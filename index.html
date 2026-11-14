@@ -1,0 +1,1033 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="no-referrer">
+<meta name="color-scheme" content="light">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%232f6690'/%3E%3Cpath d='M6 16h20' stroke='%23fff' stroke-width='3' stroke-linecap='round'/%3E%3Ccircle cx='20' cy='16' r='5' fill='%23fff'/%3E%3C/svg%3E">
+<title>Ideensammlung für zukunftsorientierte Prüfungsformate</title>
+<meta name="description" content="Schieberegler einstellen und passende, dokumentierte Prüfungsbeispiele mit Link zur Originalquelle finden.">
+<style>
+:root{
+  --bg:#f3f5f8;
+  --flaeche:#ffffff;
+  --tinte:#18212c;
+  --text:#2a3441;
+  --leise:#5a6676;
+  --linie:#dde3ea;
+  --linie-stark:#c5ced9;
+  --akzent:#2f6690;
+  --akzent-dunkel:#1f4b6d;
+  --akzent-hell:#e7eff6;
+  --akzent-mittel:#9dbad1;
+  --grau-spur:#cbd3dc;
+  --hinweis-bg:#fff7e3;
+  --hinweis-rand:#ecd9a4;
+  --hinweis-text:#6b4a00;
+  --radius:14px;
+  --schatten:0 1px 2px rgba(24,33,44,.05),0 6px 20px -8px rgba(24,33,44,.14);
+  --schrift:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--text);font-family:var(--schrift);font-size:16px;line-height:1.5}
+h1,h2,h3,p{margin:0}
+button,input,select{font:inherit;color:inherit}
+a{color:var(--akzent-dunkel)}
+:focus-visible{outline:3px solid var(--akzent);outline-offset:2px;border-radius:6px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* Kopf */
+.kopf{background:var(--flaeche);border-bottom:1px solid var(--linie)}
+.kopf-innen{max-width:1320px;margin:0 auto;padding:28px 20px 24px;display:flex;gap:28px;align-items:center;justify-content:space-between}
+.kicker{font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--akzent);font-weight:700;margin-bottom:8px}
+h1{font-size:clamp(1.55rem,1.1rem + 2vw,2.35rem);line-height:1.14;letter-spacing:-.02em;color:var(--tinte);font-weight:750;max-width:27ch}
+.intro{margin-top:12px;max-width:68ch;color:var(--leise);font-size:1rem}
+.motiv{flex:none;width:210px;display:none}
+@media (min-width:860px){.motiv{display:block}}
+
+main{max-width:1320px;margin:0 auto;padding:18px 20px 60px}
+
+/* Panels */
+.panel{background:var(--flaeche);border:1px solid var(--linie);border-radius:var(--radius);box-shadow:var(--schatten)}
+.panel>summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:10px;flex-wrap:wrap;padding:12px 18px;min-height:52px;font-weight:700;color:var(--tinte);border-radius:var(--radius)}
+.panel>summary::-webkit-details-marker{display:none}
+.panel>summary::before{content:"";width:9px;height:9px;border-right:2px solid var(--leise);border-bottom:2px solid var(--leise);transform:rotate(-45deg);transition:transform .18s;flex:none;margin-right:2px}
+.panel[open]>summary::before{transform:rotate(45deg)}
+.p-info{font-weight:500;font-size:.86rem;color:var(--leise)}
+.panel-body{padding:2px 18px 18px}
+
+.hinweis{background:var(--akzent-hell);border-left:4px solid var(--akzent);border-radius:8px;padding:10px 14px;font-size:.92rem;color:var(--text)}
+.hinweis.warn{background:var(--hinweis-bg);border-color:#d9a514;color:var(--hinweis-text)}
+
+/* Filter */
+.filter-raster{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:14px 16px;margin-top:14px}
+.feld{display:flex;flex-direction:column;gap:5px;min-width:0}
+.feld.breit{grid-column:1/-1}
+@media (min-width:700px){.feld.doppelt{grid-column:span 2}}
+.feld>label,.feld>.label{font-size:.8rem;font-weight:700;color:var(--leise);letter-spacing:.02em}
+select,input[type=search]{width:100%;min-height:44px;font-size:16px;padding:8px 12px;border:1px solid var(--linie-stark);border-radius:10px;background:#fff;color:var(--tinte)}
+select{appearance:none;-webkit-appearance:none;padding-right:34px;background-image:linear-gradient(45deg,transparent 50%,var(--leise) 50%),linear-gradient(135deg,var(--leise) 50%,transparent 50%);background-position:calc(100% - 18px) 50%,calc(100% - 12px) 50%;background-size:6px 6px;background-repeat:no-repeat}
+select:disabled{opacity:.55}
+.paar{display:flex;gap:8px;align-items:center}
+.paar span{color:var(--leise);font-size:.9rem}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip-btn{min-height:44px;padding:8px 14px;border-radius:999px;border:1px solid var(--linie-stark);background:#fff;cursor:pointer;font-size:.92rem;color:var(--text);transition:background .15s,border-color .15s,color .15s}
+.chip-btn small{color:var(--leise);font-size:.8rem;margin-left:4px}
+.chip-btn[aria-pressed=true]{background:var(--akzent);border-color:var(--akzent);color:#fff}
+.chip-btn[aria-pressed=true] small{color:#dbe7f1}
+.check{display:flex;align-items:center;gap:10px;min-height:44px;cursor:pointer;font-size:.95rem}
+.check input{width:22px;height:22px;accent-color:var(--akzent);flex:none}
+.zeile{display:flex;flex-wrap:wrap;gap:10px 18px;align-items:center;margin-top:14px}
+.btn{min-height:44px;padding:8px 16px;border-radius:10px;border:1px solid var(--linie-stark);background:#fff;cursor:pointer;font-weight:600;font-size:.92rem;color:var(--tinte)}
+.btn:hover{border-color:var(--akzent);color:var(--akzent-dunkel)}
+.btn.primaer{background:var(--akzent);border-color:var(--akzent);color:#fff}
+.btn.primaer:hover{background:var(--akzent-dunkel);color:#fff}
+
+/* Spalten */
+.spalten{display:grid;grid-template-columns:1fr;gap:18px;margin-top:18px;align-items:start}
+@media (min-width:1024px){
+  .spalten{grid-template-columns:minmax(340px,400px) 1fr}
+  .regler-panel{position:sticky;top:12px;max-height:calc(100vh - 24px);overflow:auto;overscroll-behavior:contain}
+}
+
+/* Regler */
+.profil{display:inline-flex;align-items:center;gap:6px;font-size:.8rem;font-weight:600;padding:4px 10px;border-radius:999px;background:var(--akzent-hell);color:var(--akzent-dunkel)}
+.profil.eigen{background:#eef0f3;color:var(--text)}
+.regler-kopf{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0 4px}
+.regler-kopf .btn{font-size:.86rem;padding:6px 12px}
+.regler{padding:14px 0 12px;border-top:1px solid var(--linie)}
+.regler:first-child{border-top:0}
+@media (min-width:700px) and (max-width:1023px){
+  #regler{display:grid;grid-template-columns:1fr 1fr;gap:0 32px}
+  .regler:nth-child(2){border-top:0}
+}
+.regler-titel{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.regler-titel label.name{font-weight:700;color:var(--tinte);font-size:1rem}
+.egal{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding-left:10px;cursor:pointer;font-size:.86rem;color:var(--leise);user-select:none}
+.egal input{position:absolute;opacity:0;width:1px;height:1px}
+.egal .schalter{width:38px;height:22px;border-radius:999px;background:var(--grau-spur);position:relative;transition:background .15s;flex:none}
+.egal .schalter::after{content:"";position:absolute;top:2px;left:2px;width:18px;height:18px;border-radius:50%;background:#fff;box-shadow:0 1px 2px rgba(0,0,0,.25);transition:transform .15s}
+.egal input:checked + .schalter{background:var(--leise)}
+.egal input:checked + .schalter::after{transform:translateX(16px)}
+.egal input:focus-visible + .schalter{outline:3px solid var(--akzent);outline-offset:2px}
+
+input[type=range]{-webkit-appearance:none;appearance:none;width:100%;height:44px;margin:0;background:transparent;cursor:pointer;display:block}
+input[type=range]::-webkit-slider-runnable-track{height:8px;border-radius:999px;background:linear-gradient(90deg,var(--grau-spur) 0%,#7fa3c0 55%,var(--akzent) 100%)}
+input[type=range]::-moz-range-track{height:8px;border-radius:999px;background:linear-gradient(90deg,var(--grau-spur) 0%,#7fa3c0 55%,var(--akzent) 100%)}
+input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;appearance:none;width:28px;height:28px;margin-top:-10px;border-radius:50%;background:#fff;border:3px solid var(--akzent-dunkel);box-shadow:0 2px 6px rgba(24,33,44,.28)}
+input[type=range]::-moz-range-thumb{width:22px;height:22px;border-radius:50%;background:#fff;border:3px solid var(--akzent-dunkel);box-shadow:0 2px 6px rgba(24,33,44,.28)}
+input[type=range]:focus-visible{outline:none}
+input[type=range]:focus-visible::-webkit-slider-thumb{outline:3px solid var(--akzent);outline-offset:3px}
+input[type=range]:focus-visible::-moz-range-thumb{outline:3px solid var(--akzent);outline-offset:3px}
+.ticks{display:flex;justify-content:space-between;padding:0 4px;margin-top:-8px;font-size:.74rem;color:var(--leise)}
+.ticks span{width:20px;text-align:center}
+.ticks span.an{color:var(--tinte);font-weight:800}
+.pole{display:flex;justify-content:space-between;gap:12px;font-size:.78rem;color:var(--leise);margin-top:2px}
+.pole span:last-child{text-align:right}
+.stufe{margin-top:8px;font-size:.9rem;background:#f6f8fa;border-radius:8px;padding:8px 10px;min-height:4.4em;color:var(--text)}
+.stufe b{display:block;font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;color:var(--akzent-dunkel);margin-bottom:2px}
+.regler.aus input[type=range]{opacity:.35}
+.regler.aus .ticks,.regler.aus .pole{opacity:.45}
+.regler.aus .stufe{color:var(--leise);font-style:italic}
+
+/* Trefferleiste */
+.leiste{display:flex;flex-wrap:wrap;gap:12px 18px;align-items:center;justify-content:space-between}
+.zahl{font-size:1.05rem;font-weight:700;color:var(--tinte)}
+.zahl small{display:block;font-weight:500;font-size:.84rem;color:var(--leise)}
+.modus{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.segment{display:inline-flex;border:1px solid var(--linie-stark);border-radius:10px;overflow:hidden;background:#fff}
+.segment button{min-height:44px;padding:8px 16px;border:0;background:transparent;cursor:pointer;font-weight:600;font-size:.92rem;color:var(--text)}
+.segment button[aria-pressed=true]{background:var(--akzent);color:#fff}
+.modus select{width:auto;min-width:150px}
+.erklaer{font-size:.86rem;color:var(--leise);margin-top:8px}
+.legende{display:flex;flex-wrap:wrap;gap:6px 18px;font-size:.8rem;color:var(--leise);margin:12px 0 14px;align-items:center}
+.legende span{display:inline-flex;align-items:center;gap:7px}
+
+/* Karten */
+#liste{list-style:none;margin:0;padding:0;display:grid;gap:14px}
+#liste.wechsel{animation:ein .22s ease-out}
+@keyframes ein{from{opacity:.35;transform:translateY(4px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){#liste.wechsel{animation:none}*{transition:none!important}}
+.karte{background:var(--flaeche);border:1px solid var(--linie);border-radius:var(--radius);box-shadow:var(--schatten);padding:18px 20px}
+.k-kopf{display:flex;gap:16px;justify-content:space-between;align-items:flex-start}
+.k-meta{font-size:.82rem;color:var(--leise);font-weight:600;letter-spacing:.01em}
+.k-meta .fach{color:var(--akzent-dunkel)}
+.karte h3{font-size:1.14rem;line-height:1.3;color:var(--tinte);margin-top:4px;letter-spacing:-.005em}
+.passung{flex:none;text-align:right;min-width:92px}
+.passung .wert{font-size:1.5rem;font-weight:800;color:var(--akzent-dunkel);line-height:1;letter-spacing:-.02em}
+.passung .wert small{font-size:.8rem;font-weight:700}
+.passung .balken{height:5px;border-radius:99px;background:#e6ebf0;margin:6px 0 4px;overflow:hidden}
+.passung .balken i{display:block;height:100%;background:var(--akzent);border-radius:99px}
+.passung .vgl{font-size:.72rem;color:var(--leise);line-height:1.25}
+.passung.offen .wert{font-size:.86rem;color:var(--leise);font-weight:700}
+.k-text{margin-top:8px;max-width:75ch}
+.marken{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}
+.marke{font-size:.78rem;font-weight:600;padding:4px 10px;border-radius:999px;background:#eef1f5;color:var(--text);border:1px solid transparent}
+.marke.ki{background:var(--akzent-hell);color:var(--akzent-dunkel)}
+.marke.ki-stark{background:var(--akzent);color:#fff}
+.marke.fehlt{background:var(--hinweis-bg);border-color:var(--hinweis-rand);color:var(--hinweis-text)}
+.marke.rand{background:#fff;border-color:var(--linie-stark)}
+.profilraster{display:grid;grid-template-columns:repeat(auto-fill,minmax(205px,1fr));gap:6px 22px;margin-top:14px;padding-top:12px;border-top:1px solid var(--linie)}
+.ax{display:flex;align-items:center;justify-content:space-between;gap:10px;font-size:.8rem;color:var(--text);min-height:22px}
+.ax .n{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.ax .spur{display:inline-flex;gap:9px;align-items:center;flex:none}
+.pkt{width:12px;height:12px;border-radius:50%;background:#e3e8ee;display:inline-block;flex:none}
+.pkt.wert{background:var(--akzent-dunkel)}
+.pkt.wert.gesch{background:var(--akzent-mittel);box-shadow:inset 0 0 0 1.5px var(--akzent-dunkel)}
+.pkt.ich{outline:2px solid var(--tinte);outline-offset:2px}
+.ax.leer .n{color:var(--leise)}
+.ax.leer .pkt{background:transparent;box-shadow:inset 0 0 0 1px var(--linie-stark)}
+.ax .ka{font-size:.72rem;color:var(--hinweis-text);font-style:italic;margin-right:2px}
+.ax.egal{opacity:.5}
+.k-fuss{display:flex;flex-wrap:wrap;gap:10px 16px;align-items:center;margin-top:16px}
+.quelle{display:inline-flex;align-items:center;gap:8px;min-height:46px;padding:10px 18px;border-radius:10px;background:var(--akzent);color:#fff;text-decoration:none;font-weight:700;font-size:.96rem}
+.quelle:hover{background:var(--akzent-dunkel)}
+.quelle .typ{font-weight:500;opacity:.88;font-size:.84rem}
+.fund{font-size:.82rem;color:var(--leise);flex:1 1 240px;min-width:0;overflow-wrap:anywhere}
+.linkwarn{font-size:.82rem;color:var(--hinweis-text);background:var(--hinweis-bg);border:1px solid var(--hinweis-rand);border-radius:8px;padding:6px 10px;margin-top:10px}
+.mehr-details{margin-top:12px;border-top:1px solid var(--linie);padding-top:4px}
+.mehr-details>summary{cursor:pointer;min-height:44px;display:flex;align-items:center;font-weight:600;font-size:.9rem;color:var(--akzent-dunkel)}
+.dl{display:grid;grid-template-columns:minmax(120px,170px) 1fr;gap:6px 16px;font-size:.88rem;margin:4px 0 6px}
+.dl dt{color:var(--leise);font-weight:600}
+.dl dd{margin:0;overflow-wrap:anywhere}
+.dl ul{margin:0;padding-left:18px}
+.dl li{margin-bottom:3px}
+.gesch-txt{color:var(--leise);font-size:.82em}
+@media (max-width:560px){
+  .kopf-innen{padding:22px 16px 18px}
+  main{padding:14px 12px 48px}
+  .karte{padding:16px 14px}
+  .k-kopf{flex-direction:column-reverse;gap:10px}
+  .passung{text-align:left;display:flex;align-items:center;gap:10px;min-width:0;width:100%}
+  .passung .balken{flex:1;margin:0}
+  .dl{grid-template-columns:1fr;gap:1px 0}
+  .dl dd{margin-bottom:8px}
+  .panel>summary{padding:12px 14px}
+  .panel-body{padding:2px 14px 16px}
+}
+.leerzustand{background:var(--flaeche);border:1px dashed var(--linie-stark);border-radius:var(--radius);padding:28px 20px;text-align:center;color:var(--leise)}
+.leerzustand b{display:block;color:var(--tinte);font-size:1.05rem;margin-bottom:6px}
+.leerzustand .zeile{justify-content:center}
+#mehr{display:block;margin:18px auto 0}
+.fehler{background:#fff;border:1px solid #e3b4b4;border-left:5px solid #b3261e;border-radius:var(--radius);padding:18px 20px;margin-bottom:18px}
+.fehler h2{font-size:1.1rem;color:#7a1712;margin-bottom:6px}
+.fehler code{background:#f4f1f1;padding:1px 5px;border-radius:4px;font-size:.9em}
+.fehler p+p{margin-top:8px}
+footer{max-width:1320px;margin:0 auto;padding:0 20px 40px;font-size:.84rem;color:var(--leise)}
+</style>
+</head>
+<body>
+
+<header class="kopf">
+  <div class="kopf-innen">
+    <div>
+      <p class="kicker">Prüfungskultur · Schieberegler</p>
+      <h1>Ideensammlung für zukunftsorientierte Prüfungsformate</h1>
+      <p class="intro">Regler einstellen, passende Beispiele finden: Die Sammlung zeigt konkrete, dokumentierte Prüfungen und Leistungsnachweise. Die Regler starten bei einer traditionellen Klassenarbeit – jeder Schritt nach rechts öffnet das Format ein Stück. Jedes Beispiel führt zur Originalquelle.</p>
+    </div>
+    <svg class="motiv" viewBox="0 0 210 120" aria-hidden="true">
+      <g fill="none" stroke-linecap="round" stroke-width="6">
+        <path d="M12 22h186" stroke="#dde3ea"/><path d="M12 22h40" stroke="#9dbad1"/>
+        <path d="M12 60h186" stroke="#dde3ea"/><path d="M12 60h112" stroke="#6f97b7"/>
+        <path d="M12 98h186" stroke="#dde3ea"/><path d="M12 98h160" stroke="#2f6690"/>
+      </g>
+      <g fill="#fff" stroke="#1f4b6d" stroke-width="4">
+        <circle cx="52" cy="22" r="10"/><circle cx="124" cy="60" r="10"/><circle cx="172" cy="98" r="10"/>
+      </g>
+    </svg>
+  </div>
+</header>
+
+<main>
+  <noscript><div class="fehler"><h2>JavaScript ist ausgeschaltet</h2><p>Diese Seite braucht JavaScript, um die Regler und die Beispielsammlung anzuzeigen.</p></div></noscript>
+  <div id="meldungen"></div>
+
+  <details class="panel" id="filterPanel" open>
+    <summary><span>Filter</span><span class="p-info" id="filterInfo"></span></summary>
+    <div class="panel-body">
+      <p class="hinweis">Für eine erste Orientierung über die Möglichkeiten die Filter möglichst offen lassen: Zukunftsorientierte Prüfungsformate sind ein dynamisches, experimentelles Feld, das bisher noch viel zu wenig dokumentiert ist.</p>
+      <div class="filter-raster">
+        <div class="feld">
+          <span class="label" id="lblJg">Klassenstufe</span>
+          <div class="paar" role="group" aria-labelledby="lblJg">
+            <select id="fJgVon" aria-label="Klassenstufe von"></select><span>bis</span>
+            <select id="fJgBis" aria-label="Klassenstufe bis"></select>
+          </div>
+        </div>
+        <div class="feld"><label for="fBereich">Fachbereich</label><select id="fBereich"></select></div>
+        <div class="feld"><label for="fFach">Fach</label><select id="fFach"></select></div>
+        <div class="feld"><label for="fArt">Prüfungsart</label><select id="fArt"></select></div>
+        <div class="feld"><label for="fLand">Herkunft</label><select id="fLand"></select></div>
+        <div class="feld doppelt"><label for="fSuche">Stichwortsuche</label><input type="search" id="fSuche" placeholder="z. B. Podcast, Open Book, Portfolio" autocomplete="off" enterkeyhint="search"></div>
+        <div class="feld breit">
+          <span class="label" id="lblKi">Rolle von KI <span style="font-weight:500">(Mehrfachauswahl, nichts gewählt = alle)</span></span>
+          <div class="chips" id="fKi" role="group" aria-labelledby="lblKi"></div>
+        </div>
+        <div class="feld breit">
+          <span class="label" id="lblMedien">Digitale Medien <span style="font-weight:500">(Mehrfachauswahl, nichts gewählt = alle)</span></span>
+          <div class="chips" id="fMedien" role="group" aria-labelledby="lblMedien"></div>
+        </div>
+      </div>
+      <div class="zeile">
+        <label class="check"><input type="checkbox" id="fEwh"><span>nur mit Erwartungshorizont / Bewertungsraster</span></label>
+        <button type="button" class="btn" id="filterReset">Filter zurücksetzen</button>
+      </div>
+    </div>
+  </details>
+
+  <div class="spalten">
+    <details class="panel regler-panel" id="reglerPanel" open>
+      <summary><span>Schieberegler</span><span class="profil" id="profilLabel"></span></summary>
+      <div class="panel-body">
+        <p class="hinweis">Die Beschreibungen der Stufen sind beispielhaft zu verstehen. Sie veranschaulichen die Richtung jeder Achse und bilden nicht jede Prüfung exakt ab.</p>
+        <div class="regler-kopf">
+          <button type="button" class="btn" id="reglerReset">Zurück zum Ausgangsprofil</button>
+          <button type="button" class="btn" id="reglerEgal">Alle Regler auf „egal“</button>
+        </div>
+        <div id="regler"></div>
+      </div>
+    </details>
+
+    <section aria-label="Passende Prüfungsformate">
+      <div class="panel" style="padding:14px 18px">
+        <div class="leiste">
+          <p class="zahl" id="zahl" aria-live="polite" aria-atomic="true">Sammlung wird geladen …</p>
+          <div class="modus">
+            <div class="segment" role="group" aria-label="Art der Trefferanzeige">
+              <button type="button" id="mRanking" aria-pressed="true">Ranking</button>
+              <button type="button" id="mFilter" aria-pressed="false">Filter</button>
+            </div>
+            <select id="toleranz" aria-label="Toleranz je Regler" hidden>
+              <option value="0">Toleranz: exakt</option>
+              <option value="1" selected>Toleranz: ± 1 Stufe</option>
+              <option value="2">Toleranz: ± 2 Stufen</option>
+            </select>
+          </div>
+        </div>
+        <p class="erklaer" id="erklaer"></p>
+      </div>
+      <div class="legende" aria-hidden="true">
+        <span><i class="pkt wert"></i> Stufe der Prüfung (in der Quelle belegt)</span>
+        <span><i class="pkt wert gesch"></i> Stufe der Prüfung (eingeschätzt)</span>
+        <span><i class="pkt ich" style="margin:0 3px"></i> eigene Reglerstellung</span>
+      </div>
+      <ol id="liste"></ol>
+      <button type="button" class="btn" id="mehr" hidden></button>
+    </section>
+  </div>
+</main>
+
+<footer>
+  <p id="fuss"></p>
+</footer>
+
+<script>
+"use strict";
+/* =====================================================================
+   KONFIGURATION – hier lassen sich Texte und Einstellungen anpassen,
+   ohne den restlichen Code zu verändern.
+   ===================================================================== */
+const CONFIG = {
+  datenpfad: "data/pruefungen.json",
+  proSeite: 24,                       // so viele Karten erscheinen zunächst
+  ausgangsprofil: "traditionelle Klassenarbeit (z. B. schriftliche Analyse)",
+
+  // feld  = Feldname in der JSON-Datei
+  // name  = Überschrift des Reglers, kurz = Kurzname im Achsenprofil der Karten
+  // start = Stufe im Ausgangsprofil (traditionelle Klassenarbeit)
+  achsen: [
+    { feld:"achse1", name:"Zeit", kurz:"Zeit", start:1, polLinks:"eine Sitzung, feste Zeit", polRechts:"über Wochen frei",
+      stufen:[
+        "eine Prüfungssitzung mit fester Bearbeitungszeit",
+        "mehrere fest terminierte Prüfungssitzungen",
+        "vorgegebene Arbeitsphasen mit festen Zwischenfristen",
+        "mehrtägiger Bearbeitungszeitraum, weitgehend selbst einteilbar",
+        "über Wochen frei einteilbar, nur Abgabetermin festgelegt" ] },
+    { feld:"achse2", name:"Ort / Arbeitsumgebung", kurz:"Ort", start:1, polLinks:"fester Platz", polRechts:"frei wählbar",
+      stufen:[
+        "fester Platz im Prüfungsraum",
+        "freie Platzwahl im vorgegebenen Prüfungsraum",
+        "unterschiedliche Arbeitsbereiche innerhalb der Schule",
+        "schulische und außerschulische Arbeitsorte nach Absprache",
+        "Arbeitsort vollständig frei wählbar, auch zu Hause oder unterwegs" ] },
+    { feld:"achse3", name:"Hilfsmittel", kurz:"Hilfsmittel", start:1, polLinks:"keine", polRechts:"alle inkl. Internet/KI",
+      stufen:[
+        "keine",
+        "einzelne vorgegebene Hilfsmittel",
+        "umfangreiche, aber begrenzte Hilfsmittel",
+        "alle Hilfsmittel außer bestimmten Einschränkungen (z. B. KI)",
+        "alle inkl. Internet/KI" ] },
+    { feld:"achse4", name:"Arbeitsweise / Kooperation", kurz:"Kooperation", start:1, polLinks:"strikt allein", polRechts:"Team, gemeinsame Bewertung",
+      stufen:[
+        "strikt allein",
+        "individueller Austausch in begrenzten Phasen",
+        "gemeinsame Vorbereitung, individuelle Prüfung",
+        "überwiegend kollaborativ, individuell bewertete Anteile",
+        "Teamarbeit mit gemeinsamer Bewertung" ] },
+    { feld:"achse5", name:"Produkt", kurz:"Produkt", start:1, polLinks:"fest vorgegeben", polRechts:"frei wählbar",
+      stufen:[
+        "Produktform, Umfang und Aufbau fest vorgegeben (z. B. schriftliche Analyse)",
+        "Produktform vorgegeben, Gestaltung teilweise frei (z. B. Lernvideo mit eigenem Aufbau)",
+        "Auswahl zwischen mehreren Produktformen (z. B. Text, Podcast, Lernvideo)",
+        "Produktform weitgehend frei, einzelne Anforderungen verbindlich",
+        "Produktform und Gestaltung vollständig frei wählbar" ] },
+    { feld:"achse6", name:"Aufsicht / Kontrolle", kurz:"Aufsicht", start:1, polLinks:"lückenlos beaufsichtigt", polRechts:"vertrauensbasiert",
+      stufen:[
+        "lückenlos beaufsichtigt",
+        "überwiegend beaufsichtigt",
+        "regelmäßige, punktuelle Kontrolle",
+        "weitgehend selbstständig mit vereinzelten Kontrollen",
+        "vertrauensbasiert, unbeaufsichtigt" ] },
+    { feld:"achse7", name:"Aufgabenstruktur", kurz:"Aufgabenstruktur", start:2, polLinks:"geschlossen", polRechts:"eigene Fragestellung",
+      stufen:[
+        "geschlossene Aufgaben mit eindeutigen Lösungen (z. B. Begriffe zuordnen)",
+        "konkrete Aufgaben mit festgelegten Arbeitsschritten (z. B. Rede anhand von Leitfragen analysieren)",
+        "vorgegebenes Problem mit frei wählbarem Lösungsweg (z. B. Wirkung einer Rede untersuchen)",
+        "offener Arbeitsauftrag mit eigener Schwerpunktsetzung (z. B. politische Sprache anhand selbst gewählter Beispiele untersuchen)",
+        "eigene Fragestellung entwickeln und selbstständig bearbeiten (z. B. selbst gewähltes Forschungsprojekt)" ] },
+    { feld:"achse8", name:"Bewertungsgegenstand", kurz:"Bewertung", start:1, polLinks:"nur Endprodukt", polRechts:"Prozess & Reflexion gleichwertig",
+      stufen:[
+        "nur Endprodukt",
+        "Endprodukt mit geringem Prozessanteil",
+        "Endprodukt und Arbeitsprozess",
+        "Endprodukt, Prozess und Reflexion mit Schwerpunkt auf dem Produkt",
+        "Endprodukt, Prozess und Reflexion gleichwertig" ] },
+    { feld:"achse9", name:"Feedback", kurz:"Feedback", start:1, polLinks:"einmalig, abschließend", polRechts:"kontinuierlich, mehrere Quellen",
+      stufen:[
+        "einmalige abschließende Bewertung durch die Lehrkraft",
+        "einmaliges Zwischenfeedback der Lehrkraft, anschließend Bewertung",
+        "Zwischenfeedback durch Lehrkraft oder Mitlernende mit anschließender Überarbeitung",
+        "mehrphasiges Feedback durch Lehrkraft, Mitlernende und/oder KI mit gezielten Überarbeitungen",
+        "kontinuierliches Feedback aus mehreren Quellen (Lehrkraft, Mitlernende, KI), selbstgesteuerte Reflexion und wiederholte Überarbeitung" ] }
+  ],
+
+  kiStufen: [
+    { wert:0, name:"KI ausgeschlossen" },
+    { wert:1, name:"KI nicht thematisiert" },
+    { wert:2, name:"KI als Hilfsmittel erlaubt" },
+    { wert:3, name:"KI gezielt integriert" },
+    { wert:4, name:"KI ist Prüfungsgegenstand" }
+  ],
+
+  fachbereiche: ["Sprachen","Gesellschaftswissenschaften","MINT","Informatik","Kunst/Musik/Darstellendes Spiel","Sport","Religion/Philosophie","fächerübergreifend"],
+
+  // Die Prüfungsarten in den Daten sind sehr kleinteilig. Für den Filter werden sie über
+  // Stichworte zu Gruppen gebündelt (Schreibweise: klein, ä=ae, ö=oe, ü=ue, ß=ss).
+  // Eine Prüfung kann zu mehreren Gruppen gehören; ohne Treffer landet sie in "sonstigeGruppe".
+  pruefungsartGruppen: [
+    { name:"Klassenarbeit / Klausur (auch als Ersatz)", stichworte:["klassenarbeit","klausur","schulaufgabe","ersatzleistung"] },
+    { name:"Projekt / Portfolio", stichworte:["projekt","portfolio"] },
+    { name:"Mündlich / Präsentation", stichworte:["muendlich","praesentation","kommunikationspruefung"] },
+    { name:"Praktisch / Produkt", stichworte:["praktisch","produkt","film","audio"] },
+    { name:"Abschluss- und Standardprüfung (z. B. IB, NCEA)", stichworte:["abschlusspruefung","ib-pruefungsbestandteil","ncea"] }
+  ],
+  sonstigeGruppe: "Sonstiger Leistungsnachweis",
+
+  // Stichworte für die Checkbox "nur mit Erwartungshorizont / Bewertungsraster"
+  // (gesucht in material_vorhanden und qualitaet; verneinte Angaben wie "nicht belegt" zählen nicht)
+  bewertungsStichworte: ["erwartungshorizont","ewh","raster","rubrik","bewertungsbogen","bewertungsmaterial","beurteilungsmatrix","bewertungskriterien","wertungstabelle"],
+
+  laender: { DE:"Deutschland", AT:"Österreich", CH:"Schweiz", NZ:"Neuseeland", international:"International" },
+
+  fusszeile: "Die Achsenwerte der Beispiele stammen aus einer Recherche und sind zum Teil eingeschätzt, nicht in der Quelle belegt. Fehlende Angaben werden gekennzeichnet; solche Beispiele bleiben immer sichtbar."
+};
+
+/* =====================================================================
+   HILFSFUNKTIONEN
+   ===================================================================== */
+const $ = s => document.querySelector(s);
+const N = CONFIG.achsen.length;
+
+function h(tag, attrs, ...kinder){
+  const el = document.createElement(tag);
+  if (attrs) for (const k in attrs){
+    const v = attrs[k];
+    if (v === null || v === undefined || v === false) continue;
+    if (k === "class") el.className = v;
+    else if (v === true) el.setAttribute(k, "");
+    else el.setAttribute(k, v);
+  }
+  for (const kind of kinder.flat()){
+    if (kind === null || kind === undefined || kind === false) continue;
+    el.append(kind.nodeType ? kind : document.createTextNode(String(kind)));
+  }
+  return el;
+}
+function txt(v){ return (v === null || v === undefined) ? "" : String(v).trim(); }
+function norm(v){
+  return txt(v).toLowerCase()
+    .replace(/ä/g,"ae").replace(/ö/g,"oe").replace(/ü/g,"ue").replace(/ß/g,"ss")
+    .normalize("NFD").replace(/[̀-ͯ]/g,"");
+}
+const LEER = /^(|-|–|null|n\/a|k\.? ?a\.?|unbekannt|keine angabe|nicht (ausgewiesen|belegt|angegeben|bekannt))$/;
+function fehlt(v){ return LEER.test(norm(v)); }
+function zahl(v){
+  if (v === null || v === undefined || v === "") return null;
+  if (typeof v === "boolean") return null;
+  const n = Number(String(v).trim().replace(",", "."));
+  return Number.isFinite(n) ? n : null;
+}
+function stufe(v){ const n = zahl(v); if (n === null) return null; const r = Math.round(n); return (r >= 1 && r <= 5) ? r : null; }
+function gross(s){ return s ? s.charAt(0).toUpperCase() + s.slice(1) : s; }
+function httpLink(v){ const s = txt(v); return /^https?:\/\/\S+$/i.test(s) ? s : null; }
+function reEsc(s){ return s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"); }
+function enthaeltWort(heuhaufenNorm, nadelNorm){
+  if (!nadelNorm) return false;
+  return new RegExp("(^|[^a-z0-9])" + reEsc(nadelNorm) + "($|[^a-z0-9])").test(heuhaufenNorm);
+}
+function host(url){ try { return new URL(url).hostname.replace(/^www\./, ""); } catch(e){ return ""; } }
+
+/* =====================================================================
+   DATEN EINLESEN UND VEREINHEITLICHEN
+   ===================================================================== */
+function medienNorm(v){
+  const s = norm(v);
+  if (fehlt(v)) return null;
+  if (/^(nicht|kein)/.test(s)) return "nicht nötig";
+  if (/^optional/.test(s)) return "optional";
+  if (/^(erforderlich|noetig|notwendig|ja)/.test(s)) return "erforderlich";
+  return null;
+}
+const MEDIEN = ["nicht nötig","optional","erforderlich"];
+
+function belegLesen(v){
+  let o = v;
+  if (typeof v === "string"){
+    try { o = JSON.parse(v); } catch(e){ o = null; }
+  }
+  const aus = new Array(N).fill(null);
+  if (o && typeof o === "object" && !Array.isArray(o)){
+    CONFIG.achsen.forEach((a, i) => {
+      const s = norm(o[a.feld]);
+      if (s.startsWith("explizit")) aus[i] = "explizit";
+      else if (s.startsWith("eingeschaetzt") || s.startsWith("geschaetzt")) aus[i] = "eingeschätzt";
+    });
+    return { proAchse: aus, roh: null };
+  }
+  return { proAchse: aus, roh: (typeof v === "string" && !fehlt(v)) ? v : null };
+}
+
+function hatBewertungsmaterial(material, qualitaet){
+  const teile = (txt(material) + ";" + txt(qualitaet)).split(";");
+  for (const t of teile){
+    const s = norm(t);
+    if (/(^|[^a-z])(nicht|kein|keine|keinen|ohne)([^a-z]|$)/.test(s)) continue;
+    for (const w of CONFIG.bewertungsStichworte){
+      if (w.length <= 3 ? enthaeltWort(s, w) : s.includes(w)) return true;
+    }
+  }
+  return false;
+}
+
+function artGruppen(art){
+  const s = norm(art);
+  if (!s) return [];
+  const g = CONFIG.pruefungsartGruppen.filter(gr => gr.stichworte.some(w => s.includes(w))).map(gr => gr.name);
+  return g.length ? g : [CONFIG.sonstigeGruppe];
+}
+
+function fachTeile(fach){
+  return txt(fach).split(/\s*[;,]\s*|\s+\/\s+/).map(s => s.trim()).filter(Boolean);
+}
+
+function bereiteVor(e, index){
+  const achsen = CONFIG.achsen.map(a => stufe(e[a.feld]));
+  const beleg = belegLesen(e.achsen_belegstatus);
+  let jgVon = zahl(e.jg_von), jgBis = zahl(e.jg_bis);
+  if (jgVon === null) jgVon = jgBis;
+  if (jgBis === null) jgBis = jgVon;
+  if (jgVon !== null && jgVon > jgBis){ const t = jgVon; jgVon = jgBis; jgBis = t; }
+  const qualText = txt(e.qualitaet);
+  const qm = qualText.match(/^\s*(\d)/);
+  const konf = { hoch:3, mittel:2, niedrig:1 }[norm(e.konfidenz)] || 0;
+  const ki = zahl(e.ki_rolle);
+  const weitere = txt(e.weitere_links).split(/[\s;,|]+/).filter(u => httpLink(u));
+  const p = {
+    id: txt(e.id) || ("eintrag-" + (index + 1)),
+    titel: txt(e.titel) || "(ohne Titel)",
+    text: txt(e.kurzbeschreibung),
+    fach: fehlt(e.fach) ? "" : txt(e.fach),
+    bereich: fehlt(e.faechergruppe) ? "" : txt(e.faechergruppe),
+    jgVon, jgBis,
+    schulform: fehlt(e.schulform) ? "" : txt(e.schulform),
+    land: fehlt(e.land) ? "" : txt(e.land),
+    sprache: norm(e.sprache),
+    art: fehlt(e.pruefungsart) ? "" : txt(e.pruefungsart),
+    ki: (ki !== null && ki >= 0 && ki <= 4) ? Math.round(ki) : null,
+    kiBegruendung: txt(e.ki_rolle_begruendung),
+    aias: zahl(e.aias_stufe),
+    medien: medienNorm(e.digitale_medien),
+    medienRoh: fehlt(e.digitale_medien) ? "" : txt(e.digitale_medien),
+    tools: fehlt(e.tools) ? "" : txt(e.tools),
+    achsen, beleg: beleg.proAchse, belegRoh: beleg.roh,
+    material: fehlt(e.material_vorhanden) ? "" : txt(e.material_vorhanden),
+    link: httpLink(e.link_primaer),
+    linktyp: fehlt(e.linktyp) ? "" : txt(e.linktyp),
+    fundpfad: fehlt(e.fundpfad) ? "" : txt(e.fundpfad),
+    weitere,
+    urheber: fehlt(e.urheber) ? "" : txt(e.urheber),
+    datum: fehlt(e.datum) ? "" : txt(e.datum),
+    lizenz: txt(e.lizenz),
+    linkStatus: txt(e.link_status),
+    qual: qm ? Number(qm[1]) : 0,
+    qualText, konf,
+    konfText: fehlt(e.konfidenz) ? "" : txt(e.konfidenz)
+  };
+  p.fachNorm = norm(p.fach);
+  p.artGruppen = artGruppen(p.art);
+  p.ewh = hatBewertungsmaterial(e.material_vorhanden, e.qualitaet);
+  p.fehlendeAchsen = CONFIG.achsen.filter((a, i) => achsen[i] === null).map(a => a.name);
+  p.suche = norm([p.titel, p.text, p.fach, p.bereich, p.tools, p.urheber, p.art, p.schulform, p.material].join(" | "));
+  p.istTest = /^\s*\[TEST\]/i.test(p.titel);
+  return p;
+}
+
+function leseDaten(roh){
+  let liste = roh;
+  if (roh && !Array.isArray(roh) && typeof roh === "object"){
+    liste = Object.values(roh).find(v => Array.isArray(v));
+  }
+  if (!Array.isArray(liste)) throw new Error("Die Datei enthält keine Liste von Prüfungen (erwartet wird ein JSON-Array [ {…}, {…} ]).");
+  const gut = [], uebersprungen = [];
+  liste.forEach((e, i) => {
+    if (e && typeof e === "object" && !Array.isArray(e)){
+      try { gut.push(bereiteVor(e, i)); } catch(err){ uebersprungen.push(i + 1); }
+    } else uebersprungen.push(i + 1);
+  });
+  return { gut, uebersprungen };
+}
+
+/* =====================================================================
+   ZUSTAND
+   ===================================================================== */
+let DATEN = [];
+let FACH_OPTIONEN = [];   // [{name, norm}]
+const state = {
+  werte: CONFIG.achsen.map(a => a.start),
+  aktiv: CONFIG.achsen.map(() => true),
+  modus: "ranking",
+  toleranz: 1,
+  sichtbar: CONFIG.proSeite,
+  f: { jgVon:null, jgBis:null, bereich:"", fach:"", art:"", land:"", suche:"", ki:new Set(), medien:new Set(), ewh:false }
+};
+
+/* =====================================================================
+   BEWERTEN UND FILTERN
+   ===================================================================== */
+function passtFilter(p){
+  const f = state.f;
+  // Grundsatz: Fehlt bei einer Prüfung die Angabe, wird sie NICHT ausgeblendet.
+  if (f.jgVon !== null || f.jgBis !== null){
+    if (p.jgVon !== null){
+      let von = f.jgVon === null ? -Infinity : f.jgVon;
+      let bis = f.jgBis === null ? Infinity : f.jgBis;
+      if (von > bis){ const t = von; von = bis; bis = t; }
+      if (p.jgBis < von || p.jgVon > bis) return false;
+    }
+  }
+  if (f.bereich && p.bereich && norm(p.bereich) !== norm(f.bereich)) return false;
+  if (f.fach && p.fach && !enthaeltWort(p.fachNorm, f.fach)) return false;
+  if (f.art && p.art && !p.artGruppen.includes(f.art)) return false;
+  if (f.land && p.land && p.land !== f.land) return false;
+  if (f.ki.size && p.ki !== null && !f.ki.has(p.ki)) return false;
+  if (f.medien.size && p.medien !== null && !f.medien.has(p.medien)) return false;
+  if (f.ewh && !p.ewh) return false;
+  if (f.suche){
+    for (const w of f.suche) if (!p.suche.includes(w)) return false;
+  }
+  return true;
+}
+
+function bewerte(p){
+  let summe = 0, n = 0, aktive = 0, maxAbw = 0;
+  for (let i = 0; i < N; i++){
+    if (!state.aktiv[i]) continue;
+    aktive++;
+    const v = p.achsen[i];
+    if (v === null) continue;
+    const d = Math.abs(v - state.werte[i]);
+    summe += d; n++;
+    if (d > maxAbw) maxAbw = d;
+  }
+  const passung = n ? 1 - (summe / n) / 4 : null;
+  const abdeckung = aktive ? n / aktive : 1;
+  // Prüfungen mit vielen fehlenden Angaben rutschen etwas nach unten, bleiben aber sichtbar.
+  const sortwert = (passung === null ? 0.5 : passung) * (0.6 + 0.4 * abdeckung);
+  return { p, passung, n, aktive, maxAbw, sortwert };
+}
+
+function berechne(){
+  let liste = DATEN.filter(passtFilter).map(bewerte);
+  if (state.modus === "filter") liste = liste.filter(t => t.maxAbw <= state.toleranz);
+  liste.sort((a, b) =>
+    (b.sortwert - a.sortwert) || (b.p.qual - a.p.qual) || (b.p.konf - a.p.konf) || a.p.titel.localeCompare(b.p.titel, "de"));
+  return liste;
+}
+
+/* =====================================================================
+   REGLER
+   ===================================================================== */
+const reglerEls = [];
+function baueRegler(){
+  const box = $("#regler");
+  CONFIG.achsen.forEach((a, i) => {
+    const id = "regler" + i;
+    const range = h("input", { type:"range", min:"1", max:"5", step:"1", id, "aria-describedby": id + "-stufe" });
+    const egal = h("input", { type:"checkbox", id: id + "-egal", "aria-label": a.name + ": egal (zählt nicht mit)" });
+    const ticks = h("div", { class:"ticks", "aria-hidden":"true" }, [1,2,3,4,5].map(n => h("span", null, n)));
+    const stufeEl = h("div", { class:"stufe", id: id + "-stufe" });
+    const block = h("div", { class:"regler" },
+      h("div", { class:"regler-titel" },
+        h("label", { class:"name", for:id }, a.name),
+        h("label", { class:"egal" }, egal, h("span", { class:"schalter" }), "egal")),
+      range, ticks,
+      h("div", { class:"pole", "aria-hidden":"true" }, h("span", null, a.polLinks), h("span", null, a.polRechts)),
+      stufeEl);
+    range.addEventListener("input", () => { state.werte[i] = Number(range.value); zeigeRegler(i); geaendert(); });
+    egal.addEventListener("change", () => { state.aktiv[i] = !egal.checked; zeigeRegler(i); geaendert(); });
+    reglerEls.push({ block, range, egal, ticks, stufeEl });
+    box.append(block);
+  });
+}
+function zeigeRegler(i){
+  const a = CONFIG.achsen[i], el = reglerEls[i], v = state.werte[i], an = state.aktiv[i];
+  el.range.value = String(v);
+  el.range.disabled = !an;
+  el.egal.checked = !an;
+  el.block.classList.toggle("aus", !an);
+  el.range.setAttribute("aria-valuetext", "Stufe " + v + " von 5: " + a.stufen[v - 1]);
+  [...el.ticks.children].forEach((t, k) => t.classList.toggle("an", an && k === v - 1));
+  el.stufeEl.replaceChildren();
+  if (an) el.stufeEl.append(h("b", null, "Stufe " + v + " von 5"), a.stufen[v - 1]);
+  else el.stufeEl.append("Dieser Regler zählt gerade nicht mit.");
+  const start = state.aktiv.every(Boolean) && state.werte.every((w, k) => w === CONFIG.achsen[k].start);
+  const lab = $("#profilLabel");
+  lab.textContent = start ? "Ausgangsprofil: " + CONFIG.ausgangsprofil : "eigene Einstellung";
+  lab.classList.toggle("eigen", !start);
+}
+function alleReglerZeigen(){ for (let i = 0; i < N; i++) zeigeRegler(i); }
+
+/* =====================================================================
+   FILTER-OBERFLÄCHE
+   ===================================================================== */
+function option(wert, text){ return h("option", { value: wert }, text); }
+
+function baueFachOptionen(){
+  // Mehrfachnennungen ("Deutsch / Kunst", "Biologie, Deutsch, …") werden in Einzelfächer zerlegt.
+  const basis = new Map();
+  DATEN.forEach(p => fachTeile(p.fach).forEach(t => { const k = norm(t); if (k && !basis.has(k)) basis.set(k, t); }));
+  const fertig = new Map();
+  basis.forEach((name, k) => {
+    for (const trenner of [" und ", "/"]){
+      if (k.includes(trenner)){
+        const teile = k.split(trenner).map(s => s.trim()).filter(Boolean);
+        if (teile.length > 1 && teile.every(t => basis.has(t))) return;   // besteht nur aus bekannten Einzelfächern
+      }
+    }
+    fertig.set(k, gross(name));
+  });
+  FACH_OPTIONEN = [...fertig].map(([n, name]) => ({ norm:n, name })).sort((a, b) => a.name.localeCompare(b.name, "de"));
+}
+function fuelleFach(){
+  const sel = $("#fFach"), f = state.f;
+  const pool = f.bereich ? DATEN.filter(p => !p.bereich || norm(p.bereich) === norm(f.bereich)) : DATEN;
+  const opts = FACH_OPTIONEN.map(o => ({ ...o, n: pool.filter(p => p.fach && enthaeltWort(p.fachNorm, o.norm)).length })).filter(o => o.n > 0);
+  if (f.fach && !opts.some(o => o.norm === f.fach)) f.fach = "";
+  sel.replaceChildren(option("", "alle Fächer"), ...opts.map(o => option(o.norm, o.name + " (" + o.n + ")")));
+  sel.value = f.fach;
+}
+
+function baueFilter(){
+  const f = state.f;
+  // Klassenstufen
+  const stufen = DATEN.flatMap(p => p.jgVon === null ? [] : [p.jgVon, p.jgBis]);
+  const min = stufen.length ? Math.min(5, ...stufen) : 5, max = stufen.length ? Math.max(13, ...stufen) : 13;
+  const jgOpts = () => { const o = [option("", "alle")]; for (let j = Math.floor(min); j <= Math.ceil(max); j++) o.push(option(String(j), "Klasse " + j)); return o; };
+  $("#fJgVon").replaceChildren(...jgOpts()); $("#fJgBis").replaceChildren(...jgOpts());
+
+  // Fachbereich
+  const bereiche = new Map();
+  CONFIG.fachbereiche.forEach(b => bereiche.set(norm(b), { name:b, n:0 }));
+  DATEN.forEach(p => { if (!p.bereich) return; const k = norm(p.bereich); if (!bereiche.has(k)) bereiche.set(k, { name:p.bereich, n:0 }); bereiche.get(k).n++; });
+  $("#fBereich").replaceChildren(option("", "alle Fachbereiche"),
+    ...[...bereiche.values()].filter(b => b.n > 0).map(b => option(b.name, gross(b.name) + " (" + b.n + ")")));
+
+  baueFachOptionen(); fuelleFach();
+
+  // Prüfungsart (gebündelt)
+  const gruppen = [...CONFIG.pruefungsartGruppen.map(g => g.name), CONFIG.sonstigeGruppe]
+    .map(name => ({ name, n: DATEN.filter(p => p.artGruppen.includes(name)).length })).filter(g => g.n > 0);
+  $("#fArt").replaceChildren(option("", "alle Prüfungsarten"), ...gruppen.map(g => option(g.name, g.name + " (" + g.n + ")")));
+
+  // Herkunft
+  const laender = new Map();
+  DATEN.forEach(p => { if (p.land) laender.set(p.land, (laender.get(p.land) || 0) + 1); });
+  $("#fLand").replaceChildren(option("", "alle"),
+    ...[...laender].sort((a, b) => b[1] - a[1]).map(([l, n]) => option(l, (CONFIG.laender[l] || l) + " (" + n + ")")));
+
+  // KI-Rolle
+  $("#fKi").replaceChildren(...CONFIG.kiStufen.map(k => {
+    const n = DATEN.filter(p => p.ki === k.wert).length;
+    const b = h("button", { type:"button", class:"chip-btn", "aria-pressed":"false" }, k.name, h("small", null, n));
+    b.addEventListener("click", () => { umschalten(f.ki, k.wert, b); geaendert(); });
+    return b;
+  }));
+  // Digitale Medien
+  $("#fMedien").replaceChildren(...MEDIEN.map(m => {
+    const n = DATEN.filter(p => p.medien === m).length;
+    const b = h("button", { type:"button", class:"chip-btn", "aria-pressed":"false" }, gross(m), h("small", null, n));
+    b.addEventListener("click", () => { umschalten(f.medien, m, b); geaendert(); });
+    return b;
+  }));
+}
+function umschalten(menge, wert, knopf){
+  if (menge.has(wert)) menge.delete(wert); else menge.add(wert);
+  knopf.setAttribute("aria-pressed", menge.has(wert) ? "true" : "false");
+}
+function anzahlFilter(){
+  const f = state.f;
+  return [f.jgVon !== null || f.jgBis !== null, f.bereich, f.fach, f.art, f.land, f.suche && f.suche.length, f.ki.size, f.medien.size, f.ewh].filter(Boolean).length;
+}
+function filterZuruecksetzen(){
+  const f = state.f;
+  f.jgVon = f.jgBis = null; f.bereich = f.fach = f.art = f.land = ""; f.suche = ""; f.ki.clear(); f.medien.clear(); f.ewh = false;
+  ["#fJgVon","#fJgBis","#fBereich","#fArt","#fLand","#fSuche"].forEach(s => { $(s).value = ""; });
+  $("#fEwh").checked = false;
+  document.querySelectorAll(".chip-btn").forEach(b => b.setAttribute("aria-pressed", "false"));
+  fuelleFach();
+}
+function verdrahteFilter(){
+  const f = state.f;
+  $("#fJgVon").addEventListener("change", e => { f.jgVon = zahl(e.target.value); geaendert(); });
+  $("#fJgBis").addEventListener("change", e => { f.jgBis = zahl(e.target.value); geaendert(); });
+  $("#fBereich").addEventListener("change", e => { f.bereich = e.target.value; fuelleFach(); geaendert(); });
+  $("#fFach").addEventListener("change", e => { f.fach = e.target.value; geaendert(); });
+  $("#fArt").addEventListener("change", e => { f.art = e.target.value; geaendert(); });
+  $("#fLand").addEventListener("change", e => { f.land = e.target.value; geaendert(); });
+  $("#fEwh").addEventListener("change", e => { f.ewh = e.target.checked; geaendert(); });
+  $("#fSuche").addEventListener("input", e => { const w = norm(e.target.value).split(/\s+/).filter(Boolean); f.suche = w.length ? w : ""; geaendert(); });
+  $("#filterReset").addEventListener("click", () => { filterZuruecksetzen(); geaendert(); });
+  $("#reglerReset").addEventListener("click", () => {
+    state.werte = CONFIG.achsen.map(a => a.start); state.aktiv = CONFIG.achsen.map(() => true); alleReglerZeigen(); geaendert();
+  });
+  $("#reglerEgal").addEventListener("click", () => { state.aktiv = CONFIG.achsen.map(() => false); alleReglerZeigen(); geaendert(); });
+  $("#mRanking").addEventListener("click", () => setzeModus("ranking"));
+  $("#mFilter").addEventListener("click", () => setzeModus("filter"));
+  $("#toleranz").addEventListener("change", e => { state.toleranz = Number(e.target.value); geaendert(); });
+  $("#mehr").addEventListener("click", () => { state.sichtbar += CONFIG.proSeite; zeige(false); });
+}
+function setzeModus(m){
+  state.modus = m;
+  $("#mRanking").setAttribute("aria-pressed", m === "ranking" ? "true" : "false");
+  $("#mFilter").setAttribute("aria-pressed", m === "filter" ? "true" : "false");
+  $("#toleranz").hidden = m !== "filter";
+  geaendert();
+}
+
+/* =====================================================================
+   KARTEN
+   ===================================================================== */
+function jgText(p){
+  if (p.jgVon === null) return "Jahrgang: keine Angabe";
+  return p.jgVon === p.jgBis ? "Jg. " + p.jgVon : "Jg. " + p.jgVon + "–" + p.jgBis;
+}
+function quelleKnopf(p){
+  if (!p.link) return h("span", { class:"marke fehlt" }, "kein Link zur Quelle hinterlegt");
+  const hst = host(p.link), typ = norm(p.linktyp);
+  let text = "Zur Quelle", zusatz = p.linktyp;
+  if (hst.includes("taskcards")){ text = "Zur TaskCards-Pinnwand"; zusatz = ""; }
+  else if (typ === "buch"){ text = "Zum Buch"; zusatz = "Verlagsseite"; }
+  return h("a", { class:"quelle", href:p.link, target:"_blank", rel:"noopener noreferrer" },
+    text, zusatz ? h("span", { class:"typ" }, "· " + zusatz) : null, h("span", { "aria-hidden":"true" }, "↗"),
+    h("span", { class:"sr" }, " (öffnet in neuem Tab: " + hst + ")"));
+}
+function achsenProfil(p){
+  return h("div", { class:"profilraster", role:"list", "aria-label":"Achsenprofil der Prüfung" },
+    CONFIG.achsen.map((a, i) => {
+      const v = p.achsen[i], ich = state.aktiv[i] ? state.werte[i] : null, gesch = p.beleg[i] === "eingeschätzt";
+      const label = a.name + ": " + (v === null ? "keine Angabe" : "Stufe " + v + " von 5" + (gesch ? " (eingeschätzt)" : p.beleg[i] ? " (belegt)" : ""))
+        + (ich !== null ? "; eigene Einstellung: Stufe " + ich : "; Regler steht auf egal");
+      const spur = h("span", { class:"spur", "aria-hidden":"true" },
+        v === null ? h("span", { class:"ka" }, "keine Angabe") : null,
+        [1,2,3,4,5].map(n => h("i", { class:"pkt" + (v === n ? " wert" + (gesch ? " gesch" : "") : "") + (ich === n ? " ich" : "") })));
+      return h("div", { class:"ax" + (v === null ? " leer" : "") + (ich === null ? " egal" : ""), role:"listitem", "aria-label":label, title: v === null ? a.name + ": keine Angabe in der Quelle" : a.name + " – Stufe " + v + ": " + a.stufen[v - 1] + (gesch ? " (eingeschätzt)" : "") },
+        h("span", { class:"n", "aria-hidden":"true" }, a.kurz || a.name), spur);
+    }));
+}
+function dlZeile(dl, name, inhalt){
+  if (inhalt === null || inhalt === undefined || inhalt === "" || (Array.isArray(inhalt) && !inhalt.length)) return;
+  dl.append(h("dt", null, name), h("dd", null, inhalt));
+}
+function detailInhalt(p){
+  const dl = h("dl", { class:"dl" });
+  dlZeile(dl, "Achsen im Einzelnen", h("ul", null, CONFIG.achsen.map((a, i) => {
+    const v = p.achsen[i];
+    return h("li", null, h("b", null, a.name + ": "),
+      v === null ? "keine Angabe" : "Stufe " + v + " – " + a.stufen[v - 1],
+      v !== null && p.beleg[i] ? h("span", { class:"gesch-txt" }, " (" + (p.beleg[i] === "explizit" ? "in der Quelle belegt" : "eingeschätzt") + ")") : null);
+  })));
+  if (p.belegRoh) dlZeile(dl, "Belegstatus", p.belegRoh);
+  const ki = CONFIG.kiStufen.find(k => k.wert === p.ki);
+  dlZeile(dl, "Rolle von KI", (ki ? ki.name : "keine Angabe") + (p.kiBegruendung ? " – " + p.kiBegruendung : "") + (p.aias !== null ? " (AI Assessment Scale: Stufe " + p.aias + ")" : ""));
+  dlZeile(dl, "Digitale Medien", p.medienRoh || "keine Angabe");
+  dlZeile(dl, "Werkzeuge", p.tools);
+  dlZeile(dl, "Prüfungsart", p.art);
+  dlZeile(dl, "Schulform", p.schulform);
+  dlZeile(dl, "Material in der Quelle", p.material);
+  if (p.weitere.length) dlZeile(dl, "Weitere Links", h("ul", null, p.weitere.map(u =>
+    h("li", null, h("a", { href:u, target:"_blank", rel:"noopener noreferrer" }, host(u) || u, h("span", { class:"sr" }, " (öffnet in neuem Tab)"))))));
+  dlZeile(dl, "Urheber/in", p.urheber);
+  dlZeile(dl, "Datum", p.datum);
+  dlZeile(dl, "Lizenz", p.lizenz);
+  dlZeile(dl, "Link geprüft", p.linkStatus);
+  dlZeile(dl, "Qualität der Dokumentation", p.qualText);
+  dlZeile(dl, "Verlässlichkeit der Einordnung", p.konfText);
+  dlZeile(dl, "Kennung", p.id);
+  return dl;
+}
+function karte(t){
+  const p = t.p;
+  const meta = [p.fach ? h("span", { class:"fach" }, p.fach) : "Fach: keine Angabe", jgText(p), p.schulform, p.land ? (CONFIG.laender[p.land] || p.land) : ""]
+    .filter(Boolean).flatMap((x, i) => i ? [" · ", x] : [x]);
+
+  let passung;
+  if (t.aktive === 0) passung = null;
+  else if (t.passung === null) passung = h("div", { class:"passung offen" }, h("div", { class:"wert" }, "nicht vergleichbar"),
+    h("div", { class:"vgl" }, "keine Angaben zu den aktiven Reglern"));
+  else {
+    const proz = Math.round(t.passung * 100);
+    passung = h("div", { class:"passung" },
+      h("div", { class:"wert", "aria-label":"Passung " + proz + " Prozent" }, proz, h("small", null, " % Passung")),
+      h("div", { class:"balken", "aria-hidden":"true" }, h("i", { style:"width:" + proz + "%" })),
+      h("div", { class:"vgl" }, "verglichen: " + t.n + " von " + t.aktive + (t.aktive === 1 ? " Regler" : " Reglern")));
+  }
+
+  const marken = [];
+  const ki = CONFIG.kiStufen.find(k => k.wert === p.ki);
+  marken.push(h("span", { class:"marke " + (p.ki !== null && p.ki >= 2 ? "ki-stark" : "ki") }, ki ? ki.name : "KI-Rolle: keine Angabe"));
+  marken.push(p.medien
+    ? h("span", { class:"marke" }, "Digitale Medien: " + p.medien)
+    : h("span", { class:"marke fehlt" }, "Digitale Medien: keine Angabe"));
+  if (p.art) marken.push(h("span", { class:"marke rand" }, p.art));
+  if (p.ewh) marken.push(h("span", { class:"marke rand" }, "mit Bewertungsmaterial"));
+  if (p.sprache && p.sprache !== "de") marken.push(h("span", { class:"marke rand" }, "Quelle: " + ({ en:"Englisch", fr:"Französisch", nl:"Niederländisch", es:"Spanisch" }[p.sprache] || p.sprache)));
+  const fa = p.fehlendeAchsen;
+  if (fa.length) marken.push(h("span", { class:"marke fehlt" },
+    fa.length <= 3 ? "Keine Angabe zu: " + fa.join(", ") : "Zu " + fa.length + " von " + N + " Achsen keine Angabe"));
+
+  const st = norm(p.linkStatus);
+  const warn = /nicht geoeffnet|eingeloggt|nicht verifiziert|nicht erreichbar/.test(st)
+    ? h("p", { class:"linkwarn" }, "Hinweis zum Link: " + p.linkStatus) : null;
+
+  const details = h("details", { class:"mehr-details" }, h("summary", null, "Details anzeigen"));
+  details.addEventListener("toggle", () => { if (details.open && details.children.length === 1) details.append(detailInhalt(p)); });
+
+  return h("li", { class:"karte" },
+    h("div", { class:"k-kopf" },
+      h("div", null, h("p", { class:"k-meta" }, meta), h("h3", null, p.titel)),
+      passung),
+    p.text ? h("p", { class:"k-text" }, p.text) : null,
+    h("div", { class:"marken" }, marken),
+    achsenProfil(p),
+    h("div", { class:"k-fuss" }, quelleKnopf(p), p.fundpfad ? h("span", { class:"fund" }, h("b", null, "Fundstelle: "), p.fundpfad) : null),
+    warn, details);
+}
+
+/* =====================================================================
+   ANZEIGE
+   ===================================================================== */
+let geplant = false, letzteFolge = "";
+function geaendert(){
+  state.sichtbar = CONFIG.proSeite;
+  if (geplant) return;
+  geplant = true;
+  requestAnimationFrame(() => { geplant = false; zeige(true); });
+}
+function zeige(mitWechsel){
+  const liste = berechne();
+  const gesamt = DATEN.length, n = liste.length, aktive = state.aktiv.filter(Boolean).length;
+  const zahlEl = $("#zahl");
+  zahlEl.replaceChildren(n === gesamt ? n + (n === 1 ? " Beispiel" : " Beispiele") : n + " von " + gesamt + " Beispielen",
+    h("small", null, aktive ? "sortiert nach Nähe zur Reglerstellung" : "alle Regler stehen auf „egal“ – sortiert nach Qualität der Dokumentation"));
+  $("#erklaer").textContent = state.modus === "ranking"
+    ? "Ranking: Alle Beispiele bleiben sichtbar, die ähnlichsten stehen oben. Beispiele mit vielen fehlenden Angaben rutschen etwas nach unten."
+    : "Filter: Es erscheinen nur Beispiele, die auf jedem aktiven Regler höchstens um die Toleranz abweichen. Fehlende Angaben gelten als passend – solche Beispiele bleiben sichtbar.";
+  const fa = anzahlFilter();
+  $("#filterInfo").textContent = fa ? fa + (fa === 1 ? " Filter aktiv" : " Filter aktiv") : "alle offen";
+
+  const ol = $("#liste");
+  const sicht = liste.slice(0, state.sichtbar);
+  if (!n){
+    const leer = h("li", { class:"leerzustand" }, h("b", null, "Keine passenden Beispiele"),
+      state.modus === "filter"
+        ? "Mit dieser Reglerstellung und Toleranz gibt es keinen Treffer. Größere Toleranz wählen, einzelne Regler auf „egal“ stellen oder zum Ranking wechseln."
+        : "Mit diesen Filtern gibt es keinen Treffer. Das Feld ist noch dünn dokumentiert – Filter möglichst offen lassen.");
+    const z = h("div", { class:"zeile" });
+    if (state.modus === "filter"){ const b = h("button", { type:"button", class:"btn primaer" }, "Zum Ranking wechseln"); b.addEventListener("click", () => setzeModus("ranking")); z.append(b); }
+    if (fa){ const b = h("button", { type:"button", class:"btn" }, "Filter zurücksetzen"); b.addEventListener("click", () => { filterZuruecksetzen(); geaendert(); }); z.append(b); }
+    leer.append(z);
+    ol.replaceChildren(leer);
+  } else {
+    ol.replaceChildren(...sicht.map(karte));
+  }
+  const folge = sicht.map(t => t.p.id).join("|");
+  if (mitWechsel && folge !== letzteFolge){ ol.classList.remove("wechsel"); void ol.offsetWidth; ol.classList.add("wechsel"); }
+  letzteFolge = folge;
+
+  const rest = n - sicht.length, mehr = $("#mehr");
+  mehr.hidden = rest <= 0;
+  if (rest > 0) mehr.textContent = "Weitere " + Math.min(rest, CONFIG.proSeite) + " anzeigen (" + rest + " verbleibend)";
+}
+
+/* =====================================================================
+   START
+   ===================================================================== */
+function meldung(el){ $("#meldungen").append(el); }
+function starte(roh){
+  const { gut, uebersprungen } = leseDaten(roh);
+  DATEN = gut;
+  $("#meldungen").replaceChildren();
+  if (uebersprungen.length) meldung(h("p", { class:"hinweis warn", style:"margin-bottom:18px" },
+    uebersprungen.length + " Einträge der Datendatei konnten nicht gelesen werden und fehlen in der Liste (Position: " + uebersprungen.slice(0, 12).join(", ") + (uebersprungen.length > 12 ? " …" : "") + ")."));
+  if (DATEN.some(p => p.istTest)) meldung(h("p", { class:"hinweis warn", style:"margin-bottom:18px" },
+    "Achtung: Die Sammlung enthält Testdaten (Titel beginnt mit [TEST])."));
+  if (!DATEN.length) meldung(h("p", { class:"hinweis warn", style:"margin-bottom:18px" },
+    "Die Datendatei enthält noch keine Prüfungen."));
+  baueFilter();
+  $("#fuss").textContent = DATEN.length + " Beispiele in der Sammlung. " + CONFIG.fusszeile;
+  zeige(false);
+}
+function ladefehler(titel, text){
+  const wahl = h("input", { type:"file", accept:".json,application/json", id:"dateiwahl", style:"margin-top:10px;font-size:16px;max-width:100%" });
+  wahl.addEventListener("change", () => {
+    const d = wahl.files && wahl.files[0]; if (!d) return;
+    d.text().then(t => { try { starte(JSON.parse(t)); } catch(e){ ladefehler("Die gewählte Datei ist kein gültiges JSON", e.message); } });
+  });
+  $("#meldungen").replaceChildren(h("div", { class:"fehler", role:"alert" },
+    h("h2", null, titel),
+    h("p", null, text),
+    h("p", null, "Erwartet wird die Datei ", h("code", null, CONFIG.datenpfad), " neben der index.html. Wird die Seite direkt von der Festplatte geöffnet (Adresse beginnt mit file://), blockiert der Browser das Nachladen – auf GitHub Pages tritt das nicht auf."),
+    h("p", null, h("label", { for:"dateiwahl" }, h("b", null, "Zum Ausprobieren die JSON-Datei von diesem Gerät laden:")), h("br"), wahl)));
+  $("#zahl").textContent = "Keine Daten geladen";
+}
+async function ladeDaten(){
+  let antwort;
+  try { antwort = await fetch(CONFIG.datenpfad, { cache:"no-cache" }); }
+  catch(e){ return ladefehler("Die Sammlung konnte nicht geladen werden", "Die Datendatei ist nicht erreichbar."); }
+  if (!antwort.ok) return ladefehler("Die Sammlung konnte nicht geladen werden", "Der Server meldet für die Datendatei den Fehler " + antwort.status + ".");
+  let roh;
+  try { roh = JSON.parse(await antwort.text()); }
+  catch(e){ return ladefehler("Die Datendatei enthält einen Formatfehler", "Meldung des Browsers: " + e.message); }
+  try { starte(roh); }
+  catch(e){ ladefehler("Die Datendatei hat nicht den erwarteten Aufbau", e.message); }
+}
+
+baueRegler(); alleReglerZeigen(); verdrahteFilter();
+if (window.matchMedia("(max-width: 699px)").matches){ $("#filterPanel").open = false; $("#reglerPanel").open = false; }
+else if (window.matchMedia("(max-width: 1023px)").matches){ $("#filterPanel").open = false; }
+ladeDaten();
+</script>
+</body>
+</html>
