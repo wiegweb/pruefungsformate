@@ -14,162 +14,169 @@
   --flaeche:#ffffff;
   --tinte:#18212c;
   --text:#2a3441;
-  --leise:#5a6676;
-  --linie:#dde3ea;
-  --linie-stark:#c5ced9;
+  --leise:#5d6978;
+  --linie:#e3e8ee;
+  --linie-stark:#c9d2dc;
   --akzent:#2f6690;
   --akzent-dunkel:#1f4b6d;
-  --akzent-hell:#e7eff6;
+  --akzent-hell:#e8f0f7;
   --akzent-mittel:#9dbad1;
   --grau-spur:#cbd3dc;
   --hinweis-bg:#fff7e3;
   --hinweis-rand:#ecd9a4;
   --hinweis-text:#6b4a00;
-  --radius:14px;
-  --schatten:0 1px 2px rgba(24,33,44,.05),0 6px 20px -8px rgba(24,33,44,.14);
+  --r-gross:16px;   /* Panels, Karten */
+  --r-mittel:10px;  /* Felder, Knöpfe */
+  --r-klein:7px;    /* Elemente in Knöpfen (Segment) */
+  --schatten:0 0 0 1px rgba(24,33,44,.06),0 1px 2px rgba(24,33,44,.05),0 6px 18px -8px rgba(24,33,44,.14);
+  --ease:cubic-bezier(.2,0,0,1);
   --schrift:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif;
 }
 *{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
-body{margin:0;background:var(--bg);color:var(--text);font-family:var(--schrift);font-size:16px;line-height:1.5}
+body{margin:0;background:var(--bg);color:var(--text);font-family:var(--schrift);font-size:16px;line-height:1.5;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
 h1,h2,h3,p{margin:0}
+h1,h2,h3{text-wrap:balance}
+p,dd,li{text-wrap:pretty}
 button,input,select{font:inherit;color:inherit}
 a{color:var(--akzent-dunkel)}
 :focus-visible{outline:3px solid var(--akzent);outline-offset:2px;border-radius:6px}
 .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.zahlen{font-variant-numeric:tabular-nums}
 
 /* Kopf */
-.kopf{background:var(--flaeche);border-bottom:1px solid var(--linie)}
-.kopf-innen{max-width:1320px;margin:0 auto;padding:28px 20px 24px;display:flex;gap:28px;align-items:center;justify-content:space-between}
-.kicker{font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--akzent);font-weight:700;margin-bottom:8px}
-h1{font-size:clamp(1.55rem,1.1rem + 2vw,2.35rem);line-height:1.14;letter-spacing:-.02em;color:var(--tinte);font-weight:750;max-width:27ch}
-.intro{margin-top:12px;max-width:68ch;color:var(--leise);font-size:1rem}
-.motiv{flex:none;width:210px;display:none}
+.kopf{background:var(--flaeche);box-shadow:0 1px 0 var(--linie)}
+.kopf-innen{max-width:1320px;margin:0 auto;padding:22px 20px 18px;display:flex;gap:24px;align-items:center;justify-content:space-between}
+h1{font-size:clamp(1.45rem,1.1rem + 1.6vw,2.05rem);line-height:1.15;letter-spacing:-.02em;color:var(--tinte);font-weight:750}
+.intro{margin-top:6px;color:var(--leise);font-size:1rem}
+.motiv{flex:none;width:132px;display:none}
 @media (min-width:860px){.motiv{display:block}}
 
 main{max-width:1320px;margin:0 auto;padding:18px 20px 60px}
 
-/* Panels */
-.panel{background:var(--flaeche);border:1px solid var(--linie);border-radius:var(--radius);box-shadow:var(--schatten)}
-.panel>summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:10px;flex-wrap:wrap;padding:12px 18px;min-height:52px;font-weight:700;color:var(--tinte);border-radius:var(--radius)}
-.panel>summary::-webkit-details-marker{display:none}
-.panel>summary::before{content:"";width:9px;height:9px;border-right:2px solid var(--leise);border-bottom:2px solid var(--leise);transform:rotate(-45deg);transition:transform .18s;flex:none;margin-right:2px}
-.panel[open]>summary::before{transform:rotate(45deg)}
-.p-info{font-weight:500;font-size:.86rem;color:var(--leise)}
+/* Flächen: Tiefe über Schatten, nicht über Rahmen */
+.panel{background:var(--flaeche);border-radius:var(--r-gross);box-shadow:var(--schatten)}
+details.panel>summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:10px;flex-wrap:wrap;padding:10px 18px;min-height:52px;font-weight:700;color:var(--tinte);border-radius:var(--r-gross)}
+details>summary::-webkit-details-marker{display:none}
 .panel-body{padding:2px 18px 18px}
+.p-info{font-weight:500;font-size:.88rem;color:var(--leise)}
+
+/* Aufklapp-Pfeil, ein gemeinsames Muster */
+.pfeil{width:16px;height:16px;flex:none;color:var(--leise);transition:transform .18s var(--ease)}
+details[open]>summary>.pfeil{transform:rotate(90deg)}
 
 .hinweis{background:var(--akzent-hell);border-left:4px solid var(--akzent);border-radius:8px;padding:10px 14px;font-size:.92rem;color:var(--text)}
 .hinweis.warn{background:var(--hinweis-bg);border-color:#d9a514;color:var(--hinweis-text)}
 
 /* Filter */
-.filter-raster{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:14px 16px;margin-top:14px}
+.filter-raster{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px 16px;margin-top:4px}
 .feld{display:flex;flex-direction:column;gap:5px;min-width:0}
 .feld.breit{grid-column:1/-1}
 @media (min-width:700px){.feld.doppelt{grid-column:span 2}}
 .feld>label,.feld>.label{font-size:.8rem;font-weight:700;color:var(--leise);letter-spacing:.02em}
-select,input[type=search]{width:100%;min-height:44px;font-size:16px;padding:8px 12px;border:1px solid var(--linie-stark);border-radius:10px;background:#fff;color:var(--tinte)}
+.feld .label span{font-weight:500}
+select,input[type=search]{width:100%;min-height:44px;font-size:16px;padding:8px 12px;border:1px solid var(--linie-stark);border-radius:var(--r-mittel);background:#fff;color:var(--tinte)}
 select{appearance:none;-webkit-appearance:none;padding-right:34px;background-image:linear-gradient(45deg,transparent 50%,var(--leise) 50%),linear-gradient(135deg,var(--leise) 50%,transparent 50%);background-position:calc(100% - 18px) 50%,calc(100% - 12px) 50%;background-size:6px 6px;background-repeat:no-repeat}
-select:disabled{opacity:.55}
 .paar{display:flex;gap:8px;align-items:center}
 .paar span{color:var(--leise);font-size:.9rem}
 .chips{display:flex;flex-wrap:wrap;gap:8px}
-.chip-btn{min-height:44px;padding:8px 14px;border-radius:999px;border:1px solid var(--linie-stark);background:#fff;cursor:pointer;font-size:.92rem;color:var(--text);transition:background .15s,border-color .15s,color .15s}
-.chip-btn small{color:var(--leise);font-size:.8rem;margin-left:4px}
+.chip-btn{min-height:44px;padding:8px 14px;border-radius:999px;border:1px solid var(--linie-stark);background:#fff;cursor:pointer;font-size:.92rem;color:var(--text)}
+.chip-btn small{color:var(--leise);font-size:.8rem;margin-left:5px;font-variant-numeric:tabular-nums}
 .chip-btn[aria-pressed=true]{background:var(--akzent);border-color:var(--akzent);color:#fff}
 .chip-btn[aria-pressed=true] small{color:#dbe7f1}
 .check{display:flex;align-items:center;gap:10px;min-height:44px;cursor:pointer;font-size:.95rem}
 .check input{width:22px;height:22px;accent-color:var(--akzent);flex:none}
 .zeile{display:flex;flex-wrap:wrap;gap:10px 18px;align-items:center;margin-top:14px}
-.btn{min-height:44px;padding:8px 16px;border-radius:10px;border:1px solid var(--linie-stark);background:#fff;cursor:pointer;font-weight:600;font-size:.92rem;color:var(--tinte)}
+.btn{min-height:44px;padding:8px 16px;border-radius:var(--r-mittel);border:1px solid var(--linie-stark);background:#fff;cursor:pointer;font-weight:600;font-size:.92rem;color:var(--tinte)}
 .btn:hover{border-color:var(--akzent);color:var(--akzent-dunkel)}
 .btn.primaer{background:var(--akzent);border-color:var(--akzent);color:#fff}
 .btn.primaer:hover{background:var(--akzent-dunkel);color:#fff}
+.btn.leise{border-color:transparent;background:transparent;color:var(--akzent-dunkel);padding:8px 10px}
+.btn.leise:hover{background:var(--akzent-hell)}
+
+/* Druck-Rückmeldung: nur Transform/Farben, nie "all" */
+.btn,.chip-btn,.quelle,.segment button{transition-property:transform,background-color,border-color,color;transition-duration:.14s;transition-timing-function:var(--ease)}
+.btn:active,.chip-btn:active,.quelle:active,.segment button:active{transform:scale(.96)}
 
 /* Spalten */
 .spalten{display:grid;grid-template-columns:1fr;gap:18px;margin-top:18px;align-items:start}
+@media (min-width:1024px) and (hover:hover){.egal{min-height:40px}}
 @media (min-width:1024px){
-  .spalten{grid-template-columns:minmax(340px,400px) 1fr}
+  .spalten{grid-template-columns:minmax(330px,380px) 1fr}
   .regler-panel{position:sticky;top:12px;max-height:calc(100vh - 24px);overflow:auto;overscroll-behavior:contain}
 }
 
-/* Regler */
-.profil{display:inline-flex;align-items:center;gap:6px;font-size:.8rem;font-weight:600;padding:4px 10px;border-radius:999px;background:var(--akzent-hell);color:var(--akzent-dunkel)}
-.profil.eigen{background:#eef0f3;color:var(--text)}
-.regler-kopf{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0 4px}
-.regler-kopf .btn{font-size:.86rem;padding:6px 12px}
-.regler{padding:14px 0 12px;border-top:1px solid var(--linie)}
-.regler:first-child{border-top:0}
+/* Regler – immer sichtbar, kompakt */
+.regler-panel{padding:16px 18px 10px}
+.regler-kopf{display:flex;align-items:baseline;justify-content:space-between;gap:8px 12px;flex-wrap:wrap}
+.regler-kopf h2{font-size:1.05rem;color:var(--tinte)}
+.profil{font-size:.8rem;font-weight:600;color:var(--akzent-dunkel)}
+.profil.eigen{color:var(--leise)}
+.regler-hinweis{font-size:.82rem;color:var(--leise);margin-top:2px}
 @media (min-width:700px) and (max-width:1023px){
   #regler{display:grid;grid-template-columns:1fr 1fr;gap:0 32px}
   .regler:nth-child(2){border-top:0}
 }
+.regler{padding:6px 0 10px;border-top:1px solid var(--linie)}
+.regler:first-child{border-top:0}
 .regler-titel{display:flex;align-items:center;justify-content:space-between;gap:10px}
-.regler-titel label.name{font-weight:700;color:var(--tinte);font-size:1rem}
-.egal{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding-left:10px;cursor:pointer;font-size:.86rem;color:var(--leise);user-select:none}
+.regler-titel label.name{font-weight:700;color:var(--tinte);font-size:.95rem}
+.egal{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding-left:10px;cursor:pointer;font-size:.82rem;color:var(--leise);user-select:none}
 .egal input{position:absolute;opacity:0;width:1px;height:1px}
-.egal .schalter{width:38px;height:22px;border-radius:999px;background:var(--grau-spur);position:relative;transition:background .15s;flex:none}
-.egal .schalter::after{content:"";position:absolute;top:2px;left:2px;width:18px;height:18px;border-radius:50%;background:#fff;box-shadow:0 1px 2px rgba(0,0,0,.25);transition:transform .15s}
+.egal .schalter{width:34px;height:20px;border-radius:999px;background:var(--grau-spur);position:relative;transition:background-color .15s var(--ease);flex:none}
+.egal .schalter::after{content:"";position:absolute;top:2px;left:2px;width:16px;height:16px;border-radius:50%;background:#fff;box-shadow:0 1px 2px rgba(0,0,0,.25);transition:transform .15s var(--ease)}
 .egal input:checked + .schalter{background:var(--leise)}
-.egal input:checked + .schalter::after{transform:translateX(16px)}
+.egal input:checked + .schalter::after{transform:translateX(14px)}
 .egal input:focus-visible + .schalter{outline:3px solid var(--akzent);outline-offset:2px}
 
-input[type=range]{-webkit-appearance:none;appearance:none;width:100%;height:44px;margin:0;background:transparent;cursor:pointer;display:block}
-input[type=range]::-webkit-slider-runnable-track{height:8px;border-radius:999px;background:linear-gradient(90deg,var(--grau-spur) 0%,#7fa3c0 55%,var(--akzent) 100%)}
-input[type=range]::-moz-range-track{height:8px;border-radius:999px;background:linear-gradient(90deg,var(--grau-spur) 0%,#7fa3c0 55%,var(--akzent) 100%)}
-input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;appearance:none;width:28px;height:28px;margin-top:-10px;border-radius:50%;background:#fff;border:3px solid var(--akzent-dunkel);box-shadow:0 2px 6px rgba(24,33,44,.28)}
-input[type=range]::-moz-range-thumb{width:22px;height:22px;border-radius:50%;background:#fff;border:3px solid var(--akzent-dunkel);box-shadow:0 2px 6px rgba(24,33,44,.28)}
+input[type=range]{-webkit-appearance:none;appearance:none;width:100%;height:44px;margin:-8px 0 -4px;background:transparent;cursor:pointer;display:block}
+input[type=range]::-webkit-slider-runnable-track{height:6px;border-radius:999px;background:linear-gradient(90deg,var(--grau-spur) 0%,#7fa3c0 55%,var(--akzent) 100%)}
+input[type=range]::-moz-range-track{height:6px;border-radius:999px;background:linear-gradient(90deg,var(--grau-spur) 0%,#7fa3c0 55%,var(--akzent) 100%)}
+input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;appearance:none;width:26px;height:26px;margin-top:-10px;border-radius:50%;background:#fff;border:3px solid var(--akzent-dunkel);box-shadow:0 1px 2px rgba(24,33,44,.2),0 3px 8px rgba(24,33,44,.18)}
+input[type=range]::-moz-range-thumb{width:20px;height:20px;border-radius:50%;background:#fff;border:3px solid var(--akzent-dunkel);box-shadow:0 1px 2px rgba(24,33,44,.2),0 3px 8px rgba(24,33,44,.18)}
 input[type=range]:focus-visible{outline:none}
 input[type=range]:focus-visible::-webkit-slider-thumb{outline:3px solid var(--akzent);outline-offset:3px}
 input[type=range]:focus-visible::-moz-range-thumb{outline:3px solid var(--akzent);outline-offset:3px}
-.ticks{display:flex;justify-content:space-between;padding:0 4px;margin-top:-8px;font-size:.74rem;color:var(--leise)}
-.ticks span{width:20px;text-align:center}
-.ticks span.an{color:var(--tinte);font-weight:800}
-.pole{display:flex;justify-content:space-between;gap:12px;font-size:.78rem;color:var(--leise);margin-top:2px}
-.pole span:last-child{text-align:right}
-.stufe{margin-top:8px;font-size:.9rem;background:#f6f8fa;border-radius:8px;padding:8px 10px;min-height:4.4em;color:var(--text)}
-.stufe b{display:block;font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;color:var(--akzent-dunkel);margin-bottom:2px}
+.stufe{display:flex;gap:8px;font-size:.86rem;line-height:1.4;color:var(--text)}
+.stufe .nr{flex:none;width:2.2em;font-weight:700;color:var(--akzent-dunkel);font-variant-numeric:tabular-nums}
 .regler.aus input[type=range]{opacity:.35}
-.regler.aus .ticks,.regler.aus .pole{opacity:.45}
 .regler.aus .stufe{color:var(--leise);font-style:italic}
+.regler-fuss{display:flex;flex-wrap:wrap;gap:4px;border-top:1px solid var(--linie);padding-top:6px;margin:0 -8px}
 
 /* Trefferleiste */
-.leiste{display:flex;flex-wrap:wrap;gap:12px 18px;align-items:center;justify-content:space-between}
-.zahl{font-size:1.05rem;font-weight:700;color:var(--tinte)}
+.leiste{display:flex;flex-wrap:wrap;gap:10px 18px;align-items:center;justify-content:space-between;padding:12px 18px}
+.zahl{font-size:1.05rem;font-weight:700;color:var(--tinte);font-variant-numeric:tabular-nums}
 .zahl small{display:block;font-weight:500;font-size:.84rem;color:var(--leise)}
 .modus{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
-.segment{display:inline-flex;border:1px solid var(--linie-stark);border-radius:10px;overflow:hidden;background:#fff}
-.segment button{min-height:44px;padding:8px 16px;border:0;background:transparent;cursor:pointer;font-weight:600;font-size:.92rem;color:var(--text)}
-.segment button[aria-pressed=true]{background:var(--akzent);color:#fff}
+.segment{display:inline-flex;gap:2px;padding:3px;border-radius:var(--r-mittel);background:#edf1f5}
+.segment button{min-height:40px;padding:6px 14px;border:0;border-radius:var(--r-klein);background:transparent;cursor:pointer;font-weight:600;font-size:.92rem;color:var(--text)}
+.segment button[aria-pressed=true]{background:#fff;color:var(--akzent-dunkel);box-shadow:0 1px 2px rgba(24,33,44,.12),0 1px 6px -2px rgba(24,33,44,.12)}
 .modus select{width:auto;min-width:150px}
-.erklaer{font-size:.86rem;color:var(--leise);margin-top:8px}
-.legende{display:flex;flex-wrap:wrap;gap:6px 18px;font-size:.8rem;color:var(--leise);margin:12px 0 14px;align-items:center}
-.legende span{display:inline-flex;align-items:center;gap:7px}
 
-/* Karten */
-#liste{list-style:none;margin:0;padding:0;display:grid;gap:14px}
-#liste.wechsel{animation:ein .22s ease-out}
-@keyframes ein{from{opacity:.35;transform:translateY(4px)}to{opacity:1;transform:none}}
-@media (prefers-reduced-motion:reduce){#liste.wechsel{animation:none}*{transition:none!important}}
-.karte{background:var(--flaeche);border:1px solid var(--linie);border-radius:var(--radius);box-shadow:var(--schatten);padding:18px 20px}
-.k-kopf{display:flex;gap:16px;justify-content:space-between;align-items:flex-start}
-.k-meta{font-size:.82rem;color:var(--leise);font-weight:600;letter-spacing:.01em}
+/* Karten: zuerst nur Titel und Kurzbeschreibung */
+#liste{list-style:none;margin:14px 0 0;padding:0;display:grid;gap:12px}
+.karte{background:var(--flaeche);border-radius:var(--r-gross);box-shadow:var(--schatten);padding:16px 20px 6px}
+.k-kopf{display:flex;gap:14px;justify-content:space-between;align-items:baseline}
+.karte h3{font-size:1.08rem;line-height:1.3;color:var(--tinte);letter-spacing:-.005em}
+.treffer{flex:none;font-weight:800;font-size:1rem;color:var(--akzent-dunkel);font-variant-numeric:tabular-nums;white-space:nowrap}
+.treffer.offen{font-weight:600;font-size:.82rem;color:var(--leise)}
+.k-text{margin-top:6px;max-width:75ch;color:var(--text)}
+.stufe1,.stufe2{margin-top:6px}
+.stufe1>summary,.stufe2>summary{list-style:none;cursor:pointer;display:inline-flex;align-items:center;gap:6px;min-height:44px;font-weight:600;font-size:.9rem;color:var(--akzent-dunkel);border-radius:8px}
+.stufe1>summary:hover,.stufe2>summary:hover{color:var(--akzent)}
+.stufe1>summary .pfeil,.stufe2>summary .pfeil{color:currentColor}
+.d-inhalt{border-top:1px solid var(--linie);padding:12px 0 6px}
+.k-meta{font-size:.85rem;color:var(--leise);font-weight:600}
 .k-meta .fach{color:var(--akzent-dunkel)}
-.karte h3{font-size:1.14rem;line-height:1.3;color:var(--tinte);margin-top:4px;letter-spacing:-.005em}
-.passung{flex:none;text-align:right;min-width:92px}
-.passung .wert{font-size:1.5rem;font-weight:800;color:var(--akzent-dunkel);line-height:1;letter-spacing:-.02em}
-.passung .wert small{font-size:.8rem;font-weight:700}
-.passung .balken{height:5px;border-radius:99px;background:#e6ebf0;margin:6px 0 4px;overflow:hidden}
-.passung .balken i{display:block;height:100%;background:var(--akzent);border-radius:99px}
-.passung .vgl{font-size:.72rem;color:var(--leise);line-height:1.25}
-.passung.offen .wert{font-size:.86rem;color:var(--leise);font-weight:700}
-.k-text{margin-top:8px;max-width:75ch}
-.marken{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}
+.marken{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
 .marke{font-size:.78rem;font-weight:600;padding:4px 10px;border-radius:999px;background:#eef1f5;color:var(--text);border:1px solid transparent}
 .marke.ki{background:var(--akzent-hell);color:var(--akzent-dunkel)}
 .marke.ki-stark{background:var(--akzent);color:#fff}
 .marke.fehlt{background:var(--hinweis-bg);border-color:var(--hinweis-rand);color:var(--hinweis-text)}
 .marke.rand{background:#fff;border-color:var(--linie-stark)}
-.profilraster{display:grid;grid-template-columns:repeat(auto-fill,minmax(205px,1fr));gap:6px 22px;margin-top:14px;padding-top:12px;border-top:1px solid var(--linie)}
+.passungszeile{font-size:.84rem;color:var(--leise);margin-top:12px;font-variant-numeric:tabular-nums}
+.passungszeile b{color:var(--akzent-dunkel)}
+.profilraster{display:grid;grid-template-columns:repeat(auto-fill,minmax(205px,1fr));gap:6px 22px;margin-top:8px}
 .ax{display:flex;align-items:center;justify-content:space-between;gap:10px;font-size:.8rem;color:var(--text);min-height:22px}
 .ax .n{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .ax .spur{display:inline-flex;gap:9px;align-items:center;flex:none}
@@ -181,37 +188,38 @@ input[type=range]:focus-visible::-moz-range-thumb{outline:3px solid var(--akzent
 .ax.leer .pkt{background:transparent;box-shadow:inset 0 0 0 1px var(--linie-stark)}
 .ax .ka{font-size:.72rem;color:var(--hinweis-text);font-style:italic;margin-right:2px}
 .ax.egal{opacity:.5}
-.k-fuss{display:flex;flex-wrap:wrap;gap:10px 16px;align-items:center;margin-top:16px}
-.quelle{display:inline-flex;align-items:center;gap:8px;min-height:46px;padding:10px 18px;border-radius:10px;background:var(--akzent);color:#fff;text-decoration:none;font-weight:700;font-size:.96rem}
+.legende{display:flex;flex-wrap:wrap;gap:4px 16px;font-size:.76rem;color:var(--leise);margin-top:8px}
+.legende span{display:inline-flex;align-items:center;gap:6px}
+.k-fuss{display:flex;flex-wrap:wrap;gap:10px 16px;align-items:center;margin-top:14px}
+.quelle{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:10px 16px;border-radius:var(--r-mittel);background:var(--akzent);color:#fff;text-decoration:none;font-weight:700;font-size:.94rem}
 .quelle:hover{background:var(--akzent-dunkel)}
 .quelle .typ{font-weight:500;opacity:.88;font-size:.84rem}
+.quelle svg{width:16px;height:16px;flex:none}
 .fund{font-size:.82rem;color:var(--leise);flex:1 1 240px;min-width:0;overflow-wrap:anywhere}
 .linkwarn{font-size:.82rem;color:var(--hinweis-text);background:var(--hinweis-bg);border:1px solid var(--hinweis-rand);border-radius:8px;padding:6px 10px;margin-top:10px}
-.mehr-details{margin-top:12px;border-top:1px solid var(--linie);padding-top:4px}
-.mehr-details>summary{cursor:pointer;min-height:44px;display:flex;align-items:center;font-weight:600;font-size:.9rem;color:var(--akzent-dunkel)}
-.dl{display:grid;grid-template-columns:minmax(120px,170px) 1fr;gap:6px 16px;font-size:.88rem;margin:4px 0 6px}
+.dl{display:grid;grid-template-columns:minmax(120px,170px) 1fr;gap:6px 16px;font-size:.88rem;margin:6px 0 4px}
 .dl dt{color:var(--leise);font-weight:600}
 .dl dd{margin:0;overflow-wrap:anywhere}
 .dl ul{margin:0;padding-left:18px}
 .dl li{margin-bottom:3px}
 .gesch-txt{color:var(--leise);font-size:.82em}
 @media (max-width:560px){
-  .kopf-innen{padding:22px 16px 18px}
+  .kopf-innen{padding:18px 16px 14px}
   main{padding:14px 12px 48px}
-  .karte{padding:16px 14px}
-  .k-kopf{flex-direction:column-reverse;gap:10px}
-  .passung{text-align:left;display:flex;align-items:center;gap:10px;min-width:0;width:100%}
-  .passung .balken{flex:1;margin:0}
+  .karte{padding:14px 14px 4px}
+  .regler-panel{padding:14px 14px 8px}
+  .leiste{padding:12px 14px}
   .dl{grid-template-columns:1fr;gap:1px 0}
   .dl dd{margin-bottom:8px}
-  .panel>summary{padding:12px 14px}
+  details.panel>summary{padding:10px 14px}
   .panel-body{padding:2px 14px 16px}
 }
-.leerzustand{background:var(--flaeche);border:1px dashed var(--linie-stark);border-radius:var(--radius);padding:28px 20px;text-align:center;color:var(--leise)}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+.leerzustand{background:var(--flaeche);border:1px dashed var(--linie-stark);border-radius:var(--r-gross);padding:28px 20px;text-align:center;color:var(--leise)}
 .leerzustand b{display:block;color:var(--tinte);font-size:1.05rem;margin-bottom:6px}
 .leerzustand .zeile{justify-content:center}
 #mehr{display:block;margin:18px auto 0}
-.fehler{background:#fff;border:1px solid #e3b4b4;border-left:5px solid #b3261e;border-radius:var(--radius);padding:18px 20px;margin-bottom:18px}
+.fehler{background:#fff;border:1px solid #e3b4b4;border-left:5px solid #b3261e;border-radius:var(--r-gross);padding:18px 20px;margin-bottom:18px}
 .fehler h2{font-size:1.1rem;color:#7a1712;margin-bottom:6px}
 .fehler code{background:#f4f1f1;padding:1px 5px;border-radius:4px;font-size:.9em}
 .fehler p+p{margin-top:8px}
@@ -220,12 +228,16 @@ footer{max-width:1320px;margin:0 auto;padding:0 20px 40px;font-size:.84rem;color
 </head>
 <body>
 
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-pfeil" viewBox="0 0 16 16"><path d="M6 3.5 10.5 8 6 12.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-extern" viewBox="0 0 16 16"><path d="M6 3.5h6.5V10M12.5 3.5 4 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+</svg>
+
 <header class="kopf">
   <div class="kopf-innen">
     <div>
-      <p class="kicker">Prüfungskultur · Schieberegler</p>
       <h1>Ideensammlung für zukunftsorientierte Prüfungsformate</h1>
-      <p class="intro">Regler einstellen, passende Beispiele finden: Die Sammlung zeigt konkrete, dokumentierte Prüfungen und Leistungsnachweise. Die Regler starten bei einer traditionellen Klassenarbeit – jeder Schritt nach rechts öffnet das Format ein Stück. Jedes Beispiel führt zur Originalquelle.</p>
+      <p class="intro">Regler verschieben, passende Prüfungsbeispiele finden – jeweils mit Link zur Quelle.</p>
     </div>
     <svg class="motiv" viewBox="0 0 210 120" aria-hidden="true">
       <g fill="none" stroke-linecap="round" stroke-width="6">
@@ -244,10 +256,9 @@ footer{max-width:1320px;margin:0 auto;padding:0 20px 40px;font-size:.84rem;color
   <noscript><div class="fehler"><h2>JavaScript ist ausgeschaltet</h2><p>Diese Seite braucht JavaScript, um die Regler und die Beispielsammlung anzuzeigen.</p></div></noscript>
   <div id="meldungen"></div>
 
-  <details class="panel" id="filterPanel" open>
-    <summary><span>Filter</span><span class="p-info" id="filterInfo"></span></summary>
+  <details class="panel" id="filterPanel">
+    <summary><svg class="pfeil" aria-hidden="true"><use href="#i-pfeil"/></svg><span>Filter</span><span class="p-info" id="filterInfo"></span></summary>
     <div class="panel-body">
-      <p class="hinweis">Für eine erste Orientierung über die Möglichkeiten die Filter möglichst offen lassen: Zukunftsorientierte Prüfungsformate sind ein dynamisches, experimentelles Feld, das bisher noch viel zu wenig dokumentiert ist.</p>
       <div class="filter-raster">
         <div class="feld">
           <span class="label" id="lblJg">Klassenstufe</span>
@@ -262,11 +273,11 @@ footer{max-width:1320px;margin:0 auto;padding:0 20px 40px;font-size:.84rem;color
         <div class="feld"><label for="fLand">Herkunft</label><select id="fLand"></select></div>
         <div class="feld doppelt"><label for="fSuche">Stichwortsuche</label><input type="search" id="fSuche" placeholder="z. B. Podcast, Open Book, Portfolio" autocomplete="off" enterkeyhint="search"></div>
         <div class="feld breit">
-          <span class="label" id="lblKi">Rolle von KI <span style="font-weight:500">(Mehrfachauswahl, nichts gewählt = alle)</span></span>
+          <span class="label" id="lblKi">Rolle von KI <span>(mehrere möglich)</span></span>
           <div class="chips" id="fKi" role="group" aria-labelledby="lblKi"></div>
         </div>
         <div class="feld breit">
-          <span class="label" id="lblMedien">Digitale Medien <span style="font-weight:500">(Mehrfachauswahl, nichts gewählt = alle)</span></span>
+          <span class="label" id="lblMedien">Digitale Medien <span>(mehrere möglich)</span></span>
           <div class="chips" id="fMedien" role="group" aria-labelledby="lblMedien"></div>
         </div>
       </div>
@@ -278,40 +289,33 @@ footer{max-width:1320px;margin:0 auto;padding:0 20px 40px;font-size:.84rem;color
   </details>
 
   <div class="spalten">
-    <details class="panel regler-panel" id="reglerPanel" open>
-      <summary><span>Schieberegler</span><span class="profil" id="profilLabel"></span></summary>
-      <div class="panel-body">
-        <p class="hinweis">Die Beschreibungen der Stufen sind beispielhaft zu verstehen. Sie veranschaulichen die Richtung jeder Achse und bilden nicht jede Prüfung exakt ab.</p>
-        <div class="regler-kopf">
-          <button type="button" class="btn" id="reglerReset">Zurück zum Ausgangsprofil</button>
-          <button type="button" class="btn" id="reglerEgal">Alle Regler auf „egal“</button>
-        </div>
-        <div id="regler"></div>
+    <section class="panel regler-panel" aria-labelledby="reglerTitel">
+      <div class="regler-kopf">
+        <h2 id="reglerTitel">Schieberegler</h2>
+        <span class="profil" id="profilLabel"></span>
       </div>
-    </details>
+      <p class="regler-hinweis">Die Stufenbeschreibungen sind beispielhaft zu verstehen.</p>
+      <div id="regler"></div>
+      <div class="regler-fuss">
+        <button type="button" class="btn leise" id="reglerReset">Zurück zum Ausgangsprofil</button>
+        <button type="button" class="btn leise" id="reglerEgal">Alle auf „egal“</button>
+      </div>
+    </section>
 
     <section aria-label="Passende Prüfungsformate">
-      <div class="panel" style="padding:14px 18px">
-        <div class="leiste">
-          <p class="zahl" id="zahl" aria-live="polite" aria-atomic="true">Sammlung wird geladen …</p>
-          <div class="modus">
-            <div class="segment" role="group" aria-label="Art der Trefferanzeige">
-              <button type="button" id="mRanking" aria-pressed="true">Ranking</button>
-              <button type="button" id="mFilter" aria-pressed="false">Filter</button>
-            </div>
-            <select id="toleranz" aria-label="Toleranz je Regler" hidden>
-              <option value="0">Toleranz: exakt</option>
-              <option value="1" selected>Toleranz: ± 1 Stufe</option>
-              <option value="2">Toleranz: ± 2 Stufen</option>
-            </select>
+      <div class="panel leiste">
+        <p class="zahl" id="zahl" aria-live="polite" aria-atomic="true">Sammlung wird geladen …</p>
+        <div class="modus">
+          <div class="segment" role="group" aria-label="Art der Trefferanzeige">
+            <button type="button" id="mRanking" aria-pressed="true">Ranking</button>
+            <button type="button" id="mFilter" aria-pressed="false">Filter</button>
           </div>
+          <select id="toleranz" aria-label="Toleranz je Regler" hidden>
+            <option value="0">Toleranz: exakt</option>
+            <option value="1" selected>Toleranz: ± 1 Stufe</option>
+            <option value="2">Toleranz: ± 2 Stufen</option>
+          </select>
         </div>
-        <p class="erklaer" id="erklaer"></p>
-      </div>
-      <div class="legende" aria-hidden="true">
-        <span><i class="pkt wert"></i> Stufe der Prüfung (in der Quelle belegt)</span>
-        <span><i class="pkt wert gesch"></i> Stufe der Prüfung (eingeschätzt)</span>
-        <span><i class="pkt ich" style="margin:0 3px"></i> eigene Reglerstellung</span>
       </div>
       <ol id="liste"></ol>
       <button type="button" class="btn" id="mehr" hidden></button>
@@ -332,7 +336,7 @@ footer{max-width:1320px;margin:0 auto;padding:0 20px 40px;font-size:.84rem;color
 const CONFIG = {
   datenpfad: "data/pruefungen.json",
   proSeite: 24,                       // so viele Karten erscheinen zunächst
-  ausgangsprofil: "traditionelle Klassenarbeit (z. B. schriftliche Analyse)",
+  ausgangsprofil: "traditionelle Klassenarbeit",
 
   // feld  = Feldname in der JSON-Datei
   // name  = Überschrift des Reglers, kurz = Kurzname im Achsenprofil der Karten
@@ -676,18 +680,15 @@ function baueRegler(){
     const id = "regler" + i;
     const range = h("input", { type:"range", min:"1", max:"5", step:"1", id, "aria-describedby": id + "-stufe" });
     const egal = h("input", { type:"checkbox", id: id + "-egal", "aria-label": a.name + ": egal (zählt nicht mit)" });
-    const ticks = h("div", { class:"ticks", "aria-hidden":"true" }, [1,2,3,4,5].map(n => h("span", null, n)));
-    const stufeEl = h("div", { class:"stufe", id: id + "-stufe" });
+    const stufeEl = h("p", { class:"stufe", id: id + "-stufe" });
     const block = h("div", { class:"regler" },
       h("div", { class:"regler-titel" },
-        h("label", { class:"name", for:id }, a.name),
+        h("label", { class:"name", for:id, title: a.polLinks + " → " + a.polRechts }, a.name),
         h("label", { class:"egal" }, egal, h("span", { class:"schalter" }), "egal")),
-      range, ticks,
-      h("div", { class:"pole", "aria-hidden":"true" }, h("span", null, a.polLinks), h("span", null, a.polRechts)),
-      stufeEl);
+      range, stufeEl);
     range.addEventListener("input", () => { state.werte[i] = Number(range.value); zeigeRegler(i); geaendert(); });
     egal.addEventListener("change", () => { state.aktiv[i] = !egal.checked; zeigeRegler(i); geaendert(); });
-    reglerEls.push({ block, range, egal, ticks, stufeEl });
+    reglerEls.push({ block, range, egal, stufeEl });
     box.append(block);
   });
 }
@@ -698,10 +699,9 @@ function zeigeRegler(i){
   el.egal.checked = !an;
   el.block.classList.toggle("aus", !an);
   el.range.setAttribute("aria-valuetext", "Stufe " + v + " von 5: " + a.stufen[v - 1]);
-  [...el.ticks.children].forEach((t, k) => t.classList.toggle("an", an && k === v - 1));
   el.stufeEl.replaceChildren();
-  if (an) el.stufeEl.append(h("b", null, "Stufe " + v + " von 5"), a.stufen[v - 1]);
-  else el.stufeEl.append("Dieser Regler zählt gerade nicht mit.");
+  if (an) el.stufeEl.append(h("span", { class:"nr", "aria-hidden":"true" }, v + "/5"), a.stufen[v - 1]);
+  else el.stufeEl.append("zählt gerade nicht mit");
   const start = state.aktiv.every(Boolean) && state.werte.every((w, k) => w === CONFIG.achsen[k].start);
   const lab = $("#profilLabel");
   lab.textContent = start ? "Ausgangsprofil: " + CONFIG.ausgangsprofil : "eigene Einstellung";
@@ -840,7 +840,7 @@ function quelleKnopf(p){
   if (hst.includes("taskcards")){ text = "Zur TaskCards-Pinnwand"; zusatz = ""; }
   else if (typ === "buch"){ text = "Zum Buch"; zusatz = "Verlagsseite"; }
   return h("a", { class:"quelle", href:p.link, target:"_blank", rel:"noopener noreferrer" },
-    text, zusatz ? h("span", { class:"typ" }, "· " + zusatz) : null, h("span", { "aria-hidden":"true" }, "↗"),
+    text, zusatz ? h("span", { class:"typ" }, "· " + zusatz) : null, icon("i-extern"),
     h("span", { class:"sr" }, " (öffnet in neuem Tab: " + hst + ")"));
 }
 function achsenProfil(p){
@@ -887,22 +887,28 @@ function detailInhalt(p){
   dlZeile(dl, "Kennung", p.id);
   return dl;
 }
-function karte(t){
+function icon(name, cls){
+  const ns = "http://www.w3.org/2000/svg";
+  const s = document.createElementNS(ns, "svg"); s.setAttribute("aria-hidden", "true"); if (cls) s.setAttribute("class", cls);
+  const u = document.createElementNS(ns, "use"); u.setAttribute("href", "#" + name); s.append(u);
+  return s;
+}
+// Aufgeklappte Karten bleiben beim Verschieben der Regler aufgeklappt.
+const OFFEN = { d1:new Set(), d2:new Set() };
+function aufklapper(klasse, text, id, ebene, fuellen){
+  const d = h("details", { class:klasse }, h("summary", null, icon("i-pfeil", "pfeil"), text));
+  let gefuellt = false;
+  const fuelle = () => { if (!gefuellt){ gefuellt = true; d.append(fuellen()); } };
+  if (OFFEN[ebene].has(id)){ d.open = true; fuelle(); }
+  d.addEventListener("toggle", () => {
+    if (d.open){ OFFEN[ebene].add(id); fuelle(); } else OFFEN[ebene].delete(id);
+  });
+  return d;
+}
+function detailsEbene1(t){
   const p = t.p;
   const meta = [p.fach ? h("span", { class:"fach" }, p.fach) : "Fach: keine Angabe", jgText(p), p.schulform, p.land ? (CONFIG.laender[p.land] || p.land) : ""]
     .filter(Boolean).flatMap((x, i) => i ? [" · ", x] : [x]);
-
-  let passung;
-  if (t.aktive === 0) passung = null;
-  else if (t.passung === null) passung = h("div", { class:"passung offen" }, h("div", { class:"wert" }, "nicht vergleichbar"),
-    h("div", { class:"vgl" }, "keine Angaben zu den aktiven Reglern"));
-  else {
-    const proz = Math.round(t.passung * 100);
-    passung = h("div", { class:"passung" },
-      h("div", { class:"wert", "aria-label":"Passung " + proz + " Prozent" }, proz, h("small", null, " % Passung")),
-      h("div", { class:"balken", "aria-hidden":"true" }, h("i", { style:"width:" + proz + "%" })),
-      h("div", { class:"vgl" }, "verglichen: " + t.n + " von " + t.aktive + (t.aktive === 1 ? " Regler" : " Reglern")));
-  }
 
   const marken = [];
   const ki = CONFIG.kiStufen.find(k => k.wert === p.ki);
@@ -917,28 +923,49 @@ function karte(t){
   if (fa.length) marken.push(h("span", { class:"marke fehlt" },
     fa.length <= 3 ? "Keine Angabe zu: " + fa.join(", ") : "Zu " + fa.length + " von " + N + " Achsen keine Angabe"));
 
+  let passung = null;
+  if (t.aktive > 0){
+    passung = h("p", { class:"passungszeile" }, t.passung === null
+      ? "Passung: nicht vergleichbar – keine Angaben zu den aktiven Reglern"
+      : ["Passung ", h("b", null, Math.round(t.passung * 100) + " %"), " · verglichen auf " + t.n + " von " + t.aktive + (t.aktive === 1 ? " Regler" : " Reglern")]);
+  }
+
   const st = norm(p.linkStatus);
   const warn = /nicht geoeffnet|eingeloggt|nicht verifiziert|nicht erreichbar/.test(st)
     ? h("p", { class:"linkwarn" }, "Hinweis zum Link: " + p.linkStatus) : null;
 
-  const details = h("details", { class:"mehr-details" }, h("summary", null, "Details anzeigen"));
-  details.addEventListener("toggle", () => { if (details.open && details.children.length === 1) details.append(detailInhalt(p)); });
-
-  return h("li", { class:"karte" },
-    h("div", { class:"k-kopf" },
-      h("div", null, h("p", { class:"k-meta" }, meta), h("h3", null, p.titel)),
-      passung),
-    p.text ? h("p", { class:"k-text" }, p.text) : null,
+  return h("div", { class:"d-inhalt" },
+    h("p", { class:"k-meta" }, meta),
     h("div", { class:"marken" }, marken),
+    passung,
     achsenProfil(p),
+    h("div", { class:"legende", "aria-hidden":"true" },
+      h("span", null, h("i", { class:"pkt wert" }), "Stufe belegt"),
+      h("span", null, h("i", { class:"pkt wert gesch" }), "Stufe eingeschätzt"),
+      h("span", null, h("i", { class:"pkt ich", style:"margin:0 3px" }), "eigene Reglerstellung")),
     h("div", { class:"k-fuss" }, quelleKnopf(p), p.fundpfad ? h("span", { class:"fund" }, h("b", null, "Fundstelle: "), p.fundpfad) : null),
-    warn, details);
+    warn,
+    aufklapper("stufe2", "Alle Angaben", p.id, "d2", () => h("div", { class:"d-inhalt" }, detailInhalt(p))));
+}
+function karte(t){
+  const p = t.p;
+  let treffer = null;
+  if (t.aktive > 0){
+    treffer = t.passung === null
+      ? h("span", { class:"treffer offen", title:"Keine Angaben zu den aktiven Reglern" }, "nicht vergleichbar")
+      : h("span", { class:"treffer", title:"Passung zur Reglerstellung (verglichen auf " + t.n + " von " + t.aktive + " Reglern)" },
+          Math.round(t.passung * 100) + " %", h("span", { class:"sr" }, " Passung"));
+  }
+  return h("li", { class:"karte" },
+    h("div", { class:"k-kopf" }, h("h3", null, p.titel), treffer),
+    p.text ? h("p", { class:"k-text" }, p.text) : null,
+    aufklapper("stufe1", "Details", p.id, "d1", () => detailsEbene1(t)));
 }
 
 /* =====================================================================
    ANZEIGE
    ===================================================================== */
-let geplant = false, letzteFolge = "";
+let geplant = false;
 function geaendert(){
   state.sichtbar = CONFIG.proSeite;
   if (geplant) return;
@@ -950,12 +977,11 @@ function zeige(mitWechsel){
   const gesamt = DATEN.length, n = liste.length, aktive = state.aktiv.filter(Boolean).length;
   const zahlEl = $("#zahl");
   zahlEl.replaceChildren(n === gesamt ? n + (n === 1 ? " Beispiel" : " Beispiele") : n + " von " + gesamt + " Beispielen",
-    h("small", null, aktive ? "sortiert nach Nähe zur Reglerstellung" : "alle Regler stehen auf „egal“ – sortiert nach Qualität der Dokumentation"));
-  $("#erklaer").textContent = state.modus === "ranking"
-    ? "Ranking: Alle Beispiele bleiben sichtbar, die ähnlichsten stehen oben. Beispiele mit vielen fehlenden Angaben rutschen etwas nach unten."
-    : "Filter: Es erscheinen nur Beispiele, die auf jedem aktiven Regler höchstens um die Toleranz abweichen. Fehlende Angaben gelten als passend – solche Beispiele bleiben sichtbar.";
+    h("small", null, !aktive ? "alle Regler auf „egal“ – nach Qualität der Dokumentation sortiert"
+      : state.modus === "ranking" ? "nach Nähe zur Reglerstellung sortiert"
+      : "nur Abweichung bis zur Toleranz · fehlende Angaben gelten als passend"));
   const fa = anzahlFilter();
-  $("#filterInfo").textContent = fa ? fa + (fa === 1 ? " Filter aktiv" : " Filter aktiv") : "alle offen";
+  $("#filterInfo").textContent = fa ? fa + " aktiv" : "alle offen – für den Überblick am besten so lassen";
 
   const ol = $("#liste");
   const sicht = liste.slice(0, state.sichtbar);
@@ -972,9 +998,6 @@ function zeige(mitWechsel){
   } else {
     ol.replaceChildren(...sicht.map(karte));
   }
-  const folge = sicht.map(t => t.p.id).join("|");
-  if (mitWechsel && folge !== letzteFolge){ ol.classList.remove("wechsel"); void ol.offsetWidth; ol.classList.add("wechsel"); }
-  letzteFolge = folge;
 
   const rest = n - sicht.length, mehr = $("#mehr");
   mehr.hidden = rest <= 0;
@@ -1025,8 +1048,6 @@ async function ladeDaten(){
 }
 
 baueRegler(); alleReglerZeigen(); verdrahteFilter();
-if (window.matchMedia("(max-width: 699px)").matches){ $("#filterPanel").open = false; $("#reglerPanel").open = false; }
-else if (window.matchMedia("(max-width: 1023px)").matches){ $("#filterPanel").open = false; }
 ladeDaten();
 </script>
 </body>
