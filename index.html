@@ -104,10 +104,7 @@ select{appearance:none;-webkit-appearance:none;padding-right:34px;background-ima
 .btn:active,.chip-btn:active,.quelle:active,.segment button:active{transform:scale(.96)}
 
 /* KI-Block */
-.ki-block{margin-top:12px;padding:14px 18px 14px}
-.ki-kopf{display:flex;align-items:baseline;justify-content:space-between;gap:6px 12px;flex-wrap:wrap;margin-bottom:10px}
-.ki-kopf h2{font-size:1.05rem;color:var(--tinte)}
-.ki-hinweis{font-size:.8rem;color:var(--leise)}
+.ki-block{margin-top:12px}
 .ki-rollen{margin-top:12px;padding:12px 14px;border-radius:12px;background:var(--akzent-hell)}
 .ki-unter{font-size:.86rem;font-weight:700;color:var(--tinte);margin-bottom:8px}
 .ki-unter span{font-weight:500;color:var(--leise)}
@@ -122,9 +119,7 @@ select{appearance:none;-webkit-appearance:none;padding-right:34px;background-ima
 .rolle[aria-pressed=true] b::before{content:"✓";color:var(--akzent-text)}
 .rolle.offen-rolle{background:#fbfcfd}
 .ki-quelle{font-size:.76rem;color:var(--leise);margin-top:8px}
-.woran{margin-top:12px;font-size:.84rem;color:var(--text);border-top:1px solid var(--linie);padding-top:10px}
-.woran b{color:var(--tinte)}
-@media (max-width:560px){.ki-block{padding:12px 14px}}
+.woran{margin-top:12px;font-size:.76rem;font-style:italic;color:var(--leise);border-top:1px solid var(--linie);padding-top:8px}
 
 /* Spalten */
 .spalten{display:grid;grid-template-columns:1fr;gap:18px;margin-top:18px;align-items:start}
@@ -320,19 +315,18 @@ footer{max-width:1320px;margin:0 auto;padding:0 20px 40px;font-size:.84rem;color
     </div>
   </details>
 
-  <section class="panel ki-block" aria-labelledby="kiTitel">
-    <div class="ki-kopf">
-      <h2 id="kiTitel">Rolle der KI</h2>
-      <span class="ki-hinweis">Nichts gewählt = alle Beispiele</span>
-    </div>
+  <details class="panel ki-block" id="kiPanel">
+    <summary><svg class="pfeil" aria-hidden="true"><use href="#i-pfeil"/></svg><span id="kiTitel">Rolle der KI</span><span class="p-info" id="kiInfo"></span></summary>
+    <div class="panel-body">
     <div class="chips" id="fKi" role="group" aria-labelledby="kiTitel"></div>
     <div class="ki-rollen" id="kiRollen" hidden>
       <p class="ki-unter" id="lblRolle">Welche Rolle hat die KI? <span>(mehrere möglich, nichts gewählt = alle mit KI)</span></p>
       <div class="rollen" id="fRolle" role="group" aria-labelledby="lblRolle"></div>
       <p class="ki-quelle">Rollen nach Hauke Pölert: <a href="https://unterrichten.digital/aufgaben-remix-5x4-matrix-ki/" target="_blank" rel="noopener noreferrer">Aufgaben-Remix – 5×4-Matrix<span class="sr"> (öffnet in neuem Tab)</span></a> (unterrichten.digital, 2026)</p>
     </div>
-    <p class="woran"><b>Woran wird die Eigenleistung sichtbar?</b> Pölert unterscheidet Echtzeit-, Prozess-, Kontext- und verkörperte Evidenz. In den gesammelten Beispielen ist das bislang kaum ausgewiesen – beim Auswählen lohnt der Blick darauf. <a href="https://unterrichten.digital/aufgaben-remix-5x4-matrix-ki/" target="_blank" rel="noopener noreferrer">Zum Beitrag<span class="sr"> (öffnet in neuem Tab)</span></a></p>
-  </section>
+    <p class="woran">Woran wird die Eigenleistung sichtbar? Pölert unterscheidet Echtzeit-, Prozess-, Kontext- und verkörperte Evidenz. In den gesammelten Beispielen ist das bislang kaum ausgewiesen – beim Auswählen lohnt der Blick darauf. <a href="https://unterrichten.digital/aufgaben-remix-5x4-matrix-ki/" target="_blank" rel="noopener noreferrer">Zum Beitrag<span class="sr"> (öffnet in neuem Tab)</span></a></p>
+    </div>
+  </details>
 
   <div class="spalten">
     <section class="panel regler-panel" aria-labelledby="reglerTitel">
@@ -1119,6 +1113,11 @@ function zeige(mitWechsel){
         h("span", null, h("i", { style:"background:var(--" + v + ")" }), t))) : "");
   const fa = anzahlFilter();
   $("#filterInfo").textContent = fa ? fa + " aktiv" : "alle offen – für den Überblick am besten so lassen";
+  const kf = state.f;
+  $("#kiInfo").textContent = !kf.ki.size ? "alle – nichts gewählt"
+    : CONFIG.kiHaupt.filter(k => kf.ki.has(k.wert)).map(k => k.wert === "erlaubt" && kf.rolle.size
+        ? "KI erlaubt: " + CONFIG.kiRollen.filter(r => kf.rolle.has(r.wert)).map(r => r.name.replace(/^KI als /, "")).join(", ")
+        : k.name).join(" · ");
 
   const ol = $("#liste");
   const sicht = liste.slice(0, state.sichtbar);
