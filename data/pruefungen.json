@@ -36,7 +36,9 @@
     "lizenz": "nicht ausgewiesen / Quellenrechte vorbehalten",
     "link_status": "geprüft",
     "qualitaet": "3 – ausführlicher Ablauf und Bewertungsangaben",
-    "konfidenz": "hoch"
+    "konfidenz": "hoch",
+    "ki_setzung": [],
+    "ki_setzung_status": "nicht gesetzt"
   },
   {
     "id": "B2024-02",
@@ -75,7 +77,9 @@
     "lizenz": "nicht ausgewiesen / Quellenrechte vorbehalten",
     "link_status": "geprüft",
     "qualitaet": "3 – ausführlicher Ablauf und Bewertungsangaben",
-    "konfidenz": "hoch"
+    "konfidenz": "hoch",
+    "ki_setzung": [],
+    "ki_setzung_status": "nicht gesetzt"
   },
   {
     "id": "B2024-03",
@@ -114,7 +118,9 @@
     "lizenz": "nicht ausgewiesen / Quellenrechte vorbehalten",
     "link_status": "geprüft",
     "qualitaet": "3 – ausführlicher Ablauf und Bewertungsangaben",
-    "konfidenz": "hoch"
+    "konfidenz": "hoch",
+    "ki_setzung": [],
+    "ki_setzung_status": "nicht gesetzt"
   },
   {
     "id": "B2024-04",
@@ -153,7 +159,12 @@
     "lizenz": "nicht ausgewiesen / Quellenrechte vorbehalten",
     "link_status": "geprüft",
     "qualitaet": "3 – ausführlicher Ablauf und Bewertungsangaben",
-    "konfidenz": "hoch"
+    "konfidenz": "hoch",
+    "ki_setzung": [
+      "K02",
+      "K04"
+    ],
+    "ki_setzung_status": "eingeschätzt"
   },
   {
     "id": "B2024-05",
@@ -192,7 +203,9 @@
     "lizenz": "nicht ausgewiesen / Quellenrechte vorbehalten",
     "link_status": "geprüft",
     "qualitaet": "3 – ausführlicher Ablauf und Bewertungsangaben",
-    "konfidenz": "hoch"
+    "konfidenz": "hoch",
+    "ki_setzung": [],
+    "ki_setzung_status": "nicht gesetzt"
   },
   {
     "id": "B2024-06",
@@ -231,7 +244,9 @@
     "lizenz": "nicht ausgewiesen / Quellenrechte vorbehalten",
     "link_status": "geprüft",
     "qualitaet": "3 – ausführlicher Ablauf und Bewertungsangaben",
-    "konfidenz": "hoch"
+    "konfidenz": "hoch",
+    "ki_setzung": [],
+    "ki_setzung_status": "nicht gesetzt"
   },
   {
     "id": "B2024-07",
@@ -270,7 +285,9 @@
     "lizenz": "nicht ausgewiesen / Quellenrechte vorbehalten",
     "link_status": "geprüft",
     "qualitaet": "3 – ausführlicher Ablauf und Bewertungsangaben",
-    "konfidenz": "hoch"
+    "konfidenz": "hoch",
+    "ki_setzung": [],
+    "ki_setzung_status": "nicht gesetzt"
   },
   {
     "id": "B2024-08",
@@ -309,7 +326,9 @@
     "lizenz": "nicht ausgewiesen / Quellenrechte vorbehalten",
     "link_status": "geprüft",
     "qualitaet": "3 – ausführlicher Ablauf und Bewertungsangaben",
-    "konfidenz": "hoch"
+    "konfidenz": "hoch",
+    "ki_setzung": [],
+    "ki_setzung_status": "nicht gesetzt"
   },
   {
     "id": "KMS-01",
@@ -348,7 +367,11 @@
     "lizenz": "nicht ausgewiesen / Quellenrechte vorbehalten",
     "link_status": "geprüft",
     "qualitaet": "3 – ausführlicher Ablauf und Bewertungsangaben",
-    "konfidenz": "hoch"
+    "konfidenz": "hoch",
+    "ki_setzung": [
+      "offen"
+    ],
+    "ki_setzung_status": "explizit"
   },
   {
     "id": "KMS-02",
@@ -387,7 +410,11 @@
     "lizenz": "nicht ausgewiesen / Quellenrechte vorbehalten",
     "link_status": "geprüft",
     "qualitaet": "3 – ausführlicher Ablauf und Bewertungsangaben",
-    "konfidenz": "mittel"
+    "konfidenz": "mittel",
+    "ki_setzung": [
+      "K04"
+    ],
+    "ki_setzung_status": "explizit"
   },
   {
     "id": "KMS-03",
@@ -426,7 +453,9 @@
     "lizenz": "nicht ausgewiesen / Quellenrechte vorbehalten",
     "link_status": "geprüft",
     "qualitaet": "3 – ausführlicher Ablauf und Bewertungsangaben",
-    "konfidenz": "hoch"
+    "konfidenz": "hoch",
+    "ki_setzung": [],
+    "ki_setzung_status": "nicht gesetzt"
   },
   {
     "id": "KMS-04",
@@ -465,7 +494,9 @@
     "lizenz": "nicht ausgewiesen / Quellenrechte vorbehalten",
     "link_status": "geprüft",
     "qualitaet": "3 – ausführlicher Ablauf und Bewertungsangaben",
-    "konfidenz": "hoch"
+    "konfidenz": "hoch",
+    "ki_setzung": [],
+    "ki_setzung_status": "nicht gesetzt"
   },
   {
     "id": "KMS-05",
@@ -504,7 +535,9 @@
     "lizenz": "nicht ausgewiesen / Quellenrechte vorbehalten",
     "link_status": "geprüft",
     "qualitaet": "3 – ausführlicher Ablauf und Bewertungsangaben",
-    "konfidenz": "hoch"
+    "konfidenz": "hoch",
+    "ki_setzung": [],
+    "ki_setzung_status": "nicht gesetzt"
   },
   {
     "id": "KMS-06",
@@ -543,7 +576,9 @@
     "lizenz": "nicht ausgewiesen / Quellenrechte vorbehalten",
     "link_status": "geprüft",
     "qualitaet": "3 – ausführlicher Ablauf und Bewertungsangaben",
-    "konfidenz": "hoch"
+    "konfidenz": "hoch",
+    "ki_setzung": [],
+    "ki_setzung_status": "nicht gesetzt"
   },
   {
     "id": "KMS-07",
@@ -582,7 +617,9 @@
     "lizenz": "nicht ausgewiesen / Quellenrechte vorbehalten",
     "link_status": "geprüft",
     "qualitaet": "3 – ausführlicher Ablauf und Bewertungsangaben",
-    "konfidenz": "hoch"
+    "konfidenz": "hoch",
+    "ki_setzung": [],
+    "ki_setzung_status": "nicht gesetzt"
   },
   {
     "id": "KMS-08",
@@ -621,7 +658,9 @@
     "lizenz": "nicht ausgewiesen / Quellenrechte vorbehalten",
     "link_status": "geprüft",
     "qualitaet": "3 – ausführlicher Ablauf und Bewertungsangaben",
-    "konfidenz": "hoch"
+    "konfidenz": "hoch",
+    "ki_setzung": [],
+    "ki_setzung_status": "nicht gesetzt"
   },
   {
     "id": "KMS-09",
@@ -660,7 +699,9 @@
     "lizenz": "nicht ausgewiesen / Quellenrechte vorbehalten",
     "link_status": "geprüft",
     "qualitaet": "3 – ausführlicher Ablauf und Bewertungsangaben",
-    "konfidenz": "hoch"
+    "konfidenz": "hoch",
+    "ki_setzung": [],
+    "ki_setzung_status": "nicht gesetzt"
   },
   {
     "id": "ZUM-01",
@@ -699,7 +740,9 @@
     "lizenz": "PDF-Folienhinweis uneinheitlich: Text CC BY-SA 4.0, verlinkte Lizenz CC BY 4.0",
     "link_status": "geprüft",
     "qualitaet": "2 – konkrete Leistungssituation, keine vollständige Prüfungsrubrik",
-    "konfidenz": "mittel"
+    "konfidenz": "mittel",
+    "ki_setzung": [],
+    "ki_setzung_status": "nicht gesetzt"
   },
   {
     "id": "ZUM-02",
@@ -738,7 +781,9 @@
     "lizenz": "nicht eindeutig ausgewiesen",
     "link_status": "geprüft",
     "qualitaet": "3 – nachvollziehbare Phasen und Prüfungsaufgabe",
-    "konfidenz": "hoch"
+    "konfidenz": "hoch",
+    "ki_setzung": [],
+    "ki_setzung_status": "nicht gesetzt"
   },
   {
     "id": "ZUM-03",
@@ -777,7 +822,9 @@
     "lizenz": "nicht eindeutig ausgewiesen",
     "link_status": "geprüft",
     "qualitaet": "3 – Klausur und EWH verlinkt",
-    "konfidenz": "hoch"
+    "konfidenz": "hoch",
+    "ki_setzung": [],
+    "ki_setzung_status": "nicht gesetzt"
   },
   {
     "id": "ZUM-04",
@@ -816,7 +863,9 @@
     "lizenz": "nicht eindeutig ausgewiesen",
     "link_status": "geprüft",
     "qualitaet": "3 – dreiwöchiger Ablauf mit Material und Reflexion",
-    "konfidenz": "hoch"
+    "konfidenz": "hoch",
+    "ki_setzung": [],
+    "ki_setzung_status": "nicht gesetzt"
   },
   {
     "id": "PK-001",
@@ -855,7 +904,9 @@
     "lizenz": "nicht ausdrücklich angegeben",
     "link_status": "geprüft",
     "qualitaet": "3 – ausgearbeitet mit Aufgaben-/Bewertungsmaterial",
-    "konfidenz": "hoch"
+    "konfidenz": "hoch",
+    "ki_setzung": [],
+    "ki_setzung_status": "nicht gesetzt"
   },
   {
     "id": "PK-002",
@@ -894,7 +945,9 @@
     "lizenz": "nicht ausdrücklich angegeben",
     "link_status": "geprüft",
     "qualitaet": "2 – konkreter Praxisbericht; teilweise Materiallücken",
-    "konfidenz": "mittel"
+    "konfidenz": "mittel",
+    "ki_setzung": [],
+    "ki_setzung_status": "nicht gesetzt"
   },
   {
     "id": "PK-003",
@@ -933,7 +986,11 @@
     "lizenz": "nicht ausdrücklich angegeben",
     "link_status": "geprüft",
     "qualitaet": "3 – ausgearbeitet mit Aufgaben-/Bewertungsmaterial",
-    "konfidenz": "hoch"
+    "konfidenz": "hoch",
+    "ki_setzung": [
+      "K02"
+    ],
+    "ki_setzung_status": "eingeschätzt"
   },
   {
     "id": "PK-004",
@@ -972,7 +1029,9 @@
     "lizenz": "nicht ausdrücklich angegeben",
     "link_status": "geprüft",
     "qualitaet": "2 – konkreter Praxisbericht; teilweise Materiallücken",
-    "konfidenz": "mittel"
+    "konfidenz": "mittel",
+    "ki_setzung": [],
+    "ki_setzung_status": "nicht gesetzt"
   },
   {
     "id": "PK-005",
@@ -1011,7 +1070,9 @@
     "lizenz": "nicht ausdrücklich angegeben",
     "link_status": "geprüft",
     "qualitaet": "2 – konkreter Praxisbericht; teilweise Materiallücken",
-    "konfidenz": "mittel"
+    "konfidenz": "mittel",
+    "ki_setzung": [],
+    "ki_setzung_status": "nicht gesetzt"
   },
   {
     "id": "PK-006",
@@ -1050,7 +1111,9 @@
     "lizenz": "nicht ausdrücklich angegeben",
     "link_status": "geprüft",
     "qualitaet": "3 – ausgearbeitet mit Aufgaben-/Bewertungsmaterial",
-    "konfidenz": "hoch"
+    "konfidenz": "hoch",
+    "ki_setzung": [],
+    "ki_setzung_status": "nicht gesetzt"
   },
   {
     "id": "PK-007",
@@ -1089,7 +1152,9 @@
     "lizenz": "nicht ausdrücklich angegeben",
     "link_status": "geprüft",
     "qualitaet": "3 – ausgearbeitet mit Aufgaben-/Bewertungsmaterial",
-    "konfidenz": "hoch"
+    "konfidenz": "hoch",
+    "ki_setzung": [],
+    "ki_setzung_status": "nicht gesetzt"
   },
   {
     "id": "PK-008",
@@ -1128,7 +1193,9 @@
     "lizenz": "nicht ausdrücklich angegeben",
     "link_status": "geprüft",
     "qualitaet": "3 – ausgearbeitet mit Aufgaben-/Bewertungsmaterial",
-    "konfidenz": "hoch"
+    "konfidenz": "hoch",
+    "ki_setzung": [],
+    "ki_setzung_status": "nicht gesetzt"
   },
   {
     "id": "PK-009",
@@ -1167,7 +1234,9 @@
     "lizenz": "nicht ausdrücklich angegeben",
     "link_status": "geprüft",
     "qualitaet": "3 – ausgearbeitet mit Aufgaben-/Bewertungsmaterial",
-    "konfidenz": "hoch"
+    "konfidenz": "hoch",
+    "ki_setzung": [],
+    "ki_setzung_status": "nicht gesetzt"
   },
   {
     "id": "PK-010",
@@ -1206,7 +1275,9 @@
     "lizenz": "nicht ausdrücklich angegeben",
     "link_status": "geprüft",
     "qualitaet": "3 – ausgearbeitet mit Aufgaben-/Bewertungsmaterial",
-    "konfidenz": "hoch"
+    "konfidenz": "hoch",
+    "ki_setzung": [],
+    "ki_setzung_status": "nicht gesetzt"
   },
   {
     "id": "PK-011",
@@ -1245,7 +1316,9 @@
     "lizenz": "nicht ausdrücklich angegeben",
     "link_status": "geprüft",
     "qualitaet": "3 – ausgearbeitet mit Aufgaben-/Bewertungsmaterial",
-    "konfidenz": "hoch"
+    "konfidenz": "hoch",
+    "ki_setzung": [],
+    "ki_setzung_status": "nicht gesetzt"
   },
   {
     "id": "PK-012",
@@ -1284,7 +1357,9 @@
     "lizenz": "nicht ausdrücklich angegeben",
     "link_status": "geprüft",
     "qualitaet": "3 – ausgearbeitet mit Aufgaben-/Bewertungsmaterial",
-    "konfidenz": "hoch"
+    "konfidenz": "hoch",
+    "ki_setzung": [],
+    "ki_setzung_status": "nicht gesetzt"
   },
   {
     "id": "PK-013",
@@ -1323,7 +1398,9 @@
     "lizenz": "nicht ausdrücklich angegeben",
     "link_status": "geprüft",
     "qualitaet": "3 – ausgearbeitet mit Aufgaben-/Bewertungsmaterial",
-    "konfidenz": "hoch"
+    "konfidenz": "hoch",
+    "ki_setzung": [],
+    "ki_setzung_status": "nicht gesetzt"
   },
   {
     "id": "PK-014",
@@ -1362,7 +1439,9 @@
     "lizenz": "nicht ausdrücklich angegeben",
     "link_status": "geprüft",
     "qualitaet": "3 – ausgearbeitet mit Aufgaben-/Bewertungsmaterial",
-    "konfidenz": "hoch"
+    "konfidenz": "hoch",
+    "ki_setzung": [],
+    "ki_setzung_status": "nicht gesetzt"
   },
   {
     "id": "PK-015",
@@ -1401,7 +1480,9 @@
     "lizenz": "nicht ausdrücklich angegeben",
     "link_status": "geprüft",
     "qualitaet": "2 – konkreter Praxisbericht; teilweise Materiallücken",
-    "konfidenz": "mittel"
+    "konfidenz": "mittel",
+    "ki_setzung": [],
+    "ki_setzung_status": "nicht gesetzt"
   },
   {
     "id": "PK-016",
@@ -1440,7 +1521,9 @@
     "lizenz": "nicht ausdrücklich angegeben",
     "link_status": "geprüft",
     "qualitaet": "2 – konkreter Praxisbericht; teilweise Materiallücken",
-    "konfidenz": "mittel"
+    "konfidenz": "mittel",
+    "ki_setzung": [],
+    "ki_setzung_status": "nicht gesetzt"
   },
   {
     "id": "PK-017",
@@ -1479,7 +1562,9 @@
     "lizenz": "nicht ausdrücklich angegeben",
     "link_status": "geprüft",
     "qualitaet": "2 – konkreter Praxisbericht; teilweise Materiallücken",
-    "konfidenz": "mittel"
+    "konfidenz": "mittel",
+    "ki_setzung": [],
+    "ki_setzung_status": "nicht gesetzt"
   },
   {
     "id": "PK-018",
@@ -1518,7 +1603,9 @@
     "lizenz": "nicht ausdrücklich angegeben",
     "link_status": "geprüft",
     "qualitaet": "2 – konkreter Praxisbericht; teilweise Materiallücken",
-    "konfidenz": "mittel"
+    "konfidenz": "mittel",
+    "ki_setzung": [],
+    "ki_setzung_status": "nicht gesetzt"
   },
   {
     "id": "PK-019",
@@ -1557,7 +1644,9 @@
     "lizenz": "nicht ausdrücklich angegeben",
     "link_status": "geprüft",
     "qualitaet": "3 – ausgearbeitet mit Aufgaben-/Bewertungsmaterial",
-    "konfidenz": "hoch"
+    "konfidenz": "hoch",
+    "ki_setzung": [],
+    "ki_setzung_status": "nicht gesetzt"
   },
   {
     "id": "PK-020",
@@ -1596,7 +1685,9 @@
     "lizenz": "nicht ausdrücklich angegeben",
     "link_status": "geprüft",
     "qualitaet": "3 – ausgearbeitet mit Aufgaben-/Bewertungsmaterial",
-    "konfidenz": "hoch"
+    "konfidenz": "hoch",
+    "ki_setzung": [],
+    "ki_setzung_status": "nicht gesetzt"
   },
   {
     "id": "PK-021",
@@ -1635,7 +1726,9 @@
     "lizenz": "nicht ausdrücklich angegeben",
     "link_status": "geprüft",
     "qualitaet": "3 – ausgearbeitet mit Aufgaben-/Bewertungsmaterial",
-    "konfidenz": "hoch"
+    "konfidenz": "hoch",
+    "ki_setzung": [],
+    "ki_setzung_status": "nicht gesetzt"
   },
   {
     "id": "PK-022",
@@ -1674,7 +1767,9 @@
     "lizenz": "nicht ausdrücklich angegeben",
     "link_status": "geprüft",
     "qualitaet": "3 – ausgearbeitet mit Aufgaben-/Bewertungsmaterial",
-    "konfidenz": "hoch"
+    "konfidenz": "hoch",
+    "ki_setzung": [],
+    "ki_setzung_status": "nicht gesetzt"
   },
   {
     "id": "PK-023",
@@ -1713,7 +1808,9 @@
     "lizenz": "nicht ausdrücklich angegeben",
     "link_status": "geprüft",
     "qualitaet": "2 – konkreter Praxisbericht; teilweise Materiallücken",
-    "konfidenz": "mittel"
+    "konfidenz": "mittel",
+    "ki_setzung": [],
+    "ki_setzung_status": "nicht gesetzt"
   },
   {
     "id": "PK-024",
@@ -1752,7 +1849,9 @@
     "lizenz": "nicht ausdrücklich angegeben",
     "link_status": "geprüft",
     "qualitaet": "2 – konkreter Praxisbericht; teilweise Materiallücken",
-    "konfidenz": "mittel"
+    "konfidenz": "mittel",
+    "ki_setzung": [],
+    "ki_setzung_status": "nicht gesetzt"
   },
   {
     "id": "PK-025",
@@ -1791,7 +1890,9 @@
     "lizenz": "nicht ausdrücklich angegeben",
     "link_status": "geprüft",
     "qualitaet": "3 – ausgearbeitet mit Aufgaben-/Bewertungsmaterial",
-    "konfidenz": "hoch"
+    "konfidenz": "hoch",
+    "ki_setzung": [],
+    "ki_setzung_status": "nicht gesetzt"
   },
   {
     "id": "PK-026",
@@ -1830,7 +1931,9 @@
     "lizenz": "nicht ausdrücklich angegeben",
     "link_status": "geprüft",
     "qualitaet": "2 – konkreter Praxisbericht; teilweise Materiallücken",
-    "konfidenz": "mittel"
+    "konfidenz": "mittel",
+    "ki_setzung": [],
+    "ki_setzung_status": "nicht gesetzt"
   },
   {
     "id": "PK-027",
@@ -1869,7 +1972,9 @@
     "lizenz": "nicht ausdrücklich angegeben",
     "link_status": "geprüft",
     "qualitaet": "3 – ausgearbeitet mit Aufgaben-/Bewertungsmaterial",
-    "konfidenz": "hoch"
+    "konfidenz": "hoch",
+    "ki_setzung": [],
+    "ki_setzung_status": "nicht gesetzt"
   },
   {
     "id": "PK-028",
@@ -1908,7 +2013,9 @@
     "lizenz": "nicht ausdrücklich angegeben",
     "link_status": "geprüft",
     "qualitaet": "3 – ausgearbeitet mit Aufgaben-/Bewertungsmaterial",
-    "konfidenz": "hoch"
+    "konfidenz": "hoch",
+    "ki_setzung": [],
+    "ki_setzung_status": "nicht gesetzt"
   },
   {
     "id": "PK-029",
@@ -1947,7 +2054,9 @@
     "lizenz": "nicht ausdrücklich angegeben",
     "link_status": "geprüft",
     "qualitaet": "3 – ausgearbeitet mit Aufgaben-/Bewertungsmaterial",
-    "konfidenz": "hoch"
+    "konfidenz": "hoch",
+    "ki_setzung": [],
+    "ki_setzung_status": "nicht gesetzt"
   },
   {
     "id": "PK-030",
@@ -1986,7 +2095,9 @@
     "lizenz": "nicht ausdrücklich angegeben",
     "link_status": "geprüft",
     "qualitaet": "3 – ausgearbeitet mit Aufgaben-/Bewertungsmaterial",
-    "konfidenz": "hoch"
+    "konfidenz": "hoch",
+    "ki_setzung": [],
+    "ki_setzung_status": "nicht gesetzt"
   },
   {
     "id": "PK-031",
@@ -2025,7 +2136,9 @@
     "lizenz": "nicht ausdrücklich angegeben",
     "link_status": "geprüft",
     "qualitaet": "3 – ausgearbeitet mit Aufgaben-/Bewertungsmaterial",
-    "konfidenz": "hoch"
+    "konfidenz": "hoch",
+    "ki_setzung": [],
+    "ki_setzung_status": "nicht gesetzt"
   },
   {
     "id": "PK-032",
@@ -2064,7 +2177,9 @@
     "lizenz": "nicht ausdrücklich angegeben",
     "link_status": "geprüft",
     "qualitaet": "2 – konkreter Praxisbericht; teilweise Materiallücken",
-    "konfidenz": "mittel"
+    "konfidenz": "mittel",
+    "ki_setzung": [],
+    "ki_setzung_status": "nicht gesetzt"
   },
   {
     "id": "PK-033",
@@ -2103,7 +2218,9 @@
     "lizenz": "nicht ausdrücklich angegeben",
     "link_status": "geprüft",
     "qualitaet": "3 – ausgearbeitet mit Aufgaben-/Bewertungsmaterial",
-    "konfidenz": "hoch"
+    "konfidenz": "hoch",
+    "ki_setzung": [],
+    "ki_setzung_status": "nicht gesetzt"
   },
   {
     "id": "IQES-2025-01",
@@ -2118,7 +2235,7 @@
     "sprache": "de",
     "pruefungsart": "Klassenarbeit/Klausur-Ersatz",
     "ki_rolle": 4,
-    "ki_rolle_begruendung": "Generative KI ausdrücklich als Hilfsmittel bzw. Prüfungsgegenstand integriert.",
+    "ki_rolle_begruendung": "Teil 1 hilfsmittelfrei ohne Internet; Teil 2 Überarbeitung mit einem DSGVO-konformen Chatbot und Prompt-Protokoll; Teil 3 Reflexion übernommener und verworfener KI-Vorschläge.",
     "aias_stufe": null,
     "digitale_medien": "erforderlich",
     "tools": "iPad; Fobizz-KI; Safari; OneNote; Teams",
@@ -2132,17 +2249,22 @@
     "achse8": 5,
     "achse9": 2,
     "achsen_belegstatus": "{\"achse1\": \"explizit\", \"achse2\": \"explizit\", \"achse3\": \"eingeschätzt\", \"achse4\": \"explizit\", \"achse5\": \"explizit\", \"achse6\": \"explizit\", \"achse7\": \"eingeschätzt\", \"achse8\": \"explizit\", \"achse9\": \"eingeschätzt\"}",
-    "material_vorhanden": "Originalklausur; 80-Punkte-Erwartungshorizont; Promptprotokolle; Reflexionsmuster",
-    "link_primaer": "https://padlet-uploads.storage.googleapis.com/44149107/a4a97af7ba12f7466b13d6ffb01e12e3/Unterrichtsbeispiele_Pruefungskultur_mit_KI.pdf",
-    "linktyp": "PDF",
-    "fundpfad": "IQES online → Prüfungskultur mit KI (Version 4/2025) → 23-seitige Nutzer-PDF, S. 12–23 Aufgaben und Erwartungshorizont",
-    "weitere_links": "https://www.iqesonline.net/mediathek/suche/?search=%22Deutsch%22",
+    "material_vorhanden": "Ablauf in drei Teilen; Bewertungsgrundsätze; Reflexion nach Kompetenzraster (Falck); Originalklausur und Erwartungshorizont nur über IQES",
+    "link_primaer": "https://www.fellofish.com/blog/ki-in-klassenarbeiten",
+    "linktyp": "Blog",
+    "fundpfad": "FelloFish-Blog: „KI in Klassenarbeiten – ein Praxisbericht“ (07.03.2025). Originalklausur und Erwartungshorizont sind in der IQES-Mediathek veröffentlicht (nur mit IQES-Zugang).",
+    "weitere_links": "https://www.timmwiegmann.de/blog-1/",
     "urheber": "Timm Wiegmann",
-    "datum": "2025-04",
-    "lizenz": "IQES: alle Rechte vorbehalten",
+    "datum": "2025-03",
+    "lizenz": "nicht angegeben",
     "link_status": "geprüft",
     "qualitaet": "3 – ausgearbeitet mit Aufgaben-/Bewertungsmaterial",
-    "konfidenz": "hoch"
+    "konfidenz": "hoch",
+    "ki_setzung": [
+      "K01",
+      "K02"
+    ],
+    "ki_setzung_status": "explizit"
   },
   {
     "id": "TC-01",
@@ -2181,7 +2303,9 @@
     "lizenz": "Im gesichteten Material nicht eindeutig ausgewiesen",
     "link_status": "TaskCards-Pinnwand im Browser geöffnet",
     "qualitaet": "3 – Aufgabenblatt und Punkteraster",
-    "konfidenz": "hoch"
+    "konfidenz": "hoch",
+    "ki_setzung": [],
+    "ki_setzung_status": "nicht gesetzt"
   },
   {
     "id": "TC-02",
@@ -2220,7 +2344,11 @@
     "lizenz": "Im gesichteten Material nicht eindeutig ausgewiesen",
     "link_status": "TaskCards-Pinnwand im Browser geöffnet",
     "qualitaet": "3 – Ablauf, Schülerbeispiel und Punkteraster",
-    "konfidenz": "hoch"
+    "konfidenz": "hoch",
+    "ki_setzung": [
+      "K04"
+    ],
+    "ki_setzung_status": "eingeschätzt"
   },
   {
     "id": "TC-03",
@@ -2259,7 +2387,9 @@
     "lizenz": "Im gesichteten Material nicht eindeutig ausgewiesen",
     "link_status": "TaskCards-Pinnwand im Browser geöffnet",
     "qualitaet": "2 – erprobter Ablauf ohne fachliche Aufgabenstellung",
-    "konfidenz": "mittel"
+    "konfidenz": "mittel",
+    "ki_setzung": [],
+    "ki_setzung_status": "nicht gesetzt"
   },
   {
     "id": "TC-05",
@@ -2298,7 +2428,9 @@
     "lizenz": "Im gesichteten Material nicht eindeutig ausgewiesen",
     "link_status": "TaskCards-Pinnwand im Browser geöffnet",
     "qualitaet": "3 – entworfene Prüfung mit vollständigen Materialien",
-    "konfidenz": "hoch"
+    "konfidenz": "hoch",
+    "ki_setzung": [],
+    "ki_setzung_status": "nicht gesetzt"
   },
   {
     "id": "TC-06",
@@ -2337,7 +2469,9 @@
     "lizenz": "Im gesichteten Material nicht eindeutig ausgewiesen",
     "link_status": "TaskCards-Pinnwand im Browser geöffnet",
     "qualitaet": "2 – konkreter Entwurf ohne separates Bewertungsraster",
-    "konfidenz": "mittel"
+    "konfidenz": "mittel",
+    "ki_setzung": [],
+    "ki_setzung_status": "nicht gesetzt"
   },
   {
     "id": "TC-07",
@@ -2376,7 +2510,9 @@
     "lizenz": "Im gesichteten Material nicht eindeutig ausgewiesen",
     "link_status": "TaskCards-Pinnwand im Browser geöffnet",
     "qualitaet": "3 – Aufgabenblatt und Punkteraster",
-    "konfidenz": "hoch"
+    "konfidenz": "hoch",
+    "ki_setzung": [],
+    "ki_setzung_status": "nicht gesetzt"
   },
   {
     "id": "TC-08",
@@ -2415,7 +2551,9 @@
     "lizenz": "Im gesichteten Material nicht eindeutig ausgewiesen",
     "link_status": "TaskCards-Pinnwand im Browser geöffnet",
     "qualitaet": "3 – mehrere konkret ausgearbeitete Wahlaufgaben",
-    "konfidenz": "hoch"
+    "konfidenz": "hoch",
+    "ki_setzung": [],
+    "ki_setzung_status": "nicht gesetzt"
   },
   {
     "id": "TC-09",
@@ -2454,7 +2592,9 @@
     "lizenz": "Im gesichteten Material nicht eindeutig ausgewiesen",
     "link_status": "TaskCards-Pinnwand im Browser geöffnet",
     "qualitaet": "3 – konkreter Auftrag mit Bewertungsraster",
-    "konfidenz": "mittel"
+    "konfidenz": "mittel",
+    "ki_setzung": [],
+    "ki_setzung_status": "nicht gesetzt"
   },
   {
     "id": "TC-10",
@@ -2493,7 +2633,9 @@
     "lizenz": "Im gesichteten Material nicht eindeutig ausgewiesen",
     "link_status": "TaskCards-Pinnwand im Browser geöffnet",
     "qualitaet": "3 – Aufgabenauftrag und Raster",
-    "konfidenz": "hoch"
+    "konfidenz": "hoch",
+    "ki_setzung": [],
+    "ki_setzung_status": "nicht gesetzt"
   },
   {
     "id": "TC-11",
@@ -2532,7 +2674,9 @@
     "lizenz": "Im gesichteten Material nicht eindeutig ausgewiesen",
     "link_status": "TaskCards-Pinnwand im Browser geöffnet",
     "qualitaet": "3 – konkreter Auftrag mit Raster und Checkliste",
-    "konfidenz": "hoch"
+    "konfidenz": "hoch",
+    "ki_setzung": [],
+    "ki_setzung_status": "nicht gesetzt"
   },
   {
     "id": "TC-12",
@@ -2571,7 +2715,9 @@
     "lizenz": "Im gesichteten Material nicht eindeutig ausgewiesen",
     "link_status": "TaskCards-Pinnwand im Browser geöffnet",
     "qualitaet": "3 – Originalaufgabe und Bewertung",
-    "konfidenz": "hoch"
+    "konfidenz": "hoch",
+    "ki_setzung": [],
+    "ki_setzung_status": "nicht gesetzt"
   },
   {
     "id": "TC-13",
@@ -2610,7 +2756,9 @@
     "lizenz": "Im gesichteten Material nicht eindeutig ausgewiesen",
     "link_status": "TaskCards-Pinnwand im Browser geöffnet",
     "qualitaet": "3 – konkreter Auftrag mit Kriterien",
-    "konfidenz": "hoch"
+    "konfidenz": "hoch",
+    "ki_setzung": [],
+    "ki_setzung_status": "nicht gesetzt"
   },
   {
     "id": "TC-14",
@@ -2649,7 +2797,11 @@
     "lizenz": "Im gesichteten Material nicht eindeutig ausgewiesen",
     "link_status": "TaskCards-Pinnwand im Browser geöffnet",
     "qualitaet": "3 – ausgestaltetes Prüfungsmodell mit Leitfaden und Bewertungsstruktur",
-    "konfidenz": "mittel"
+    "konfidenz": "mittel",
+    "ki_setzung": [
+      "offen"
+    ],
+    "ki_setzung_status": "explizit"
   },
   {
     "id": "TC-15",
@@ -2688,7 +2840,9 @@
     "lizenz": "Im gesichteten Material nicht eindeutig ausgewiesen",
     "link_status": "TaskCards-Pinnwand im Browser geöffnet",
     "qualitaet": "3 – dokumentierte Durchführung und Bewertungsmaterial",
-    "konfidenz": "hoch"
+    "konfidenz": "hoch",
+    "ki_setzung": [],
+    "ki_setzung_status": "nicht gesetzt"
   },
   {
     "id": "TC-16",
@@ -2727,7 +2881,9 @@
     "lizenz": "Im gesichteten Material nicht eindeutig ausgewiesen",
     "link_status": "TaskCards-Pinnwand im Browser geöffnet",
     "qualitaet": "2 – erprobtes Prüfungssetting mit konkretem Ablauf",
-    "konfidenz": "mittel"
+    "konfidenz": "mittel",
+    "ki_setzung": [],
+    "ki_setzung_status": "nicht gesetzt"
   },
   {
     "id": "ISB-11-47",
@@ -2766,7 +2922,9 @@
     "lizenz": "nicht ausgewiesen / Quellenrechte vorbehalten",
     "link_status": "geprüft",
     "qualitaet": "2 – ISB-Beispielseite mit verlinktem Praxismaterial",
-    "konfidenz": "mittel"
+    "konfidenz": "mittel",
+    "ki_setzung": [],
+    "ki_setzung_status": "nicht gesetzt"
   },
   {
     "id": "ISB-11-48",
@@ -2805,7 +2963,9 @@
     "lizenz": "nicht ausgewiesen / Quellenrechte vorbehalten",
     "link_status": "geprüft",
     "qualitaet": "3 – Durchführungshinweise im PDF und verlinktes Praxismaterial",
-    "konfidenz": "hoch"
+    "konfidenz": "hoch",
+    "ki_setzung": [],
+    "ki_setzung_status": "nicht gesetzt"
   },
   {
     "id": "ISB-11-49",
@@ -2844,7 +3004,9 @@
     "lizenz": "nicht ausgewiesen / Quellenrechte vorbehalten",
     "link_status": "geprüft",
     "qualitaet": "2 – ISB-Beispielseite mit verlinktem Praxismaterial",
-    "konfidenz": "mittel"
+    "konfidenz": "mittel",
+    "ki_setzung": [],
+    "ki_setzung_status": "nicht gesetzt"
   },
   {
     "id": "ISB-11-50",
@@ -2883,7 +3045,9 @@
     "lizenz": "nicht ausgewiesen / Quellenrechte vorbehalten",
     "link_status": "geprüft",
     "qualitaet": "3 – Durchführungshinweise im PDF und verlinktes Praxismaterial",
-    "konfidenz": "hoch"
+    "konfidenz": "hoch",
+    "ki_setzung": [],
+    "ki_setzung_status": "nicht gesetzt"
   },
   {
     "id": "ISB-11-51",
@@ -2922,7 +3086,9 @@
     "lizenz": "nicht ausgewiesen / Quellenrechte vorbehalten",
     "link_status": "geprüft",
     "qualitaet": "3 – Durchführungshinweise im PDF und verlinktes Praxismaterial",
-    "konfidenz": "hoch"
+    "konfidenz": "hoch",
+    "ki_setzung": [],
+    "ki_setzung_status": "nicht gesetzt"
   },
   {
     "id": "ISB-11-52",
@@ -2961,7 +3127,9 @@
     "lizenz": "nicht ausgewiesen / Quellenrechte vorbehalten",
     "link_status": "geprüft",
     "qualitaet": "2 – ISB-Beispielseite mit verlinktem Praxismaterial",
-    "konfidenz": "mittel"
+    "konfidenz": "mittel",
+    "ki_setzung": [],
+    "ki_setzung_status": "nicht gesetzt"
   },
   {
     "id": "ISB-12-47",
@@ -3000,7 +3168,11 @@
     "lizenz": "nicht ausgewiesen / Quellenrechte vorbehalten",
     "link_status": "geprüft",
     "qualitaet": "3 – Durchführungshinweise im PDF und verlinktes Praxismaterial",
-    "konfidenz": "hoch"
+    "konfidenz": "hoch",
+    "ki_setzung": [
+      "K01"
+    ],
+    "ki_setzung_status": "explizit"
   },
   {
     "id": "ISB-12-48",
@@ -3039,7 +3211,9 @@
     "lizenz": "nicht ausgewiesen / Quellenrechte vorbehalten",
     "link_status": "geprüft",
     "qualitaet": "3 – Durchführungshinweise im PDF und verlinktes Praxismaterial",
-    "konfidenz": "hoch"
+    "konfidenz": "hoch",
+    "ki_setzung": [],
+    "ki_setzung_status": "nicht gesetzt"
   },
   {
     "id": "ISB-12-50",
@@ -3078,7 +3252,9 @@
     "lizenz": "nicht ausgewiesen / Quellenrechte vorbehalten",
     "link_status": "geprüft",
     "qualitaet": "3 – Durchführungshinweise im PDF und verlinktes Praxismaterial",
-    "konfidenz": "hoch"
+    "konfidenz": "hoch",
+    "ki_setzung": [],
+    "ki_setzung_status": "nicht gesetzt"
   },
   {
     "id": "ISB-12-51",
@@ -3117,7 +3293,9 @@
     "lizenz": "nicht ausgewiesen / Quellenrechte vorbehalten",
     "link_status": "geprüft",
     "qualitaet": "3 – Durchführungshinweise im PDF und verlinktes Praxismaterial",
-    "konfidenz": "hoch"
+    "konfidenz": "hoch",
+    "ki_setzung": [],
+    "ki_setzung_status": "nicht gesetzt"
   },
   {
     "id": "ISB-12-52",
@@ -3156,7 +3334,9 @@
     "lizenz": "nicht ausgewiesen / Quellenrechte vorbehalten",
     "link_status": "geprüft",
     "qualitaet": "3 – Durchführungshinweise im PDF und verlinktes Praxismaterial",
-    "konfidenz": "hoch"
+    "konfidenz": "hoch",
+    "ki_setzung": [],
+    "ki_setzung_status": "nicht gesetzt"
   },
   {
     "id": "ISB-12-53",
@@ -3195,7 +3375,11 @@
     "lizenz": "nicht ausgewiesen / Quellenrechte vorbehalten",
     "link_status": "geprüft",
     "qualitaet": "3 – Durchführungshinweise im PDF und verlinktes Praxismaterial",
-    "konfidenz": "hoch"
+    "konfidenz": "hoch",
+    "ki_setzung": [
+      "K01"
+    ],
+    "ki_setzung_status": "explizit"
   },
   {
     "id": "ISB-12-54",
@@ -3234,7 +3418,11 @@
     "lizenz": "nicht ausgewiesen / Quellenrechte vorbehalten",
     "link_status": "geprüft",
     "qualitaet": "3 – Durchführungshinweise im PDF und verlinktes Praxismaterial",
-    "konfidenz": "hoch"
+    "konfidenz": "hoch",
+    "ki_setzung": [
+      "K01"
+    ],
+    "ki_setzung_status": "explizit"
   },
   {
     "id": "ISB-12-55",
@@ -3273,7 +3461,9 @@
     "lizenz": "nicht ausgewiesen / Quellenrechte vorbehalten",
     "link_status": "geprüft",
     "qualitaet": "2 – ISB-Beispielseite mit verlinktem Praxismaterial",
-    "konfidenz": "mittel"
+    "konfidenz": "mittel",
+    "ki_setzung": [],
+    "ki_setzung_status": "nicht gesetzt"
   },
   {
     "id": "ISB-12-56",
@@ -3312,7 +3502,9 @@
     "lizenz": "nicht ausgewiesen / Quellenrechte vorbehalten",
     "link_status": "geprüft",
     "qualitaet": "2 – ISB-Beispielseite mit verlinktem Praxismaterial",
-    "konfidenz": "mittel"
+    "konfidenz": "mittel",
+    "ki_setzung": [],
+    "ki_setzung_status": "nicht gesetzt"
   },
   {
     "id": "ISB-12-57",
@@ -3351,7 +3543,11 @@
     "lizenz": "nicht ausgewiesen / Quellenrechte vorbehalten",
     "link_status": "geprüft",
     "qualitaet": "2 – ISB-Beispielseite mit verlinktem Praxismaterial",
-    "konfidenz": "mittel"
+    "konfidenz": "mittel",
+    "ki_setzung": [
+      "offen"
+    ],
+    "ki_setzung_status": "explizit"
   },
   {
     "id": "ISB-12-58",
@@ -3390,7 +3586,9 @@
     "lizenz": "nicht ausgewiesen / Quellenrechte vorbehalten",
     "link_status": "geprüft",
     "qualitaet": "3 – Durchführungshinweise im PDF und verlinktes Praxismaterial",
-    "konfidenz": "hoch"
+    "konfidenz": "hoch",
+    "ki_setzung": [],
+    "ki_setzung_status": "nicht gesetzt"
   },
   {
     "id": "ISB-12-59",
@@ -3429,7 +3627,9 @@
     "lizenz": "nicht ausgewiesen / Quellenrechte vorbehalten",
     "link_status": "geprüft",
     "qualitaet": "2 – ISB-Beispielseite mit verlinktem Praxismaterial",
-    "konfidenz": "mittel"
+    "konfidenz": "mittel",
+    "ki_setzung": [],
+    "ki_setzung_status": "nicht gesetzt"
   },
   {
     "id": "ISB-13-47",
@@ -3468,7 +3668,9 @@
     "lizenz": "nicht ausgewiesen / Quellenrechte vorbehalten",
     "link_status": "geprüft",
     "qualitaet": "3 – Durchführungshinweise im PDF und verlinktes Praxismaterial",
-    "konfidenz": "hoch"
+    "konfidenz": "hoch",
+    "ki_setzung": [],
+    "ki_setzung_status": "nicht gesetzt"
   },
   {
     "id": "ISB-13-48",
@@ -3507,7 +3709,9 @@
     "lizenz": "nicht ausgewiesen / Quellenrechte vorbehalten",
     "link_status": "geprüft",
     "qualitaet": "3 – Durchführungshinweise im PDF und verlinktes Praxismaterial",
-    "konfidenz": "hoch"
+    "konfidenz": "hoch",
+    "ki_setzung": [],
+    "ki_setzung_status": "nicht gesetzt"
   },
   {
     "id": "ISB-13-49",
@@ -3546,7 +3750,9 @@
     "lizenz": "nicht ausgewiesen / Quellenrechte vorbehalten",
     "link_status": "geprüft",
     "qualitaet": "3 – Durchführungshinweise im PDF und verlinktes Praxismaterial",
-    "konfidenz": "hoch"
+    "konfidenz": "hoch",
+    "ki_setzung": [],
+    "ki_setzung_status": "nicht gesetzt"
   },
   {
     "id": "ISB-13-50",
@@ -3585,7 +3791,9 @@
     "lizenz": "nicht ausgewiesen / Quellenrechte vorbehalten",
     "link_status": "geprüft",
     "qualitaet": "2 – ISB-Beispielseite mit verlinktem Praxismaterial",
-    "konfidenz": "mittel"
+    "konfidenz": "mittel",
+    "ki_setzung": [],
+    "ki_setzung_status": "nicht gesetzt"
   },
   {
     "id": "ISB-13-51",
@@ -3624,7 +3832,9 @@
     "lizenz": "nicht ausgewiesen / Quellenrechte vorbehalten",
     "link_status": "geprüft",
     "qualitaet": "3 – Durchführungshinweise im PDF und verlinktes Praxismaterial",
-    "konfidenz": "hoch"
+    "konfidenz": "hoch",
+    "ki_setzung": [],
+    "ki_setzung_status": "nicht gesetzt"
   },
   {
     "id": "ISB-13-52",
@@ -3663,7 +3873,9 @@
     "lizenz": "nicht ausgewiesen / Quellenrechte vorbehalten",
     "link_status": "geprüft",
     "qualitaet": "2 – ISB-Beispielseite mit verlinktem Praxismaterial",
-    "konfidenz": "mittel"
+    "konfidenz": "mittel",
+    "ki_setzung": [],
+    "ki_setzung_status": "nicht gesetzt"
   },
   {
     "id": "ISB-14-48",
@@ -3702,7 +3914,9 @@
     "lizenz": "nicht ausgewiesen / Quellenrechte vorbehalten",
     "link_status": "geprüft",
     "qualitaet": "2 – ISB-Beispielseite mit verlinktem Praxismaterial",
-    "konfidenz": "mittel"
+    "konfidenz": "mittel",
+    "ki_setzung": [],
+    "ki_setzung_status": "nicht gesetzt"
   },
   {
     "id": "ISB-14-49",
@@ -3741,7 +3955,9 @@
     "lizenz": "nicht ausgewiesen / Quellenrechte vorbehalten",
     "link_status": "geprüft",
     "qualitaet": "2 – ISB-Beispielseite mit verlinktem Praxismaterial",
-    "konfidenz": "mittel"
+    "konfidenz": "mittel",
+    "ki_setzung": [],
+    "ki_setzung_status": "nicht gesetzt"
   },
   {
     "id": "NZQA-91948",
@@ -3780,7 +3996,9 @@
     "lizenz": "nicht ausgewiesen / Quellenrechte vorbehalten",
     "link_status": "Offizielle NZQA-Quelle im Suchindex geprüft",
     "qualitaet": "2 – Leistungsstandard und annotierte Schülerexemplare",
-    "konfidenz": "mittel"
+    "konfidenz": "mittel",
+    "ki_setzung": [],
+    "ki_setzung_status": "nicht gesetzt"
   },
   {
     "id": "NZQA-91949",
@@ -3819,7 +4037,9 @@
     "lizenz": "nicht ausgewiesen / Quellenrechte vorbehalten",
     "link_status": "Offizielle NZQA-Quelle im Suchindex geprüft",
     "qualitaet": "2 – Leistungsstandard und annotierte Schülerexemplare",
-    "konfidenz": "mittel"
+    "konfidenz": "mittel",
+    "ki_setzung": [],
+    "ki_setzung_status": "nicht gesetzt"
   },
   {
     "id": "NZQA-91270",
@@ -3858,7 +4078,9 @@
     "lizenz": "nicht ausgewiesen / Quellenrechte vorbehalten",
     "link_status": "Offizielle NZQA-Quelle im Suchindex geprüft",
     "qualitaet": "2 – Leistungsstandard und annotierte Schülerexemplare",
-    "konfidenz": "mittel"
+    "konfidenz": "mittel",
+    "ki_setzung": [],
+    "ki_setzung_status": "nicht gesetzt"
   },
   {
     "id": "NZQA-91271",
@@ -3897,7 +4119,9 @@
     "lizenz": "nicht ausgewiesen / Quellenrechte vorbehalten",
     "link_status": "Offizielle NZQA-Quelle im Suchindex geprüft",
     "qualitaet": "2 – Leistungsstandard und annotierte Schülerexemplare",
-    "konfidenz": "mittel"
+    "konfidenz": "mittel",
+    "ki_setzung": [],
+    "ki_setzung_status": "nicht gesetzt"
   },
   {
     "id": "NZQA-91272",
@@ -3936,7 +4160,9 @@
     "lizenz": "nicht ausgewiesen / Quellenrechte vorbehalten",
     "link_status": "Offizielle NZQA-Quelle im Suchindex geprüft",
     "qualitaet": "2 – Leistungsstandard und annotierte Schülerexemplare",
-    "konfidenz": "mittel"
+    "konfidenz": "mittel",
+    "ki_setzung": [],
+    "ki_setzung_status": "nicht gesetzt"
   },
   {
     "id": "NZQA-91273",
@@ -3975,7 +4201,9 @@
     "lizenz": "nicht ausgewiesen / Quellenrechte vorbehalten",
     "link_status": "Offizielle NZQA-Quelle im Suchindex geprüft",
     "qualitaet": "2 – Leistungsstandard und annotierte Schülerexemplare",
-    "konfidenz": "mittel"
+    "konfidenz": "mittel",
+    "ki_setzung": [],
+    "ki_setzung_status": "nicht gesetzt"
   },
   {
     "id": "NZQA-91274",
@@ -4014,7 +4242,9 @@
     "lizenz": "nicht ausgewiesen / Quellenrechte vorbehalten",
     "link_status": "Offizielle NZQA-Quelle im Suchindex geprüft",
     "qualitaet": "2 – Leistungsstandard und annotierte Schülerexemplare",
-    "konfidenz": "mittel"
+    "konfidenz": "mittel",
+    "ki_setzung": [],
+    "ki_setzung_status": "nicht gesetzt"
   },
   {
     "id": "NZQA-91278",
@@ -4053,7 +4283,9 @@
     "lizenz": "nicht ausgewiesen / Quellenrechte vorbehalten",
     "link_status": "Offizielle NZQA-Quelle im Suchindex geprüft",
     "qualitaet": "2 – Leistungsstandard und annotierte Schülerexemplare",
-    "konfidenz": "mittel"
+    "konfidenz": "mittel",
+    "ki_setzung": [],
+    "ki_setzung_status": "nicht gesetzt"
   },
   {
     "id": "NZQA-91418",
@@ -4092,7 +4324,9 @@
     "lizenz": "nicht ausgewiesen / Quellenrechte vorbehalten",
     "link_status": "Offizielle NZQA-Quelle im Suchindex geprüft",
     "qualitaet": "2 – Leistungsstandard und annotierte Schülerexemplare",
-    "konfidenz": "mittel"
+    "konfidenz": "mittel",
+    "ki_setzung": [],
+    "ki_setzung_status": "nicht gesetzt"
   },
   {
     "id": "NZQA-91422",
@@ -4131,7 +4365,9 @@
     "lizenz": "nicht ausgewiesen / Quellenrechte vorbehalten",
     "link_status": "Offizielle NZQA-Quelle im Suchindex geprüft",
     "qualitaet": "2 – Leistungsstandard und annotierte Schülerexemplare",
-    "konfidenz": "mittel"
+    "konfidenz": "mittel",
+    "ki_setzung": [],
+    "ki_setzung_status": "nicht gesetzt"
   },
   {
     "id": "NZQA-91849",
@@ -4170,7 +4406,9 @@
     "lizenz": "nicht ausgewiesen / Quellenrechte vorbehalten",
     "link_status": "Offizielle NZQA-Quelle im Suchindex geprüft",
     "qualitaet": "2 – Leistungsstandard und annotierte Schülerexemplare",
-    "konfidenz": "mittel"
+    "konfidenz": "mittel",
+    "ki_setzung": [],
+    "ki_setzung_status": "nicht gesetzt"
   },
   {
     "id": "NZQA-91944",
@@ -4209,7 +4447,9 @@
     "lizenz": "nicht ausgewiesen / Quellenrechte vorbehalten",
     "link_status": "Offizielle NZQA-Quelle im Suchindex geprüft",
     "qualitaet": "2 – Leistungsstandard und annotierte Schülerexemplare",
-    "konfidenz": "mittel"
+    "konfidenz": "mittel",
+    "ki_setzung": [],
+    "ki_setzung_status": "nicht gesetzt"
   },
   {
     "id": "NZQA-91945",
@@ -4248,7 +4488,9 @@
     "lizenz": "nicht ausgewiesen / Quellenrechte vorbehalten",
     "link_status": "Offizielle NZQA-Quelle im Suchindex geprüft",
     "qualitaet": "2 – Leistungsstandard und annotierte Schülerexemplare",
-    "konfidenz": "mittel"
+    "konfidenz": "mittel",
+    "ki_setzung": [],
+    "ki_setzung_status": "nicht gesetzt"
   },
   {
     "id": "NZQA-91256",
@@ -4287,7 +4529,9 @@
     "lizenz": "nicht ausgewiesen / Quellenrechte vorbehalten",
     "link_status": "Offizielle NZQA-Quelle im Suchindex geprüft",
     "qualitaet": "2 – Leistungsstandard und annotierte Schülerexemplare",
-    "konfidenz": "mittel"
+    "konfidenz": "mittel",
+    "ki_setzung": [],
+    "ki_setzung_status": "nicht gesetzt"
   },
   {
     "id": "NZQA-91257",
@@ -4326,7 +4570,9 @@
     "lizenz": "nicht ausgewiesen / Quellenrechte vorbehalten",
     "link_status": "Offizielle NZQA-Quelle im Suchindex geprüft",
     "qualitaet": "2 – Leistungsstandard und annotierte Schülerexemplare",
-    "konfidenz": "mittel"
+    "konfidenz": "mittel",
+    "ki_setzung": [],
+    "ki_setzung_status": "nicht gesetzt"
   },
   {
     "id": "NZQA-91258",
@@ -4365,7 +4611,9 @@
     "lizenz": "nicht ausgewiesen / Quellenrechte vorbehalten",
     "link_status": "Offizielle NZQA-Quelle im Suchindex geprüft",
     "qualitaet": "2 – Leistungsstandard und annotierte Schülerexemplare",
-    "konfidenz": "mittel"
+    "konfidenz": "mittel",
+    "ki_setzung": [],
+    "ki_setzung_status": "nicht gesetzt"
   },
   {
     "id": "NZQA-91259",
@@ -4404,7 +4652,9 @@
     "lizenz": "nicht ausgewiesen / Quellenrechte vorbehalten",
     "link_status": "Offizielle NZQA-Quelle im Suchindex geprüft",
     "qualitaet": "2 – Leistungsstandard und annotierte Schülerexemplare",
-    "konfidenz": "mittel"
+    "konfidenz": "mittel",
+    "ki_setzung": [],
+    "ki_setzung_status": "nicht gesetzt"
   },
   {
     "id": "NZQA-91263",
@@ -4443,7 +4693,9 @@
     "lizenz": "nicht ausgewiesen / Quellenrechte vorbehalten",
     "link_status": "Offizielle NZQA-Quelle im Suchindex geprüft",
     "qualitaet": "2 – Leistungsstandard und annotierte Schülerexemplare",
-    "konfidenz": "mittel"
+    "konfidenz": "mittel",
+    "ki_setzung": [],
+    "ki_setzung_status": "nicht gesetzt"
   },
   {
     "id": "NZQA-91265",
@@ -4482,7 +4734,9 @@
     "lizenz": "nicht ausgewiesen / Quellenrechte vorbehalten",
     "link_status": "Offizielle NZQA-Quelle im Suchindex geprüft",
     "qualitaet": "2 – Leistungsstandard und annotierte Schülerexemplare",
-    "konfidenz": "mittel"
+    "konfidenz": "mittel",
+    "ki_setzung": [],
+    "ki_setzung_status": "nicht gesetzt"
   },
   {
     "id": "NZQA-91266",
@@ -4521,7 +4775,9 @@
     "lizenz": "nicht ausgewiesen / Quellenrechte vorbehalten",
     "link_status": "Offizielle NZQA-Quelle im Suchindex geprüft",
     "qualitaet": "2 – Leistungsstandard und annotierte Schülerexemplare",
-    "konfidenz": "mittel"
+    "konfidenz": "mittel",
+    "ki_setzung": [],
+    "ki_setzung_status": "nicht gesetzt"
   },
   {
     "id": "NZQA-91580",
@@ -4560,7 +4816,9 @@
     "lizenz": "nicht ausgewiesen / Quellenrechte vorbehalten",
     "link_status": "Offizielle NZQA-Quelle im Suchindex geprüft",
     "qualitaet": "2 – Leistungsstandard und annotierte Schülerexemplare",
-    "konfidenz": "mittel"
+    "konfidenz": "mittel",
+    "ki_setzung": [],
+    "ki_setzung_status": "nicht gesetzt"
   },
   {
     "id": "NZQA-91582",
@@ -4599,7 +4857,9 @@
     "lizenz": "nicht ausgewiesen / Quellenrechte vorbehalten",
     "link_status": "Offizielle NZQA-Quelle im Suchindex geprüft",
     "qualitaet": "2 – Leistungsstandard und annotierte Schülerexemplare",
-    "konfidenz": "mittel"
+    "konfidenz": "mittel",
+    "ki_setzung": [],
+    "ki_setzung_status": "nicht gesetzt"
   },
   {
     "id": "NZQA-91153",
@@ -4638,7 +4898,9 @@
     "lizenz": "nicht ausgewiesen / Quellenrechte vorbehalten",
     "link_status": "Offizielle NZQA-Quelle im Suchindex geprüft",
     "qualitaet": "2 – Leistungsstandard und annotierte Schülerexemplare",
-    "konfidenz": "mittel"
+    "konfidenz": "mittel",
+    "ki_setzung": [],
+    "ki_setzung_status": "nicht gesetzt"
   },
   {
     "id": "NZQA-91154",
@@ -4677,7 +4939,9 @@
     "lizenz": "nicht ausgewiesen / Quellenrechte vorbehalten",
     "link_status": "Offizielle NZQA-Quelle im Suchindex geprüft",
     "qualitaet": "2 – Leistungsstandard und annotierte Schülerexemplare",
-    "konfidenz": "mittel"
+    "konfidenz": "mittel",
+    "ki_setzung": [],
+    "ki_setzung_status": "nicht gesetzt"
   },
   {
     "id": "NZQA-91155",
@@ -4716,7 +4980,9 @@
     "lizenz": "nicht ausgewiesen / Quellenrechte vorbehalten",
     "link_status": "Offizielle NZQA-Quelle im Suchindex geprüft",
     "qualitaet": "2 – Leistungsstandard und annotierte Schülerexemplare",
-    "konfidenz": "mittel"
+    "konfidenz": "mittel",
+    "ki_setzung": [],
+    "ki_setzung_status": "nicht gesetzt"
   },
   {
     "id": "NZQA-91158",
@@ -4755,7 +5021,9 @@
     "lizenz": "nicht ausgewiesen / Quellenrechte vorbehalten",
     "link_status": "Offizielle NZQA-Quelle im Suchindex geprüft",
     "qualitaet": "2 – Leistungsstandard und annotierte Schülerexemplare",
-    "konfidenz": "mittel"
+    "konfidenz": "mittel",
+    "ki_setzung": [],
+    "ki_setzung_status": "nicht gesetzt"
   },
   {
     "id": "NZQA-91160",
@@ -4794,7 +5062,9 @@
     "lizenz": "nicht ausgewiesen / Quellenrechte vorbehalten",
     "link_status": "Offizielle NZQA-Quelle im Suchindex geprüft",
     "qualitaet": "2 – Leistungsstandard und annotierte Schülerexemplare",
-    "konfidenz": "mittel"
+    "konfidenz": "mittel",
+    "ki_setzung": [],
+    "ki_setzung_status": "nicht gesetzt"
   },
   {
     "id": "NZQA-91601",
@@ -4833,7 +5103,9 @@
     "lizenz": "nicht ausgewiesen / Quellenrechte vorbehalten",
     "link_status": "Offizielle NZQA-Quelle im Suchindex geprüft",
     "qualitaet": "2 – Leistungsstandard und annotierte Schülerexemplare",
-    "konfidenz": "mittel"
+    "konfidenz": "mittel",
+    "ki_setzung": [],
+    "ki_setzung_status": "nicht gesetzt"
   },
   {
     "id": "NZQA-91602",
@@ -4872,7 +5144,9 @@
     "lizenz": "nicht ausgewiesen / Quellenrechte vorbehalten",
     "link_status": "Offizielle NZQA-Quelle im Suchindex geprüft",
     "qualitaet": "2 – Leistungsstandard und annotierte Schülerexemplare",
-    "konfidenz": "mittel"
+    "konfidenz": "mittel",
+    "ki_setzung": [],
+    "ki_setzung_status": "nicht gesetzt"
   },
   {
     "id": "NZQA-92016",
@@ -4911,7 +5185,9 @@
     "lizenz": "nicht ausgewiesen / Quellenrechte vorbehalten",
     "link_status": "Offizielle NZQA-Quelle im Suchindex geprüft",
     "qualitaet": "2 – Leistungsstandard und annotierte Schülerexemplare",
-    "konfidenz": "mittel"
+    "konfidenz": "mittel",
+    "ki_setzung": [],
+    "ki_setzung_status": "nicht gesetzt"
   },
   {
     "id": "NZQA-92017",
@@ -4950,7 +5226,9 @@
     "lizenz": "nicht ausgewiesen / Quellenrechte vorbehalten",
     "link_status": "Offizielle NZQA-Quelle im Suchindex geprüft",
     "qualitaet": "2 – Leistungsstandard und annotierte Schülerexemplare",
-    "konfidenz": "mittel"
+    "konfidenz": "mittel",
+    "ki_setzung": [],
+    "ki_setzung_status": "nicht gesetzt"
   },
   {
     "id": "NZQA-91327",
@@ -4989,7 +5267,9 @@
     "lizenz": "nicht ausgewiesen / Quellenrechte vorbehalten",
     "link_status": "Offizielle NZQA-Quelle im Suchindex geprüft",
     "qualitaet": "2 – Leistungsstandard und annotierte Schülerexemplare",
-    "konfidenz": "mittel"
+    "konfidenz": "mittel",
+    "ki_setzung": [],
+    "ki_setzung_status": "nicht gesetzt"
   },
   {
     "id": "NZQA-91328",
@@ -5028,7 +5308,9 @@
     "lizenz": "nicht ausgewiesen / Quellenrechte vorbehalten",
     "link_status": "Offizielle NZQA-Quelle im Suchindex geprüft",
     "qualitaet": "2 – Leistungsstandard und annotierte Schülerexemplare",
-    "konfidenz": "mittel"
+    "konfidenz": "mittel",
+    "ki_setzung": [],
+    "ki_setzung_status": "nicht gesetzt"
   },
   {
     "id": "NZQA-91331",
@@ -5067,7 +5349,9 @@
     "lizenz": "nicht ausgewiesen / Quellenrechte vorbehalten",
     "link_status": "Offizielle NZQA-Quelle im Suchindex geprüft",
     "qualitaet": "2 – Leistungsstandard und annotierte Schülerexemplare",
-    "konfidenz": "mittel"
+    "konfidenz": "mittel",
+    "ki_setzung": [],
+    "ki_setzung_status": "nicht gesetzt"
   },
   {
     "id": "NZQA-91335",
@@ -5106,7 +5390,9 @@
     "lizenz": "nicht ausgewiesen / Quellenrechte vorbehalten",
     "link_status": "Offizielle NZQA-Quelle im Suchindex geprüft",
     "qualitaet": "2 – Leistungsstandard und annotierte Schülerexemplare",
-    "konfidenz": "mittel"
+    "konfidenz": "mittel",
+    "ki_setzung": [],
+    "ki_setzung_status": "nicht gesetzt"
   },
   {
     "id": "NZQA-91789",
@@ -5145,7 +5431,9 @@
     "lizenz": "nicht ausgewiesen / Quellenrechte vorbehalten",
     "link_status": "Offizielle NZQA-Quelle im Suchindex geprüft",
     "qualitaet": "2 – Leistungsstandard und annotierte Schülerexemplare",
-    "konfidenz": "mittel"
+    "konfidenz": "mittel",
+    "ki_setzung": [],
+    "ki_setzung_status": "nicht gesetzt"
   },
   {
     "id": "NZQA-91916",
@@ -5184,7 +5472,9 @@
     "lizenz": "nicht ausgewiesen / Quellenrechte vorbehalten",
     "link_status": "Offizielle NZQA-Quelle im Suchindex geprüft",
     "qualitaet": "2 – Leistungsstandard und annotierte Schülerexemplare",
-    "konfidenz": "mittel"
+    "konfidenz": "mittel",
+    "ki_setzung": [],
+    "ki_setzung_status": "nicht gesetzt"
   },
   {
     "id": "NZQA-91917",
@@ -5223,7 +5513,9 @@
     "lizenz": "nicht ausgewiesen / Quellenrechte vorbehalten",
     "link_status": "Offizielle NZQA-Quelle im Suchindex geprüft",
     "qualitaet": "2 – Leistungsstandard und annotierte Schülerexemplare",
-    "konfidenz": "mittel"
+    "konfidenz": "mittel",
+    "ki_setzung": [],
+    "ki_setzung_status": "nicht gesetzt"
   },
   {
     "id": "NZQA-91724",
@@ -5262,7 +5554,9 @@
     "lizenz": "nicht ausgewiesen / Quellenrechte vorbehalten",
     "link_status": "Offizielle NZQA-Quelle im Suchindex geprüft",
     "qualitaet": "2 – Leistungsstandard und annotierte Schülerexemplare",
-    "konfidenz": "mittel"
+    "konfidenz": "mittel",
+    "ki_setzung": [],
+    "ki_setzung_status": "nicht gesetzt"
   },
   {
     "id": "NZQA-90821",
@@ -5301,7 +5595,9 @@
     "lizenz": "nicht ausgewiesen / Quellenrechte vorbehalten",
     "link_status": "Offizielle NZQA-Quelle im Suchindex geprüft",
     "qualitaet": "2 – Leistungsstandard und annotierte Schülerexemplare",
-    "konfidenz": "mittel"
+    "konfidenz": "mittel",
+    "ki_setzung": [],
+    "ki_setzung_status": "nicht gesetzt"
   },
   {
     "id": "NZQA-90822",
@@ -5340,7 +5636,9 @@
     "lizenz": "nicht ausgewiesen / Quellenrechte vorbehalten",
     "link_status": "Offizielle NZQA-Quelle im Suchindex geprüft",
     "qualitaet": "2 – Leistungsstandard und annotierte Schülerexemplare",
-    "konfidenz": "mittel"
+    "konfidenz": "mittel",
+    "ki_setzung": [],
+    "ki_setzung_status": "nicht gesetzt"
   },
   {
     "id": "NZQA-90823",
@@ -5379,7 +5677,9 @@
     "lizenz": "nicht ausgewiesen / Quellenrechte vorbehalten",
     "link_status": "Offizielle NZQA-Quelle im Suchindex geprüft",
     "qualitaet": "2 – Leistungsstandard und annotierte Schülerexemplare",
-    "konfidenz": "mittel"
+    "konfidenz": "mittel",
+    "ki_setzung": [],
+    "ki_setzung_status": "nicht gesetzt"
   },
   {
     "id": "NZQA-91725",
@@ -5418,7 +5718,9 @@
     "lizenz": "nicht ausgewiesen / Quellenrechte vorbehalten",
     "link_status": "Offizielle NZQA-Quelle im Suchindex geprüft",
     "qualitaet": "2 – Leistungsstandard und annotierte Schülerexemplare",
-    "konfidenz": "mittel"
+    "konfidenz": "mittel",
+    "ki_setzung": [],
+    "ki_setzung_status": "nicht gesetzt"
   },
   {
     "id": "NZQA-90825",
@@ -5457,7 +5759,9 @@
     "lizenz": "nicht ausgewiesen / Quellenrechte vorbehalten",
     "link_status": "Offizielle NZQA-Quelle im Suchindex geprüft",
     "qualitaet": "2 – Leistungsstandard und annotierte Schülerexemplare",
-    "konfidenz": "mittel"
+    "konfidenz": "mittel",
+    "ki_setzung": [],
+    "ki_setzung_status": "nicht gesetzt"
   },
   {
     "id": "NZQA-90826",
@@ -5496,7 +5800,9 @@
     "lizenz": "nicht ausgewiesen / Quellenrechte vorbehalten",
     "link_status": "Offizielle NZQA-Quelle im Suchindex geprüft",
     "qualitaet": "2 – Leistungsstandard und annotierte Schülerexemplare",
-    "konfidenz": "mittel"
+    "konfidenz": "mittel",
+    "ki_setzung": [],
+    "ki_setzung_status": "nicht gesetzt"
   },
   {
     "id": "NZQA-90827",
@@ -5535,7 +5841,9 @@
     "lizenz": "nicht ausgewiesen / Quellenrechte vorbehalten",
     "link_status": "Offizielle NZQA-Quelle im Suchindex geprüft",
     "qualitaet": "2 – Leistungsstandard und annotierte Schülerexemplare",
-    "konfidenz": "mittel"
+    "konfidenz": "mittel",
+    "ki_setzung": [],
+    "ki_setzung_status": "nicht gesetzt"
   },
   {
     "id": "NZQA-92004",
@@ -5574,7 +5882,9 @@
     "lizenz": "nicht ausgewiesen / Quellenrechte vorbehalten",
     "link_status": "Offizielle NZQA-Quelle im Suchindex geprüft",
     "qualitaet": "2 – Leistungsstandard und annotierte Schülerexemplare",
-    "konfidenz": "mittel"
+    "konfidenz": "mittel",
+    "ki_setzung": [],
+    "ki_setzung_status": "nicht gesetzt"
   },
   {
     "id": "NZQA-92005",
@@ -5613,7 +5923,9 @@
     "lizenz": "nicht ausgewiesen / Quellenrechte vorbehalten",
     "link_status": "Offizielle NZQA-Quelle im Suchindex geprüft",
     "qualitaet": "2 – Leistungsstandard und annotierte Schülerexemplare",
-    "konfidenz": "mittel"
+    "konfidenz": "mittel",
+    "ki_setzung": [],
+    "ki_setzung_status": "nicht gesetzt"
   },
   {
     "id": "NZQA-91893",
@@ -5652,7 +5964,9 @@
     "lizenz": "nicht ausgewiesen / Quellenrechte vorbehalten",
     "link_status": "Offizielle NZQA-Quelle im Suchindex geprüft",
     "qualitaet": "2 – Leistungsstandard und annotierte Schülerexemplare",
-    "konfidenz": "mittel"
+    "konfidenz": "mittel",
+    "ki_setzung": [],
+    "ki_setzung_status": "nicht gesetzt"
   },
   {
     "id": "NZQA-91896",
@@ -5691,7 +6005,9 @@
     "lizenz": "nicht ausgewiesen / Quellenrechte vorbehalten",
     "link_status": "Offizielle NZQA-Quelle im Suchindex geprüft",
     "qualitaet": "2 – Leistungsstandard und annotierte Schülerexemplare",
-    "konfidenz": "mittel"
+    "konfidenz": "mittel",
+    "ki_setzung": [],
+    "ki_setzung_status": "nicht gesetzt"
   },
   {
     "id": "NZQA-91897",
@@ -5730,7 +6046,9 @@
     "lizenz": "nicht ausgewiesen / Quellenrechte vorbehalten",
     "link_status": "Offizielle NZQA-Quelle im Suchindex geprüft",
     "qualitaet": "2 – Leistungsstandard und annotierte Schülerexemplare",
-    "konfidenz": "mittel"
+    "konfidenz": "mittel",
+    "ki_setzung": [],
+    "ki_setzung_status": "nicht gesetzt"
   },
   {
     "id": "NZQA-91903",
@@ -5769,7 +6087,9 @@
     "lizenz": "nicht ausgewiesen / Quellenrechte vorbehalten",
     "link_status": "Offizielle NZQA-Quelle im Suchindex geprüft",
     "qualitaet": "2 – Leistungsstandard und annotierte Schülerexemplare",
-    "konfidenz": "mittel"
+    "konfidenz": "mittel",
+    "ki_setzung": [],
+    "ki_setzung_status": "nicht gesetzt"
   },
   {
     "id": "NZQA-91904",
@@ -5808,7 +6128,9 @@
     "lizenz": "nicht ausgewiesen / Quellenrechte vorbehalten",
     "link_status": "Offizielle NZQA-Quelle im Suchindex geprüft",
     "qualitaet": "2 – Leistungsstandard und annotierte Schülerexemplare",
-    "konfidenz": "mittel"
+    "konfidenz": "mittel",
+    "ki_setzung": [],
+    "ki_setzung_status": "nicht gesetzt"
   },
   {
     "id": "NZQA-91907",
@@ -5847,7 +6169,9 @@
     "lizenz": "nicht ausgewiesen / Quellenrechte vorbehalten",
     "link_status": "Offizielle NZQA-Quelle im Suchindex geprüft",
     "qualitaet": "2 – Leistungsstandard und annotierte Schülerexemplare",
-    "konfidenz": "mittel"
+    "konfidenz": "mittel",
+    "ki_setzung": [],
+    "ki_setzung_status": "nicht gesetzt"
   },
   {
     "id": "NZQA-91924",
@@ -5886,7 +6210,9 @@
     "lizenz": "nicht ausgewiesen / Quellenrechte vorbehalten",
     "link_status": "Offizielle NZQA-Quelle im Suchindex geprüft",
     "qualitaet": "2 – Leistungsstandard und annotierte Schülerexemplare",
-    "konfidenz": "mittel"
+    "konfidenz": "mittel",
+    "ki_setzung": [],
+    "ki_setzung_status": "nicht gesetzt"
   },
   {
     "id": "NZQA-91926",
@@ -5925,7 +6251,9 @@
     "lizenz": "nicht ausgewiesen / Quellenrechte vorbehalten",
     "link_status": "Offizielle NZQA-Quelle im Suchindex geprüft",
     "qualitaet": "2 – Leistungsstandard und annotierte Schülerexemplare",
-    "konfidenz": "mittel"
+    "konfidenz": "mittel",
+    "ki_setzung": [],
+    "ki_setzung_status": "nicht gesetzt"
   },
   {
     "id": "NZQA-91101",
@@ -5964,7 +6292,9 @@
     "lizenz": "nicht ausgewiesen / Quellenrechte vorbehalten",
     "link_status": "Offizielle NZQA-Quelle im Suchindex geprüft",
     "qualitaet": "2 – Leistungsstandard und annotierte Schülerexemplare",
-    "konfidenz": "mittel"
+    "konfidenz": "mittel",
+    "ki_setzung": [],
+    "ki_setzung_status": "nicht gesetzt"
   },
   {
     "id": "NZQA-91102",
@@ -6003,7 +6333,9 @@
     "lizenz": "nicht ausgewiesen / Quellenrechte vorbehalten",
     "link_status": "Offizielle NZQA-Quelle im Suchindex geprüft",
     "qualitaet": "2 – Leistungsstandard und annotierte Schülerexemplare",
-    "konfidenz": "mittel"
+    "konfidenz": "mittel",
+    "ki_setzung": [],
+    "ki_setzung_status": "nicht gesetzt"
   },
   {
     "id": "NZQA-91103",
@@ -6042,7 +6374,9 @@
     "lizenz": "nicht ausgewiesen / Quellenrechte vorbehalten",
     "link_status": "Offizielle NZQA-Quelle im Suchindex geprüft",
     "qualitaet": "2 – Leistungsstandard und annotierte Schülerexemplare",
-    "konfidenz": "mittel"
+    "konfidenz": "mittel",
+    "ki_setzung": [],
+    "ki_setzung_status": "nicht gesetzt"
   },
   {
     "id": "NZQA-91104",
@@ -6081,7 +6415,9 @@
     "lizenz": "nicht ausgewiesen / Quellenrechte vorbehalten",
     "link_status": "Offizielle NZQA-Quelle im Suchindex geprüft",
     "qualitaet": "2 – Leistungsstandard und annotierte Schülerexemplare",
-    "konfidenz": "mittel"
+    "konfidenz": "mittel",
+    "ki_setzung": [],
+    "ki_setzung_status": "nicht gesetzt"
   },
   {
     "id": "NZQA-91476",
@@ -6120,7 +6456,9 @@
     "lizenz": "nicht ausgewiesen / Quellenrechte vorbehalten",
     "link_status": "Offizielle NZQA-Quelle im Suchindex geprüft",
     "qualitaet": "2 – Leistungsstandard und annotierte Schülerexemplare",
-    "konfidenz": "mittel"
+    "konfidenz": "mittel",
+    "ki_setzung": [],
+    "ki_setzung_status": "nicht gesetzt"
   },
   {
     "id": "NZQA-91478",
@@ -6159,7 +6497,9 @@
     "lizenz": "nicht ausgewiesen / Quellenrechte vorbehalten",
     "link_status": "Offizielle NZQA-Quelle im Suchindex geprüft",
     "qualitaet": "2 – Leistungsstandard und annotierte Schülerexemplare",
-    "konfidenz": "mittel"
+    "konfidenz": "mittel",
+    "ki_setzung": [],
+    "ki_setzung_status": "nicht gesetzt"
   },
   {
     "id": "NZQA-91912",
@@ -6198,7 +6538,9 @@
     "lizenz": "nicht ausgewiesen / Quellenrechte vorbehalten",
     "link_status": "Offizielle NZQA-Quelle im Suchindex geprüft",
     "qualitaet": "2 – Leistungsstandard und annotierte Schülerexemplare",
-    "konfidenz": "mittel"
+    "konfidenz": "mittel",
+    "ki_setzung": [],
+    "ki_setzung_status": "nicht gesetzt"
   },
   {
     "id": "NZQA-91913",
@@ -6237,7 +6579,9 @@
     "lizenz": "nicht ausgewiesen / Quellenrechte vorbehalten",
     "link_status": "Offizielle NZQA-Quelle im Suchindex geprüft",
     "qualitaet": "2 – Leistungsstandard und annotierte Schülerexemplare",
-    "konfidenz": "mittel"
+    "konfidenz": "mittel",
+    "ki_setzung": [],
+    "ki_setzung_status": "nicht gesetzt"
   },
   {
     "id": "NZQA-91325",
@@ -6276,7 +6620,9 @@
     "lizenz": "nicht ausgewiesen / Quellenrechte vorbehalten",
     "link_status": "Offizielle NZQA-Quelle im Suchindex geprüft",
     "qualitaet": "2 – Leistungsstandard und annotierte Schülerexemplare",
-    "konfidenz": "mittel"
+    "konfidenz": "mittel",
+    "ki_setzung": [],
+    "ki_setzung_status": "nicht gesetzt"
   },
   {
     "id": "NZQA-91460",
@@ -6315,7 +6661,9 @@
     "lizenz": "nicht ausgewiesen / Quellenrechte vorbehalten",
     "link_status": "Offizielle NZQA-Quelle im Suchindex geprüft",
     "qualitaet": "2 – Leistungsstandard und annotierte Schülerexemplare",
-    "konfidenz": "mittel"
+    "konfidenz": "mittel",
+    "ki_setzung": [],
+    "ki_setzung_status": "nicht gesetzt"
   },
   {
     "id": "REK-15-14",
@@ -6354,7 +6702,9 @@
     "lizenz": "nicht ausgewiesen / Quellenrechte vorbehalten",
     "link_status": "geprüft",
     "qualitaet": "2 – Praxisbericht mit Projektphasen",
-    "konfidenz": "mittel"
+    "konfidenz": "mittel",
+    "ki_setzung": [],
+    "ki_setzung_status": "nicht gesetzt"
   },
   {
     "id": "REK-15-37",
@@ -6393,7 +6743,9 @@
     "lizenz": "nicht ausgewiesen / Quellenrechte vorbehalten",
     "link_status": "geprüft",
     "qualitaet": "3 – Aufgaben, Materialien, Erwartungshorizont und Bewertungsbogen",
-    "konfidenz": "hoch"
+    "konfidenz": "hoch",
+    "ki_setzung": [],
+    "ki_setzung_status": "nicht gesetzt"
   },
   {
     "id": "REK-17-4",
@@ -6432,7 +6784,9 @@
     "lizenz": "nicht ausgewiesen / Quellenrechte vorbehalten",
     "link_status": "geprüft",
     "qualitaet": "3 – Praxisbericht mit Ablauf und Beurteilungsmatrix",
-    "konfidenz": "hoch"
+    "konfidenz": "hoch",
+    "ki_setzung": [],
+    "ki_setzung_status": "nicht gesetzt"
   },
   {
     "id": "REK-17-17",
@@ -6471,7 +6825,9 @@
     "lizenz": "nicht ausgewiesen / Quellenrechte vorbehalten",
     "link_status": "geprüft",
     "qualitaet": "2 – Aufträge und Kompetenzraster im Praxisbericht",
-    "konfidenz": "mittel"
+    "konfidenz": "mittel",
+    "ki_setzung": [],
+    "ki_setzung_status": "nicht gesetzt"
   },
   {
     "id": "REK-17-23",
@@ -6510,7 +6866,9 @@
     "lizenz": "nicht ausgewiesen / Quellenrechte vorbehalten",
     "link_status": "geprüft",
     "qualitaet": "3 – Reihenplanung und Originalaufgaben über die verlinkte Pinnwand",
-    "konfidenz": "hoch"
+    "konfidenz": "hoch",
+    "ki_setzung": [],
+    "ki_setzung_status": "nicht gesetzt"
   },
   {
     "id": "REK-18-32",
@@ -6549,7 +6907,9 @@
     "lizenz": "nicht ausgewiesen / Quellenrechte vorbehalten",
     "link_status": "geprüft",
     "qualitaet": "2 – Aufgabenstellung und vereinbarte Kriterien",
-    "konfidenz": "mittel"
+    "konfidenz": "mittel",
+    "ki_setzung": [],
+    "ki_setzung_status": "nicht gesetzt"
   },
   {
     "id": "REK-18-36",
@@ -6588,7 +6948,9 @@
     "lizenz": "nicht ausgewiesen / Quellenrechte vorbehalten",
     "link_status": "geprüft",
     "qualitaet": "2 – Praxisbericht mit Aufgabenanforderungen und Korrekturerfahrung",
-    "konfidenz": "mittel"
+    "konfidenz": "mittel",
+    "ki_setzung": [],
+    "ki_setzung_status": "nicht gesetzt"
   },
   {
     "id": "REK-EXT0-17",
@@ -6627,7 +6989,9 @@
     "lizenz": "nicht ausgewiesen / Quellenrechte vorbehalten",
     "link_status": "geprüft",
     "qualitaet": "2 – Ablauf, Reflexion und Formatspinne",
-    "konfidenz": "mittel"
+    "konfidenz": "mittel",
+    "ki_setzung": [],
+    "ki_setzung_status": "nicht gesetzt"
   },
   {
     "id": "REK-EXT1-6",
@@ -6666,7 +7030,9 @@
     "lizenz": "nicht ausgewiesen / Quellenrechte vorbehalten",
     "link_status": "geprüft",
     "qualitaet": "2 – Praxisbericht mit Bewertungsanteilen und Formatspinne",
-    "konfidenz": "mittel"
+    "konfidenz": "mittel",
+    "ki_setzung": [],
+    "ki_setzung_status": "nicht gesetzt"
   },
   {
     "id": "REK-PART2",
@@ -6705,7 +7071,11 @@
     "lizenz": "nicht ausgewiesen / Quellenrechte vorbehalten",
     "link_status": "geprüft",
     "qualitaet": "3 – Konzeptpapier und Bewertungsmaterial über den Praxisbeitrag",
-    "konfidenz": "hoch"
+    "konfidenz": "hoch",
+    "ki_setzung": [
+      "offen"
+    ],
+    "ki_setzung_status": "explizit"
   },
   {
     "id": "REK-SPORT",
@@ -6744,7 +7114,9 @@
     "lizenz": "nicht ausgewiesen / Quellenrechte vorbehalten",
     "link_status": "geprüft",
     "qualitaet": "2 – Amtliche Prüfungsaufgabe mit Bewertungskriterien",
-    "konfidenz": "mittel"
+    "konfidenz": "mittel",
+    "ki_setzung": [],
+    "ki_setzung_status": "nicht gesetzt"
   },
   {
     "id": "REK-MATHCASES",
@@ -6783,7 +7155,9 @@
     "lizenz": "nicht ausgewiesen / Quellenrechte vorbehalten",
     "link_status": "geprüft",
     "qualitaet": "2 – Erprobter Ablauf und zwei Bewertungsraster",
-    "konfidenz": "mittel"
+    "konfidenz": "mittel",
+    "ki_setzung": [],
+    "ki_setzung_status": "nicht gesetzt"
   },
   {
     "id": "REK-BOOKTOK",
@@ -6822,7 +7196,9 @@
     "lizenz": "nicht ausgewiesen / Quellenrechte vorbehalten",
     "link_status": "geprüft",
     "qualitaet": "2 – Praxismaterial mit Aufgaben, Arbeitsphasen und Punktebewertung",
-    "konfidenz": "mittel"
+    "konfidenz": "mittel",
+    "ki_setzung": [],
+    "ki_setzung_status": "nicht gesetzt"
   },
   {
     "id": "REK-EXT0-6-19",
@@ -6861,7 +7237,9 @@
     "lizenz": "nicht ausgewiesen / Quellenrechte vorbehalten",
     "link_status": "geprüft",
     "qualitaet": "2 – LuPe²-Praxisbericht und Formatspinne",
-    "konfidenz": "mittel"
+    "konfidenz": "mittel",
+    "ki_setzung": [],
+    "ki_setzung_status": "nicht gesetzt"
   },
   {
     "id": "REK-EXT0-6-23",
@@ -6900,7 +7278,9 @@
     "lizenz": "nicht ausgewiesen / Quellenrechte vorbehalten",
     "link_status": "geprüft",
     "qualitaet": "2 – Aufgabenmaterial, Checkliste und Bewertungsbogen",
-    "konfidenz": "mittel"
+    "konfidenz": "mittel",
+    "ki_setzung": [],
+    "ki_setzung_status": "nicht gesetzt"
   },
   {
     "id": "REK-EXT0-6-25",
@@ -6939,7 +7319,9 @@
     "lizenz": "nicht ausgewiesen / Quellenrechte vorbehalten",
     "link_status": "geprüft",
     "qualitaet": "2 – Praxisbericht mit Zeitaufteilung und zwei Varianten",
-    "konfidenz": "mittel"
+    "konfidenz": "mittel",
+    "ki_setzung": [],
+    "ki_setzung_status": "nicht gesetzt"
   },
   {
     "id": "REK-EXT0-6-30",
@@ -6978,7 +7360,9 @@
     "lizenz": "nicht ausgewiesen / Quellenrechte vorbehalten",
     "link_status": "geprüft",
     "qualitaet": "2 – LuPe²-Praxisbericht mit Prüfungsformat",
-    "konfidenz": "mittel"
+    "konfidenz": "mittel",
+    "ki_setzung": [],
+    "ki_setzung_status": "nicht gesetzt"
   },
   {
     "id": "REK-BENOTETE-PROJEKTARBEIT",
@@ -7017,7 +7401,9 @@
     "lizenz": "nicht ausgewiesen / Quellenrechte vorbehalten",
     "link_status": "geprüft",
     "qualitaet": "2 – Good-Practice-Beispiel mit verlinktem Überblick und Praxismaterial",
-    "konfidenz": "mittel"
+    "konfidenz": "mittel",
+    "ki_setzung": [],
+    "ki_setzung_status": "nicht gesetzt"
   },
   {
     "id": "REK-SPORT-TANZ",
@@ -7056,7 +7442,9 @@
     "lizenz": "nicht ausgewiesen / Quellenrechte vorbehalten",
     "link_status": "geprüft",
     "qualitaet": "2 – Amtliche Prüfungsanforderungen und Wertungstabellen",
-    "konfidenz": "mittel"
+    "konfidenz": "mittel",
+    "ki_setzung": [],
+    "ki_setzung_status": "nicht gesetzt"
   },
   {
     "id": "IB-VA-COMP",
@@ -7095,7 +7483,9 @@
     "lizenz": "nicht ausgewiesen / Quellenrechte vorbehalten",
     "link_status": "geprüft",
     "qualitaet": "2 – Offizielle Beschreibung der Prüfungsaufgabe",
-    "konfidenz": "mittel"
+    "konfidenz": "mittel",
+    "ki_setzung": [],
+    "ki_setzung_status": "nicht gesetzt"
   },
   {
     "id": "IB-VA-PORT",
@@ -7134,7 +7524,9 @@
     "lizenz": "nicht ausgewiesen / Quellenrechte vorbehalten",
     "link_status": "geprüft",
     "qualitaet": "2 – Offizielle Beschreibung der Prüfungsaufgabe",
-    "konfidenz": "mittel"
+    "konfidenz": "mittel",
+    "ki_setzung": [],
+    "ki_setzung_status": "nicht gesetzt"
   },
   {
     "id": "IB-VA-EXHIB",
@@ -7173,7 +7565,9 @@
     "lizenz": "nicht ausgewiesen / Quellenrechte vorbehalten",
     "link_status": "geprüft",
     "qualitaet": "2 – Offizielle Beschreibung der Prüfungsaufgabe",
-    "konfidenz": "mittel"
+    "konfidenz": "mittel",
+    "ki_setzung": [],
+    "ki_setzung_status": "nicht gesetzt"
   },
   {
     "id": "IB-VA27-PORT",
@@ -7212,7 +7606,9 @@
     "lizenz": "nicht ausgewiesen / Quellenrechte vorbehalten",
     "link_status": "geprüft",
     "qualitaet": "2 – Offizielle Beschreibung der Prüfungsaufgabe",
-    "konfidenz": "mittel"
+    "konfidenz": "mittel",
+    "ki_setzung": [],
+    "ki_setzung_status": "nicht gesetzt"
   },
   {
     "id": "IB-VA27-CON",
@@ -7251,7 +7647,9 @@
     "lizenz": "nicht ausgewiesen / Quellenrechte vorbehalten",
     "link_status": "geprüft",
     "qualitaet": "2 – Offizielle Beschreibung der Prüfungsaufgabe",
-    "konfidenz": "mittel"
+    "konfidenz": "mittel",
+    "ki_setzung": [],
+    "ki_setzung_status": "nicht gesetzt"
   },
   {
     "id": "IB-VA27-PROJ",
@@ -7290,7 +7688,9 @@
     "lizenz": "nicht ausgewiesen / Quellenrechte vorbehalten",
     "link_status": "geprüft",
     "qualitaet": "2 – Offizielle Beschreibung der Prüfungsaufgabe",
-    "konfidenz": "mittel"
+    "konfidenz": "mittel",
+    "ki_setzung": [],
+    "ki_setzung_status": "nicht gesetzt"
   },
   {
     "id": "IB-VA27-RES",
@@ -7329,7 +7729,9 @@
     "lizenz": "nicht ausgewiesen / Quellenrechte vorbehalten",
     "link_status": "geprüft",
     "qualitaet": "2 – Offizielle Beschreibung der Prüfungsaufgabe",
-    "konfidenz": "mittel"
+    "konfidenz": "mittel",
+    "ki_setzung": [],
+    "ki_setzung_status": "nicht gesetzt"
   },
   {
     "id": "IB-M-EXPLORE",
@@ -7368,7 +7770,9 @@
     "lizenz": "nicht ausgewiesen / Quellenrechte vorbehalten",
     "link_status": "geprüft",
     "qualitaet": "2 – Offizielle Beschreibung der Prüfungsaufgabe",
-    "konfidenz": "mittel"
+    "konfidenz": "mittel",
+    "ki_setzung": [],
+    "ki_setzung_status": "nicht gesetzt"
   },
   {
     "id": "IB-M-PRESENT",
@@ -7407,7 +7811,9 @@
     "lizenz": "nicht ausgewiesen / Quellenrechte vorbehalten",
     "link_status": "geprüft",
     "qualitaet": "2 – Offizielle Beschreibung der Prüfungsaufgabe",
-    "konfidenz": "mittel"
+    "konfidenz": "mittel",
+    "ki_setzung": [],
+    "ki_setzung_status": "nicht gesetzt"
   },
   {
     "id": "IB-M-EXPERIMENT",
@@ -7446,7 +7852,9 @@
     "lizenz": "nicht ausgewiesen / Quellenrechte vorbehalten",
     "link_status": "geprüft",
     "qualitaet": "2 – Offizielle Beschreibung der Prüfungsaufgabe",
-    "konfidenz": "mittel"
+    "konfidenz": "mittel",
+    "ki_setzung": [],
+    "ki_setzung_status": "nicht gesetzt"
   },
   {
     "id": "IB-M-HL",
@@ -7485,7 +7893,9 @@
     "lizenz": "nicht ausgewiesen / Quellenrechte vorbehalten",
     "link_status": "geprüft",
     "qualitaet": "2 – Offizielle Beschreibung der Prüfungsaufgabe",
-    "konfidenz": "mittel"
+    "konfidenz": "mittel",
+    "ki_setzung": [],
+    "ki_setzung_status": "nicht gesetzt"
   },
   {
     "id": "IB-EE",
@@ -7524,7 +7934,9 @@
     "lizenz": "nicht ausgewiesen / Quellenrechte vorbehalten",
     "link_status": "geprüft",
     "qualitaet": "2 – Offizielle Beschreibung der Prüfungsaufgabe",
-    "konfidenz": "mittel"
+    "konfidenz": "mittel",
+    "ki_setzung": [],
+    "ki_setzung_status": "nicht gesetzt"
   },
   {
     "id": "AIAS-L2-SPEAK",
@@ -7563,7 +7975,11 @@
     "lizenz": "nicht ausgewiesen / Quellenrechte vorbehalten",
     "link_status": "geprüft",
     "qualitaet": "2 – Konkretes Aufgabenszenario",
-    "konfidenz": "mittel"
+    "konfidenz": "mittel",
+    "ki_setzung": [
+      "K03"
+    ],
+    "ki_setzung_status": "eingeschätzt"
   },
   {
     "id": "AIAS-L2-ART",
@@ -7602,7 +8018,11 @@
     "lizenz": "nicht ausgewiesen / Quellenrechte vorbehalten",
     "link_status": "geprüft",
     "qualitaet": "2 – Konkretes Aufgabenszenario",
-    "konfidenz": "mittel"
+    "konfidenz": "mittel",
+    "ki_setzung": [
+      "K03"
+    ],
+    "ki_setzung_status": "eingeschätzt"
   },
   {
     "id": "AIAS-L3-ESSAY",
@@ -7641,7 +8061,11 @@
     "lizenz": "nicht ausgewiesen / Quellenrechte vorbehalten",
     "link_status": "geprüft",
     "qualitaet": "2 – Konkretes Aufgabenszenario",
-    "konfidenz": "mittel"
+    "konfidenz": "mittel",
+    "ki_setzung": [
+      "K02"
+    ],
+    "ki_setzung_status": "explizit"
   },
   {
     "id": "AIAS-L4-FOLIO",
@@ -7680,6 +8104,344 @@
     "lizenz": "nicht ausgewiesen / Quellenrechte vorbehalten",
     "link_status": "geprüft",
     "qualitaet": "2 – Ausgearbeiteter Entwurf mit Arbeitsphasen und Einreichung",
-    "konfidenz": "mittel"
+    "konfidenz": "mittel",
+    "ki_setzung": [
+      "K04"
+    ],
+    "ki_setzung_status": "explizit"
+  },
+  {
+    "id": "FR-GRANDORAL",
+    "titel": "Grand oral: eigene Fragen zum Abitur mündlich verteidigen",
+    "kurzbeschreibung": "Im Abschlussjahr entwickeln die Lernenden zwei eigene Fragen zu ihren Spezialitätsfächern. Die Jury wählt eine davon. Nach 20 Minuten Vorbereitung folgen 10 Minuten Vortrag im Stehen und 10 Minuten Gespräch.",
+    "fach": "Spezialitätsfächer (fächerübergreifend möglich)",
+    "faechergruppe": "fächerübergreifend",
+    "jg_von": 12,
+    "jg_bis": 12,
+    "schulform": "Sek II (Lycée, Bac général/technologique)",
+    "land": "FR",
+    "sprache": "fr",
+    "pruefungsart": "Mündliche Abschlussprüfung",
+    "ki_rolle": 0,
+    "ki_rolle_begruendung": "In der Prüfung sind keine digitalen Hilfsmittel erlaubt; die Vorbereitung im Schuljahr regelt die Quelle nicht.",
+    "aias_stufe": null,
+    "digitale_medien": "nicht nötig",
+    "tools": "Notizblatt aus der Vorbereitung, Tafel",
+    "achse1": 1,
+    "achse2": 1,
+    "achse3": 2,
+    "achse4": 1,
+    "achse5": 2,
+    "achse6": 1,
+    "achse7": 4,
+    "achse8": 1,
+    "achse9": 1,
+    "achsen_belegstatus": "{\"achse1\": \"explizit\", \"achse2\": \"explizit\", \"achse3\": \"explizit\", \"achse4\": \"explizit\", \"achse5\": \"eingeschätzt\", \"achse6\": \"explizit\", \"achse7\": \"eingeschätzt\", \"achse8\": \"eingeschätzt\", \"achse9\": \"eingeschätzt\"}",
+    "material_vorhanden": "Offizielle Beschreibung; FAQ; indikatives Bewertungsraster mit fünf Kriterien",
+    "link_primaer": "https://www.education.gouv.fr/reussir-au-lycee/baccalaureat-comment-se-passe-le-grand-oral-100028",
+    "linktyp": "Website",
+    "fundpfad": "Ministère de l’Éducation nationale → Réussir au lycée → Grand oral",
+    "weitere_links": "https://eduscol.education.gouv.fr/sites/default/files/document/faq-grand-oral-129790.pdf",
+    "urheber": "Ministère de l’Éducation nationale (Frankreich)",
+    "datum": "2026-09",
+    "lizenz": "nicht angegeben",
+    "link_status": "geprüft",
+    "qualitaet": "2 – Offizielle Beschreibung der Prüfung mit FAQ und Bewertungsraster",
+    "konfidenz": "hoch",
+    "ki_setzung": [
+      "K01"
+    ],
+    "ki_setzung_status": "eingeschätzt"
+  },
+  {
+    "id": "FR-CHEFDOEUVRE",
+    "titel": "Chef-d’œuvre: zweijähriges Berufsprojekt mit mündlicher Präsentation",
+    "kurzbeschreibung": "In CAP und Bac pro realisieren Lernende über zwei Jahre ein fächerübergreifendes Werk aus ihrem Berufsfeld, einzeln oder im Team. Es wird fortlaufend begleitet und benotet und am Ende in einer individuellen mündlichen Präsentation vorgestellt.",
+    "fach": "Berufsfeld (fächerübergreifend)",
+    "faechergruppe": "fächerübergreifend",
+    "jg_von": 10,
+    "jg_bis": 12,
+    "schulform": "Berufsbildende Schule (Lycée professionnel, CAP/Bac pro)",
+    "land": "FR",
+    "sprache": "fr",
+    "pruefungsart": "Projekt mit mündlicher Prüfung",
+    "ki_rolle": 1,
+    "ki_rolle_begruendung": "Die Quelle regelt generative KI nicht.",
+    "aias_stufe": null,
+    "digitale_medien": null,
+    "tools": "Werkstätten und Materialien des Berufsfelds",
+    "achse1": 3,
+    "achse2": 3,
+    "achse3": null,
+    "achse4": 4,
+    "achse5": 4,
+    "achse6": 3,
+    "achse7": 4,
+    "achse8": 4,
+    "achse9": 3,
+    "achsen_belegstatus": "{\"achse1\": \"explizit\", \"achse2\": \"eingeschätzt\", \"achse3\": \"null/nicht belegt\", \"achse4\": \"explizit\", \"achse5\": \"eingeschätzt\", \"achse6\": \"eingeschätzt\", \"achse7\": \"eingeschätzt\", \"achse8\": \"explizit\", \"achse9\": \"eingeschätzt\"}",
+    "material_vorhanden": "Vade-mecum mit Beispielen aus verschiedenen Berufsfeldern; Bewertungsgrundsätze",
+    "link_primaer": "https://eduscol.education.fr/media/1916/download",
+    "linktyp": "PDF",
+    "fundpfad": "Éduscol → Voie professionnelle → Vade-mecum „Réalisation du chef-d’œuvre“",
+    "weitere_links": "https://eduscol.education.gouv.fr/5532/la-realisation-d-un-projet-et-d-un-chef-d-oeuvre",
+    "urheber": "Ministère de l’Éducation nationale (Frankreich)",
+    "datum": "2019",
+    "lizenz": "nicht angegeben",
+    "link_status": "geprüft",
+    "qualitaet": "2 – Offizieller Leitfaden mit Beispielen",
+    "konfidenz": "mittel",
+    "ki_setzung": [],
+    "ki_setzung_status": "nicht gesetzt"
+  },
+  {
+    "id": "FR-DNB-ORAL",
+    "titel": "Mündliche Projektverteidigung zum Brevet (Klasse 9)",
+    "kurzbeschreibung": "Zum Abschluss der Mittelstufe stellen Lernende ein Projekt aus Kunstgeschichte, fächerübergreifendem Unterricht oder einem Bildungsparcours vor, einzeln oder zu dritt. Bewertet wird, wie sie ihr Vorgehen darlegen und begründen, nicht das Projekt selbst.",
+    "fach": "fächerübergreifend",
+    "faechergruppe": "fächerübergreifend",
+    "jg_von": 9,
+    "jg_bis": 9,
+    "schulform": "Sek I (Collège)",
+    "land": "FR",
+    "sprache": "fr",
+    "pruefungsart": "Mündliche Abschlussprüfung",
+    "ki_rolle": 1,
+    "ki_rolle_begruendung": "Die Quelle regelt generative KI nicht.",
+    "aias_stufe": null,
+    "digitale_medien": "optional",
+    "tools": "Präsentation oder Aufnahme als Unterstützung",
+    "achse1": 1,
+    "achse2": 1,
+    "achse3": 2,
+    "achse4": 3,
+    "achse5": 2,
+    "achse6": 1,
+    "achse7": 4,
+    "achse8": 3,
+    "achse9": 1,
+    "achsen_belegstatus": "{\"achse1\": \"explizit\", \"achse2\": \"explizit\", \"achse3\": \"explizit\", \"achse4\": \"explizit\", \"achse5\": \"eingeschätzt\", \"achse6\": \"explizit\", \"achse7\": \"eingeschätzt\", \"achse8\": \"explizit\", \"achse9\": \"eingeschätzt\"}",
+    "material_vorhanden": "Prüfungsbeschreibung; Bewertungskriterien (8 Punkte Ausdruck, 12 Punkte Thema)",
+    "link_primaer": "https://sites.ac-nancy-metz.fr/svt/pdf/pour%20evaluer/La%20soutenance%20orale%20du%20DNB.pdf",
+    "linktyp": "PDF",
+    "fundpfad": "Académie Nancy-Metz → Begleitdokument der IA-IPR zur mündlichen Brevet-Prüfung (nach Note de service vom 2.9.2025)",
+    "weitere_links": "https://eduscol.education.gouv.fr/5607/les-epreuves-du-dnb",
+    "urheber": "Collège des IA-IPR, Académie Nancy-Metz",
+    "datum": "2025",
+    "lizenz": "nicht angegeben",
+    "link_status": "geprüft",
+    "qualitaet": "2 – Offizielle Erläuterung mit Kriterien",
+    "konfidenz": "hoch",
+    "ki_setzung": [],
+    "ki_setzung_status": "nicht gesetzt"
+  },
+  {
+    "id": "ES-TDR-CAT",
+    "titel": "Treball de recerca: Forschungsarbeit mit Verteidigung vor einem Tribunal (Katalonien)",
+    "kurzbeschreibung": "Alle Lernenden im katalanischen Bachillerato erarbeiten über rund ein Jahr eine eigene Forschungsarbeit mit Tutorin oder Tutor. Bewertet werden Begleitung, Text und eine etwa 20-minütige Verteidigung vor drei Lehrkräften. Die verlinkte Schulhandreichung schließt KI-erstellte Arbeiten aus.",
+    "fach": "frei wählbar",
+    "faechergruppe": "fächerübergreifend",
+    "jg_von": 11,
+    "jg_bis": 12,
+    "schulform": "Sek II (Batxillerat)",
+    "land": "ES",
+    "sprache": "ca",
+    "pruefungsart": "Forschungsarbeit mit mündlicher Verteidigung",
+    "ki_rolle": 0,
+    "ki_rolle_begruendung": "Wird festgestellt, dass die Arbeit mit KI-Systemen erstellt wurde, scheidet sie aus der ordentlichen Bewertung aus.",
+    "aias_stufe": null,
+    "digitale_medien": "optional",
+    "tools": "Recherchequellen; schriftliche Memòria; Präsentation",
+    "achse1": 4,
+    "achse2": 5,
+    "achse3": 4,
+    "achse4": 2,
+    "achse5": 2,
+    "achse6": 4,
+    "achse7": 5,
+    "achse8": 3,
+    "achse9": 3,
+    "achsen_belegstatus": "{\"achse1\": \"explizit\", \"achse2\": \"eingeschätzt\", \"achse3\": \"explizit\", \"achse4\": \"explizit\", \"achse5\": \"eingeschätzt\", \"achse6\": \"eingeschätzt\", \"achse7\": \"explizit\", \"achse8\": \"explizit\", \"achse9\": \"eingeschätzt\"}",
+    "material_vorhanden": "Schulhandreichung mit Zeitplan, Bewertungsanteilen und Kriterien",
+    "link_primaer": "https://agora.xtec.cat/iessantjust/wp-content/uploads/usu366/2025/09/Guia-ALUMNAT_TR-BTX-25-26_Institut-Sant-Just.pdf",
+    "linktyp": "PDF",
+    "fundpfad": "Institut Sant Just (Katalonien) → Guia del treball de recerca 2025-26",
+    "weitere_links": "https://xtec.gencat.cat/ca/curriculum/batxillerat/treballrecerca/",
+    "urheber": "Institut Sant Just, Sant Just Desvern",
+    "datum": "2025-09",
+    "lizenz": "nicht angegeben",
+    "link_status": "geprüft",
+    "qualitaet": "3 – Ausführliche Handreichung mit Bewertungsanteilen und Ablauf",
+    "konfidenz": "hoch",
+    "ki_setzung": [
+      "K01"
+    ],
+    "ki_setzung_status": "explizit"
+  },
+  {
+    "id": "ES-PIB-MADRID",
+    "titel": "Freiwilliges Forschungsprojekt im Bachillerato mit öffentlicher Verteidigung (Madrid)",
+    "kurzbeschreibung": "Lernende der 11. Klasse forschen über ein Jahr mit einer Lehrkraft als Tutor. Sie geben eine Arbeit von höchstens 25 Seiten mit englischem Abstract ab und verteidigen sie öffentlich: 15 Minuten Vortrag, 10 Minuten Fragen. Die Note kann Fachnoten anheben.",
+    "fach": "frei wählbar",
+    "faechergruppe": "fächerübergreifend",
+    "jg_von": 11,
+    "jg_bis": 12,
+    "schulform": "Sek II (Bachillerato)",
+    "land": "ES",
+    "sprache": "es",
+    "pruefungsart": "Forschungsarbeit mit mündlicher Verteidigung",
+    "ki_rolle": 0,
+    "ki_rolle_begruendung": "Die Dokumente können auf KI-Einsatz geprüft werden; festgestellte KI-Nutzung führt zur Ablehnung.",
+    "aias_stufe": null,
+    "digitale_medien": "erforderlich",
+    "tools": "PDF-Abgabe; Präsentation",
+    "achse1": 4,
+    "achse2": 5,
+    "achse3": 4,
+    "achse4": 1,
+    "achse5": 2,
+    "achse6": 4,
+    "achse7": 5,
+    "achse8": 3,
+    "achse9": 2,
+    "achsen_belegstatus": "{\"achse1\": \"explizit\", \"achse2\": \"eingeschätzt\", \"achse3\": \"eingeschätzt\", \"achse4\": \"eingeschätzt\", \"achse5\": \"explizit\", \"achse6\": \"eingeschätzt\", \"achse7\": \"explizit\", \"achse8\": \"explizit\", \"achse9\": \"eingeschätzt\"}",
+    "material_vorhanden": "Bases mit Zeitplan und Bewertungsraster (neun Bereiche, 10 Punkte)",
+    "link_primaer": "https://site.educa.madrid.org/ies.tiernogalvan.parla//wp-content/uploads/ies.tiernogalvan.parla/2025/02/pib_bases.pdf",
+    "linktyp": "PDF",
+    "fundpfad": "IES Enrique Tierno Galván (Parla, Madrid) → Proyectos de Investigación en Bachillerato, Bases v.4",
+    "weitere_links": "",
+    "urheber": "IES Enrique Tierno Galván, Parla",
+    "datum": "2025-10",
+    "lizenz": "nicht angegeben",
+    "link_status": "geprüft",
+    "qualitaet": "3 – Vollständige Bases mit Bewertungsraster",
+    "konfidenz": "hoch",
+    "ki_setzung": [
+      "K01"
+    ],
+    "ki_setzung_status": "explizit"
+  },
+  {
+    "id": "US-NYPSC-PBAT",
+    "titel": "Performance-Based Assessment Tasks statt Abschlussprüfungen (New York)",
+    "kurzbeschreibung": "An den Schulen des New York Performance Standards Consortium ersetzen vier umfangreiche Aufgaben die meisten staatlichen Abschlussprüfungen: Literaturessay, sozialwissenschaftliche Forschungsarbeit, naturwissenschaftliches Experiment und mathematische Ausarbeitung. Jede wird schriftlich abgegeben und mündlich vor externen Gutachtern verteidigt.",
+    "fach": "Englisch, Sozialkunde, Naturwissenschaften, Mathematik",
+    "faechergruppe": "fächerübergreifend",
+    "jg_von": 11,
+    "jg_bis": 12,
+    "schulform": "Sek II (High School)",
+    "land": "US",
+    "sprache": "en",
+    "pruefungsart": "Abschlussprüfung (Portfolio von Leistungsaufgaben)",
+    "ki_rolle": 1,
+    "ki_rolle_begruendung": "Die verlinkte Seite regelt KI nicht; das Konsortium führt laut seiner Protokollübersicht eine eigene KI-Richtlinie (nicht eingesehen).",
+    "aias_stufe": null,
+    "digitale_medien": null,
+    "tools": "",
+    "achse1": 5,
+    "achse2": null,
+    "achse3": null,
+    "achse4": 1,
+    "achse5": 2,
+    "achse6": 4,
+    "achse7": 4,
+    "achse8": 1,
+    "achse9": 3,
+    "achsen_belegstatus": "{\"achse1\": \"eingeschätzt\", \"achse2\": \"null/nicht belegt\", \"achse3\": \"null/nicht belegt\", \"achse4\": \"explizit\", \"achse5\": \"eingeschätzt\", \"achse6\": \"eingeschätzt\", \"achse7\": \"eingeschätzt\", \"achse8\": \"eingeschätzt\", \"achse9\": \"eingeschätzt\"}",
+    "material_vorhanden": "Beschreibung des Systems; Bewertungsraster (Rubrics) des Konsortiums",
+    "link_primaer": "https://performance-assessment.squarespace.com/howitworks",
+    "linktyp": "Website",
+    "fundpfad": "New York Performance Standards Consortium → How it works",
+    "weitere_links": "https://fairtest.org/article/performance-assessments-succeed-new-york/",
+    "urheber": "New York Performance Standards Consortium",
+    "datum": null,
+    "lizenz": "nicht angegeben",
+    "link_status": "geprüft",
+    "qualitaet": "2 – Systembeschreibung; Rubrics über die Website des Konsortiums",
+    "konfidenz": "mittel",
+    "ki_setzung": [],
+    "ki_setzung_status": "nicht gesetzt"
+  },
+  {
+    "id": "US-AP-SEMINAR",
+    "titel": "AP Seminar: Teamprojekt und individuelle Forschungsarbeit mit Verteidigung",
+    "kurzbeschreibung": "Im Kurs AP Seminar untersuchen Teams von drei bis fünf Lernenden ein Problem. Jede Person schreibt dazu einen eigenen Bericht, das Team präsentiert und verteidigt die Lösung. In einer zweiten Aufgabe entwickeln die Lernenden aus vorgegebenem Material eine eigene Forschungsfrage, schreiben ein Argument von 2.000 Wörtern und verteidigen es mündlich.",
+    "fach": "Forschendes Arbeiten (fächerübergreifend)",
+    "faechergruppe": "fächerübergreifend",
+    "jg_von": 10,
+    "jg_bis": 12,
+    "schulform": "Sek II (High School, Advanced Placement)",
+    "land": "US",
+    "sprache": "en",
+    "pruefungsart": "Projekt mit Präsentation und Verteidigung (Teil der AP-Prüfung)",
+    "ki_rolle": 1,
+    "ki_rolle_begruendung": "Die Seite verweist auf eine eigene KI-Richtlinie des AP-Programms, nennt aber keine Details.",
+    "aias_stufe": null,
+    "digitale_medien": "erforderlich",
+    "tools": "AP Digital Portfolio; Multimedia-Präsentation",
+    "achse1": 5,
+    "achse2": 3,
+    "achse3": 4,
+    "achse4": 4,
+    "achse5": 2,
+    "achse6": 3,
+    "achse7": 4,
+    "achse8": 1,
+    "achse9": 1,
+    "achsen_belegstatus": "{\"achse1\": \"explizit\", \"achse2\": \"eingeschätzt\", \"achse3\": \"eingeschätzt\", \"achse4\": \"explizit\", \"achse5\": \"eingeschätzt\", \"achse6\": \"eingeschätzt\", \"achse7\": \"explizit\", \"achse8\": \"eingeschätzt\", \"achse9\": \"eingeschätzt\"}",
+    "material_vorhanden": "Aufgabenbeschreibung; öffentliche Bewertungsrichtlinien (Scoring Guidelines)",
+    "link_primaer": "https://apstudents.collegeboard.org/courses/ap-seminar/assessment",
+    "linktyp": "Website",
+    "fundpfad": "College Board → AP Students → AP Seminar → Assessment",
+    "weitere_links": "https://apcentral.collegeboard.org/courses/ap-seminar/exam",
+    "urheber": "College Board",
+    "datum": "2026",
+    "lizenz": "nicht angegeben",
+    "link_status": "geprüft",
+    "qualitaet": "3 – Offizielle Aufgabenbeschreibung mit Gewichtung und Bewertungsrichtlinien",
+    "konfidenz": "hoch",
+    "ki_setzung": [],
+    "ki_setzung_status": "nicht gesetzt"
+  },
+  {
+    "id": "US-ENVISION-DEFENSE",
+    "titel": "Portfolio Defense: Reife für den Abschluss vor einem Panel begründen",
+    "kurzbeschreibung": "An Envision-Schulen stellen Lernende in Klasse 10 und 12 ein Portfolio überarbeiteter Arbeiten mit Reflexionen zusammen. Vor einem Panel aus Lehrkräften und Mitschülern verteidigen sie eine These zu ihrer eigenen Lernentwicklung. Wer nicht besteht, überarbeitet und verteidigt erneut.",
+    "fach": "fächerübergreifend",
+    "faechergruppe": "fächerübergreifend",
+    "jg_von": 10,
+    "jg_bis": 12,
+    "schulform": "Sek II (High School)",
+    "land": "US",
+    "sprache": "en",
+    "pruefungsart": "Portfolio mit mündlicher Verteidigung (Abschlussvoraussetzung)",
+    "ki_rolle": 1,
+    "ki_rolle_begruendung": "Die Quelle (2016/17) regelt generative KI nicht.",
+    "aias_stufe": null,
+    "digitale_medien": "optional",
+    "tools": "Digitale Präsentation",
+    "achse1": 5,
+    "achse2": null,
+    "achse3": null,
+    "achse4": 2,
+    "achse5": 4,
+    "achse6": null,
+    "achse7": 4,
+    "achse8": 4,
+    "achse9": 4,
+    "achsen_belegstatus": "{\"achse1\": \"eingeschätzt\", \"achse2\": \"null/nicht belegt\", \"achse3\": \"null/nicht belegt\", \"achse4\": \"eingeschätzt\", \"achse5\": \"eingeschätzt\", \"achse6\": \"null/nicht belegt\", \"achse7\": \"explizit\", \"achse8\": \"explizit\", \"achse9\": \"explizit\"}",
+    "material_vorhanden": "Fallprofil mit Ablauf und Bewertungsbereichen (Rubric mit fünf Bereichen)",
+    "link_primaer": "https://learningpolicyinstitute.org/sites/default/files/CPAC_Performance_Assessment_Profile_Envision.pdf",
+    "linktyp": "PDF",
+    "fundpfad": "Learning Policy Institute → California Performance Assessment Collaborative → Profil Envision Schools",
+    "weitere_links": "https://envisionschools.org/wp-content/uploads/sites/8/2017/12/Portfolio-Defense-Student-Handbook-Template-for-Linked-Learning-Pathways.pdf",
+    "urheber": "Learning Policy Institute / Envision Education",
+    "datum": null,
+    "lizenz": "nicht angegeben",
+    "link_status": "geprüft",
+    "qualitaet": "2 – Ausführliches Fallprofil mit Bewertungsbereichen",
+    "konfidenz": "mittel",
+    "ki_setzung": [],
+    "ki_setzung_status": "nicht gesetzt"
   }
 ]

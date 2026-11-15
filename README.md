@@ -25,7 +25,7 @@ Die Datei `data/pruefungen.json` durch eine neue Fassung ersetzen (gleicher Name
 
 Die Datei ist ein JSON-Array. Jeder Eintrag kann diese Felder haben:
 
-`id, titel, kurzbeschreibung, fach, faechergruppe, jg_von, jg_bis, schulform, land, sprache, pruefungsart, ki_rolle (0–4), ki_rolle_begruendung, aias_stufe, digitale_medien, tools, achse1 … achse9 (1–5 oder null), achsen_belegstatus, material_vorhanden, link_primaer, linktyp, fundpfad, weitere_links, urheber, datum, lizenz, link_status, qualitaet, konfidenz`
+`id, titel, kurzbeschreibung, fach, faechergruppe, jg_von, jg_bis, schulform, land, sprache, pruefungsart, ki_rolle (0–4), ki_setzung (Liste: K01–K04, offen), ki_setzung_status, ki_rolle_begruendung, aias_stufe, digitale_medien, tools, achse1 … achse9 (1–5 oder null), achsen_belegstatus, material_vorhanden, link_primaer, linktyp, fundpfad, weitere_links, urheber, datum, lizenz, link_status, qualitaet, konfidenz`
 
 Regeln der App:
 
@@ -40,7 +40,8 @@ Alles Anpassbare steht am Anfang des Skripts in `index.html` im Objekt `CONFIG`:
 
 - `achsen`: Name, Kurzname, Pole und die fünf Stufenbeschreibungen jedes Reglers. `start` ist die Stufe im Ausgangsprofil (traditionelle Klassenarbeit).
 - `ausgangsprofil`: Bezeichnung des Ausgangsprofils.
-- `kiStufen`, `fachbereiche`, `laender`: Bezeichnungen in den Filtern.
+- `kiHaupt`, `kiRollen`, `kiNamen`: Auswahl „Rolle der KI“ (Rollen nach Hauke Pölert, unterrichten.digital 2026).
+- `fachbereiche`, `laender`, `dach`: Bezeichnungen und Ländergruppen im Filter „Herkunft“.
 - `pruefungsartGruppen`: Die Prüfungsarten in den Daten sind sehr kleinteilig. Für den Filter werden sie über Stichworte zu wenigen Gruppen gebündelt. Auf den Karten steht weiterhin die Originalbezeichnung.
 - `bewertungsStichworte`: Wörter, an denen die Checkbox „nur mit Erwartungshorizont / Bewertungsraster“ Bewertungsmaterial erkennt (gesucht in `material_vorhanden` und `qualitaet`).
 - `proSeite`: Zahl der Karten, die zunächst erscheinen.

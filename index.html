@@ -103,6 +103,29 @@ select{appearance:none;-webkit-appearance:none;padding-right:34px;background-ima
 .btn,.chip-btn,.quelle,.segment button{transition-property:transform,background-color,border-color,color;transition-duration:.14s;transition-timing-function:var(--ease)}
 .btn:active,.chip-btn:active,.quelle:active,.segment button:active{transform:scale(.96)}
 
+/* KI-Block */
+.ki-block{margin-top:12px;padding:14px 18px 14px}
+.ki-kopf{display:flex;align-items:baseline;justify-content:space-between;gap:6px 12px;flex-wrap:wrap;margin-bottom:10px}
+.ki-kopf h2{font-size:1.05rem;color:var(--tinte)}
+.ki-hinweis{font-size:.8rem;color:var(--leise)}
+.ki-rollen{margin-top:12px;padding:12px 14px;border-radius:12px;background:var(--akzent-hell)}
+.ki-unter{font-size:.86rem;font-weight:700;color:var(--tinte);margin-bottom:8px}
+.ki-unter span{font-weight:500;color:var(--leise)}
+.rollen{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:8px}
+.rolle{display:flex;flex-direction:column;gap:3px;text-align:left;min-height:44px;padding:10px 12px;border-radius:10px;border:1px solid var(--linie-stark);background:#fff;cursor:pointer;color:var(--text);font-size:.86rem;line-height:1.4;transition-property:transform,background-color,border-color,box-shadow;transition-duration:.14s;transition-timing-function:var(--ease)}
+.rolle:active{transform:scale(.96)}
+.rolle b{font-size:.95rem;color:var(--tinte);display:flex;justify-content:space-between;gap:8px}
+.rolle b small{font-weight:600;color:var(--leise);font-variant-numeric:tabular-nums}
+.rolle i{color:var(--leise)}
+.rolle[aria-pressed=true]{border-color:var(--akzent);box-shadow:inset 0 0 0 1px var(--akzent);background:#fff}
+.rolle b span{margin-right:auto}
+.rolle[aria-pressed=true] b::before{content:"✓";color:var(--akzent-text)}
+.rolle.offen-rolle{background:#fbfcfd}
+.ki-quelle{font-size:.76rem;color:var(--leise);margin-top:8px}
+.woran{margin-top:12px;font-size:.84rem;color:var(--text);border-top:1px solid var(--linie);padding-top:10px}
+.woran b{color:var(--tinte)}
+@media (max-width:560px){.ki-block{padding:12px 14px}}
+
 /* Spalten */
 .spalten{display:grid;grid-template-columns:1fr;gap:18px;margin-top:18px;align-items:start}
 @media (min-width:1024px) and (hover:hover){.egal{min-height:40px}}
@@ -286,10 +309,6 @@ footer{max-width:1320px;margin:0 auto;padding:0 20px 40px;font-size:.84rem;color
         <div class="feld"><label for="fLand">Herkunft</label><select id="fLand"></select></div>
         <div class="feld doppelt"><label for="fSuche">Stichwortsuche</label><input type="search" id="fSuche" placeholder="z. B. Podcast, Open Book, Portfolio" autocomplete="off" enterkeyhint="search"></div>
         <div class="feld breit">
-          <span class="label" id="lblKi">Rolle von KI <span>(mehrere möglich)</span></span>
-          <div class="chips" id="fKi" role="group" aria-labelledby="lblKi"></div>
-        </div>
-        <div class="feld breit">
           <span class="label" id="lblMedien">Digitale Medien <span>(mehrere möglich)</span></span>
           <div class="chips" id="fMedien" role="group" aria-labelledby="lblMedien"></div>
         </div>
@@ -300,6 +319,20 @@ footer{max-width:1320px;margin:0 auto;padding:0 20px 40px;font-size:.84rem;color
       </div>
     </div>
   </details>
+
+  <section class="panel ki-block" aria-labelledby="kiTitel">
+    <div class="ki-kopf">
+      <h2 id="kiTitel">Rolle der KI</h2>
+      <span class="ki-hinweis">Nichts gewählt = alle Beispiele</span>
+    </div>
+    <div class="chips" id="fKi" role="group" aria-labelledby="kiTitel"></div>
+    <div class="ki-rollen" id="kiRollen" hidden>
+      <p class="ki-unter" id="lblRolle">Welche Rolle hat die KI? <span>(mehrere möglich, nichts gewählt = alle mit KI)</span></p>
+      <div class="rollen" id="fRolle" role="group" aria-labelledby="lblRolle"></div>
+      <p class="ki-quelle">Rollen nach Hauke Pölert: <a href="https://unterrichten.digital/aufgaben-remix-5x4-matrix-ki/" target="_blank" rel="noopener noreferrer">Aufgaben-Remix – 5×4-Matrix<span class="sr"> (öffnet in neuem Tab)</span></a> (unterrichten.digital, 2026)</p>
+    </div>
+    <p class="woran"><b>Woran wird die Eigenleistung sichtbar?</b> Pölert unterscheidet Echtzeit-, Prozess-, Kontext- und verkörperte Evidenz. In den gesammelten Beispielen ist das bislang kaum ausgewiesen – beim Auswählen lohnt der Blick darauf. <a href="https://unterrichten.digital/aufgaben-remix-5x4-matrix-ki/" target="_blank" rel="noopener noreferrer">Zum Beitrag<span class="sr"> (öffnet in neuem Tab)</span></a></p>
+  </section>
 
   <div class="spalten">
     <section class="panel regler-panel" aria-labelledby="reglerTitel">
@@ -319,14 +352,14 @@ footer{max-width:1320px;margin:0 auto;padding:0 20px 40px;font-size:.84rem;color
       <div class="panel leiste">
         <p class="zahl" id="zahl" aria-live="polite" aria-atomic="true">Sammlung wird geladen …</p>
         <div class="modus">
-          <div class="segment" role="group" aria-label="Art der Trefferanzeige">
-            <button type="button" id="mRanking" aria-pressed="true">Ranking</button>
-            <button type="button" id="mFilter" aria-pressed="false">Filter</button>
+          <div class="segment" role="group" aria-label="Welche Beispiele anzeigen?">
+            <button type="button" id="mRanking" aria-pressed="true">Alle, nach Passung</button>
+            <button type="button" id="mFilter" aria-pressed="false">Nur enge Treffer</button>
           </div>
-          <select id="toleranz" aria-label="Toleranz je Regler" hidden>
-            <option value="0.5">Toleranz: ± ½ Stufe</option>
-            <option value="1" selected>Toleranz: ± 1 Stufe</option>
-            <option value="2">Toleranz: ± 2 Stufen</option>
+          <select id="toleranz" aria-label="Erlaubte Abweichung je Regler" hidden>
+            <option value="0.5">höchstens ½ Stufe Abweichung je Regler</option>
+            <option value="1" selected>höchstens 1 Stufe Abweichung je Regler</option>
+            <option value="2">höchstens 2 Stufen Abweichung je Regler</option>
           </select>
         </div>
       </div>
@@ -368,7 +401,7 @@ const CONFIG = {
         "freie Platzwahl im vorgegebenen Prüfungsraum",
         "unterschiedliche Arbeitsbereiche innerhalb der Schule",
         "schulische und außerschulische Arbeitsorte nach Absprache",
-        "Arbeitsort vollständig frei wählbar, auch zu Hause oder unterwegs" ] },
+        "Arbeitsort vollständig frei wählbar, auch zu Hause" ] },
     { feld:"achse3", name:"Hilfsmittel", kurz:"Hilfsmittel", start:1, polLinks:"keine", polRechts:"alle inkl. Internet/KI",
       stufen:[
         "keine",
@@ -380,7 +413,7 @@ const CONFIG = {
       stufen:[
         "strikt allein",
         "individueller Austausch in begrenzten Phasen",
-        "gemeinsame Vorbereitung, individuelle Prüfung",
+        "gemeinsame Vorbereitung, individuelle Prüfung – oder andersrum",
         "überwiegend kollaborativ, individuell bewertete Anteile",
         "Teamarbeit mit gemeinsamer Bewertung" ] },
     { feld:"achse5", name:"Produkt", kurz:"Produkt", start:1, polLinks:"fest vorgegeben", polRechts:"frei wählbar",
@@ -420,13 +453,20 @@ const CONFIG = {
         "kontinuierliches Feedback aus mehreren Quellen (Lehrkraft, Mitlernende, KI), selbstgesteuerte Reflexion und wiederholte Überarbeitung" ] }
   ],
 
-  kiStufen: [
-    { wert:0, name:"KI ausgeschlossen" },
-    { wert:1, name:"KI nicht thematisiert" },
-    { wert:2, name:"KI als Hilfsmittel erlaubt" },
-    { wert:3, name:"KI gezielt integriert" },
-    { wert:4, name:"KI ist Prüfungsgegenstand" }
+  // Rolle der KI (Datenfeld ki_setzung). Rollen nach Hauke Pölert, „Aufgaben-Remix – 5×4-Matrix“ (2026).
+  // Hauptauswahl: ausgeschlossen / erlaubt / ohne Angabe. „erlaubt“ öffnet die Rollenwahl.
+  kiHaupt: [
+    { wert:"aus",    name:"KI ausgeschlossen" },
+    { wert:"erlaubt", name:"KI erlaubt" },
+    { wert:"leer",   name:"ohne Angabe" }
   ],
+  kiRollen: [
+    { wert:"K02", name:"KI als Tutor", text:"Hinweise und Feedback in klar benannten Phasen, mit Leitplanken.", beispiel:"Rückmeldung zum eigenen Entwurf, dokumentierte Änderungen" },
+    { wert:"K03", name:"KI als Sparringspartner", text:"Gegenpositionen, Perspektivwechsel und Prüfsteine für das eigene Denken.", beispiel:"Drei Einwände erzeugen und am Material prüfen" },
+    { wert:"K04", name:"KI als Gegenstand", text:"Das KI-Produkt selbst wird geprüft, verglichen und eingeordnet.", beispiel:"KI-Infografik auf Fehler und Lücken prüfen" },
+    { wert:"offen", name:"Rolle nicht festgelegt", text:"KI ist erlaubt, die Quelle legt aber keine bestimmte Rolle fest.", beispiel:"", zusatz:true }
+  ],
+  kiNamen: { K01:"KI ausgeschlossen", K02:"KI als Tutor", K03:"KI als Sparringspartner", K04:"KI als Gegenstand", offen:"KI erlaubt, Rolle offen" },
 
   fachbereiche: ["Sprachen","Gesellschaftswissenschaften","MINT","Informatik","Kunst/Musik/Darstellendes Spiel","Sport","Religion/Philosophie","fächerübergreifend"],
 
@@ -446,9 +486,10 @@ const CONFIG = {
   // (gesucht in material_vorhanden und qualitaet; verneinte Angaben wie "nicht belegt" zählen nicht)
   bewertungsStichworte: ["erwartungshorizont","ewh","raster","rubrik","bewertungsbogen","bewertungsmaterial","beurteilungsmatrix","bewertungskriterien","wertungstabelle"],
 
-  laender: { DE:"Deutschland", AT:"Österreich", CH:"Schweiz", NZ:"Neuseeland", international:"International" },
+  laender: { DE:"Deutschland", AT:"Österreich", CH:"Schweiz", NZ:"Neuseeland", FR:"Frankreich", ES:"Spanien", US:"USA", international:"International (länderübergreifend)" },
+  dach: ["DE","AT","CH"],
 
-  fusszeile: "Die Achsenwerte der Beispiele stammen aus einer Recherche und sind zum Teil eingeschätzt, nicht in der Quelle belegt. Fehlende Angaben werden gekennzeichnet; solche Beispiele bleiben immer sichtbar."
+  fusszeile: "Rollen der KI nach Hauke Pölert (unterrichten.digital, 2026). Die Achsenwerte der Beispiele stammen aus einer Recherche und sind zum Teil eingeschätzt, nicht in der Quelle belegt. Fehlende Angaben werden gekennzeichnet; solche Beispiele bleiben immer sichtbar."
 };
 
 /* =====================================================================
@@ -549,6 +590,15 @@ function fachTeile(fach){
   return txt(fach).split(/\s*[;,]\s*|\s+\/\s+/).map(s => s.trim()).filter(Boolean);
 }
 
+const KI_ERLAUBT = ["K02","K03","K04","offen"];
+function kiSetzungLesen(e){
+  let v = e.ki_setzung;
+  if (typeof v === "string") v = v.split(/[\s,;+]+/);
+  if (Array.isArray(v)) return v.map(x => txt(x)).map(x => /^k0?\d$/i.test(x) ? "K0" + x.slice(-1) : x.toLowerCase() === "offen" ? "offen" : "").filter(Boolean);
+  // ältere Dateien ohne ki_setzung: aus ki_rolle ableiten
+  const r = zahl(e.ki_rolle);
+  return r === 0 ? ["K01"] : r === 4 ? ["K04"] : (r === 2 || r === 3) ? ["offen"] : [];
+}
 function bereiteVor(e, index){
   const achsen = CONFIG.achsen.map(a => stufe(e[a.feld]));
   const beleg = belegLesen(e.achsen_belegstatus);
@@ -574,6 +624,8 @@ function bereiteVor(e, index){
     art: fehlt(e.pruefungsart) ? "" : txt(e.pruefungsart),
     ki: (ki !== null && ki >= 0 && ki <= 4) ? Math.round(ki) : null,
     kiBegruendung: txt(e.ki_rolle_begruendung),
+    kiSetzung: kiSetzungLesen(e),
+    kiStatus: txt(e.ki_setzung_status),
     aias: zahl(e.aias_stufe),
     medien: medienNorm(e.digitale_medien),
     medienRoh: fehlt(e.digitale_medien) ? "" : txt(e.digitale_medien),
@@ -627,12 +679,22 @@ const state = {
   modus: "ranking",
   toleranz: 1,
   sichtbar: CONFIG.proSeite,
-  f: { jgVon:null, jgBis:null, bereich:"", fach:"", art:"", land:"", suche:"", ki:new Set(), medien:new Set(), ewh:false }
+  f: { jgVon:null, jgBis:null, bereich:"", fach:"", art:"", land:"", suche:"", ki:new Set(), rolle:new Set(), medien:new Set(), ewh:false }
 };
 
 /* =====================================================================
    BEWERTEN UND FILTERN
    ===================================================================== */
+function kiPasst(p){
+  const f = state.f, s = p.kiSetzung;
+  if (f.ki.has("aus") && s.includes("K01")) return true;
+  if (f.ki.has("leer") && s.length === 0) return true;
+  if (f.ki.has("erlaubt")){
+    const erlaubt = s.filter(x => KI_ERLAUBT.includes(x));
+    if (erlaubt.length && (!f.rolle.size || erlaubt.some(x => f.rolle.has(x)))) return true;
+  }
+  return false;
+}
 function passtFilter(p){
   const f = state.f;
   // Grundsatz: Fehlt bei einer Prüfung die Angabe, wird sie NICHT ausgeblendet.
@@ -647,8 +709,12 @@ function passtFilter(p){
   if (f.bereich && p.bereich && norm(p.bereich) !== norm(f.bereich)) return false;
   if (f.fach && p.fach && !enthaeltWort(p.fachNorm, f.fach)) return false;
   if (f.art && p.art && !p.artGruppen.includes(f.art)) return false;
-  if (f.land && p.land && p.land !== f.land) return false;
-  if (f.ki.size && p.ki !== null && !f.ki.has(p.ki)) return false;
+  if (f.land){
+    if (f.land === "@dach"){ if (p.land && !CONFIG.dach.includes(p.land)) return false; }
+    else if (f.land === "@int"){ if (p.land && CONFIG.dach.includes(p.land)) return false; }
+    else if (p.land && p.land !== f.land) return false;
+  }
+  if (f.ki.size && !kiPasst(p)) return false;
   if (f.medien.size && p.medien !== null && !f.medien.has(p.medien)) return false;
   if (f.ewh && !p.ewh) return false;
   if (f.suche){
@@ -803,16 +869,31 @@ function baueFilter(){
   // Herkunft
   const laender = new Map();
   DATEN.forEach(p => { if (p.land) laender.set(p.land, (laender.get(p.land) || 0) + 1); });
-  $("#fLand").replaceChildren(option("", "alle"),
-    ...[...laender].sort((a, b) => b[1] - a[1]).map(([l, n]) => option(l, (CONFIG.laender[l] || l) + " (" + n + ")")));
+  const nDach = DATEN.filter(p => CONFIG.dach.includes(p.land)).length, nInt = DATEN.filter(p => p.land && !CONFIG.dach.includes(p.land)).length;
+  $("#fLand").replaceChildren(option("", "alle Länder"),
+    option("@dach", "deutschsprachiger Raum (" + nDach + ")"),
+    option("@int", "international (" + nInt + ")"),
+    h("optgroup", { label:"einzelne Länder" },
+      ...[...laender].sort((a, b) => b[1] - a[1]).map(([l, n]) => option(l, (CONFIG.laender[l] || l) + " (" + n + ")"))));
 
-  // KI-Rolle
-  $("#fKi").replaceChildren(...CONFIG.kiStufen.map(k => {
-    const n = DATEN.filter(p => p.ki === k.wert).length;
-    const b = h("button", { type:"button", class:"chip-btn", "aria-pressed":"false" }, k.name, h("small", null, n));
-    b.addEventListener("click", () => { umschalten(f.ki, k.wert, b); geaendert(); });
+  // Rolle der KI
+  const zaehle = fn => DATEN.filter(fn).length;
+  const kiAnz = { aus: zaehle(p => p.kiSetzung.includes("K01")), erlaubt: zaehle(p => p.kiSetzung.some(x => KI_ERLAUBT.includes(x))), leer: zaehle(p => !p.kiSetzung.length) };
+  $("#fKi").replaceChildren(...CONFIG.kiHaupt.map(k => {
+    const b = h("button", { type:"button", class:"chip-btn", "aria-pressed":"false", "data-ki":k.wert }, k.name, h("small", null, kiAnz[k.wert]));
+    if (k.wert === "erlaubt") b.setAttribute("aria-controls", "kiRollen");
+    b.addEventListener("click", () => { umschalten(f.ki, k.wert, b); zeigeRollen(); geaendert(); });
     return b;
   }));
+  $("#fRolle").replaceChildren(...CONFIG.kiRollen.map(r => {
+    const b = h("button", { type:"button", class:"rolle" + (r.zusatz ? " offen-rolle" : ""), "aria-pressed":"false" },
+      h("b", null, h("span", null, r.name), h("small", null, zaehle(p => p.kiSetzung.includes(r.wert)))),
+      h("span", null, r.text),
+      r.beispiel ? h("i", null, r.beispiel) : null);
+    b.addEventListener("click", () => { umschalten(f.rolle, r.wert, b); geaendert(); });
+    return b;
+  }));
+  zeigeRollen();
   // Digitale Medien
   $("#fMedien").replaceChildren(...MEDIEN.map(m => {
     const n = DATEN.filter(p => p.medien === m).length;
@@ -821,20 +902,25 @@ function baueFilter(){
     return b;
   }));
 }
+function zeigeRollen(){
+  const an = state.f.ki.has("erlaubt");
+  $("#kiRollen").hidden = !an;
+  if (!an && state.f.rolle.size){ state.f.rolle.clear(); document.querySelectorAll("#fRolle .rolle").forEach(b => b.setAttribute("aria-pressed", "false")); }
+}
 function umschalten(menge, wert, knopf){
   if (menge.has(wert)) menge.delete(wert); else menge.add(wert);
   knopf.setAttribute("aria-pressed", menge.has(wert) ? "true" : "false");
 }
 function anzahlFilter(){
   const f = state.f;
-  return [f.jgVon !== null || f.jgBis !== null, f.bereich, f.fach, f.art, f.land, f.suche && f.suche.length, f.ki.size, f.medien.size, f.ewh].filter(Boolean).length;
+  return [f.jgVon !== null || f.jgBis !== null, f.bereich, f.fach, f.art, f.land, f.suche && f.suche.length, f.medien.size, f.ewh].filter(Boolean).length;
 }
 function filterZuruecksetzen(){
   const f = state.f;
-  f.jgVon = f.jgBis = null; f.bereich = f.fach = f.art = f.land = ""; f.suche = ""; f.ki.clear(); f.medien.clear(); f.ewh = false;
+  f.jgVon = f.jgBis = null; f.bereich = f.fach = f.art = f.land = ""; f.suche = ""; f.medien.clear(); f.ewh = false;
   ["#fJgVon","#fJgBis","#fBereich","#fArt","#fLand","#fSuche"].forEach(s => { $(s).value = ""; });
   $("#fEwh").checked = false;
-  document.querySelectorAll(".chip-btn").forEach(b => b.setAttribute("aria-pressed", "false"));
+  document.querySelectorAll("#fMedien .chip-btn").forEach(b => b.setAttribute("aria-pressed", "false"));
   fuelleFach();
 }
 function verdrahteFilter(){
@@ -899,6 +985,10 @@ function dlZeile(dl, name, inhalt){
   if (inhalt === null || inhalt === undefined || inhalt === "" || (Array.isArray(inhalt) && !inhalt.length)) return;
   dl.append(h("dt", null, name), h("dd", null, inhalt));
 }
+function kiText(p){
+  if (!p.kiSetzung.length) return "in der Quelle nicht festgelegt";
+  return p.kiSetzung.map(x => CONFIG.kiNamen[x] || x).join(" + ");
+}
 function detailInhalt(p){
   const dl = h("dl", { class:"dl" });
   dlZeile(dl, "Achsen im Einzelnen", h("ul", null, CONFIG.achsen.map((a, i) => {
@@ -908,8 +998,8 @@ function detailInhalt(p){
       v !== null && p.beleg[i] ? h("span", { class:"gesch-txt" }, " (" + (p.beleg[i] === "explizit" ? "in der Quelle belegt" : "eingeschätzt") + ")") : null);
   })));
   if (p.belegRoh) dlZeile(dl, "Belegstatus", p.belegRoh);
-  const ki = CONFIG.kiStufen.find(k => k.wert === p.ki);
-  dlZeile(dl, "Rolle von KI", (ki ? ki.name : "keine Angabe") + (p.kiBegruendung ? " – " + p.kiBegruendung : "") + (p.aias !== null ? " (AI Assessment Scale: Stufe " + p.aias + ")" : ""));
+  dlZeile(dl, "Rolle der KI", kiText(p) + (p.kiSetzung.length && p.kiStatus ? " (" + p.kiStatus + ")" : "")
+    + (p.kiBegruendung ? " – " + p.kiBegruendung : "") + (p.aias !== null ? " (AI Assessment Scale: Stufe " + p.aias + ")" : ""));
   dlZeile(dl, "Digitale Medien", p.medienRoh || "keine Angabe");
   dlZeile(dl, "Werkzeuge", p.tools);
   dlZeile(dl, "Prüfungsart", p.art);
@@ -950,8 +1040,13 @@ function detailsEbene1(t){
     .filter(Boolean).flatMap((x, i) => i ? [" · ", x] : [x]);
 
   const marken = [];
-  const ki = CONFIG.kiStufen.find(k => k.wert === p.ki);
-  marken.push(h("span", { class:"marke " + (p.ki !== null && p.ki >= 2 ? "ki-stark" : "ki") }, ki ? ki.name : "KI-Rolle: keine Angabe"));
+  if (!p.kiSetzung.length) marken.push(h("span", { class:"marke ki" }, "Rolle der KI: ohne Angabe"));
+  else {
+    const zweiphasig = p.kiSetzung.includes("K01") && p.kiSetzung.length > 1;
+    if (zweiphasig) marken.push(h("span", { class:"marke ki" }, "zweiphasig: erst ohne, dann mit KI"));
+    p.kiSetzung.filter(x => !(zweiphasig && x === "K01")).forEach(x =>
+      marken.push(h("span", { class:"marke " + (x === "K01" ? "ki" : "ki-stark") }, CONFIG.kiNamen[x] || x)));
+  }
   marken.push(p.medien
     ? h("span", { class:"marke" }, "Digitale Medien: " + p.medien)
     : h("span", { class:"marke fehlt" }, "Digitale Medien: keine Angabe"));
@@ -1017,11 +1112,11 @@ function zeige(mitWechsel){
   const zahlEl = $("#zahl");
   zahlEl.replaceChildren(n === gesamt ? n + (n === 1 ? " Beispiel" : " Beispiele") : n + " von " + gesamt + " Beispielen",
     h("small", null, !aktive ? "alle Regler auf „egal“ – nach Qualität der Dokumentation sortiert"
-      : state.modus === "ranking" ? "nach Nähe zur Reglerstellung sortiert"
-      : "nur Abweichung bis zur Toleranz · fehlende Angaben gelten als passend"),
+      : state.modus === "ranking" ? "alle Beispiele, sortiert nach Nähe zu deiner Reglerstellung"
+      : "nur Beispiele, die bei keinem Regler mehr als " + ({ 0.5:"½ Stufe", 1:"1 Stufe", 2:"2 Stufen" }[state.toleranz] || state.toleranz + " Stufen") + " von deiner Einstellung abweichen · fehlende Angaben zählen als passend"),
     aktive ? h("span", { class:"farblegende", "aria-hidden":"true" },
       [["p90","ab 90 %"],["p80","80–89"],["p70","70–79"],["p60","60–69"],["p50","50–59"]].map(([v, t]) =>
-        h("span", null, h("i", { style:"background:var(--" + v + ")" }), t))) : null);
+        h("span", null, h("i", { style:"background:var(--" + v + ")" }), t))) : "");
   const fa = anzahlFilter();
   $("#filterInfo").textContent = fa ? fa + " aktiv" : "alle offen – für den Überblick am besten so lassen";
 
@@ -1032,10 +1127,10 @@ function zeige(mitWechsel){
       AUSGEBLENDET
         ? "Kein Beispiel erreicht mindestens " + SCHWELLE + " % Passung. Bitte Schieberegler oder Filter anpassen."
         : state.modus === "filter"
-        ? "Mit dieser Reglerstellung und Toleranz gibt es keinen Treffer. Bitte Schieberegler oder Filter anpassen – oder zum Ranking wechseln."
+        ? "Mit dieser Reglerstellung und erlaubten Abweichung gibt es keinen Treffer. Bitte Schieberegler oder Filter anpassen, die erlaubte Abweichung vergrößern oder „Alle, nach Passung“ wählen."
         : "Mit diesen Filtern gibt es keinen Treffer. Bitte Schieberegler oder Filter anpassen.");
     const z = h("div", { class:"zeile" });
-    if (state.modus === "filter"){ const b = h("button", { type:"button", class:"btn primaer" }, "Zum Ranking wechseln"); b.addEventListener("click", () => setzeModus("ranking")); z.append(b); }
+    if (state.modus === "filter"){ const b = h("button", { type:"button", class:"btn primaer" }, "Alle, nach Passung anzeigen"); b.addEventListener("click", () => setzeModus("ranking")); z.append(b); }
     if (fa){ const b = h("button", { type:"button", class:"btn" }, "Filter zurücksetzen"); b.addEventListener("click", () => { filterZuruecksetzen(); geaendert(); }); z.append(b); }
     leer.append(z);
     ol.replaceChildren(leer);

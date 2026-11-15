@@ -52,6 +52,11 @@ def pruefe(e):
     ki = e.get("ki_rolle")
     if ki is not None and ki not in (0, 1, 2, 3, 4):
         fehler.append(f"ki_rolle muss 0–4 sein (ist {ki!r})")
+    ks = e.get("ki_setzung")
+    if ks is None:
+        warn.append("ki_setzung fehlt (wird aus ki_rolle abgeleitet)")
+    elif not (isinstance(ks, list) and all(x in ("K01", "K02", "K03", "K04", "offen") for x in ks)):
+        fehler.append(f"ki_setzung muss eine Liste aus K01–K04/offen sein (ist {ks!r})")
     dm = e.get("digitale_medien")
     if dm not in (None, "") and dm not in MEDIEN:
         warn.append(f"digitale_medien unbekannt: {dm!r}")
