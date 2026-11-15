@@ -47,9 +47,22 @@ Alles Anpassbare steht am Anfang des Skripts in `index.html` im Objekt `CONFIG`:
 
 ## Trefferlogik
 
-- **Ranking** (Standard): Passung = 1 − mittlere Abweichung über alle aktiven Regler mit bekanntem Wert ÷ 4. Sortiert wird nach Passung × (0,6 + 0,4 × Anteil der vergleichbaren Regler), bei Gleichstand nach Qualität und Konfidenz.
+- Die Regler sind stufenlos (1,0 bis 5,0). Unter jedem Regler steht die Beschreibung der nächstgelegenen Stufe.
+- **Ranking** (Standard): Passung = 1 − mittlere Abweichung über alle aktiven Regler mit bekanntem Wert ÷ 4. Zuerst kommen Beispiele, die auf mindestens der Hälfte der aktiven Regler vergleichbar sind, streng nach Passung sortiert; danach in einem eigenen Abschnitt die mit wenigen Angaben.
+- Farben: ab 90 % grün, 80–89 hellgrün, 70–79 gelb, 60–69 orange, 50–59 rot. Beispiele unter 50 % werden ausgeblendet (`SCHWELLE` im Skript); Beispiele ohne vergleichbare Angaben bleiben sichtbar.
 - **Filter**: Es erscheinen nur Beispiele, die auf jedem aktiven Regler höchstens um die gewählte Toleranz abweichen. Fehlende Werte gelten als passend.
 - Ein Regler auf „egal“ zählt nicht mit.
+
+## Neue Funde einpflegen
+
+`werkzeuge/daten_einpflegen.py` prüft neue Einträge (Pflichtfelder, Wertebereiche, Links), erkennt Dubletten und hängt nur gültige, neue Einträge an. Bestehende Einträge bleiben unverändert.
+
+```
+python3 werkzeuge/daten_einpflegen.py neue_funde.json              # nur prüfen
+python3 werkzeuge/daten_einpflegen.py neue_funde.json --schreiben  # einpflegen
+```
+
+`werkzeuge/RECHERCHE-AUFTRAG.md` enthält den Entwurf für einen regelmäßigen Rechercheauftrag, der neue Funde als Pull Request zur Freigabe vorlegt.
 
 ## Lokal testen
 

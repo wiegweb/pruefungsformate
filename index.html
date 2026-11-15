@@ -5,30 +5,35 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="referrer" content="no-referrer">
 <meta name="color-scheme" content="light">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%232f6690'/%3E%3Cpath d='M6 16h20' stroke='%23fff' stroke-width='3' stroke-linecap='round'/%3E%3Ccircle cx='20' cy='16' r='5' fill='%23fff'/%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23123b5c'/%3E%3Cpath d='M6 16h20' stroke='%23fff' stroke-width='3' stroke-linecap='round'/%3E%3Ccircle cx='20' cy='16' r='5' fill='%23fff'/%3E%3C/svg%3E">
 <title>Ideensammlung für zukunftsorientierte Prüfungsformate</title>
 <meta name="description" content="Schieberegler einstellen und passende, dokumentierte Prüfungsbeispiele mit Link zur Originalquelle finden.">
 <style>
 :root{
-  --bg:#f3f5f8;
+  --bg:#eef2f5;
   --flaeche:#ffffff;
-  --tinte:#18212c;
-  --text:#2a3441;
-  --leise:#5d6978;
-  --linie:#e3e8ee;
-  --linie-stark:#c9d2dc;
-  --akzent:#2f6690;
-  --akzent-dunkel:#1f4b6d;
-  --akzent-hell:#e8f0f7;
-  --akzent-mittel:#9dbad1;
-  --grau-spur:#cbd3dc;
+  --navy:#123b5c;
+  --navy-tief:#0d2e49;
+  --tinte:#13293d;
+  --text:#2d3b48;
+  --leise:#66737f;
+  --linie:#e4e9ee;
+  --linie-stark:#cfd8e0;
+  --akzent:#1a9ccf;        /* Türkis: Flächen, Linien, Regler */
+  --akzent-text:#0d6f9a;   /* Türkis dunkel: Text und Links (ausreichender Kontrast) */
+  --akzent-dunkel:#0d6f9a;
+  --akzent-hell:#e5f4fa;
+  --akzent-mittel:#9dd3ea;
+  --grau-spur:#d7dee5;
   --hinweis-bg:#fff7e3;
   --hinweis-rand:#ecd9a4;
   --hinweis-text:#6b4a00;
-  --r-gross:16px;   /* Panels, Karten */
-  --r-mittel:10px;  /* Felder, Knöpfe */
-  --r-klein:7px;    /* Elemente in Knöpfen (Segment) */
-  --schatten:0 0 0 1px rgba(24,33,44,.06),0 1px 2px rgba(24,33,44,.05),0 6px 18px -8px rgba(24,33,44,.14);
+  /* Passungsfarben */
+  --p90:#2e9a57; --p80:#8bc34a; --p70:#f2c230; --p60:#f08c2e; --p50:#d9483b;
+  --r-gross:16px;
+  --r-mittel:10px;
+  --r-klein:7px;
+  --schatten:0 1px 2px rgba(19,41,61,.05),0 4px 16px -6px rgba(19,41,61,.10);
   --ease:cubic-bezier(.2,0,0,1);
   --schrift:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif;
 }
@@ -45,10 +50,10 @@ a{color:var(--akzent-dunkel)}
 .zahlen{font-variant-numeric:tabular-nums}
 
 /* Kopf */
-.kopf{background:var(--flaeche);box-shadow:0 1px 0 var(--linie)}
-.kopf-innen{max-width:1320px;margin:0 auto;padding:22px 20px 18px;display:flex;gap:24px;align-items:center;justify-content:space-between}
-h1{font-size:clamp(1.45rem,1.1rem + 1.6vw,2.05rem);line-height:1.15;letter-spacing:-.02em;color:var(--tinte);font-weight:750}
-.intro{margin-top:6px;color:var(--leise);font-size:1rem}
+.kopf{background:var(--navy)}
+.kopf-innen{max-width:1320px;margin:0 auto;padding:24px 20px 22px;display:flex;gap:24px;align-items:center;justify-content:space-between}
+h1{font-size:clamp(1.4rem,1.1rem + 1.4vw,1.9rem);line-height:1.18;letter-spacing:-.015em;color:#fff;font-weight:650}
+.intro{margin-top:6px;color:#b9cddc;font-size:.98rem}
 .motiv{flex:none;width:132px;display:none}
 @media (min-width:860px){.motiv{display:block}}
 
@@ -82,15 +87,15 @@ select{appearance:none;-webkit-appearance:none;padding-right:34px;background-ima
 .chips{display:flex;flex-wrap:wrap;gap:8px}
 .chip-btn{min-height:44px;padding:8px 14px;border-radius:999px;border:1px solid var(--linie-stark);background:#fff;cursor:pointer;font-size:.92rem;color:var(--text)}
 .chip-btn small{color:var(--leise);font-size:.8rem;margin-left:5px;font-variant-numeric:tabular-nums}
-.chip-btn[aria-pressed=true]{background:var(--akzent);border-color:var(--akzent);color:#fff}
+.chip-btn[aria-pressed=true]{background:var(--navy);border-color:var(--navy);color:#fff}
 .chip-btn[aria-pressed=true] small{color:#dbe7f1}
 .check{display:flex;align-items:center;gap:10px;min-height:44px;cursor:pointer;font-size:.95rem}
 .check input{width:22px;height:22px;accent-color:var(--akzent);flex:none}
 .zeile{display:flex;flex-wrap:wrap;gap:10px 18px;align-items:center;margin-top:14px}
 .btn{min-height:44px;padding:8px 16px;border-radius:var(--r-mittel);border:1px solid var(--linie-stark);background:#fff;cursor:pointer;font-weight:600;font-size:.92rem;color:var(--tinte)}
-.btn:hover{border-color:var(--akzent);color:var(--akzent-dunkel)}
-.btn.primaer{background:var(--akzent);border-color:var(--akzent);color:#fff}
-.btn.primaer:hover{background:var(--akzent-dunkel);color:#fff}
+.btn:hover{border-color:var(--akzent);color:var(--akzent-text)}
+.btn.primaer{background:var(--navy);border-color:var(--navy);color:#fff}
+.btn.primaer:hover{background:var(--navy-tief);color:#fff}
 .btn.leise{border-color:transparent;background:transparent;color:var(--akzent-dunkel);padding:8px 10px}
 .btn.leise:hover{background:var(--akzent-hell)}
 
@@ -110,7 +115,7 @@ select{appearance:none;-webkit-appearance:none;padding-right:34px;background-ima
 .regler-panel{padding:16px 18px 10px}
 .regler-kopf{display:flex;align-items:baseline;justify-content:space-between;gap:8px 12px;flex-wrap:wrap}
 .regler-kopf h2{font-size:1.05rem;color:var(--tinte)}
-.profil{font-size:.8rem;font-weight:600;color:var(--akzent-dunkel)}
+.profil{font-size:.8rem;font-weight:600;color:var(--akzent-text)}
 .profil.eigen{color:var(--leise)}
 .regler-hinweis{font-size:.82rem;color:var(--leise);margin-top:2px}
 @media (min-width:700px) and (max-width:1023px){
@@ -130,15 +135,16 @@ select{appearance:none;-webkit-appearance:none;padding-right:34px;background-ima
 .egal input:focus-visible + .schalter{outline:3px solid var(--akzent);outline-offset:2px}
 
 input[type=range]{-webkit-appearance:none;appearance:none;width:100%;height:44px;margin:-8px 0 -4px;background:transparent;cursor:pointer;display:block}
-input[type=range]::-webkit-slider-runnable-track{height:6px;border-radius:999px;background:linear-gradient(90deg,var(--grau-spur) 0%,#7fa3c0 55%,var(--akzent) 100%)}
-input[type=range]::-moz-range-track{height:6px;border-radius:999px;background:linear-gradient(90deg,var(--grau-spur) 0%,#7fa3c0 55%,var(--akzent) 100%)}
-input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;appearance:none;width:26px;height:26px;margin-top:-10px;border-radius:50%;background:#fff;border:3px solid var(--akzent-dunkel);box-shadow:0 1px 2px rgba(24,33,44,.2),0 3px 8px rgba(24,33,44,.18)}
-input[type=range]::-moz-range-thumb{width:20px;height:20px;border-radius:50%;background:#fff;border:3px solid var(--akzent-dunkel);box-shadow:0 1px 2px rgba(24,33,44,.2),0 3px 8px rgba(24,33,44,.18)}
+input[type=range]{--fill:0%}
+input[type=range]::-webkit-slider-runnable-track{height:6px;border-radius:999px;background:linear-gradient(90deg,var(--akzent) 0 var(--fill),var(--grau-spur) var(--fill) 100%)}
+input[type=range]::-moz-range-track{height:6px;border-radius:999px;background:linear-gradient(90deg,var(--akzent) 0 var(--fill),var(--grau-spur) var(--fill) 100%)}
+input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;appearance:none;width:26px;height:26px;margin-top:-10px;border-radius:50%;background:#fff;border:2px solid var(--akzent);box-shadow:0 1px 2px rgba(19,41,61,.18),0 3px 8px rgba(19,41,61,.14)}
+input[type=range]::-moz-range-thumb{width:20px;height:20px;border-radius:50%;background:#fff;border:2px solid var(--akzent);box-shadow:0 1px 2px rgba(19,41,61,.18),0 3px 8px rgba(19,41,61,.14)}
 input[type=range]:focus-visible{outline:none}
 input[type=range]:focus-visible::-webkit-slider-thumb{outline:3px solid var(--akzent);outline-offset:3px}
 input[type=range]:focus-visible::-moz-range-thumb{outline:3px solid var(--akzent);outline-offset:3px}
 .stufe{display:flex;gap:8px;font-size:.86rem;line-height:1.4;color:var(--text)}
-.stufe .nr{flex:none;width:2.2em;font-weight:700;color:var(--akzent-dunkel);font-variant-numeric:tabular-nums}
+.stufe .nr{flex:none;width:2.2em;font-weight:700;color:var(--akzent-text);font-variant-numeric:tabular-nums}
 .regler.aus input[type=range]{opacity:.35}
 .regler.aus .stufe{color:var(--leise);font-style:italic}
 .regler-fuss{display:flex;flex-wrap:wrap;gap:4px;border-top:1px solid var(--linie);padding-top:6px;margin:0 -8px}
@@ -148,9 +154,9 @@ input[type=range]:focus-visible::-moz-range-thumb{outline:3px solid var(--akzent
 .zahl{font-size:1.05rem;font-weight:700;color:var(--tinte);font-variant-numeric:tabular-nums}
 .zahl small{display:block;font-weight:500;font-size:.84rem;color:var(--leise)}
 .modus{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
-.segment{display:inline-flex;gap:2px;padding:3px;border-radius:var(--r-mittel);background:#edf1f5}
-.segment button{min-height:40px;padding:6px 14px;border:0;border-radius:var(--r-klein);background:transparent;cursor:pointer;font-weight:600;font-size:.92rem;color:var(--text)}
-.segment button[aria-pressed=true]{background:#fff;color:var(--akzent-dunkel);box-shadow:0 1px 2px rgba(24,33,44,.12),0 1px 6px -2px rgba(24,33,44,.12)}
+.segment{display:inline-flex;gap:4px}
+.segment button{min-height:44px;padding:6px 14px;border:0;border-bottom:2px solid transparent;border-radius:0;background:transparent;cursor:pointer;font-weight:600;font-size:.94rem;color:var(--leise)}
+.segment button[aria-pressed=true]{color:var(--akzent-text);border-bottom-color:var(--akzent)}
 .modus select{width:auto;min-width:150px}
 
 /* Karten: zuerst nur Titel und Kurzbeschreibung */
@@ -158,8 +164,15 @@ input[type=range]:focus-visible::-moz-range-thumb{outline:3px solid var(--akzent
 .karte{background:var(--flaeche);border-radius:var(--r-gross);box-shadow:var(--schatten);padding:16px 20px 6px}
 .k-kopf{display:flex;gap:14px;justify-content:space-between;align-items:baseline}
 .karte h3{font-size:1.08rem;line-height:1.3;color:var(--tinte);letter-spacing:-.005em}
-.treffer{flex:none;font-weight:800;font-size:1rem;color:var(--akzent-dunkel);font-variant-numeric:tabular-nums;white-space:nowrap}
-.treffer.offen{font-weight:600;font-size:.82rem;color:var(--leise)}
+.treffer{flex:none;font-weight:700;font-size:.9rem;font-variant-numeric:tabular-nums;white-space:nowrap;padding:3px 10px;border-radius:999px;color:#fff;background:var(--leise)}
+.f90{background:var(--p90);color:#fff}.f80{background:var(--p80);color:#1d3510}.f70{background:var(--p70);color:#3d2f00}.f60{background:var(--p60);color:#3b1c00}.f50{background:var(--p50);color:#fff}
+.farblegende{display:flex;flex-wrap:wrap;gap:4px 12px;font-size:.76rem;color:var(--leise);margin-top:4px}
+.farblegende span{display:inline-flex;align-items:center;gap:5px;font-variant-numeric:tabular-nums}
+.farblegende i{width:10px;height:10px;border-radius:50%;display:inline-block}
+.trenner{margin-top:14px;padding:4px 4px 0;font-size:.86rem;color:var(--leise)}
+.trenner b{color:var(--tinte)}
+.ausgeblendet{margin-top:12px;font-size:.88rem;color:var(--leise);text-align:center}
+.treffer.offen{font-weight:600;font-size:.8rem;color:var(--leise);background:#eef1f4}
 .k-text{margin-top:6px;max-width:75ch;color:var(--text)}
 .stufe1,.stufe2{margin-top:6px}
 .stufe1>summary,.stufe2>summary{list-style:none;cursor:pointer;display:inline-flex;align-items:center;gap:6px;min-height:44px;font-weight:600;font-size:.9rem;color:var(--akzent-dunkel);border-radius:8px}
@@ -171,18 +184,18 @@ input[type=range]:focus-visible::-moz-range-thumb{outline:3px solid var(--akzent
 .marken{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
 .marke{font-size:.78rem;font-weight:600;padding:4px 10px;border-radius:999px;background:#eef1f5;color:var(--text);border:1px solid transparent}
 .marke.ki{background:var(--akzent-hell);color:var(--akzent-dunkel)}
-.marke.ki-stark{background:var(--akzent);color:#fff}
+.marke.ki-stark{background:var(--navy);color:#fff}
 .marke.fehlt{background:var(--hinweis-bg);border-color:var(--hinweis-rand);color:var(--hinweis-text)}
 .marke.rand{background:#fff;border-color:var(--linie-stark)}
 .passungszeile{font-size:.84rem;color:var(--leise);margin-top:12px;font-variant-numeric:tabular-nums}
-.passungszeile b{color:var(--akzent-dunkel)}
+.passungszeile b{color:var(--tinte)}
 .profilraster{display:grid;grid-template-columns:repeat(auto-fill,minmax(205px,1fr));gap:6px 22px;margin-top:8px}
 .ax{display:flex;align-items:center;justify-content:space-between;gap:10px;font-size:.8rem;color:var(--text);min-height:22px}
 .ax .n{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .ax .spur{display:inline-flex;gap:9px;align-items:center;flex:none}
 .pkt{width:12px;height:12px;border-radius:50%;background:#e3e8ee;display:inline-block;flex:none}
-.pkt.wert{background:var(--akzent-dunkel)}
-.pkt.wert.gesch{background:var(--akzent-mittel);box-shadow:inset 0 0 0 1.5px var(--akzent-dunkel)}
+.pkt.wert{background:var(--navy)}
+.pkt.wert.gesch{background:var(--akzent-mittel);box-shadow:inset 0 0 0 1.5px var(--navy)}
 .pkt.ich{outline:2px solid var(--tinte);outline-offset:2px}
 .ax.leer .n{color:var(--leise)}
 .ax.leer .pkt{background:transparent;box-shadow:inset 0 0 0 1px var(--linie-stark)}
@@ -191,8 +204,8 @@ input[type=range]:focus-visible::-moz-range-thumb{outline:3px solid var(--akzent
 .legende{display:flex;flex-wrap:wrap;gap:4px 16px;font-size:.76rem;color:var(--leise);margin-top:8px}
 .legende span{display:inline-flex;align-items:center;gap:6px}
 .k-fuss{display:flex;flex-wrap:wrap;gap:10px 16px;align-items:center;margin-top:14px}
-.quelle{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:10px 16px;border-radius:var(--r-mittel);background:var(--akzent);color:#fff;text-decoration:none;font-weight:700;font-size:.94rem}
-.quelle:hover{background:var(--akzent-dunkel)}
+.quelle{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:10px 16px;border-radius:var(--r-mittel);background:var(--navy);color:#fff;text-decoration:none;font-weight:700;font-size:.94rem}
+.quelle:hover{background:var(--navy-tief)}
 .quelle .typ{font-weight:500;opacity:.88;font-size:.84rem}
 .quelle svg{width:16px;height:16px;flex:none}
 .fund{font-size:.82rem;color:var(--leise);flex:1 1 240px;min-width:0;overflow-wrap:anywhere}
@@ -241,11 +254,11 @@ footer{max-width:1320px;margin:0 auto;padding:0 20px 40px;font-size:.84rem;color
     </div>
     <svg class="motiv" viewBox="0 0 210 120" aria-hidden="true">
       <g fill="none" stroke-linecap="round" stroke-width="6">
-        <path d="M12 22h186" stroke="#dde3ea"/><path d="M12 22h40" stroke="#9dbad1"/>
-        <path d="M12 60h186" stroke="#dde3ea"/><path d="M12 60h112" stroke="#6f97b7"/>
-        <path d="M12 98h186" stroke="#dde3ea"/><path d="M12 98h160" stroke="#2f6690"/>
+        <path d="M12 22h186" stroke="#2a5476"/><path d="M12 22h40" stroke="#1a9ccf"/>
+        <path d="M12 60h186" stroke="#2a5476"/><path d="M12 60h112" stroke="#1a9ccf"/>
+        <path d="M12 98h186" stroke="#2a5476"/><path d="M12 98h160" stroke="#1a9ccf"/>
       </g>
-      <g fill="#fff" stroke="#1f4b6d" stroke-width="4">
+      <g fill="#fff" stroke="#1a9ccf" stroke-width="4">
         <circle cx="52" cy="22" r="10"/><circle cx="124" cy="60" r="10"/><circle cx="172" cy="98" r="10"/>
       </g>
     </svg>
@@ -311,7 +324,7 @@ footer{max-width:1320px;margin:0 auto;padding:0 20px 40px;font-size:.84rem;color
             <button type="button" id="mFilter" aria-pressed="false">Filter</button>
           </div>
           <select id="toleranz" aria-label="Toleranz je Regler" hidden>
-            <option value="0">Toleranz: exakt</option>
+            <option value="0.5">Toleranz: ± ½ Stufe</option>
             <option value="1" selected>Toleranz: ± 1 Stufe</option>
             <option value="2">Toleranz: ± 2 Stufen</option>
           </select>
@@ -372,9 +385,9 @@ const CONFIG = {
         "Teamarbeit mit gemeinsamer Bewertung" ] },
     { feld:"achse5", name:"Produkt", kurz:"Produkt", start:1, polLinks:"fest vorgegeben", polRechts:"frei wählbar",
       stufen:[
-        "Produktform, Umfang und Aufbau fest vorgegeben (z. B. schriftliche Analyse)",
-        "Produktform vorgegeben, Gestaltung teilweise frei (z. B. Lernvideo mit eigenem Aufbau)",
-        "Auswahl zwischen mehreren Produktformen (z. B. Text, Podcast, Lernvideo)",
+        "Produktform, Umfang und Aufbau fest vorgegeben",
+        "Produktform vorgegeben, Gestaltung teilweise frei",
+        "Auswahl zwischen mehreren Produktformen",
         "Produktform weitgehend frei, einzelne Anforderungen verbindlich",
         "Produktform und Gestaltung vollständig frei wählbar" ] },
     { feld:"achse6", name:"Aufsicht / Kontrolle", kurz:"Aufsicht", start:1, polLinks:"lückenlos beaufsichtigt", polRechts:"vertrauensbasiert",
@@ -386,11 +399,11 @@ const CONFIG = {
         "vertrauensbasiert, unbeaufsichtigt" ] },
     { feld:"achse7", name:"Aufgabenstruktur", kurz:"Aufgabenstruktur", start:2, polLinks:"geschlossen", polRechts:"eigene Fragestellung",
       stufen:[
-        "geschlossene Aufgaben mit eindeutigen Lösungen (z. B. Begriffe zuordnen)",
-        "konkrete Aufgaben mit festgelegten Arbeitsschritten (z. B. Rede anhand von Leitfragen analysieren)",
-        "vorgegebenes Problem mit frei wählbarem Lösungsweg (z. B. Wirkung einer Rede untersuchen)",
-        "offener Arbeitsauftrag mit eigener Schwerpunktsetzung (z. B. politische Sprache anhand selbst gewählter Beispiele untersuchen)",
-        "eigene Fragestellung entwickeln und selbstständig bearbeiten (z. B. selbst gewähltes Forschungsprojekt)" ] },
+        "geschlossene Aufgaben mit eindeutigen Lösungen",
+        "konkrete Aufgaben mit festgelegten Arbeitsschritten",
+        "vorgegebenes Problem mit frei wählbarem Lösungsweg",
+        "offener Arbeitsauftrag mit eigener Schwerpunktsetzung",
+        "eigene Fragestellung entwickeln und selbstständig bearbeiten" ] },
     { feld:"achse8", name:"Bewertungsgegenstand", kurz:"Bewertung", start:1, polLinks:"nur Endprodukt", polRechts:"Prozess & Reflexion gleichwertig",
       stufen:[
         "nur Endprodukt",
@@ -659,14 +672,29 @@ function bewerte(p){
   const abdeckung = aktive ? n / aktive : 1;
   // Prüfungen mit vielen fehlenden Angaben rutschen etwas nach unten, bleiben aber sichtbar.
   const sortwert = (passung === null ? 0.5 : passung) * (0.6 + 0.4 * abdeckung);
-  return { p, passung, n, aktive, maxAbw, sortwert };
+  // "dicht": mindestens die Hälfte der aktiven Regler ist vergleichbar
+  const dicht = aktive === 0 || (passung !== null && n / aktive >= 0.5);
+  return { p, passung, n, aktive, maxAbw, sortwert, dicht };
 }
 
+const SCHWELLE = 50;   // Beispiele unter dieser Passung (in %) werden ausgeblendet
+function prozent(t){ return t.passung === null ? null : Math.round(t.passung * 100); }
+function farbklasse(proz){
+  if (proz === null) return "";
+  return proz >= 90 ? "f90" : proz >= 80 ? "f80" : proz >= 70 ? "f70" : proz >= 60 ? "f60" : "f50";
+}
+let AUSGEBLENDET = 0;
 function berechne(){
   let liste = DATEN.filter(passtFilter).map(bewerte);
-  if (state.modus === "filter") liste = liste.filter(t => t.maxAbw <= state.toleranz);
+  if (state.modus === "filter") liste = liste.filter(t => t.maxAbw <= state.toleranz + 1e-9);
+  const vorher = liste.length;
+  // Nur ausblenden, wenn die Passung bekannt ist – fehlende Angaben blenden nie aus.
+  liste = liste.filter(t => t.aktive === 0 || prozent(t) === null || prozent(t) >= SCHWELLE);
+  AUSGEBLENDET = vorher - liste.length;
+  // Zuerst gut vergleichbare Beispiele streng nach Passung, danach die mit wenigen Angaben.
+  const pz = t => prozent(t) === null ? -1 : prozent(t);
   liste.sort((a, b) =>
-    (b.sortwert - a.sortwert) || (b.p.qual - a.p.qual) || (b.p.konf - a.p.konf) || a.p.titel.localeCompare(b.p.titel, "de"));
+    (b.dicht - a.dicht) || (pz(b) - pz(a)) || (b.n - a.n) || (b.p.qual - a.p.qual) || (b.p.konf - a.p.konf) || a.p.titel.localeCompare(b.p.titel, "de"));
   return liste;
 }
 
@@ -678,7 +706,7 @@ function baueRegler(){
   const box = $("#regler");
   CONFIG.achsen.forEach((a, i) => {
     const id = "regler" + i;
-    const range = h("input", { type:"range", min:"1", max:"5", step:"1", id, "aria-describedby": id + "-stufe" });
+    const range = h("input", { type:"range", min:"1", max:"5", step:"0.01", id, "aria-describedby": id + "-stufe" });
     const egal = h("input", { type:"checkbox", id: id + "-egal", "aria-label": a.name + ": egal (zählt nicht mit)" });
     const stufeEl = h("p", { class:"stufe", id: id + "-stufe" });
     const block = h("div", { class:"regler" },
@@ -687,22 +715,33 @@ function baueRegler(){
         h("label", { class:"egal" }, egal, h("span", { class:"schalter" }), "egal")),
       range, stufeEl);
     range.addEventListener("input", () => { state.werte[i] = Number(range.value); zeigeRegler(i); geaendert(); });
+    // Tastatur: Pfeiltasten in Zehntelschritten, Bild auf/ab um eine ganze Stufe
+    range.addEventListener("keydown", e => {
+      const schritt = { ArrowRight:.1, ArrowUp:.1, ArrowLeft:-.1, ArrowDown:-.1, PageUp:1, PageDown:-1 }[e.key];
+      if (schritt === undefined) return;
+      e.preventDefault();
+      state.werte[i] = Math.min(5, Math.max(1, Math.round((state.werte[i] + schritt) * 10) / 10));
+      zeigeRegler(i); geaendert();
+    });
     egal.addEventListener("change", () => { state.aktiv[i] = !egal.checked; zeigeRegler(i); geaendert(); });
     reglerEls.push({ block, range, egal, stufeEl });
     box.append(block);
   });
 }
+function kommazahl(v){ return (Math.round(v * 10) / 10).toLocaleString("de-DE", { minimumFractionDigits:1, maximumFractionDigits:1 }); }
 function zeigeRegler(i){
   const a = CONFIG.achsen[i], el = reglerEls[i], v = state.werte[i], an = state.aktiv[i];
-  el.range.value = String(v);
+  const naechste = Math.min(5, Math.max(1, Math.round(v)));
+  if (Number(el.range.value) !== v) el.range.value = String(v);
+  el.range.style.setProperty("--fill", ((v - 1) / 4 * 100) + "%");
   el.range.disabled = !an;
   el.egal.checked = !an;
   el.block.classList.toggle("aus", !an);
-  el.range.setAttribute("aria-valuetext", "Stufe " + v + " von 5: " + a.stufen[v - 1]);
+  el.range.setAttribute("aria-valuetext", kommazahl(v) + " von 5, nahe Stufe " + naechste + ": " + a.stufen[naechste - 1]);
   el.stufeEl.replaceChildren();
-  if (an) el.stufeEl.append(h("span", { class:"nr", "aria-hidden":"true" }, v + "/5"), a.stufen[v - 1]);
+  if (an) el.stufeEl.append(h("span", { class:"nr", "aria-hidden":"true" }, kommazahl(v)), a.stufen[naechste - 1]);
   else el.stufeEl.append("zählt gerade nicht mit");
-  const start = state.aktiv.every(Boolean) && state.werte.every((w, k) => w === CONFIG.achsen[k].start);
+  const start = state.aktiv.every(Boolean) && state.werte.every((w, k) => Math.abs(w - CONFIG.achsen[k].start) < 0.005);
   const lab = $("#profilLabel");
   lab.textContent = start ? "Ausgangsprofil: " + CONFIG.ausgangsprofil : "eigene Einstellung";
   lab.classList.toggle("eigen", !start);
@@ -846,9 +885,9 @@ function quelleKnopf(p){
 function achsenProfil(p){
   return h("div", { class:"profilraster", role:"list", "aria-label":"Achsenprofil der Prüfung" },
     CONFIG.achsen.map((a, i) => {
-      const v = p.achsen[i], ich = state.aktiv[i] ? state.werte[i] : null, gesch = p.beleg[i] === "eingeschätzt";
+      const v = p.achsen[i], ich = state.aktiv[i] ? Math.round(state.werte[i]) : null, gesch = p.beleg[i] === "eingeschätzt";
       const label = a.name + ": " + (v === null ? "keine Angabe" : "Stufe " + v + " von 5" + (gesch ? " (eingeschätzt)" : p.beleg[i] ? " (belegt)" : ""))
-        + (ich !== null ? "; eigene Einstellung: Stufe " + ich : "; Regler steht auf egal");
+        + (ich !== null ? "; eigene Einstellung: " + kommazahl(state.werte[i]) : "; Regler steht auf egal");
       const spur = h("span", { class:"spur", "aria-hidden":"true" },
         v === null ? h("span", { class:"ka" }, "keine Angabe") : null,
         [1,2,3,4,5].map(n => h("i", { class:"pkt" + (v === n ? " wert" + (gesch ? " gesch" : "") : "") + (ich === n ? " ich" : "") })));
@@ -953,8 +992,8 @@ function karte(t){
   if (t.aktive > 0){
     treffer = t.passung === null
       ? h("span", { class:"treffer offen", title:"Keine Angaben zu den aktiven Reglern" }, "nicht vergleichbar")
-      : h("span", { class:"treffer", title:"Passung zur Reglerstellung (verglichen auf " + t.n + " von " + t.aktive + " Reglern)" },
-          Math.round(t.passung * 100) + " %", h("span", { class:"sr" }, " Passung"));
+      : h("span", { class:"treffer " + farbklasse(prozent(t)), title:"Passung zur Reglerstellung (verglichen auf " + t.n + " von " + t.aktive + " Reglern)" },
+          prozent(t) + " %", h("span", { class:"sr" }, " Passung"));
   }
   return h("li", { class:"karte" },
     h("div", { class:"k-kopf" }, h("h3", null, p.titel), treffer),
@@ -979,7 +1018,10 @@ function zeige(mitWechsel){
   zahlEl.replaceChildren(n === gesamt ? n + (n === 1 ? " Beispiel" : " Beispiele") : n + " von " + gesamt + " Beispielen",
     h("small", null, !aktive ? "alle Regler auf „egal“ – nach Qualität der Dokumentation sortiert"
       : state.modus === "ranking" ? "nach Nähe zur Reglerstellung sortiert"
-      : "nur Abweichung bis zur Toleranz · fehlende Angaben gelten als passend"));
+      : "nur Abweichung bis zur Toleranz · fehlende Angaben gelten als passend"),
+    aktive ? h("span", { class:"farblegende", "aria-hidden":"true" },
+      [["p90","ab 90 %"],["p80","80–89"],["p70","70–79"],["p60","60–69"],["p50","50–59"]].map(([v, t]) =>
+        h("span", null, h("i", { style:"background:var(--" + v + ")" }), t))) : null);
   const fa = anzahlFilter();
   $("#filterInfo").textContent = fa ? fa + " aktiv" : "alle offen – für den Überblick am besten so lassen";
 
@@ -987,18 +1029,29 @@ function zeige(mitWechsel){
   const sicht = liste.slice(0, state.sichtbar);
   if (!n){
     const leer = h("li", { class:"leerzustand" }, h("b", null, "Keine passenden Beispiele"),
-      state.modus === "filter"
-        ? "Mit dieser Reglerstellung und Toleranz gibt es keinen Treffer. Größere Toleranz wählen, einzelne Regler auf „egal“ stellen oder zum Ranking wechseln."
-        : "Mit diesen Filtern gibt es keinen Treffer. Das Feld ist noch dünn dokumentiert – Filter möglichst offen lassen.");
+      AUSGEBLENDET
+        ? "Kein Beispiel erreicht mindestens " + SCHWELLE + " % Passung. Bitte Schieberegler oder Filter anpassen."
+        : state.modus === "filter"
+        ? "Mit dieser Reglerstellung und Toleranz gibt es keinen Treffer. Bitte Schieberegler oder Filter anpassen – oder zum Ranking wechseln."
+        : "Mit diesen Filtern gibt es keinen Treffer. Bitte Schieberegler oder Filter anpassen.");
     const z = h("div", { class:"zeile" });
     if (state.modus === "filter"){ const b = h("button", { type:"button", class:"btn primaer" }, "Zum Ranking wechseln"); b.addEventListener("click", () => setzeModus("ranking")); z.append(b); }
     if (fa){ const b = h("button", { type:"button", class:"btn" }, "Filter zurücksetzen"); b.addEventListener("click", () => { filterZuruecksetzen(); geaendert(); }); z.append(b); }
     leer.append(z);
     ol.replaceChildren(leer);
   } else {
-    ol.replaceChildren(...sicht.map(karte));
+    const karten = [];
+    sicht.forEach((t, k) => {
+      if (aktive && !t.dicht && (k === 0 ? false : sicht[k - 1].dicht))
+        karten.push(h("li", { class:"trenner" }, h("b", null, "Beispiele mit wenigen Angaben"),
+          " – nur auf weniger als der Hälfte der aktiven Regler vergleichbar, die Prozentzahl ist daher unsicherer."));
+      karten.push(karte(t));
+    });
+    ol.replaceChildren(...karten);
   }
 
+  if (n && AUSGEBLENDET && sicht.length === n) ol.append(h("li", { class:"ausgeblendet" },
+    AUSGEBLENDET + (AUSGEBLENDET === 1 ? " weiteres Beispiel liegt" : " weitere Beispiele liegen") + " unter " + SCHWELLE + " % Passung und " + (AUSGEBLENDET === 1 ? "wird" : "werden") + " nicht angezeigt. Für mehr Treffer Schieberegler oder Filter anpassen."));
   const rest = n - sicht.length, mehr = $("#mehr");
   mehr.hidden = rest <= 0;
   if (rest > 0) mehr.textContent = "Weitere " + Math.min(rest, CONFIG.proSeite) + " anzeigen (" + rest + " verbleibend)";
