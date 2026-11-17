@@ -1,4 +1,4 @@
-# Ideensammlung für zukunftsorientierte Prüfungsformate
+# Inspirationssammlung für zukunftsorientierte Prüfungsformate
 
 Statische Web-App für GitHub Pages: Schieberegler einstellen, passende Prüfungsbeispiele mit Link zur Originalquelle finden. Kein Build-Schritt, keine externen Ressourcen, kein Tracking, keine Cookies.
 
@@ -53,6 +53,7 @@ Alles Anpassbare steht am Anfang des Skripts in `index.html` im Objekt `CONFIG`:
 - Farben: ab 90 % grün, 80–89 hellgrün, 70–79 gelb, 60–69 orange, 50–59 rot. Beispiele unter 50 % werden ausgeblendet (`SCHWELLE` im Skript); Beispiele ohne vergleichbare Angaben bleiben sichtbar.
 - **Filter**: Es erscheinen nur Beispiele, die auf jedem aktiven Regler höchstens um die gewählte Toleranz abweichen. Fehlende Werte gelten als passend.
 - Ein Regler auf „egal“ zählt nicht mit.
+- Schnellauswahl oben: Fachbereich, Fach und Klassenstufe. Der Schalter „Schieberegler“ schaltet alle Regler aus; dann erscheinen alle Beispiele zu den gewählten Filtern, sortiert nach Qualität der Dokumentation.
 
 ## Neue Funde einpflegen
 

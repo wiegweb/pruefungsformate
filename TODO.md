@@ -1,4 +1,4 @@
-# Offene To-dos – Ideensammlung Prüfungsformate
+# Offene To-dos – Inspirationssammlung Prüfungsformate
 
 Stand: 15.11.2026
 

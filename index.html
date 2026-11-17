@@ -6,7 +6,7 @@
 <meta name="referrer" content="no-referrer">
 <meta name="color-scheme" content="light">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23123b5c'/%3E%3Cpath d='M6 16h20' stroke='%23fff' stroke-width='3' stroke-linecap='round'/%3E%3Ccircle cx='20' cy='16' r='5' fill='%23fff'/%3E%3C/svg%3E">
-<title>Ideensammlung für zukunftsorientierte Prüfungsformate</title>
+<title>Inspirationssammlung für zukunftsorientierte Prüfungsformate</title>
 <meta name="description" content="Schieberegler einstellen und passende, dokumentierte Prüfungsbeispiele mit Link zur Originalquelle finden.">
 <style>
 :root{
@@ -103,6 +103,22 @@ select{appearance:none;-webkit-appearance:none;padding-right:34px;background-ima
 .btn,.chip-btn,.quelle,.segment button{transition-property:transform,background-color,border-color,color;transition-duration:.14s;transition-timing-function:var(--ease)}
 .btn:active,.chip-btn:active,.quelle:active,.segment button:active{transform:scale(.96)}
 
+/* Schnellauswahl */
+.schnell{margin-top:0;padding:14px 18px 12px}
+.schnell-raster{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:12px 16px;align-items:end}
+.schnell-hinweis{font-size:.8rem;color:var(--leise);margin-top:8px}
+.umschalter{display:inline-flex;align-items:center;gap:10px;min-height:44px;cursor:pointer;font-size:.95rem;color:var(--tinte);user-select:none}
+.umschalter input{position:absolute;opacity:0;width:1px;height:1px}
+.umschalter .schalter{width:44px;height:26px;border-radius:999px;background:var(--grau-spur);position:relative;transition:background-color .15s var(--ease);flex:none}
+.umschalter .schalter::after{content:"";position:absolute;top:3px;left:3px;width:20px;height:20px;border-radius:50%;background:#fff;box-shadow:0 1px 2px rgba(0,0,0,.25);transition:transform .15s var(--ease)}
+.umschalter input:checked + .schalter{background:var(--akzent)}
+.umschalter input:checked + .schalter::after{transform:translateX(18px)}
+.umschalter input:focus-visible + .schalter{outline:3px solid var(--akzent);outline-offset:2px}
+#filterPanel{margin-top:12px}
+.regler-pause{margin-top:10px;font-size:.84rem;color:var(--text);background:var(--akzent-hell);border-radius:10px;padding:8px 6px 8px 12px;display:flex;flex-wrap:wrap;align-items:center;gap:4px 8px}
+.regler-pause[hidden],.schnell-hinweis[hidden]{display:none}
+.regler-panel.pausiert #regler,.regler-panel.pausiert .regler-fuss{opacity:.4;pointer-events:none}
+
 /* KI-Block */
 .ki-block{margin-top:12px}
 .ki-rollen{margin-top:12px;padding:12px 14px;border-radius:12px;background:var(--akzent-hell)}
@@ -122,10 +138,10 @@ select{appearance:none;-webkit-appearance:none;padding-right:34px;background-ima
 .woran{margin-top:12px;font-size:.76rem;font-style:italic;color:var(--leise);border-top:1px solid var(--linie);padding-top:8px}
 
 /* Spalten */
-.spalten{display:grid;grid-template-columns:1fr;gap:18px;margin-top:18px;align-items:start}
+.spalten{display:grid;grid-template-columns:minmax(0,1fr);gap:18px;margin-top:18px;align-items:start}
 @media (min-width:1024px) and (hover:hover){.egal{min-height:40px}}
 @media (min-width:1024px){
-  .spalten{grid-template-columns:minmax(330px,380px) 1fr}
+  .spalten{grid-template-columns:minmax(330px,380px) minmax(0,1fr)}
   .regler-panel{position:sticky;top:12px;max-height:calc(100vh - 24px);overflow:auto;overscroll-behavior:contain}
 }
 
@@ -142,7 +158,9 @@ select{appearance:none;-webkit-appearance:none;padding-right:34px;background-ima
 }
 .regler{padding:6px 0 10px;border-top:1px solid var(--linie)}
 .regler:first-child{border-top:0}
-.regler-titel{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.regler-titel{display:flex;align-items:flex-start;justify-content:space-between;gap:10px}
+.regler-titel .pole{display:block;font-size:.8rem;color:var(--leise);line-height:1.35;margin-top:1px}
+.regler-titel .pole b{color:var(--text);font-weight:650}
 .regler-titel label.name{font-weight:700;color:var(--tinte);font-size:.95rem}
 .egal{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding-left:10px;cursor:pointer;font-size:.82rem;color:var(--leise);user-select:none}
 .egal input{position:absolute;opacity:0;width:1px;height:1px}
@@ -161,10 +179,14 @@ input[type=range]::-moz-range-thumb{width:20px;height:20px;border-radius:50%;bac
 input[type=range]:focus-visible{outline:none}
 input[type=range]:focus-visible::-webkit-slider-thumb{outline:3px solid var(--akzent);outline-offset:3px}
 input[type=range]:focus-visible::-moz-range-thumb{outline:3px solid var(--akzent);outline-offset:3px}
-.stufe{display:flex;gap:8px;font-size:.86rem;line-height:1.4;color:var(--text)}
-.stufe .nr{flex:none;width:2.2em;font-weight:700;color:var(--akzent-text);font-variant-numeric:tabular-nums}
+.schiene{position:relative;padding-top:6px}
+.blase{position:relative;display:block;width:max-content;max-width:min(100%,250px);margin:0 0 7px;padding:5px 10px;border-radius:8px;background:var(--akzent-dunkel);color:#fff;font-size:.8rem;line-height:1.3;font-weight:600;text-wrap:balance;will-change:transform}
+.blase::after{content:"";position:absolute;bottom:-5px;left:var(--pfeil,50%);width:10px;height:10px;margin-left:-5px;background:inherit;transform:rotate(45deg);border-radius:0 0 2px 0}
+.schiene input[type=range]{margin:-10px 0 -6px}
+.striche{position:relative;height:8px;margin-bottom:2px}
+.striche i{position:absolute;top:0;width:1px;height:6px;background:var(--linie-stark)}
 .regler.aus input[type=range]{opacity:.35}
-.regler.aus .stufe{color:var(--leise);font-style:italic}
+.regler.aus .blase{background:#e3e8ed;color:var(--leise);font-style:italic;font-weight:500}
 .regler-fuss{display:flex;flex-wrap:wrap;gap:4px;border-top:1px solid var(--linie);padding-top:6px;margin:0 -8px}
 
 /* Trefferleiste */
@@ -267,7 +289,7 @@ footer{max-width:1320px;margin:0 auto;padding:0 20px 40px;font-size:.84rem;color
 <header class="kopf">
   <div class="kopf-innen">
     <div>
-      <h1>Ideensammlung für zukunftsorientierte Prüfungsformate</h1>
+      <h1>Inspirationssammlung für zukunftsorientierte Prüfungsformate</h1>
       <p class="intro">Regler verschieben, passende Prüfungsbeispiele finden – jeweils mit Link zur Quelle.</p>
     </div>
     <svg class="motiv" viewBox="0 0 210 120" aria-hidden="true">
@@ -287,19 +309,29 @@ footer{max-width:1320px;margin:0 auto;padding:0 20px 40px;font-size:.84rem;color
   <noscript><div class="fehler"><h2>JavaScript ist ausgeschaltet</h2><p>Diese Seite braucht JavaScript, um die Regler und die Beispielsammlung anzuzeigen.</p></div></noscript>
   <div id="meldungen"></div>
 
+  <section class="panel schnell" aria-label="Schnellauswahl nach Fach und Stufe">
+    <div class="schnell-raster">
+      <div class="feld"><label for="fBereich">Fachbereich</label><select id="fBereich"></select></div>
+      <div class="feld"><label for="fFach">Fach</label><select id="fFach"></select></div>
+      <div class="feld">
+        <span class="label" id="lblJg">Klassenstufe</span>
+        <div class="paar" role="group" aria-labelledby="lblJg">
+          <select id="fJgVon" aria-label="Klassenstufe von"></select><span>bis</span>
+          <select id="fJgBis" aria-label="Klassenstufe bis"></select>
+        </div>
+      </div>
+      <div class="feld">
+        <span class="label" id="lblReglerAn">Schieberegler</span>
+        <label class="umschalter"><input type="checkbox" id="reglerAn" checked aria-labelledby="lblReglerAn reglerAnText"><span class="schalter" aria-hidden="true"></span><span id="reglerAnText">berücksichtigt</span></label>
+      </div>
+    </div>
+    <p class="schnell-hinweis" id="schnellHinweis">Nur nach Fach oder Stufe stöbern? Schieberegler ausschalten – dann erscheinen alle passenden Beispiele, ohne Passung in Prozent.</p>
+  </section>
+
   <details class="panel" id="filterPanel">
-    <summary><svg class="pfeil" aria-hidden="true"><use href="#i-pfeil"/></svg><span>Filter</span><span class="p-info" id="filterInfo"></span></summary>
+    <summary><svg class="pfeil" aria-hidden="true"><use href="#i-pfeil"/></svg><span>Weitere Filter</span><span class="p-info" id="filterInfo"></span></summary>
     <div class="panel-body">
       <div class="filter-raster">
-        <div class="feld">
-          <span class="label" id="lblJg">Klassenstufe</span>
-          <div class="paar" role="group" aria-labelledby="lblJg">
-            <select id="fJgVon" aria-label="Klassenstufe von"></select><span>bis</span>
-            <select id="fJgBis" aria-label="Klassenstufe bis"></select>
-          </div>
-        </div>
-        <div class="feld"><label for="fBereich">Fachbereich</label><select id="fBereich"></select></div>
-        <div class="feld"><label for="fFach">Fach</label><select id="fFach"></select></div>
         <div class="feld"><label for="fArt">Prüfungsart</label><select id="fArt"></select></div>
         <div class="feld"><label for="fLand">Herkunft</label><select id="fLand"></select></div>
         <div class="feld doppelt"><label for="fSuche">Stichwortsuche</label><input type="search" id="fSuche" placeholder="z. B. Podcast, Open Book, Portfolio" autocomplete="off" enterkeyhint="search"></div>
@@ -335,6 +367,7 @@ footer{max-width:1320px;margin:0 auto;padding:0 20px 40px;font-size:.84rem;color
         <span class="profil" id="profilLabel"></span>
       </div>
       <p class="regler-hinweis">Die Stufenbeschreibungen sind beispielhaft zu verstehen.</p>
+      <p class="regler-pause" id="reglerPause" hidden>Die Schieberegler sind ausgeschaltet. Angezeigt werden alle Beispiele zu Fach, Stufe und Filtern. <button type="button" class="btn leise" id="reglerWiederAn">Wieder einschalten</button></p>
       <div id="regler"></div>
       <div class="regler-fuss">
         <button type="button" class="btn leise" id="reglerReset">Zurück zum Ausgangsprofil</button>
@@ -671,6 +704,7 @@ const state = {
   werte: CONFIG.achsen.map(a => a.start),
   aktiv: CONFIG.achsen.map(() => true),
   modus: "ranking",
+  reglerAn: true,
   toleranz: 1,
   sichtbar: CONFIG.proSeite,
   f: { jgVon:null, jgBis:null, bereich:"", fach:"", art:"", land:"", suche:"", ki:new Set(), rolle:new Set(), medien:new Set(), ewh:false }
@@ -720,7 +754,7 @@ function passtFilter(p){
 function bewerte(p){
   let summe = 0, n = 0, aktive = 0, maxAbw = 0;
   for (let i = 0; i < N; i++){
-    if (!state.aktiv[i]) continue;
+    if (!state.aktiv[i] || !state.reglerAn) continue;
     aktive++;
     const v = p.achsen[i];
     if (v === null) continue;
@@ -768,12 +802,15 @@ function baueRegler(){
     const id = "regler" + i;
     const range = h("input", { type:"range", min:"1", max:"5", step:"0.01", id, "aria-describedby": id + "-stufe" });
     const egal = h("input", { type:"checkbox", id: id + "-egal", "aria-label": a.name + ": egal (zählt nicht mit)" });
-    const stufeEl = h("p", { class:"stufe", id: id + "-stufe" });
+    const stufeEl = h("p", { class:"blase", id: id + "-stufe" });
     const block = h("div", { class:"regler" },
       h("div", { class:"regler-titel" },
-        h("label", { class:"name", for:id, title: a.polLinks + " → " + a.polRechts }, a.name),
+        h("div", null,
+          h("label", { class:"name", for:id }, a.name),
+          h("span", { class:"pole" }, "von ", h("b", null, a.polLinks), " bis ", h("b", null, a.polRechts))),
         h("label", { class:"egal" }, egal, h("span", { class:"schalter" }), "egal")),
-      range, stufeEl);
+      h("div", { class:"schiene" }, stufeEl, range,
+        h("div", { class:"striche", "aria-hidden":"true" }, [0,1,2,3,4].map(k => h("i", { style:"left:calc(13px + (100% - 26px) * " + (k / 4) + ")" })))));
     range.addEventListener("input", () => { state.werte[i] = Number(range.value); zeigeRegler(i); geaendert(); });
     // Tastatur: Pfeiltasten in Zehntelschritten, Bild auf/ab um eine ganze Stufe
     range.addEventListener("keydown", e => {
@@ -794,19 +831,38 @@ function zeigeRegler(i){
   const naechste = Math.min(5, Math.max(1, Math.round(v)));
   if (Number(el.range.value) !== v) el.range.value = String(v);
   el.range.style.setProperty("--fill", ((v - 1) / 4 * 100) + "%");
-  el.range.disabled = !an;
+  el.range.disabled = !an || !state.reglerAn;
   el.egal.checked = !an;
   el.block.classList.toggle("aus", !an);
   el.range.setAttribute("aria-valuetext", kommazahl(v) + " von 5, nahe Stufe " + naechste + ": " + a.stufen[naechste - 1]);
-  el.stufeEl.replaceChildren();
-  if (an) el.stufeEl.append(h("span", { class:"nr", "aria-hidden":"true" }, kommazahl(v)), a.stufen[naechste - 1]);
-  else el.stufeEl.append("zählt gerade nicht mit");
+  el.stufeEl.textContent = an ? a.stufen[naechste - 1] : "egal – zählt nicht mit";
+  setzeBlase(i);
   const start = state.aktiv.every(Boolean) && state.werte.every((w, k) => Math.abs(w - CONFIG.achsen[k].start) < 0.005);
   const lab = $("#profilLabel");
-  lab.textContent = start ? "Ausgangsprofil: " + CONFIG.ausgangsprofil : "eigene Einstellung";
+  lab.textContent = !state.reglerAn ? "ausgeschaltet" : start ? "Ausgangsprofil: " + CONFIG.ausgangsprofil : "eigene Einstellung";
   lab.classList.toggle("eigen", !start);
 }
+// Die Stufenbeschreibung sitzt als Blase über dem Griff und bleibt innerhalb der Reglerbreite.
+const GRIFF = 26;
+function setzeBlase(i){
+  const el = reglerEls[i], b = el.stufeEl, W = el.range.clientWidth;
+  if (!W) return;
+  const mitte = GRIFF / 2 + (state.werte[i] - 1) / 4 * (W - GRIFF);
+  const bw = b.offsetWidth;
+  const x = Math.max(0, Math.min(W - bw, mitte - bw / 2));
+  b.style.transform = "translateX(" + x + "px)";
+  b.style.setProperty("--pfeil", Math.max(8, Math.min(bw - 8, mitte - x)) + "px");
+}
 function alleReglerZeigen(){ for (let i = 0; i < N; i++) zeigeRegler(i); }
+function setzeReglerAn(an){
+  state.reglerAn = an;
+  $("#reglerAn").checked = an;
+  $("#reglerAnText").textContent = an ? "berücksichtigt" : "ausgeschaltet";
+  document.querySelector(".regler-panel").classList.toggle("pausiert", !an);
+  $("#reglerPause").hidden = an;
+  $("#schnellHinweis").hidden = !an;
+  alleReglerZeigen(); geaendert();
+}
 
 /* =====================================================================
    FILTER-OBERFLÄCHE
@@ -907,12 +963,14 @@ function umschalten(menge, wert, knopf){
 }
 function anzahlFilter(){
   const f = state.f;
-  return [f.jgVon !== null || f.jgBis !== null, f.bereich, f.fach, f.art, f.land, f.suche && f.suche.length, f.medien.size, f.ewh].filter(Boolean).length;
+  return [f.art, f.land, f.suche && f.suche.length, f.medien.size, f.ewh].filter(Boolean).length;
 }
-function filterZuruecksetzen(){
+// alles = true: auch Fach, Fachbereich und Klassenstufe aus der Schnellauswahl
+function filterZuruecksetzen(alles){
   const f = state.f;
-  f.jgVon = f.jgBis = null; f.bereich = f.fach = f.art = f.land = ""; f.suche = ""; f.medien.clear(); f.ewh = false;
-  ["#fJgVon","#fJgBis","#fBereich","#fArt","#fLand","#fSuche"].forEach(s => { $(s).value = ""; });
+  if (alles){ f.jgVon = f.jgBis = null; f.bereich = f.fach = ""; ["#fJgVon","#fJgBis","#fBereich"].forEach(s => { $(s).value = ""; }); }
+  f.art = f.land = ""; f.suche = ""; f.medien.clear(); f.ewh = false;
+  ["#fArt","#fLand","#fSuche"].forEach(s => { $(s).value = ""; });
   $("#fEwh").checked = false;
   document.querySelectorAll("#fMedien .chip-btn").forEach(b => b.setAttribute("aria-pressed", "false"));
   fuelleFach();
@@ -931,6 +989,8 @@ function verdrahteFilter(){
   $("#reglerReset").addEventListener("click", () => {
     state.werte = CONFIG.achsen.map(a => a.start); state.aktiv = CONFIG.achsen.map(() => true); alleReglerZeigen(); geaendert();
   });
+  $("#reglerAn").addEventListener("change", e => setzeReglerAn(e.target.checked));
+  $("#reglerWiederAn").addEventListener("click", () => setzeReglerAn(true));
   $("#reglerEgal").addEventListener("click", () => { state.aktiv = CONFIG.achsen.map(() => false); alleReglerZeigen(); geaendert(); });
   $("#mRanking").addEventListener("click", () => setzeModus("ranking"));
   $("#mFilter").addEventListener("click", () => setzeModus("filter"));
@@ -965,7 +1025,7 @@ function quelleKnopf(p){
 function achsenProfil(p){
   return h("div", { class:"profilraster", role:"list", "aria-label":"Achsenprofil der Prüfung" },
     CONFIG.achsen.map((a, i) => {
-      const v = p.achsen[i], ich = state.aktiv[i] ? Math.round(state.werte[i]) : null, gesch = p.beleg[i] === "eingeschätzt";
+      const v = p.achsen[i], ich = state.aktiv[i] && state.reglerAn ? Math.round(state.werte[i]) : null, gesch = p.beleg[i] === "eingeschätzt";
       const label = a.name + ": " + (v === null ? "keine Angabe" : "Stufe " + v + " von 5" + (gesch ? " (eingeschätzt)" : p.beleg[i] ? " (belegt)" : ""))
         + (ich !== null ? "; eigene Einstellung: " + kommazahl(state.werte[i]) : "; Regler steht auf egal");
       const spur = h("span", { class:"spur", "aria-hidden":"true" },
@@ -1102,10 +1162,10 @@ function geaendert(){
 }
 function zeige(mitWechsel){
   const liste = berechne();
-  const gesamt = DATEN.length, n = liste.length, aktive = state.aktiv.filter(Boolean).length;
+  const gesamt = DATEN.length, n = liste.length, aktive = state.reglerAn ? state.aktiv.filter(Boolean).length : 0;
   const zahlEl = $("#zahl");
   zahlEl.replaceChildren(n === gesamt ? n + (n === 1 ? " Beispiel" : " Beispiele") : n + " von " + gesamt + " Beispielen",
-    h("small", null, !aktive ? "alle Regler auf „egal“ – nach Qualität der Dokumentation sortiert"
+    h("small", null, !state.reglerAn ? "Schieberegler ausgeschaltet – sortiert nach Qualität der Dokumentation" : !aktive ? "alle Regler auf „egal“ – nach Qualität der Dokumentation sortiert"
       : state.modus === "ranking" ? "alle Beispiele, sortiert nach Nähe zu deiner Reglerstellung"
       : "nur Beispiele, die bei keinem Regler mehr als " + ({ 0.5:"½ Stufe", 1:"1 Stufe", 2:"2 Stufen" }[state.toleranz] || state.toleranz + " Stufen") + " von deiner Einstellung abweichen · fehlende Angaben zählen als passend"),
     aktive ? h("span", { class:"farblegende", "aria-hidden":"true" },
@@ -1130,7 +1190,8 @@ function zeige(mitWechsel){
         : "Mit diesen Filtern gibt es keinen Treffer. Bitte Schieberegler oder Filter anpassen.");
     const z = h("div", { class:"zeile" });
     if (state.modus === "filter"){ const b = h("button", { type:"button", class:"btn primaer" }, "Alle, nach Passung anzeigen"); b.addEventListener("click", () => setzeModus("ranking")); z.append(b); }
-    if (fa){ const b = h("button", { type:"button", class:"btn" }, "Filter zurücksetzen"); b.addEventListener("click", () => { filterZuruecksetzen(); geaendert(); }); z.append(b); }
+    const ff = state.f;
+    if (fa || ff.fach || ff.bereich || ff.jgVon !== null || ff.jgBis !== null){ const b = h("button", { type:"button", class:"btn" }, "Filter zurücksetzen"); b.addEventListener("click", () => { filterZuruecksetzen(true); geaendert(); }); z.append(b); }
     leer.append(z);
     ol.replaceChildren(leer);
   } else {
@@ -1195,6 +1256,8 @@ async function ladeDaten(){
 }
 
 baueRegler(); alleReglerZeigen(); verdrahteFilter();
+if ("ResizeObserver" in window) new ResizeObserver(() => { for (let i = 0; i < N; i++) setzeBlase(i); }).observe($("#regler"));
+else window.addEventListener("resize", () => { for (let i = 0; i < N; i++) setzeBlase(i); });
 ladeDaten();
 </script>
 </body>
