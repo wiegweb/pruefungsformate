@@ -140,20 +140,16 @@ select{appearance:none;-webkit-appearance:none;padding-right:34px;background-ima
 /* Spalten */
 .spalten{display:grid;grid-template-columns:minmax(0,1fr);gap:18px;margin-top:18px;align-items:start}
 @media (min-width:1024px) and (hover:hover){.egal{min-height:40px}}
-@media (min-width:1024px){
-  .spalten{grid-template-columns:minmax(330px,380px) minmax(0,1fr)}
-  .regler-panel{position:sticky;top:12px;max-height:calc(100vh - 24px);overflow:auto;overscroll-behavior:contain}
-}
 
 /* Regler – immer sichtbar, kompakt */
-.regler-panel{padding:16px 18px 10px}
+.regler-panel{padding:18px 22px 12px;background:#f4fafd;box-shadow:0 0 0 1px #cde6f2,0 4px 18px -6px rgba(19,41,61,.14)}
 .regler-kopf{display:flex;align-items:baseline;justify-content:space-between;gap:8px 12px;flex-wrap:wrap}
 .regler-kopf h2{font-size:1.05rem;color:var(--tinte)}
 .profil{font-size:.8rem;font-weight:600;color:var(--akzent-text)}
 .profil.eigen{color:var(--leise)}
 .regler-hinweis{font-size:.82rem;color:var(--leise);margin-top:2px}
-@media (min-width:700px) and (max-width:1023px){
-  #regler{display:grid;grid-template-columns:1fr 1fr;gap:0 32px}
+@media (min-width:700px){
+  #regler{display:grid;grid-template-columns:1fr 1fr;gap:0 48px}
   .regler:nth-child(2){border-top:0}
 }
 .regler{padding:6px 0 10px;border-top:1px solid var(--linie)}
