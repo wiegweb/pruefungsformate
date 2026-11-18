@@ -119,6 +119,23 @@ select{appearance:none;-webkit-appearance:none;padding-right:34px;background-ima
 .regler-pause[hidden],.schnell-hinweis[hidden]{display:none}
 .regler-panel.pausiert #regler,.regler-panel.pausiert .regler-fuss{opacity:.4;pointer-events:none}
 
+/* Live-Trefferzahl: Leiste unten und Rückmeldung am Regler */
+.liveleiste{position:fixed;left:50%;bottom:14px;transform:translateX(-50%);width:min(560px,calc(100% - 24px));z-index:20;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 10px 10px 18px;border-radius:14px;background:var(--navy);color:#fff;box-shadow:0 8px 24px -6px rgba(13,46,73,.45);transition-property:opacity,transform;transition-duration:.18s;transition-timing-function:var(--ease)}
+.liveleiste[hidden]{display:flex;opacity:0;transform:translate(-50%,10px);pointer-events:none;visibility:hidden}
+.ll-text b{display:block;font-size:.98rem;font-variant-numeric:tabular-nums}
+.ll-band{display:flex;gap:3px;margin-top:4px;width:140px}
+.ll-band i{height:5px;border-radius:3px;min-width:4px}
+.ll-btn{min-height:44px;padding:8px 14px;border:0;border-radius:10px;background:rgba(255,255,255,.1);color:#bfe6f5;font-weight:700;font-size:.92rem;cursor:pointer;transition-property:transform,background-color;transition-duration:.14s;transition-timing-function:var(--ease)}
+.ll-btn:hover{background:rgba(255,255,255,.18)}
+.ll-btn:active{transform:scale(.96)}
+.name-zeile{position:relative;display:inline-block}
+.toast{position:absolute;left:100%;top:50%;transform:translateY(-50%);white-space:nowrap;pointer-events:none;z-index:2;box-shadow:0 0 0 3px #f4fafd;display:inline-flex;gap:6px;align-items:center;margin-left:8px;font-size:.76rem;font-weight:700;color:var(--akzent-text);background:var(--akzent-hell);border-radius:999px;padding:2px 9px;font-variant-numeric:tabular-nums;opacity:0;transition:opacity .25s var(--ease)}
+.toast.an{opacity:1}
+.toast .plus{color:var(--p90)}.toast .minus{color:#b23b2f}
+footer{padding-bottom:90px!important}
+.ll-diff{font-weight:700;margin-left:6px}.ll-diff.plus{color:#8fd9a8}.ll-diff.minus{color:#ffb4a8}
+@media (max-width:559px){.toast{display:none}}
+
 /* KI-Block */
 .ki-block{margin-top:12px}
 .ki-rollen{margin-top:12px;padding:12px 14px;border-radius:12px;background:var(--akzent-hell)}
@@ -372,7 +389,7 @@ footer{max-width:1320px;margin:0 auto;padding:0 20px 40px;font-size:.84rem;color
     </section>
 
     <section aria-label="Passende Prüfungsformate">
-      <div class="panel leiste">
+      <div class="panel leiste" id="zahlBox">
         <p class="zahl" id="zahl" aria-live="polite" aria-atomic="true">Sammlung wird geladen …</p>
         <div class="modus">
           <div class="segment" role="group" aria-label="Welche Beispiele anzeigen?">
@@ -391,6 +408,11 @@ footer{max-width:1320px;margin:0 auto;padding:0 20px 40px;font-size:.84rem;color
     </section>
   </div>
 </main>
+
+<div class="liveleiste" id="liveleiste" hidden>
+  <div class="ll-text"><b aria-hidden="true"><span id="llZahl"></span><span class="ll-diff" id="llDiff"></span></b><span class="ll-band" id="llBand" aria-hidden="true"></span></div>
+  <button type="button" class="ll-btn" id="llBtn">Zur Liste <span aria-hidden="true">↓</span></button>
+</div>
 
 <footer>
   <p id="fuss"></p>
@@ -802,17 +824,19 @@ function baueRegler(){
     const block = h("div", { class:"regler" },
       h("div", { class:"regler-titel" },
         h("div", null,
-          h("label", { class:"name", for:id }, a.name),
+          h("span", { class:"name-zeile" }, h("label", { class:"name", for:id }, a.name),
+            h("span", { class:"toast", id: id + "-toast", "aria-hidden":"true" })),
           h("span", { class:"pole" }, "von ", h("b", null, a.polLinks), " bis ", h("b", null, a.polRechts))),
         h("label", { class:"egal" }, egal, h("span", { class:"schalter" }), "egal")),
       h("div", { class:"schiene" }, stufeEl, range,
         h("div", { class:"striche", "aria-hidden":"true" }, [0,1,2,3,4].map(k => h("i", { style:"left:calc(13px + (100% - 26px) * " + (k / 4) + ")" })))));
-    range.addEventListener("input", () => { state.werte[i] = Number(range.value); zeigeRegler(i); geaendert(); });
+    range.addEventListener("input", () => { merkeStart(i); state.werte[i] = Number(range.value); zeigeRegler(i); geaendert(); });
     // Tastatur: Pfeiltasten in Zehntelschritten, Bild auf/ab um eine ganze Stufe
     range.addEventListener("keydown", e => {
       const schritt = { ArrowRight:.1, ArrowUp:.1, ArrowLeft:-.1, ArrowDown:-.1, PageUp:1, PageDown:-1 }[e.key];
       if (schritt === undefined) return;
       e.preventDefault();
+      merkeStart(i);
       state.werte[i] = Math.min(5, Math.max(1, Math.round((state.werte[i] + schritt) * 10) / 10));
       zeigeRegler(i); geaendert();
     });
@@ -848,6 +872,24 @@ function setzeBlase(i){
   const x = Math.max(0, Math.min(W - bw, mitte - bw / 2));
   b.style.transform = "translateX(" + x + "px)";
   b.style.setProperty("--pfeil", Math.max(8, Math.min(bw - 8, mitte - x)) + "px");
+}
+// Rückmeldung am bewegten Regler: Trefferzahl und Veränderung seit Beginn der Bewegung
+const LIVE = { regler:null, start:0, aktuell:0, timer:null };
+function merkeStart(i){
+  if (LIVE.regler !== i){
+    if (LIVE.regler !== null){ const alt = $("#regler" + LIVE.regler + "-toast"); if (alt) alt.classList.remove("an"); }
+    LIVE.regler = i; LIVE.start = LIVE.aktuell;
+  }
+}
+function zeigeToast(n){
+  if (LIVE.regler === null) return;
+  const t = $("#regler" + LIVE.regler + "-toast"), d = n - LIVE.start;
+  t.replaceChildren(n + " Treffer", d ? h("span", { class: d > 0 ? "plus" : "minus" }, (d > 0 ? "+" : "−") + Math.abs(d)) : "");
+  t.classList.add("an");
+  const ld = $("#llDiff");
+  ld.textContent = d ? (d > 0 ? "+" : "−") + Math.abs(d) : ""; ld.className = "ll-diff " + (d > 0 ? "plus" : "minus");
+  clearTimeout(LIVE.timer);
+  LIVE.timer = setTimeout(() => { t.classList.remove("an"); ld.textContent = ""; LIVE.regler = null; }, 2600);
 }
 function alleReglerZeigen(){ for (let i = 0; i < N; i++) zeigeRegler(i); }
 function setzeReglerAn(an){
@@ -1203,6 +1245,12 @@ function zeige(mitWechsel){
 
   if (n && AUSGEBLENDET && sicht.length === n) ol.append(h("li", { class:"ausgeblendet" },
     AUSGEBLENDET + (AUSGEBLENDET === 1 ? " weiteres Beispiel liegt" : " weitere Beispiele liegen") + " unter " + SCHWELLE + " % Passung und " + (AUSGEBLENDET === 1 ? "wird" : "werden") + " nicht angezeigt. Für mehr Treffer Schieberegler oder Filter anpassen."));
+  zeigeToast(n); LIVE.aktuell = n;
+  $("#llZahl").textContent = n + (n === 1 ? " Treffer" : " Treffer");
+  const baender = aktive ? [["f90","p90"],["f80","p80"],["f70","p70"],["f60","p60"],["f50","p50"]].map(([k, v]) => [liste.filter(t => farbklasse(prozent(t)) === k).length, v]).filter(x => x[0]) : [];
+  const summe = baender.reduce((a, x) => a + x[0], 0);
+  $("#llBand").replaceChildren(...baender.map(([z, v]) => h("i", { style:"flex:" + z + " 1 0;background:var(--" + v + ")", title: z + "" })));
+  $("#llBand").hidden = !summe;
   const rest = n - sicht.length, mehr = $("#mehr");
   mehr.hidden = rest <= 0;
   if (rest > 0) mehr.textContent = "Weitere " + Math.min(rest, CONFIG.proSeite) + " anzeigen (" + rest + " verbleibend)";
@@ -1252,6 +1300,17 @@ async function ladeDaten(){
 }
 
 baueRegler(); alleReglerZeigen(); verdrahteFilter();
+// Leiste nur zeigen, solange der Reglerkasten im Bild ist und die Trefferzeile nicht
+const SICHT = { regler:false, liste:false };
+function leisteAktualisieren(){ $("#liveleiste").hidden = !(SICHT.regler && !SICHT.liste); }
+if ("IntersectionObserver" in window){
+  new IntersectionObserver(es => { es.forEach(e => { SICHT.regler = e.isIntersecting; }); leisteAktualisieren(); })
+    .observe(document.querySelector(".regler-panel"));
+}
+if ("IntersectionObserver" in window){
+  new IntersectionObserver(es => { es.forEach(e => { SICHT.liste = e.isIntersecting; }); leisteAktualisieren(); }).observe(document.getElementById("zahlBox"));
+}
+$("#llBtn").addEventListener("click", () => document.getElementById("zahlBox").scrollIntoView({ behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block:"start" }));
 if ("ResizeObserver" in window) new ResizeObserver(() => { for (let i = 0; i < N; i++) setzeBlase(i); }).observe($("#regler"));
 else window.addEventListener("resize", () => { for (let i = 0; i < N; i++) setzeBlase(i); });
 ladeDaten();
