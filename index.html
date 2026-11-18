@@ -120,7 +120,8 @@ select{appearance:none;-webkit-appearance:none;padding-right:34px;background-ima
 .regler-panel.pausiert #regler,.regler-panel.pausiert .regler-fuss{opacity:.4;pointer-events:none}
 
 /* Live-Trefferzahl: Leiste unten und Rückmeldung am Regler */
-.liveleiste{position:fixed;left:50%;bottom:14px;transform:translateX(-50%);width:min(560px,calc(100% - 24px));z-index:20;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 10px 10px 18px;border-radius:14px;background:var(--navy);color:#fff;box-shadow:0 8px 24px -6px rgba(13,46,73,.45);transition-property:opacity,transform;transition-duration:.18s;transition-timing-function:var(--ease)}
+.liveleiste{position:fixed;left:50%;bottom:14px;transform:translateX(-50%);width:min(560px,calc(100% - 24px));z-index:20;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 10px 10px 18px;border-radius:14px;background:rgba(18,59,92,.88);-webkit-backdrop-filter:blur(16px) saturate(160%);backdrop-filter:blur(16px) saturate(160%);color:#fff;box-shadow:0 8px 24px -6px rgba(13,46,73,.45);transition-property:opacity,transform;transition-duration:.18s;transition-timing-function:var(--ease)}
+@media (prefers-reduced-transparency:reduce){.liveleiste{background:var(--navy);-webkit-backdrop-filter:none;backdrop-filter:none}}
 .liveleiste[hidden]{display:flex;opacity:0;transform:translate(-50%,10px);pointer-events:none;visibility:hidden}
 .ll-text b{display:block;font-size:.98rem;font-variant-numeric:tabular-nums}
 .ll-band{display:flex;gap:3px;margin-top:4px;width:140px}
@@ -206,6 +207,7 @@ input[type=range]:focus-visible::-moz-range-thumb{outline:3px solid var(--akzent
 .striche{position:relative;height:8px;margin-bottom:2px}
 .striche i{position:absolute;top:0;width:1px;height:6px;background:var(--linie-stark)}
 .regler.aus input[type=range]{opacity:.35}
+.regler.aus .pole,.regler.aus label.name{opacity:.55}
 .regler.aus .blase{background:#e3e8ed;color:var(--leise);font-style:italic;font-weight:500}
 .regler-fuss{display:flex;flex-wrap:wrap;gap:4px;border-top:1px solid var(--linie);padding-top:6px;margin:0 -8px}
 
@@ -325,7 +327,7 @@ footer{max-width:1320px;margin:0 auto;padding:0 20px 40px;font-size:.84rem;color
   </div>
 </header>
 
-<main>
+<main style="padding-bottom:96px">
   <noscript><div class="fehler"><h2>JavaScript ist ausgeschaltet</h2><p>Diese Seite braucht JavaScript, um die Regler und die Beispielsammlung anzuzeigen.</p></div></noscript>
   <div id="meldungen"></div>
 
@@ -440,21 +442,21 @@ const CONFIG = {
   // name  = Überschrift des Reglers, kurz = Kurzname im Achsenprofil der Karten
   // start = Stufe im Ausgangsprofil (traditionelle Klassenarbeit)
   achsen: [
-    { feld:"achse1", name:"Zeit", kurz:"Zeit", start:1, polLinks:"eine Sitzung, feste Zeit", polRechts:"über Wochen frei",
+    { feld:"achse1", name:"Zeit", kurz:"Zeit", start:1, polLinks:"einer Sitzung, feste Zeit", polRechts:"über Wochen frei",
       stufen:[
         "eine Prüfungssitzung mit fester Bearbeitungszeit",
         "mehrere fest terminierte Prüfungssitzungen",
         "vorgegebene Arbeitsphasen mit festen Zwischenfristen",
         "flexible Zeitfenster und Meilensteine, angepasst an den Produktentwicklungsprozess und iterative Arbeitsweisen",
         "über Wochen frei einteilbar, nur Abgabetermin festgelegt" ] },
-    { feld:"achse2", name:"Ort / Arbeitsumgebung", kurz:"Ort", start:1, polLinks:"fester Platz", polRechts:"frei wählbar",
+    { feld:"achse2", name:"Ort / Arbeitsumgebung", kurz:"Ort", start:1, polLinks:"festem Platz", polRechts:"frei wählbar",
       stufen:[
         "fester Platz im Prüfungsraum",
         "freie Platzwahl im vorgegebenen Prüfungsraum",
         "unterschiedliche Arbeitsbereiche innerhalb der Schule",
         "hybride Arbeitsumgebungen, die physische und digitale Zusammenarbeit ermöglichen",
         "Arbeitsort vollständig frei wählbar, auch zu Hause" ] },
-    { feld:"achse3", name:"Hilfsmittel", kurz:"Hilfsmittel", start:1, polLinks:"keine", polRechts:"alle inkl. Internet/KI",
+    { feld:"achse3", name:"Hilfsmittel", kurz:"Hilfsmittel", start:1, polLinks:"keinen", polRechts:"alle inkl. Internet/KI",
       stufen:[
         "keine",
         "einzelne vorgegebene Hilfsmittel",
@@ -468,7 +470,7 @@ const CONFIG = {
         "gemeinsame Vorbereitung, individuelle Prüfung – oder andersrum",
         "überwiegend kollaborativ, individuell bewertete Anteile",
         "Teamarbeit mit gemeinsamer Bewertung" ] },
-    { feld:"achse5", name:"Produkt", kurz:"Produkt", start:1, polLinks:"standardisierte Produkte (z. B. Texte, Präsentationen)", polRechts:"multimodale Ergebnisse (z. B. Prototypen, Videos, Simulationen, interaktive Anwendungen)",
+    { feld:"achse5", name:"Produkt", kurz:"Produkt", start:1, polLinks:"standardisierten Produkten (z. B. Texten, Präsentationen)", polRechts:"multimodale Ergebnisse (z. B. Prototypen, Videos, Simulationen, interaktive Anwendungen)",
       info:{ titel:"Beispiele für alternative Produkte", gruppen:[
         ["Textprodukte", "Reden und Essays, fiktive Dialoge, Stellungnahmen"],
         ["Mixed Media", "digitale Portfolios, interaktive Mindmaps, virtuelle Produkte"],
