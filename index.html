@@ -826,7 +826,7 @@ function bewerte(p){
   return { p, passung, n, aktive, maxAbw, sortwert, dicht };
 }
 
-const SCHWELLE = 50;   // Beispiele unter dieser Passung (in %) werden ausgeblendet
+const MAX_ABW = 3;   // Beispiele, die bei einem aktiven Regler mehr als 3 Stufen abweichen, werden ausgeblendet (unabhängig von egal-Reglern)
 function prozent(t){ return t.passung === null ? null : Math.round(t.passung * 100); }
 function farbklasse(proz){
   if (proz === null) return "";
@@ -838,7 +838,7 @@ function berechne(){
   if (state.modus === "filter") liste = liste.filter(t => t.maxAbw <= state.toleranz + 1e-9);
   const vorher = liste.length;
   // Nur ausblenden, wenn die Passung bekannt ist – fehlende Angaben blenden nie aus.
-  liste = liste.filter(t => t.aktive === 0 || prozent(t) === null || prozent(t) >= SCHWELLE);
+  liste = liste.filter(t => t.aktive === 0 || t.n === 0 || t.maxAbw <= MAX_ABW + 1e-9);
   AUSGEBLENDET = vorher - liste.length;
   // Zuerst gut vergleichbare Beispiele streng nach Passung, danach die mit wenigen Angaben.
   const pz = t => prozent(t) === null ? -1 : prozent(t);
@@ -1249,7 +1249,7 @@ function zeige(mitWechsel){
   if (!n){
     const leer = h("li", { class:"leerzustand" }, h("b", null, "Keine passenden Beispiele"),
       AUSGEBLENDET
-        ? "Kein Beispiel erreicht mindestens " + SCHWELLE + " % Passung. Bitte Schieberegler oder Filter anpassen."
+        ? "Kein Beispiel liegt bei allen Reglern höchstens " + MAX_ABW + " Stufen entfernt. Bitte Schieberegler oder Filter anpassen."
         : state.modus === "filter"
         ? "Mit dieser Reglerstellung und erlaubten Abweichung gibt es keinen Treffer. Bitte Schieberegler oder Filter anpassen, die erlaubte Abweichung vergrößern oder „Alle, nach Passung“ wählen."
         : "Mit diesen Filtern gibt es keinen Treffer. Bitte Schieberegler oder Filter anpassen.");
@@ -1271,7 +1271,7 @@ function zeige(mitWechsel){
   }
 
   if (n && AUSGEBLENDET && sicht.length === n) ol.append(h("li", { class:"ausgeblendet" },
-    AUSGEBLENDET + (AUSGEBLENDET === 1 ? " weiteres Beispiel liegt" : " weitere Beispiele liegen") + " unter " + SCHWELLE + " % Passung und " + (AUSGEBLENDET === 1 ? "wird" : "werden") + " nicht angezeigt. Für mehr Treffer Schieberegler oder Filter anpassen."));
+    AUSGEBLENDET + (AUSGEBLENDET === 1 ? " weiteres Beispiel liegt" : " weitere Beispiele liegen") + " mehr als " + MAX_ABW + " Stufen von einem Regler entfernt und " + (AUSGEBLENDET === 1 ? "wird" : "werden") + " nicht angezeigt. Für mehr Treffer Schieberegler oder Filter anpassen."));
   zeigeToast(n); LIVE.aktuell = n;
   $("#llZahl").textContent = n + (n === 1 ? " Treffer" : " Treffer");
   const baender = aktive ? [["f90","p90"],["f80","p80"],["f70","p70"],["f60","p60"],["f50","p50"]].map(([k, v]) => [liste.filter(t => farbklasse(prozent(t)) === k).length, v]).filter(x => x[0]) : [];
