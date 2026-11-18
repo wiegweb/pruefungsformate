@@ -12,6 +12,7 @@ Stand: 15.11.2026
 - [ ] **Woran (Evidenz der Eigenleistung):** in den Daten bisher nicht erfasst. Entscheiden, ob ein Feld `evidenz` (Echtzeit, Prozess, Kontext, verkörpert) aufgenommen werden soll.
 - [ ] **Setting (Wie) nach Pölert:** bewusst noch nicht berücksichtigt. Später entscheiden, ob es als Filter kommt.
 - [ ] **Schieflagen in der Sammlung:** 66 von 205 Beispielen stammen aus Neuseeland, und KI-Beispiele sind wenige. Gezielt ergänzen: Sport, Musik, Naturwissenschaften, Informatik, KI-integrierte Prüfungen, weitere Länder.
+- [ ] **Regler „Produkt“ neu eingeordnet:** Die 165 Beispiele mit Wert wurden von „wie frei ist das Produkt“ auf „standardisiert bis multimodal“ umgestellt, alle als „eingeschätzt“. Grenzfälle gegenlesen: Podcasts und Tonaufnahmen (Stufe 4), Zeichnungen und Kunstwerke (2–3), Portfolios (1–3), mündliche Prüfungen (1).
 - [ ] **Lücken bei den Achsen:** Feedback, Aufsicht und Ort sind besonders oft ohne Angabe.
 - [ ] **Links auf Bezahlschranken:** Hinter Bezahlschranken soll nichts verlinkt sein. Der IQES-Fall ist erledigt; bei neuen Funden darauf achten.
 - [ ] **Grand oral:** Die Regeln wurden im September 2026 neu gefasst (BO spécial Nr. 4). Bei Gelegenheit gegen den Erlasstext prüfen.

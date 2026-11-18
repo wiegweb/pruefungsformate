@@ -310,7 +310,7 @@ footer{max-width:1320px;margin:0 auto;padding:0 20px 40px;font-size:.84rem;color
   <div class="kopf-innen">
     <div>
       <h1>Inspirationssammlung für zukunftsorientierte Prüfungsformate</h1>
-      <p class="intro">Regler verschieben, passende Prüfungsbeispiele finden – jeweils mit Link zur Quelle.</p>
+      <p class="intro">Regler verschieben, passende Prüfungsbeispiele finden.</p>
     </div>
     <svg class="motiv" viewBox="0 0 210 120" aria-hidden="true">
       <g fill="none" stroke-linecap="round" stroke-width="6">
@@ -386,7 +386,7 @@ footer{max-width:1320px;margin:0 auto;padding:0 20px 40px;font-size:.84rem;color
         <h2 id="reglerTitel">Schieberegler</h2>
         <span class="profil" id="profilLabel"></span>
       </div>
-      <p class="regler-hinweis">Die Stufenbeschreibungen sind beispielhaft zu verstehen.</p>
+      <p class="regler-hinweis">⚠️ Die Stufenbeschreibungen sind beispielhaft zu verstehen.</p>
       <p class="regler-pause" id="reglerPause" hidden>Die Schieberegler sind ausgeschaltet. Angezeigt werden alle Beispiele zu Fach, Stufe und Filtern. <button type="button" class="btn leise" id="reglerWiederAn">Wieder einschalten</button></p>
       <div id="regler"></div>
       <div class="regler-fuss">
@@ -468,17 +468,17 @@ const CONFIG = {
         "gemeinsame Vorbereitung, individuelle Prüfung – oder andersrum",
         "überwiegend kollaborativ, individuell bewertete Anteile",
         "Teamarbeit mit gemeinsamer Bewertung" ] },
-    { feld:"achse5", name:"Produktformat", kurz:"Produkt", start:1, polLinks:"standardisierte Produkte (z. B. Texte, Präsentationen)", polRechts:"multimodale Ergebnisse (z. B. Prototypen, Videos, Simulationen, interaktive Anwendungen)",
+    { feld:"achse5", name:"Produkt", kurz:"Produkt", start:1, polLinks:"standardisierte Produkte (z. B. Texte, Präsentationen)", polRechts:"multimodale Ergebnisse (z. B. Prototypen, Videos, Simulationen, interaktive Anwendungen)",
       info:{ titel:"Beispiele für alternative Produkte", gruppen:[
         ["Textprodukte", "Reden und Essays, fiktive Dialoge, Stellungnahmen"],
         ["Mixed Media", "digitale Portfolios, interaktive Mindmaps, virtuelle Produkte"],
         ["Video- und Audioprodukte", "Kurzfilme, Erklärvideos, Dokumentationen, Podcasts, Hörspiele, Interviews"] ] },
       stufen:[
-        "Produktform, Umfang und Aufbau fest vorgegeben",
-        "Produktform vorgegeben, Gestaltung teilweise frei",
-        "Auswahl zwischen mehreren Produktformen",
-        "Produktform weitgehend frei, einzelne Anforderungen verbindlich",
-        "Produktform und Gestaltung vollständig frei wählbar" ] },
+        "Text, Klausurlösung oder mündlicher Vortrag in festgelegter Form",
+        "überwiegend Text oder Vortrag, ergänzt um Bilder, Grafiken oder Folien",
+        "mehrere Darstellungsformen kombiniert, z. B. Portfolio, Lapbook, Plakat mit Audio, Modell mit Erläuterung",
+        "eigenständiges audiovisuelles oder gestaltetes Produkt, z. B. Erklärvideo, Podcast, Kunstwerk, Aufführung",
+        "multimodal und interaktiv oder funktionsfähig, z. B. Prototyp, Simulation, App, Spiel, Mitmachausstellung" ] },
     { feld:"achse6", name:"Aufsicht / Kontrolle", kurz:"Aufsicht", start:1, polLinks:"lückenlos beaufsichtigt", polRechts:"vertrauensbasiert",
       stufen:[
         "lückenlos beaufsichtigt",
@@ -1235,9 +1235,9 @@ function zeige(mitWechsel){
       [["p90","ab 90 %"],["p80","80–89"],["p70","70–79"],["p60","60–69"],["p50","50–59"]].map(([v, t]) =>
         h("span", null, h("i", { style:"background:var(--" + v + ")" }), t))) : "");
   const fa = anzahlFilter();
-  $("#filterInfo").textContent = fa ? fa + " aktiv" : "alle offen – für den Überblick am besten so lassen";
+  $("#filterInfo").textContent = fa ? fa + " aktiv" : "";
   const kf = state.f;
-  $("#kiInfo").textContent = !kf.ki.size ? "alle – nichts gewählt"
+  $("#kiInfo").textContent = !kf.ki.size ? ""
     : CONFIG.kiHaupt.filter(k => kf.ki.has(k.wert)).map(k => k.wert === "erlaubt" && kf.rolle.size
         ? "KI erlaubt: " + CONFIG.kiRollen.filter(r => kf.rolle.has(r.wert)).map(r => r.name.replace(/^KI als /, "")).join(", ")
         : k.name).join(" · ");
