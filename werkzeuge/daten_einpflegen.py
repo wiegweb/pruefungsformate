@@ -17,7 +17,7 @@ Bestehende Einträge werden nie verändert oder gelöscht.
 import json, re, sys, unicodedata, datetime, pathlib
 
 DATEI = pathlib.Path(__file__).resolve().parent.parent / "data" / "pruefungen.json"
-ACHSEN = [f"achse{i}" for i in range(1, 10)]
+ACHSEN = [f"achse{i}" for i in (1, 2, 3, 4, 5, 6, 8, 9)]   # achse7 (Aufgabenstruktur) gestrichen
 PFLICHT = ["titel", "kurzbeschreibung", "link_primaer"]
 MEDIEN = {"nicht nötig", "optional", "erforderlich"}
 
@@ -64,9 +64,11 @@ def pruefe(e):
         v = e.get(f)
         if v is not None and not (isinstance(v, int) and 1 <= v <= 13):
             warn.append(f"{f} ungewöhnlich: {v!r}")
+    if e.get("achse7") is not None:
+        warn.append("achse7 (Aufgabenstruktur) wird nicht mehr verwendet und ignoriert")
     bekannt = sum(1 for a in ACHSEN if e.get(a) is not None)
     if bekannt < 3:
-        warn.append(f"nur {bekannt} von 9 Achsen eingeordnet")
+        warn.append(f"nur {bekannt} von {len(ACHSEN)} Achsen eingeordnet")
     if str(e.get("link_status") or "") != "geprüft":
         warn.append(f"Link nicht als geprüft markiert ({e.get('link_status')!r})")
     return fehler, warn

@@ -136,6 +136,13 @@ footer{padding-bottom:90px!important}
 .ll-diff{font-weight:700;margin-left:6px}.ll-diff.plus{color:#8fd9a8}.ll-diff.minus{color:#ffb4a8}
 @media (max-width:559px){.toast{display:none}}
 
+.regler-info{margin-top:2px;font-size:.8rem;color:var(--leise)}
+.regler-info>summary{list-style:none;cursor:pointer;display:inline-flex;align-items:center;gap:5px;min-height:36px;font-weight:600;color:var(--akzent-text)}
+.regler-info>summary .pfeil{width:13px;height:13px;color:currentColor}
+.regler-info dl{display:grid;grid-template-columns:auto 1fr;gap:3px 12px;margin:2px 0 6px}
+.regler-info dt{font-weight:650;color:var(--text)}.regler-info dd{margin:0}
+@media (max-width:420px){.regler-info dl{grid-template-columns:1fr}.regler-info dd{margin-bottom:4px}}
+
 /* KI-Block */
 .ki-block{margin-top:12px}
 .ki-rollen{margin-top:12px;padding:12px 14px;border-radius:12px;background:var(--akzent-hell)}
@@ -438,14 +445,14 @@ const CONFIG = {
         "eine Prüfungssitzung mit fester Bearbeitungszeit",
         "mehrere fest terminierte Prüfungssitzungen",
         "vorgegebene Arbeitsphasen mit festen Zwischenfristen",
-        "mehrtägiger Bearbeitungszeitraum, weitgehend selbst einteilbar",
+        "flexible Zeitfenster und Meilensteine, angepasst an den Produktentwicklungsprozess und iterative Arbeitsweisen",
         "über Wochen frei einteilbar, nur Abgabetermin festgelegt" ] },
     { feld:"achse2", name:"Ort / Arbeitsumgebung", kurz:"Ort", start:1, polLinks:"fester Platz", polRechts:"frei wählbar",
       stufen:[
         "fester Platz im Prüfungsraum",
         "freie Platzwahl im vorgegebenen Prüfungsraum",
         "unterschiedliche Arbeitsbereiche innerhalb der Schule",
-        "schulische und außerschulische Arbeitsorte nach Absprache",
+        "hybride Arbeitsumgebungen, die physische und digitale Zusammenarbeit ermöglichen",
         "Arbeitsort vollständig frei wählbar, auch zu Hause" ] },
     { feld:"achse3", name:"Hilfsmittel", kurz:"Hilfsmittel", start:1, polLinks:"keine", polRechts:"alle inkl. Internet/KI",
       stufen:[
@@ -461,7 +468,11 @@ const CONFIG = {
         "gemeinsame Vorbereitung, individuelle Prüfung – oder andersrum",
         "überwiegend kollaborativ, individuell bewertete Anteile",
         "Teamarbeit mit gemeinsamer Bewertung" ] },
-    { feld:"achse5", name:"Produkt", kurz:"Produkt", start:1, polLinks:"fest vorgegeben", polRechts:"frei wählbar",
+    { feld:"achse5", name:"Produktformat", kurz:"Produkt", start:1, polLinks:"standardisierte Produkte (z. B. Texte, Präsentationen)", polRechts:"multimodale Ergebnisse (z. B. Prototypen, Videos, Simulationen, interaktive Anwendungen)",
+      info:{ titel:"Beispiele für alternative Produkte", gruppen:[
+        ["Textprodukte", "Reden und Essays, fiktive Dialoge, Stellungnahmen"],
+        ["Mixed Media", "digitale Portfolios, interaktive Mindmaps, virtuelle Produkte"],
+        ["Video- und Audioprodukte", "Kurzfilme, Erklärvideos, Dokumentationen, Podcasts, Hörspiele, Interviews"] ] },
       stufen:[
         "Produktform, Umfang und Aufbau fest vorgegeben",
         "Produktform vorgegeben, Gestaltung teilweise frei",
@@ -473,15 +484,8 @@ const CONFIG = {
         "lückenlos beaufsichtigt",
         "überwiegend beaufsichtigt",
         "regelmäßige, punktuelle Kontrolle",
-        "weitgehend selbstständig mit vereinzelten Kontrollen",
+        "selbstorganisierte Prozesse mit Check-ins und Peer-Reviews",
         "vertrauensbasiert, unbeaufsichtigt" ] },
-    { feld:"achse7", name:"Aufgabenstruktur", kurz:"Aufgabenstruktur", start:2, polLinks:"geschlossen", polRechts:"eigene Fragestellung",
-      stufen:[
-        "geschlossene Aufgaben mit eindeutigen Lösungen",
-        "konkrete Aufgaben mit festgelegten Arbeitsschritten",
-        "vorgegebenes Problem mit frei wählbarem Lösungsweg",
-        "offener Arbeitsauftrag mit eigener Schwerpunktsetzung",
-        "eigene Fragestellung entwickeln und selbstständig bearbeiten" ] },
     { feld:"achse8", name:"Bewertungsgegenstand", kurz:"Bewertung", start:1, polLinks:"nur Endprodukt", polRechts:"Prozess & Reflexion gleichwertig",
       stufen:[
         "nur Endprodukt",
@@ -512,6 +516,21 @@ const CONFIG = {
     { wert:"offen", name:"Rolle nicht festgelegt", text:"KI ist erlaubt, die Quelle legt aber keine bestimmte Rolle fest.", beispiel:"", zusatz:true }
   ],
   kiNamen: { K01:"KI ausgeschlossen", K02:"KI als Tutor", K03:"KI als Sparringspartner", K04:"KI als Gegenstand", offen:"KI erlaubt, Rolle offen" },
+
+  // Zusammenfassung der Fächer im Filter. Schlüssel: Fachangaben aus den Daten (klein, ä=ae …);
+  // nicht aufgeführte Fächer erscheinen unter ihrem eigenen Namen.
+  fachZuordnung: {
+    "Mathematik": ["mathematik","mathematik und statistik"],
+    "Deutsch": ["deutsch","schreiben"],
+    "Biologie": ["biologie","biologie/chemie","naturwissenschaften","natur und technik"],
+    "Kunst": ["kunst","gestaltung","werken"],
+    "Religion/Ethik": ["religion","katholische religion","werte und normen"],
+    "Sozialwissenschaften": ["sozialkunde","sozialwissenschaften","gesellschaftswissenschaften","wirtschaft/politik","wirtschaft und beruf","wirtschaft und recht"],
+    "Geographie": ["geographie","heimat- und sachunterricht"],
+    "Berufsorientierung": ["berufsorientierung","berufsfeld (faecheruebergreifend)"],
+    "Weitere Fremdsprachen": ["fremdsprache","niederlaendisch"],
+    "Fächerübergreifend": ["faecheruebergreifend","forschendes arbeiten (faecheruebergreifend)","forschendes lernen","spezialitaetsfaecher (faecheruebergreifend moeglich)","frei waehlbar"]
+  },
 
   fachbereiche: ["Sprachen","Gesellschaftswissenschaften","MINT","Informatik","Kunst/Musik/Darstellendes Spiel","Sport","Religion/Philosophie","fächerübergreifend"],
 
@@ -631,6 +650,21 @@ function artGruppen(art){
   return g.length ? g : [CONFIG.sonstigeGruppe];
 }
 
+const FACH_MAP = new Map();
+function faecherVon(fach){
+  if (!FACH_MAP.size) Object.entries(CONFIG.fachZuordnung).forEach(([ziel, quellen]) => quellen.forEach(q => FACH_MAP.set(norm(q), ziel)));
+  const aus = new Set();
+  fachTeile(fach).forEach(t => {
+    const k = norm(t);
+    if (FACH_MAP.has(k)) return aus.add(FACH_MAP.get(k));
+    for (const tr of [" und ", "/"]){
+      const teile = k.split(tr).map(x => x.trim()).filter(Boolean);
+      if (teile.length > 1 && teile.every(x => FACH_MAP.has(x) || /^[a-z]+$/.test(x))){ teile.forEach(x => aus.add(FACH_MAP.get(x) || gross(x))); return; }
+    }
+    aus.add(gross(t));
+  });
+  return aus;
+}
 function fachTeile(fach){
   return txt(fach).split(/\s*[;,]\s*|\s+\/\s+/).map(s => s.trim()).filter(Boolean);
 }
@@ -690,6 +724,7 @@ function bereiteVor(e, index){
     konfText: fehlt(e.konfidenz) ? "" : txt(e.konfidenz)
   };
   p.fachNorm = norm(p.fach);
+  p.faecher = faecherVon(p.fach);
   p.artGruppen = artGruppen(p.art);
   p.ewh = hatBewertungsmaterial(e.material_vorhanden, e.qualitaet);
   p.fehlendeAchsen = CONFIG.achsen.filter((a, i) => achsen[i] === null).map(a => a.name);
@@ -753,7 +788,7 @@ function passtFilter(p){
     }
   }
   if (f.bereich && p.bereich && norm(p.bereich) !== norm(f.bereich)) return false;
-  if (f.fach && p.fach && !enthaeltWort(p.fachNorm, f.fach)) return false;
+  if (f.fach && p.fach && !p.faecher.has(f.fach)) return false;
   if (f.art && p.art && !p.artGruppen.includes(f.art)) return false;
   if (f.land){
     if (f.land === "@dach"){ if (p.land && !CONFIG.dach.includes(p.land)) return false; }
@@ -829,7 +864,9 @@ function baueRegler(){
           h("span", { class:"pole" }, "von ", h("b", null, a.polLinks), " bis ", h("b", null, a.polRechts))),
         h("label", { class:"egal" }, egal, h("span", { class:"schalter" }), "egal")),
       h("div", { class:"schiene" }, stufeEl, range,
-        h("div", { class:"striche", "aria-hidden":"true" }, [0,1,2,3,4].map(k => h("i", { style:"left:calc(13px + (100% - 26px) * " + (k / 4) + ")" })))));
+        h("div", { class:"striche", "aria-hidden":"true" }, [0,1,2,3,4].map(k => h("i", { style:"left:calc(13px + (100% - 26px) * " + (k / 4) + ")" })))),
+      a.info ? h("details", { class:"regler-info" }, h("summary", null, icon("i-pfeil", "pfeil"), a.info.titel),
+        h("dl", null, a.info.gruppen.flatMap(([t, b]) => [h("dt", null, t), h("dd", null, b)]))) : null);
     range.addEventListener("input", () => { merkeStart(i); state.werte[i] = Number(range.value); zeigeRegler(i); geaendert(); });
     // Tastatur: Pfeiltasten in Zehntelschritten, Bild auf/ab um eine ganze Stufe
     range.addEventListener("keydown", e => {
@@ -908,25 +945,13 @@ function setzeReglerAn(an){
 function option(wert, text){ return h("option", { value: wert }, text); }
 
 function baueFachOptionen(){
-  // Mehrfachnennungen ("Deutsch / Kunst", "Biologie, Deutsch, …") werden in Einzelfächer zerlegt.
-  const basis = new Map();
-  DATEN.forEach(p => fachTeile(p.fach).forEach(t => { const k = norm(t); if (k && !basis.has(k)) basis.set(k, t); }));
-  const fertig = new Map();
-  basis.forEach((name, k) => {
-    for (const trenner of [" und ", "/"]){
-      if (k.includes(trenner)){
-        const teile = k.split(trenner).map(s => s.trim()).filter(Boolean);
-        if (teile.length > 1 && teile.every(t => basis.has(t))) return;   // besteht nur aus bekannten Einzelfächern
-      }
-    }
-    fertig.set(k, gross(name));
-  });
-  FACH_OPTIONEN = [...fertig].map(([n, name]) => ({ norm:n, name })).sort((a, b) => a.name.localeCompare(b.name, "de"));
+  const namen = new Set(); DATEN.forEach(p => p.faecher.forEach(f => namen.add(f)));
+  FACH_OPTIONEN = [...namen].map(name => ({ norm:name, name })).sort((a, b) => a.name.localeCompare(b.name, "de"));
 }
 function fuelleFach(){
   const sel = $("#fFach"), f = state.f;
   const pool = f.bereich ? DATEN.filter(p => !p.bereich || norm(p.bereich) === norm(f.bereich)) : DATEN;
-  const opts = FACH_OPTIONEN.map(o => ({ ...o, n: pool.filter(p => p.fach && enthaeltWort(p.fachNorm, o.norm)).length })).filter(o => o.n > 0);
+  const opts = FACH_OPTIONEN.map(o => ({ ...o, n: pool.filter(p => p.faecher.has(o.norm)).length })).filter(o => o.n > 0);
   if (f.fach && !opts.some(o => o.norm === f.fach)) f.fach = "";
   sel.replaceChildren(option("", "alle Fächer"), ...opts.map(o => option(o.norm, o.name + " (" + o.n + ")")));
   sel.value = f.fach;
