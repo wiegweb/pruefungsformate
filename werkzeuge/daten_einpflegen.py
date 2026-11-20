@@ -4,6 +4,9 @@
 Aufruf (im Repo-Ordner):
     python3 werkzeuge/daten_einpflegen.py neue_funde.json            # nur prüfen, nichts schreiben
     python3 werkzeuge/daten_einpflegen.py neue_funde.json --schreiben
+    python3 werkzeuge/daten_einpflegen.py neue_funde.json --gleicher-link-ok --schreiben
+        (für Sammelquellen wie ein TaskCards-Board oder ein Leitfaden-PDF mit mehreren Beispielen:
+         Dubletten werden dann nur über den Titel erkannt)
 
 neue_funde.json ist ein JSON-Array im selben Format wie data/pruefungen.json.
 
@@ -77,6 +80,7 @@ def pruefe(e):
 def main():
     args = [a for a in sys.argv[1:] if not a.startswith("--")]
     schreiben = "--schreiben" in sys.argv
+    gleicher_link_ok = "--gleicher-link-ok" in sys.argv
     if len(args) != 1:
         print(__doc__)
         sys.exit(2)
@@ -97,7 +101,7 @@ def main():
         if fehler:
             abgelehnt.append((name, fehler))
             continue
-        if link_norm(e["link_primaer"]) in links or norm(e["titel"]) in titel:
+        if (not gleicher_link_ok and link_norm(e["link_primaer"]) in links) or norm(e["titel"]) in titel:
             dubletten.append(name)
             continue
         if not str(e.get("id") or "").strip() or str(e["id"]) in ids:
