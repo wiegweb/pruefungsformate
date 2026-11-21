@@ -25,7 +25,7 @@ Die Datei `data/pruefungen.json` durch eine neue Fassung ersetzen (gleicher Name
 
 Die Datei ist ein JSON-Array. Jeder Eintrag kann diese Felder haben:
 
-`id, titel, kurzbeschreibung, fach, faechergruppe, jg_von, jg_bis, schulform, land, sprache, pruefungsart, ki_rolle (0–4), ki_setzung (Liste: K01–K04, offen), ki_setzung_status, ki_rolle_begruendung, aias_stufe, digitale_medien, tools, achse1 … achse6, achse8, achse9 (1–5 oder null; achse7 „Aufgabenstruktur“ wurde im Nov. 2026 gestrichen), achsen_belegstatus, material_vorhanden, link_primaer, linktyp, fundpfad, weitere_links, urheber, datum, lizenz, link_status, qualitaet, konfidenz`
+`id, titel, kurzbeschreibung, fach, faechergruppe, jg_von, jg_bis, schulform, land, sprache, pruefungsart, ki_rolle (0–4), ki_setzung (Liste: K01–K04, offen), ki_setzung_status, ki_rolle_begruendung, aias_stufe, digitale_medien, tools, achse1 … achse6, achse8, achse9 (1–5 oder null; achse7 „Aufgabenstruktur“ wurde im Nov. 2026 gestrichen), achsen_belegstatus, achsen_begruendung (JSON je Achse: Fundstelle und Begründung der Einstufung), material_vorhanden, link_primaer, linktyp, fundpfad, weitere_links, urheber, datum, lizenz, link_status, qualitaet, konfidenz`
 
 Regeln der App:
 
