@@ -57,6 +57,34 @@ h1{font-size:clamp(1.4rem,1.1rem + 1.4vw,1.9rem);line-height:1.18;letter-spacing
 .motiv{flex:none;width:132px;display:none}
 @media (min-width:860px){.motiv{display:block}}
 
+
+/* Juristische Grundlagen: dezenter Knopf im Kopf + Dialog */
+.recht-knopf{margin-top:12px;display:inline-flex;align-items:center;gap:6px;background:transparent;color:#b9cddc;border:1px solid rgba(255,255,255,.28);border-radius:999px;padding:6px 14px;font:inherit;font-size:.86rem;cursor:pointer;transition:background .15s var(--ease),color .15s var(--ease)}
+.recht-knopf:hover{background:rgba(255,255,255,.1);color:#fff}
+.recht-knopf:focus-visible{outline:2px solid #fff;outline-offset:2px}
+@media (pointer:coarse){.recht-knopf{min-height:44px}}
+.recht{width:min(720px,calc(100% - 24px));max-height:86vh;padding:0;border:0;border-radius:var(--r-gross);background:var(--flaeche);color:var(--text);box-shadow:0 24px 60px -12px rgba(13,46,73,.45);overflow:auto;animation:rechtEin .22s var(--ease)}
+.recht::backdrop{background:rgba(13,46,73,.55);-webkit-backdrop-filter:blur(4px);backdrop-filter:blur(4px)}
+@keyframes rechtEin{from{opacity:0;transform:translateY(8px) scale(.985)}to{opacity:1;transform:none}}
+.recht-kopf{position:sticky;top:0;z-index:1;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 18px;background:var(--flaeche);border-bottom:1px solid var(--linie)}
+.recht-kopf h2{margin:0;font-size:1.12rem;color:var(--tinte);letter-spacing:-.01em}
+.recht-zu{flex:none;width:44px;height:44px;margin:-6px -8px -6px 0;border:0;border-radius:50%;background:transparent;color:var(--leise);font-size:1.5rem;line-height:1;cursor:pointer}
+.recht-zu:hover{background:var(--akzent-hell);color:var(--tinte)}
+.recht-zu:focus-visible{outline:2px solid var(--akzent-text);outline-offset:1px}
+.recht-inhalt{padding:6px 20px 22px}
+.recht-inhalt h3{margin:20px 0 4px;font-size:1rem;color:var(--tinte)}
+.recht-inhalt .r-quelle{margin:0 0 8px;font-size:.86rem;color:var(--leise)}
+.recht-inhalt blockquote{margin:8px 0;padding:2px 0 2px 14px;border-left:3px solid var(--akzent-mittel);color:var(--tinte)}
+.recht-inhalt blockquote p{margin:6px 0}
+.recht-kurz{margin:10px 0 0;padding:10px 14px;background:var(--akzent-hell);border-radius:var(--r-mittel);font-size:.93rem}
+.recht-kurz b{display:block;margin-bottom:2px;color:var(--akzent-text);font-size:.8rem;text-transform:uppercase;letter-spacing:.05em}
+.recht-kurz ul,.recht-inhalt ul.punkte{margin:0;padding-left:1.15em}
+.recht-kurz li,.recht-inhalt ul.punkte li{margin:3px 0}
+.recht-inhalt ul.punkte{margin:8px 0}
+.recht-quelle{margin-top:12px;font-size:.84rem;color:var(--leise)}
+@media (prefers-reduced-motion:reduce){.recht{animation:none}.recht-knopf{transition:none}}
+@media (prefers-reduced-transparency:reduce){.recht::backdrop{background:rgba(13,46,73,.8);backdrop-filter:none;-webkit-backdrop-filter:none}}
+
 main{max-width:1320px;margin:0 auto;padding:18px 20px 60px}
 
 /* Flächen: Tiefe über Schatten, nicht über Rahmen */
@@ -313,6 +341,7 @@ footer{max-width:1320px;margin:0 auto;padding:0 20px 40px;font-size:.84rem;color
     <div>
       <h1>Inspirationssammlung für zukunftsorientierte Prüfungsformate</h1>
       <p class="intro">Regler verschieben, passende Prüfungsbeispiele finden.</p>
+      <button type="button" class="recht-knopf" id="rechtAuf" aria-haspopup="dialog">⚖️ juristische Grundlagen (NRW)</button>
     </div>
     <svg class="motiv" viewBox="0 0 210 120" aria-hidden="true">
       <g fill="none" stroke-linecap="round" stroke-width="6">
@@ -326,6 +355,42 @@ footer{max-width:1320px;margin:0 auto;padding:0 20px 40px;font-size:.84rem;color
     </svg>
   </div>
 </header>
+
+
+<dialog class="recht" id="rechtDialog" aria-labelledby="rechtTitel">
+  <div class="recht-kopf">
+    <h2 id="rechtTitel">Rechtliche Ausgangslage</h2>
+    <button type="button" class="recht-zu" id="rechtZu" aria-label="Schließen">×</button>
+  </div>
+  <div class="recht-inhalt">
+    <h3>Sekundarstufe I: § 6 Abs. 8 APO-S I NRW</h3>
+    <p class="r-quelle">Verordnung über die Ausbildung und die Abschlussprüfungen in der Sekundarstufe I (Ausbildungs- und Prüfungsordnung Sekundarstufe I)</p>
+    <blockquote><p>„Einmal im Schuljahr kann pro Fach eine Klassenarbeit durch eine andere, in der Regel schriftliche, in Ausnahmefällen auch gleichwertige nicht schriftliche Leistungsüberprüfung ersetzt werden.“</p></blockquote>
+    <div class="recht-kurz"><b>Kurz gesagt</b><ul>
+      <li>Einmal pro Schuljahr und Fach ist ein Ersatz der Klassenarbeit möglich.</li>
+      <li>Entscheidend ist „gleichwertig“: gleicher Anspruch, gleiche Aussagekraft.</li>
+      <li>Kein Freibrief, sondern ein Gestaltungsauftrag.</li>
+      <li>Die Fachkonferenz legt die Grundsätze der Leistungsbewertung fest (§ 70 Abs. 4 Nr. 2 SchulG NRW).</li></ul></div>
+
+    <h3>KMK-Ergänzungspapier „Lehren und Lernen in der digitalen Welt“</h3>
+    <p class="r-quelle">Beschluss vom 09.12.2021</p>
+    <blockquote>
+      <p>„Im Wandel des Lehrens und Lernens in der digitalen Welt sind – ausgehend von klassischen handschriftlichen Klassenarbeiten und Klausuren – unter Nutzung digitaler Medien und Werkzeuge etablierte Prüfungsformate anzupassen sowie neue Prüfungsformate zu entwickeln. Zukünftige Prüfungsformate beziehen daher auch verstärkt Kreativität, Kollaboration, kritisches Denken und Kommunikation mit ein.“</p>
+      <p>ebd.: „Die bisher in den Ländern definierten Prüfungsformate tragen den gesellschaftlichen, pädagogisch-didaktischen und fachlichen Veränderungen noch nicht in ausreichendem Maße Rechnung.“</p>
+      <p>ebd.: „Insgesamt sind bisherige Prüfungsformen um offenere Formate zu erweitern.“</p>
+    </blockquote>
+    <div class="recht-kurz"><b>Kurz gesagt</b><ul>
+      <li>Kein „Kann“, sondern ein Auftrag mit zwei Teilen: Bestehendes anpassen, Neues entwickeln.</li>
+      <li>Ausgangspunkt ist die klassische handschriftliche Klassenarbeit. Sie wird kritisch hinterfragt, nicht abgeschafft, sondern weiterentwickelt.</li></ul></div>
+
+    <h3>Rechtssicherheit beim Erproben</h3>
+    <ul class="punkte">
+      <li>Wer das Format und die Bewertungskriterien vorher erklärt und die Prüfung fair und ordnungsgemäß durchführt, hat eine Grundlage für die Erprobung zukunftsorientierter Prüfungsformate.</li>
+      <li>Selbst wenn ein erheblicher Mangel im Bewertungsverfahren festgestellt wird, kann dieser etwa durch eine Neubewertung oder eine Wiederholung behoben werden.</li>
+    </ul>
+    <p class="recht-quelle">Vgl. Oliver Schmitz, „Zeitgemäße Prüfungskultur aus der Perspektive des Schulrechts“, in: Adriane Langela-Bickenbach, Ricarda Dreier, Philippe Wampfler und Christian Albrecht (Hrsg.), <i>Wege zu einer zeitgemäßen Prüfungskultur. Grundlagen und Praxisbeispiele</i>, Weinheim und Basel: Beltz, 2024, S. 162.</p>
+  </div>
+</dialog>
 
 <main style="padding-bottom:96px">
   <noscript><div class="fehler"><h2>JavaScript ist ausgeschaltet</h2><p>Diese Seite braucht JavaScript, um die Regler und die Beispielsammlung anzuzeigen.</p></div></noscript>
@@ -1341,6 +1406,17 @@ $("#llBtn").addEventListener("click", () => document.getElementById("zahlBox").s
 if ("ResizeObserver" in window) new ResizeObserver(() => { for (let i = 0; i < N; i++) setzeBlase(i); }).observe($("#regler"));
 else window.addEventListener("resize", () => { for (let i = 0; i < N; i++) setzeBlase(i); });
 ladeDaten();
+
+// Juristische Grundlagen (Dialog)
+(function(){
+  const dlg = document.getElementById("rechtDialog"), auf = document.getElementById("rechtAuf");
+  if (!dlg || !auf) return;
+  const zu = () => dlg.close();
+  auf.addEventListener("click", () => { if (typeof dlg.showModal === "function") { dlg.showModal(); document.documentElement.style.overflow = "hidden"; dlg.scrollTop = 0; } else { dlg.setAttribute("open", ""); } });
+  document.getElementById("rechtZu").addEventListener("click", zu);
+  dlg.addEventListener("click", e => { if (e.target === dlg) zu(); });
+  dlg.addEventListener("close", () => { document.documentElement.style.overflow = ""; auf.focus(); });
+})();
 </script>
 </body>
 </html>
