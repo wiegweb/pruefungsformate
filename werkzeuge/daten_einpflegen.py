@@ -7,6 +7,8 @@ Aufruf (im Repo-Ordner):
     python3 werkzeuge/daten_einpflegen.py neue_funde.json --gleicher-link-ok --schreiben
         (für Sammelquellen wie ein TaskCards-Board oder ein Leitfaden-PDF mit mehreren Beispielen:
          Dubletten werden dann nur über den Titel erkannt)
+    python3 werkzeuge/daten_einpflegen.py neue_funde.json --agent --schreiben
+        (für automatische Läufe: neue Einträge bekommen pruefstatus „automatisch ergänzt, Sichtung offen“)
 
 neue_funde.json ist ein JSON-Array im selben Format wie data/pruefungen.json.
 
@@ -14,12 +16,19 @@ Das Skript
 - prüft jeden neuen Eintrag (Pflichtfelder, Wertebereiche, Link-Form),
 - erkennt Dubletten (gleicher Link oder gleicher Titel, auch leicht abweichend geschrieben),
 - vergibt fehlende IDs,
-- hängt nur gültige, neue Einträge an und schreibt einen Bericht.
+- hängt nur gültige, neue Einträge an und schreibt einen Bericht,
+- setzt erfasst_am (heute) und pruefstatus, falls sie fehlen,
+- trägt den Lauf in data/aenderungslog.json ein (Grundlage für eine spätere Meldung „N neue Prüfungen“).
 Bestehende Einträge werden nie verändert oder gelöscht.
 """
 import json, re, sys, unicodedata, datetime, pathlib
 
 DATEI = pathlib.Path(__file__).resolve().parent.parent / "data" / "pruefungen.json"
+LOG = DATEI.parent / "aenderungslog.json"
+# Rolle der KI nach Joscha Falck (Deutsches Schulportal, 2026): begründet begrenzt, integriert,
+# reflektiert/thematisiert; dazu „offen“ = KI erlaubt, Rolle nicht festgelegt. Mehrfachnennung möglich.
+KI_WERTE = ("begrenzt", "integriert", "reflektiert", "offen")
+PRUEFSTATUS = ("geprüft", "automatisch ergänzt, Sichtung offen")
 ACHSEN = [f"achse{i}" for i in (1, 2, 3, 4, 5, 6, 8, 9)]   # achse7 (Aufgabenstruktur) gestrichen
 PFLICHT = ["titel", "kurzbeschreibung", "link_primaer"]
 MEDIEN = {"nicht nötig", "optional", "erforderlich"}
@@ -58,8 +67,16 @@ def pruefe(e):
     ks = e.get("ki_setzung")
     if ks is None:
         warn.append("ki_setzung fehlt (wird aus ki_rolle abgeleitet)")
-    elif not (isinstance(ks, list) and all(x in ("K01", "K02", "K03", "K04", "offen") for x in ks)):
-        fehler.append(f"ki_setzung muss eine Liste aus K01–K04/offen sein (ist {ks!r})")
+    elif not (isinstance(ks, list) and all(x in KI_WERTE for x in ks)):
+        fehler.append(f"ki_setzung muss eine Liste aus {'/'.join(KI_WERTE)} sein (ist {ks!r})")
+    elif ks and e.get("ki_setzung_status") not in ("explizit", "eingeschätzt"):
+        warn.append("ki_setzung_status sollte explizit oder eingeschätzt sein")
+    ps = e.get("pruefstatus")
+    if ps is not None and ps not in PRUEFSTATUS:
+        fehler.append(f"pruefstatus unbekannt: {ps!r}")
+    ea = e.get("erfasst_am")
+    if ea is not None and not re.match(r"^\d{4}-\d{2}-\d{2}$", str(ea)):
+        fehler.append(f"erfasst_am muss JJJJ-MM-TT sein (ist {ea!r})")
     dm = e.get("digitale_medien")
     if dm not in (None, "") and dm not in MEDIEN:
         warn.append(f"digitale_medien unbekannt: {dm!r}")
@@ -81,6 +98,7 @@ def main():
     args = [a for a in sys.argv[1:] if not a.startswith("--")]
     schreiben = "--schreiben" in sys.argv
     gleicher_link_ok = "--gleicher-link-ok" in sys.argv
+    agent = "--agent" in sys.argv
     if len(args) != 1:
         print(__doc__)
         sys.exit(2)
@@ -109,6 +127,14 @@ def main():
             while f"NEU-{heute}-{n:03d}" in ids:
                 n += 1
             e["id"] = f"NEU-{heute}-{n:03d}"
+        e.setdefault("erfasst_am", datetime.date.today().isoformat())
+        if agent:
+            e["pruefstatus"] = PRUEFSTATUS[1]
+        else:
+            e.setdefault("pruefstatus", PRUEFSTATUS[0])
+        e.setdefault("ki_setzung", [])
+        if not e["ki_setzung"]:
+            e["ki_setzung_status"] = "nicht gesetzt"
         ids.add(str(e["id"])); links.add(link_norm(e["link_primaer"])); titel.add(norm(e["titel"]))
         aufgenommen.append((e, warn))
 
@@ -125,6 +151,16 @@ def main():
         alt.extend(e for e, _ in aufgenommen)
         DATEI.write_text(json.dumps(alt, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
         print(f"\n{DATEI.name} geschrieben: jetzt {len(alt)} Einträge.")
+        log = json.loads(LOG.read_text(encoding="utf-8")) if LOG.exists() else {"laeufe": []}
+        faecher = {}
+        for e, _ in aufgenommen:
+            g = e.get("faechergruppe") or e.get("fach") or "ohne Angabe"
+            faecher[g] = faecher.get(g, 0) + 1
+        log["laeufe"].append({"datum": datetime.date.today().isoformat(), "art": "agent" if agent else "manuell",
+                              "neu": len(aufgenommen), "faecher": dict(sorted(faecher.items(), key=lambda x: -x[1])),
+                              "gesamt": len(alt), "ids": [e["id"] for e, _ in aufgenommen]})
+        LOG.write_text(json.dumps(log, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+        print(f"{LOG.name} ergänzt.")
     elif aufgenommen:
         print("\nNur geprüft. Mit --schreiben werden die neuen Einträge angehängt.")
 

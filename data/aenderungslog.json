@@ -1,0 +1,61 @@
+{
+  "hinweis": "Ein Eintrag pro Tag, an dem neue Beispiele hinzukamen. art: manuell oder agent. Grundlage für die spätere Meldung „N neue Prüfungen“.",
+  "laeufe": [
+    {
+      "datum": "2026-11-14",
+      "art": "manuell",
+      "neu": 197,
+      "faecher": {
+        "Sprachen": 58,
+        "MINT": 44,
+        "Kunst/Musik/Darstellendes Spiel": 34,
+        "Gesellschaftswissenschaften": 18,
+        "Religion/Philosophie": 14,
+        "fächerübergreifend": 10,
+        "Informatik": 10,
+        "Sport": 9
+      },
+      "gesamt": 197
+    },
+    {
+      "datum": "2026-11-15",
+      "art": "manuell",
+      "neu": 8,
+      "faecher": {
+        "fächerübergreifend": 8
+      },
+      "gesamt": 205
+    },
+    {
+      "datum": "2026-11-18",
+      "art": "manuell",
+      "neu": 17,
+      "faecher": {
+        "Sprachen": 7,
+        "MINT": 3,
+        "Informatik": 2,
+        "Gesellschaftswissenschaften": 2,
+        "Religion/Philosophie": 1,
+        "fächerübergreifend": 1,
+        "Kunst/Musik/Darstellendes Spiel": 1
+      },
+      "gesamt": 222
+    },
+    {
+      "datum": "2026-11-20",
+      "art": "manuell",
+      "neu": 89,
+      "faecher": {
+        "Sprachen": 30,
+        "MINT": 24,
+        "Gesellschaftswissenschaften": 20,
+        "fächerübergreifend": 5,
+        "Kunst/Musik/Darstellendes Spiel": 5,
+        "Religion/Philosophie": 3,
+        "Sport": 1,
+        "Informatik": 1
+      },
+      "gesamt": 311
+    }
+  ]
+}

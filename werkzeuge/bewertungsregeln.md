@@ -63,3 +63,27 @@ Bei diesen Einträgen hat Timm „?“ gewählt. Sie müssen anhand der Quelle n
 - REK-BOOKTOK (Feedback; nach R10 voraussichtlich niedriger)
 
 Zu IB-EE (Zeit) gibt es keine Antwort.
+
+## Rolle der KI (Feld `ki_setzung`)
+
+Kategorien nach Joscha Falck („KI-Didaktik: Wie wird KI zur Lernressource statt zur Abkürzung?“, Deutsches Schulportal, 2026). Mehrfachnennung ist möglich.
+
+| Wert | Bedeutung |
+|---|---|
+| `begrenzt` | begründet begrenzt: KI bewusst ausgeschlossen oder eingeschränkt, damit eine Kompetenz sichtbar wird |
+| `integriert` | KI als Tutor oder Sparringspartner, an Lernziele gebunden. Nicht: KI als „Taschenrechner“, der die Antwort liefert |
+| `reflektiert` | reflektiert / thematisiert: KI-Einsatz und -Ergebnisse werden geprüft, oder KI ist selbst Thema |
+| `offen` | KI erlaubt, die Quelle legt keine Rolle fest |
+| leere Liste | ohne Angabe: Die Quelle regelt KI nicht. Das ist kein Verbot |
+
+Regeln:
+- `integriert` nur, wenn die Quelle eine lernförderliche Rolle beschreibt; bloße Erlaubnis = `offen`.
+- Hilfsmittel-Stufe 1 (keine Hilfsmittel) → `begrenzt`, Status „eingeschätzt“.
+- „KI nicht geregelt“ bleibt ohne Angabe, auch bei offenen Hilfsmitteln.
+- `ki_setzung_status`: explizit oder eingeschätzt; bei leerer Liste „nicht gesetzt“.
+
+## Felder für spätere automatische Ergänzung
+
+- `erfasst_am` (JJJJ-MM-TT): wann der Eintrag in die Sammlung kam. Für den Bestand aus der Git-Historie nachgetragen (frühestes Datum = Start des Repos).
+- `pruefstatus`: „geprüft“ oder „automatisch ergänzt, Sichtung offen“. Die Oberfläche markiert ungeprüfte Einträge mit „neu, Sichtung offen“.
+- `data/aenderungslog.json`: ein Eintrag pro Lauf (Datum, manuell/agent, Anzahl neu, Fächer). Das Importskript schreibt ihn bei `--schreiben` mit; `--agent` setzt den Prüfstatus auf „Sichtung offen“.

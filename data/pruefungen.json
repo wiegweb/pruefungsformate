@@ -38,7 +38,9 @@
     "qualitaet": "3 – ausführlicher Ablauf und Bewertungsangaben",
     "konfidenz": "hoch",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-14",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "B2024-02",
@@ -78,7 +80,9 @@
     "qualitaet": "3 – ausführlicher Ablauf und Bewertungsangaben",
     "konfidenz": "hoch",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-14",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "B2024-03",
@@ -118,7 +122,9 @@
     "qualitaet": "3 – ausführlicher Ablauf und Bewertungsangaben",
     "konfidenz": "hoch",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-14",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "B2024-04",
@@ -159,10 +165,12 @@
     "qualitaet": "3 – ausführlicher Ablauf und Bewertungsangaben",
     "konfidenz": "hoch",
     "ki_setzung": [
-      "K02",
-      "K04"
+      "integriert",
+      "reflektiert"
     ],
-    "ki_setzung_status": "eingeschätzt"
+    "ki_setzung_status": "eingeschätzt",
+    "erfasst_am": "2026-11-14",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "B2024-05",
@@ -202,7 +210,9 @@
     "qualitaet": "3 – ausführlicher Ablauf und Bewertungsangaben",
     "konfidenz": "hoch",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-14",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "B2024-06",
@@ -243,7 +253,9 @@
     "qualitaet": "3 – ausführlicher Ablauf und Bewertungsangaben",
     "konfidenz": "hoch",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-14",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "B2024-07",
@@ -283,7 +295,9 @@
     "qualitaet": "3 – ausführlicher Ablauf und Bewertungsangaben",
     "konfidenz": "hoch",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-14",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "B2024-08",
@@ -323,7 +337,9 @@
     "qualitaet": "3 – ausführlicher Ablauf und Bewertungsangaben",
     "konfidenz": "hoch",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-14",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "KMS-01",
@@ -366,7 +382,9 @@
     "ki_setzung": [
       "offen"
     ],
-    "ki_setzung_status": "explizit"
+    "ki_setzung_status": "explizit",
+    "erfasst_am": "2026-11-14",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "KMS-02",
@@ -407,9 +425,11 @@
     "qualitaet": "3 – ausführlicher Ablauf und Bewertungsangaben",
     "konfidenz": "mittel",
     "ki_setzung": [
-      "K04"
+      "reflektiert"
     ],
-    "ki_setzung_status": "explizit"
+    "ki_setzung_status": "explizit",
+    "erfasst_am": "2026-11-14",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "KMS-03",
@@ -450,7 +470,9 @@
     "qualitaet": "3 – ausführlicher Ablauf und Bewertungsangaben",
     "konfidenz": "hoch",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-14",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "KMS-04",
@@ -491,7 +513,9 @@
     "qualitaet": "3 – ausführlicher Ablauf und Bewertungsangaben",
     "konfidenz": "hoch",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-14",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "KMS-05",
@@ -531,7 +555,9 @@
     "qualitaet": "3 – ausführlicher Ablauf und Bewertungsangaben",
     "konfidenz": "hoch",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-14",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "KMS-06",
@@ -572,7 +598,9 @@
     "qualitaet": "3 – ausführlicher Ablauf und Bewertungsangaben",
     "konfidenz": "hoch",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-14",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "KMS-07",
@@ -613,7 +641,9 @@
     "qualitaet": "3 – ausführlicher Ablauf und Bewertungsangaben",
     "konfidenz": "hoch",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-14",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "KMS-08",
@@ -654,7 +684,9 @@
     "qualitaet": "3 – ausführlicher Ablauf und Bewertungsangaben",
     "konfidenz": "hoch",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-14",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "KMS-09",
@@ -694,7 +726,9 @@
     "qualitaet": "3 – ausführlicher Ablauf und Bewertungsangaben",
     "konfidenz": "hoch",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-14",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "ZUM-01",
@@ -735,7 +769,9 @@
     "qualitaet": "2 – konkrete Aufgabenstellung, kein Bewertungsraster",
     "konfidenz": "hoch",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-14",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "ZUM-02",
@@ -775,7 +811,9 @@
     "qualitaet": "3 – nachvollziehbare Phasen und Prüfungsaufgabe",
     "konfidenz": "hoch",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-14",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "ZUM-03",
@@ -815,7 +853,9 @@
     "qualitaet": "3 – Klausur und EWH verlinkt",
     "konfidenz": "hoch",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-14",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "ZUM-04",
@@ -855,7 +895,9 @@
     "qualitaet": "3 – dreiwöchiger Ablauf mit Material und Reflexion",
     "konfidenz": "hoch",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-14",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "PK-001",
@@ -895,7 +937,9 @@
     "qualitaet": "3 – ausgearbeitet mit Aufgaben-/Bewertungsmaterial",
     "konfidenz": "hoch",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-14",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "PK-002",
@@ -936,7 +980,9 @@
     "qualitaet": "2 – konkreter Praxisbericht; teilweise Materiallücken",
     "konfidenz": "mittel",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-14",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "PK-003",
@@ -976,9 +1022,11 @@
     "qualitaet": "3 – ausgearbeitet mit Aufgaben-/Bewertungsmaterial",
     "konfidenz": "hoch",
     "ki_setzung": [
-      "K02"
+      "integriert"
     ],
-    "ki_setzung_status": "eingeschätzt"
+    "ki_setzung_status": "eingeschätzt",
+    "erfasst_am": "2026-11-14",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "PK-004",
@@ -1018,7 +1066,9 @@
     "qualitaet": "2 – konkreter Praxisbericht; teilweise Materiallücken",
     "konfidenz": "mittel",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-14",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "PK-005",
@@ -1058,7 +1108,9 @@
     "qualitaet": "2 – konkreter Praxisbericht; teilweise Materiallücken",
     "konfidenz": "mittel",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-14",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "PK-006",
@@ -1099,7 +1151,9 @@
     "qualitaet": "3 – ausgearbeitet mit Aufgaben-/Bewertungsmaterial",
     "konfidenz": "hoch",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-14",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "PK-007",
@@ -1140,7 +1194,9 @@
     "qualitaet": "3 – ausgearbeitet mit Aufgaben-/Bewertungsmaterial",
     "konfidenz": "hoch",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-14",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "PK-008",
@@ -1181,7 +1237,9 @@
     "qualitaet": "3 – ausgearbeitet mit Aufgaben-/Bewertungsmaterial",
     "konfidenz": "hoch",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-14",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "PK-009",
@@ -1222,7 +1280,9 @@
     "qualitaet": "3 – ausgearbeitet mit Aufgaben-/Bewertungsmaterial",
     "konfidenz": "hoch",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-14",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "PK-010",
@@ -1262,7 +1322,9 @@
     "qualitaet": "3 – ausgearbeitet mit Aufgaben-/Bewertungsmaterial",
     "konfidenz": "hoch",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-14",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "PK-011",
@@ -1303,7 +1365,9 @@
     "qualitaet": "3 – ausgearbeitet mit Aufgaben-/Bewertungsmaterial",
     "konfidenz": "hoch",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-14",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "PK-012",
@@ -1343,7 +1407,9 @@
     "qualitaet": "3 – ausgearbeitet mit Aufgaben-/Bewertungsmaterial",
     "konfidenz": "hoch",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-14",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "PK-013",
@@ -1384,7 +1450,9 @@
     "qualitaet": "3 – ausgearbeitet mit Aufgaben-/Bewertungsmaterial",
     "konfidenz": "hoch",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-14",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "PK-014",
@@ -1424,7 +1492,9 @@
     "qualitaet": "3 – ausgearbeitet mit Aufgaben-/Bewertungsmaterial",
     "konfidenz": "hoch",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-14",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "PK-015",
@@ -1465,7 +1535,9 @@
     "qualitaet": "2 – konkreter Praxisbericht; teilweise Materiallücken",
     "konfidenz": "mittel",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-14",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "PK-016",
@@ -1506,7 +1578,9 @@
     "qualitaet": "2 – konkreter Praxisbericht; teilweise Materiallücken",
     "konfidenz": "mittel",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-14",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "PK-017",
@@ -1547,7 +1621,9 @@
     "qualitaet": "2 – konkreter Praxisbericht; teilweise Materiallücken",
     "konfidenz": "mittel",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-14",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "PK-018",
@@ -1588,7 +1664,9 @@
     "qualitaet": "2 – konkreter Praxisbericht; teilweise Materiallücken",
     "konfidenz": "mittel",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-14",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "PK-019",
@@ -1628,7 +1706,9 @@
     "qualitaet": "3 – ausgearbeitet mit Aufgaben-/Bewertungsmaterial",
     "konfidenz": "hoch",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-14",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "PK-020",
@@ -1668,7 +1748,9 @@
     "qualitaet": "3 – ausgearbeitet mit Aufgaben-/Bewertungsmaterial",
     "konfidenz": "hoch",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-14",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "PK-021",
@@ -1708,7 +1790,9 @@
     "qualitaet": "3 – ausgearbeitet mit Aufgaben-/Bewertungsmaterial",
     "konfidenz": "hoch",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-14",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "PK-022",
@@ -1748,7 +1832,9 @@
     "qualitaet": "3 – ausgearbeitet mit Aufgaben-/Bewertungsmaterial",
     "konfidenz": "hoch",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-14",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "PK-023",
@@ -1789,7 +1875,9 @@
     "qualitaet": "2 – konkreter Praxisbericht; teilweise Materiallücken",
     "konfidenz": "mittel",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-14",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "PK-024",
@@ -1804,7 +1892,7 @@
     "sprache": "de",
     "pruefungsart": "mündlich",
     "ki_rolle": 1,
-    "ki_rolle_begruendung": "KI nicht als Teil dieser Prüfung beschrieben; keine Aussage über ein Verbot.",
+    "ki_rolle_begruendung": "Keine Hilfsmittel zugelassen (Hilfsmittel-Stufe 1); KI ist damit ausgeschlossen. Eine eigene Begründung der Begrenzung nennt die Quelle nicht.",
     "aias_stufe": null,
     "digitale_medien": "nicht nötig",
     "tools": "Rollenkarten; Sprachendorf",
@@ -1829,8 +1917,12 @@
     "link_status": "geprüft",
     "qualitaet": "2 – konkreter Praxisbericht; teilweise Materiallücken",
     "konfidenz": "mittel",
-    "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung": [
+      "begrenzt"
+    ],
+    "ki_setzung_status": "eingeschätzt",
+    "erfasst_am": "2026-11-14",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "PK-025",
@@ -1870,7 +1962,9 @@
     "qualitaet": "3 – ausgearbeitet mit Aufgaben-/Bewertungsmaterial",
     "konfidenz": "hoch",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-14",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "PK-026",
@@ -1910,7 +2004,9 @@
     "qualitaet": "2 – konkreter Praxisbericht; teilweise Materiallücken",
     "konfidenz": "mittel",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-14",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "PK-027",
@@ -1950,7 +2046,9 @@
     "qualitaet": "3 – ausgearbeitet mit Aufgaben-/Bewertungsmaterial",
     "konfidenz": "hoch",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-14",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "PK-028",
@@ -1990,7 +2088,9 @@
     "qualitaet": "3 – ausgearbeitet mit Aufgaben-/Bewertungsmaterial",
     "konfidenz": "hoch",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-14",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "PK-029",
@@ -2031,7 +2131,9 @@
     "qualitaet": "3 – ausgearbeitet mit Aufgaben-/Bewertungsmaterial",
     "konfidenz": "hoch",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-14",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "PK-030",
@@ -2071,7 +2173,9 @@
     "qualitaet": "3 – ausgearbeitet mit Aufgaben-/Bewertungsmaterial",
     "konfidenz": "hoch",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-14",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "PK-031",
@@ -2112,7 +2216,9 @@
     "qualitaet": "3 – ausgearbeitet mit Aufgaben-/Bewertungsmaterial",
     "konfidenz": "hoch",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-14",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "PK-032",
@@ -2152,7 +2258,9 @@
     "qualitaet": "2 – konkreter Praxisbericht; teilweise Materiallücken",
     "konfidenz": "mittel",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-14",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "PK-033",
@@ -2192,7 +2300,9 @@
     "qualitaet": "3 – ausgearbeitet mit Aufgaben-/Bewertungsmaterial",
     "konfidenz": "hoch",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-14",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "IQES-2025-01",
@@ -2232,10 +2342,12 @@
     "qualitaet": "3 – ausgearbeitet mit Aufgaben-/Bewertungsmaterial",
     "konfidenz": "hoch",
     "ki_setzung": [
-      "K01",
-      "K02"
+      "begrenzt",
+      "integriert"
     ],
-    "ki_setzung_status": "explizit"
+    "ki_setzung_status": "explizit",
+    "erfasst_am": "2026-11-14",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "TC-01",
@@ -2276,7 +2388,9 @@
     "qualitaet": "3 – Aufgabenblatt und Punkteraster",
     "konfidenz": "hoch",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-14",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "TC-02",
@@ -2317,9 +2431,11 @@
     "qualitaet": "3 – Ablauf, Schülerbeispiel und Punkteraster",
     "konfidenz": "hoch",
     "ki_setzung": [
-      "K04"
+      "reflektiert"
     ],
-    "ki_setzung_status": "eingeschätzt"
+    "ki_setzung_status": "eingeschätzt",
+    "erfasst_am": "2026-11-14",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "TC-03",
@@ -2334,7 +2450,7 @@
     "sprache": "de",
     "pruefungsart": "Klassenarbeit/Klausur",
     "ki_rolle": 1,
-    "ki_rolle_begruendung": "Generative KI wird für dieses Beispiel nicht geregelt.",
+    "ki_rolle_begruendung": "Keine Hilfsmittel zugelassen (Hilfsmittel-Stufe 1); KI ist damit ausgeschlossen. Eine eigene Begründung der Begrenzung nennt die Quelle nicht.",
     "aias_stufe": null,
     "digitale_medien": "nicht belegt",
     "tools": "",
@@ -2359,8 +2475,12 @@
     "link_status": "TaskCards-Pinnwand im Browser geöffnet",
     "qualitaet": "2 – erprobter Ablauf ohne fachliche Aufgabenstellung",
     "konfidenz": "mittel",
-    "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung": [
+      "begrenzt"
+    ],
+    "ki_setzung_status": "eingeschätzt",
+    "erfasst_am": "2026-11-14",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "TC-05",
@@ -2400,7 +2520,9 @@
     "qualitaet": "3 – entworfene Prüfung mit vollständigen Materialien",
     "konfidenz": "hoch",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-14",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "TC-06",
@@ -2441,7 +2563,9 @@
     "qualitaet": "2 – konkreter Entwurf ohne separates Bewertungsraster",
     "konfidenz": "mittel",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-14",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "TC-07",
@@ -2482,7 +2606,9 @@
     "qualitaet": "3 – Aufgabenblatt und Punkteraster",
     "konfidenz": "hoch",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-14",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "TC-08",
@@ -2523,7 +2649,9 @@
     "qualitaet": "3 – mehrere konkret ausgearbeitete Wahlaufgaben",
     "konfidenz": "hoch",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-14",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "TC-09",
@@ -2564,7 +2692,9 @@
     "qualitaet": "3 – konkreter Auftrag mit Bewertungsraster",
     "konfidenz": "mittel",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-14",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "TC-10",
@@ -2605,7 +2735,9 @@
     "qualitaet": "3 – Aufgabenauftrag und Raster",
     "konfidenz": "hoch",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-14",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "TC-11",
@@ -2646,7 +2778,9 @@
     "qualitaet": "3 – konkreter Auftrag mit Raster und Checkliste",
     "konfidenz": "hoch",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-14",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "TC-12",
@@ -2686,7 +2820,9 @@
     "qualitaet": "3 – Originalaufgabe und Bewertung",
     "konfidenz": "hoch",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-14",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "TC-13",
@@ -2727,7 +2863,9 @@
     "qualitaet": "3 – konkreter Auftrag mit Kriterien",
     "konfidenz": "hoch",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-14",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "TC-14",
@@ -2770,7 +2908,9 @@
     "ki_setzung": [
       "offen"
     ],
-    "ki_setzung_status": "explizit"
+    "ki_setzung_status": "explizit",
+    "erfasst_am": "2026-11-14",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "TC-15",
@@ -2810,7 +2950,9 @@
     "qualitaet": "3 – dokumentierte Durchführung und Bewertungsmaterial",
     "konfidenz": "hoch",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-14",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "TC-16",
@@ -2825,7 +2967,7 @@
     "sprache": "de",
     "pruefungsart": "Klassenarbeit mit vorgelagerter Gruppenphase",
     "ki_rolle": 1,
-    "ki_rolle_begruendung": "Generative KI wird für dieses Beispiel nicht geregelt.",
+    "ki_rolle_begruendung": "Keine Hilfsmittel zugelassen (Hilfsmittel-Stufe 1); KI ist damit ausgeschlossen. Eine eigene Begründung der Begrenzung nennt die Quelle nicht.",
     "aias_stufe": null,
     "digitale_medien": "nicht erforderlich",
     "tools": "",
@@ -2850,8 +2992,12 @@
     "link_status": "TaskCards-Pinnwand im Browser geöffnet",
     "qualitaet": "2 – erprobtes Prüfungssetting mit konkretem Ablauf",
     "konfidenz": "mittel",
-    "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung": [
+      "begrenzt"
+    ],
+    "ki_setzung_status": "eingeschätzt",
+    "erfasst_am": "2026-11-14",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "ISB-11-47",
@@ -2892,7 +3038,9 @@
     "qualitaet": "2 – ISB-Beispielseite mit verlinktem Praxismaterial",
     "konfidenz": "mittel",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-14",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "ISB-11-48",
@@ -2933,7 +3081,9 @@
     "qualitaet": "3 – Durchführungshinweise im PDF und verlinktes Praxismaterial",
     "konfidenz": "hoch",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-14",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "ISB-11-49",
@@ -2974,7 +3124,9 @@
     "qualitaet": "2 – ISB-Beispielseite mit verlinktem Praxismaterial",
     "konfidenz": "mittel",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-14",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "ISB-11-50",
@@ -3015,7 +3167,9 @@
     "qualitaet": "3 – Durchführungshinweise im PDF und verlinktes Praxismaterial",
     "konfidenz": "hoch",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-14",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "ISB-11-51",
@@ -3056,7 +3210,9 @@
     "qualitaet": "3 – Durchführungshinweise im PDF und verlinktes Praxismaterial",
     "konfidenz": "hoch",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-14",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "ISB-11-52",
@@ -3097,7 +3253,9 @@
     "qualitaet": "2 – ISB-Beispielseite mit verlinktem Praxismaterial",
     "konfidenz": "mittel",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-14",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "ISB-12-47",
@@ -3138,9 +3296,11 @@
     "qualitaet": "3 – Durchführungshinweise im PDF und verlinktes Praxismaterial",
     "konfidenz": "hoch",
     "ki_setzung": [
-      "K01"
+      "begrenzt"
     ],
-    "ki_setzung_status": "explizit"
+    "ki_setzung_status": "explizit",
+    "erfasst_am": "2026-11-14",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "ISB-12-48",
@@ -3181,7 +3341,9 @@
     "qualitaet": "3 – Durchführungshinweise im PDF und verlinktes Praxismaterial",
     "konfidenz": "hoch",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-14",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "ISB-12-50",
@@ -3221,7 +3383,9 @@
     "qualitaet": "3 – Durchführungshinweise im PDF und verlinktes Praxismaterial",
     "konfidenz": "hoch",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-14",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "ISB-12-51",
@@ -3262,7 +3426,9 @@
     "qualitaet": "3 – Durchführungshinweise im PDF und verlinktes Praxismaterial",
     "konfidenz": "hoch",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-14",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "ISB-12-52",
@@ -3277,7 +3443,7 @@
     "sprache": "de",
     "pruefungsart": "Mündlicher Leistungsnachweis",
     "ki_rolle": 1,
-    "ki_rolle_begruendung": "Die Quelle regelt generative KI für diesen Leistungsnachweis nicht.",
+    "ki_rolle_begruendung": "Keine Hilfsmittel zugelassen (Hilfsmittel-Stufe 1); KI ist damit ausgeschlossen. Eine eigene Begründung der Begrenzung nennt die Quelle nicht.",
     "aias_stufe": null,
     "digitale_medien": "nicht belegt",
     "tools": "Keine",
@@ -3302,8 +3468,12 @@
     "link_status": "geprüft",
     "qualitaet": "3 – Durchführungshinweise im PDF und verlinktes Praxismaterial",
     "konfidenz": "hoch",
-    "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung": [
+      "begrenzt"
+    ],
+    "ki_setzung_status": "eingeschätzt",
+    "erfasst_am": "2026-11-14",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "ISB-12-53",
@@ -3344,9 +3514,11 @@
     "qualitaet": "3 – Durchführungshinweise im PDF und verlinktes Praxismaterial",
     "konfidenz": "hoch",
     "ki_setzung": [
-      "K01"
+      "begrenzt"
     ],
-    "ki_setzung_status": "explizit"
+    "ki_setzung_status": "explizit",
+    "erfasst_am": "2026-11-14",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "ISB-12-54",
@@ -3387,9 +3559,11 @@
     "qualitaet": "3 – Durchführungshinweise im PDF und verlinktes Praxismaterial",
     "konfidenz": "hoch",
     "ki_setzung": [
-      "K01"
+      "begrenzt"
     ],
-    "ki_setzung_status": "explizit"
+    "ki_setzung_status": "explizit",
+    "erfasst_am": "2026-11-14",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "ISB-12-55",
@@ -3430,7 +3604,9 @@
     "qualitaet": "2 – ISB-Beispielseite mit verlinktem Praxismaterial",
     "konfidenz": "mittel",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-14",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "ISB-12-56",
@@ -3471,7 +3647,9 @@
     "qualitaet": "2 – ISB-Beispielseite mit verlinktem Praxismaterial",
     "konfidenz": "mittel",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-14",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "ISB-12-57",
@@ -3514,7 +3692,9 @@
     "ki_setzung": [
       "offen"
     ],
-    "ki_setzung_status": "explizit"
+    "ki_setzung_status": "explizit",
+    "erfasst_am": "2026-11-14",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "ISB-12-58",
@@ -3529,7 +3709,7 @@
     "sprache": "de",
     "pruefungsart": "Kleiner Leistungsnachweis",
     "ki_rolle": 1,
-    "ki_rolle_begruendung": "Die Quelle regelt generative KI für diesen Leistungsnachweis nicht.",
+    "ki_rolle_begruendung": "Laut Überblick (S. 2) wird KI-Nutzung bei Recherche und Skripterstellung besprochen, aber nicht verboten; eine bestimmte Rolle ist nicht festgelegt.",
     "aias_stufe": null,
     "digitale_medien": "erforderlich",
     "tools": "Digitales Endgerät, Modell- und Büromaterial",
@@ -3554,8 +3734,12 @@
     "link_status": "geprüft",
     "qualitaet": "3 – Durchführungshinweise im PDF und verlinktes Praxismaterial",
     "konfidenz": "hoch",
-    "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung": [
+      "offen"
+    ],
+    "ki_setzung_status": "eingeschätzt",
+    "erfasst_am": "2026-11-14",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "ISB-12-59",
@@ -3596,7 +3780,9 @@
     "qualitaet": "2 – ISB-Beispielseite mit verlinktem Praxismaterial",
     "konfidenz": "mittel",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-14",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "ISB-13-47",
@@ -3611,7 +3797,7 @@
     "sprache": "de",
     "pruefungsart": "Mündliche Schulaufgabe",
     "ki_rolle": 1,
-    "ki_rolle_begruendung": "Die Quelle regelt generative KI für diesen Leistungsnachweis nicht.",
+    "ki_rolle_begruendung": "Keine Hilfsmittel zugelassen (Hilfsmittel-Stufe 1); KI ist damit ausgeschlossen. Eine eigene Begründung der Begrenzung nennt die Quelle nicht.",
     "aias_stufe": null,
     "digitale_medien": "nicht belegt",
     "tools": "Keine während der Prüfung",
@@ -3635,8 +3821,12 @@
     "link_status": "geprüft",
     "qualitaet": "3 – Durchführungshinweise im PDF und verlinktes Praxismaterial",
     "konfidenz": "hoch",
-    "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung": [
+      "begrenzt"
+    ],
+    "ki_setzung_status": "eingeschätzt",
+    "erfasst_am": "2026-11-14",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "ISB-13-48",
@@ -3677,7 +3867,9 @@
     "qualitaet": "3 – Durchführungshinweise im PDF und verlinktes Praxismaterial",
     "konfidenz": "hoch",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-14",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "ISB-13-49",
@@ -3692,7 +3884,7 @@
     "sprache": "de",
     "pruefungsart": "Kleiner Leistungsnachweis",
     "ki_rolle": 1,
-    "ki_rolle_begruendung": "Die Quelle regelt generative KI für diesen Leistungsnachweis nicht.",
+    "ki_rolle_begruendung": "Keine Hilfsmittel zugelassen (Hilfsmittel-Stufe 1); KI ist damit ausgeschlossen. Eine eigene Begründung der Begrenzung nennt die Quelle nicht.",
     "aias_stufe": null,
     "digitale_medien": "erforderlich",
     "tools": "Digitales Testsystem",
@@ -3717,8 +3909,12 @@
     "link_status": "geprüft",
     "qualitaet": "3 – Durchführungshinweise im PDF und verlinktes Praxismaterial",
     "konfidenz": "hoch",
-    "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung": [
+      "begrenzt"
+    ],
+    "ki_setzung_status": "eingeschätzt",
+    "erfasst_am": "2026-11-14",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "ISB-13-50",
@@ -3733,7 +3929,7 @@
     "sprache": "de",
     "pruefungsart": "Teil einer Schulaufgabe",
     "ki_rolle": 1,
-    "ki_rolle_begruendung": "Die Quelle regelt generative KI für diesen Leistungsnachweis nicht.",
+    "ki_rolle_begruendung": "Keine Hilfsmittel zugelassen (Hilfsmittel-Stufe 1); KI ist damit ausgeschlossen. Eine eigene Begründung der Begrenzung nennt die Quelle nicht.",
     "aias_stufe": null,
     "digitale_medien": "erforderlich",
     "tools": "Aufnahmegerät",
@@ -3758,8 +3954,12 @@
     "link_status": "geprüft",
     "qualitaet": "2 – ISB-Beispielseite mit verlinktem Praxismaterial",
     "konfidenz": "mittel",
-    "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung": [
+      "begrenzt"
+    ],
+    "ki_setzung_status": "eingeschätzt",
+    "erfasst_am": "2026-11-14",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "ISB-13-51",
@@ -3800,7 +4000,9 @@
     "qualitaet": "3 – Durchführungshinweise im PDF und verlinktes Praxismaterial",
     "konfidenz": "hoch",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-14",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "ISB-13-52",
@@ -3815,7 +4017,7 @@
     "sprache": "de",
     "pruefungsart": "Schulaufgabe",
     "ki_rolle": 1,
-    "ki_rolle_begruendung": "Die Quelle regelt generative KI für diesen Leistungsnachweis nicht.",
+    "ki_rolle_begruendung": "Keine Hilfsmittel zugelassen (Hilfsmittel-Stufe 1); KI ist damit ausgeschlossen. Eine eigene Begründung der Begrenzung nennt die Quelle nicht.",
     "aias_stufe": null,
     "digitale_medien": "nicht belegt",
     "tools": "",
@@ -3840,8 +4042,12 @@
     "link_status": "geprüft",
     "qualitaet": "2 – ISB-Beispielseite mit verlinktem Praxismaterial",
     "konfidenz": "mittel",
-    "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung": [
+      "begrenzt"
+    ],
+    "ki_setzung_status": "eingeschätzt",
+    "erfasst_am": "2026-11-14",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "ISB-14-48",
@@ -3882,7 +4088,9 @@
     "qualitaet": "2 – ISB-Beispielseite mit verlinktem Praxismaterial",
     "konfidenz": "mittel",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-14",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "ISB-14-49",
@@ -3923,7 +4131,9 @@
     "qualitaet": "2 – ISB-Beispielseite mit verlinktem Praxismaterial",
     "konfidenz": "mittel",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-14",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "NZQA-91948",
@@ -3964,7 +4174,9 @@
     "qualitaet": "2 – Leistungsstandard und annotierte Schülerexemplare",
     "konfidenz": "mittel",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-14",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "NZQA-91949",
@@ -4005,7 +4217,9 @@
     "qualitaet": "2 – Leistungsstandard und annotierte Schülerexemplare",
     "konfidenz": "mittel",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-14",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "NZQA-91270",
@@ -4046,7 +4260,9 @@
     "qualitaet": "2 – Leistungsstandard und annotierte Schülerexemplare",
     "konfidenz": "mittel",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-14",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "NZQA-91271",
@@ -4087,7 +4303,9 @@
     "qualitaet": "2 – Leistungsstandard und annotierte Schülerexemplare",
     "konfidenz": "mittel",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-14",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "NZQA-91272",
@@ -4128,7 +4346,9 @@
     "qualitaet": "2 – Leistungsstandard und annotierte Schülerexemplare",
     "konfidenz": "mittel",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-14",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "NZQA-91273",
@@ -4169,7 +4389,9 @@
     "qualitaet": "2 – Leistungsstandard und annotierte Schülerexemplare",
     "konfidenz": "mittel",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-14",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "NZQA-91274",
@@ -4210,7 +4432,9 @@
     "qualitaet": "2 – Leistungsstandard und annotierte Schülerexemplare",
     "konfidenz": "mittel",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-14",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "NZQA-91278",
@@ -4251,7 +4475,9 @@
     "qualitaet": "2 – Leistungsstandard und annotierte Schülerexemplare",
     "konfidenz": "mittel",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-14",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "NZQA-91418",
@@ -4292,7 +4518,9 @@
     "qualitaet": "2 – Leistungsstandard und annotierte Schülerexemplare",
     "konfidenz": "mittel",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-14",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "NZQA-91422",
@@ -4333,7 +4561,9 @@
     "qualitaet": "2 – Leistungsstandard und annotierte Schülerexemplare",
     "konfidenz": "mittel",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-14",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "NZQA-91849",
@@ -4374,7 +4604,9 @@
     "qualitaet": "2 – Leistungsstandard und annotierte Schülerexemplare",
     "konfidenz": "mittel",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-14",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "NZQA-91944",
@@ -4415,7 +4647,9 @@
     "qualitaet": "2 – Leistungsstandard und annotierte Schülerexemplare",
     "konfidenz": "mittel",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-14",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "NZQA-91945",
@@ -4456,7 +4690,9 @@
     "qualitaet": "2 – Leistungsstandard und annotierte Schülerexemplare",
     "konfidenz": "mittel",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-14",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "NZQA-91256",
@@ -4497,7 +4733,9 @@
     "qualitaet": "2 – Leistungsstandard und annotierte Schülerexemplare",
     "konfidenz": "mittel",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-14",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "NZQA-91257",
@@ -4538,7 +4776,9 @@
     "qualitaet": "2 – Leistungsstandard und annotierte Schülerexemplare",
     "konfidenz": "mittel",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-14",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "NZQA-91258",
@@ -4579,7 +4819,9 @@
     "qualitaet": "2 – Leistungsstandard und annotierte Schülerexemplare",
     "konfidenz": "mittel",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-14",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "NZQA-91259",
@@ -4620,7 +4862,9 @@
     "qualitaet": "2 – Leistungsstandard und annotierte Schülerexemplare",
     "konfidenz": "mittel",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-14",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "NZQA-91263",
@@ -4661,7 +4905,9 @@
     "qualitaet": "2 – Leistungsstandard und annotierte Schülerexemplare",
     "konfidenz": "mittel",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-14",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "NZQA-91265",
@@ -4702,7 +4948,9 @@
     "qualitaet": "2 – Leistungsstandard und annotierte Schülerexemplare",
     "konfidenz": "mittel",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-14",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "NZQA-91266",
@@ -4743,7 +4991,9 @@
     "qualitaet": "2 – Leistungsstandard und annotierte Schülerexemplare",
     "konfidenz": "mittel",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-14",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "NZQA-91580",
@@ -4784,7 +5034,9 @@
     "qualitaet": "2 – Leistungsstandard und annotierte Schülerexemplare",
     "konfidenz": "mittel",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-14",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "NZQA-91582",
@@ -4825,7 +5077,9 @@
     "qualitaet": "2 – Leistungsstandard und annotierte Schülerexemplare",
     "konfidenz": "mittel",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-14",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "NZQA-91153",
@@ -4866,7 +5120,9 @@
     "qualitaet": "2 – Leistungsstandard und annotierte Schülerexemplare",
     "konfidenz": "mittel",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-14",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "NZQA-91154",
@@ -4907,7 +5163,9 @@
     "qualitaet": "2 – Leistungsstandard und annotierte Schülerexemplare",
     "konfidenz": "mittel",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-14",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "NZQA-91155",
@@ -4948,7 +5206,9 @@
     "qualitaet": "2 – Leistungsstandard und annotierte Schülerexemplare",
     "konfidenz": "mittel",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-14",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "NZQA-91158",
@@ -4989,7 +5249,9 @@
     "qualitaet": "2 – Leistungsstandard und annotierte Schülerexemplare",
     "konfidenz": "mittel",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-14",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "NZQA-91160",
@@ -5030,7 +5292,9 @@
     "qualitaet": "2 – Leistungsstandard und annotierte Schülerexemplare",
     "konfidenz": "mittel",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-14",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "NZQA-91601",
@@ -5071,7 +5335,9 @@
     "qualitaet": "2 – Leistungsstandard und annotierte Schülerexemplare",
     "konfidenz": "mittel",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-14",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "NZQA-91602",
@@ -5112,7 +5378,9 @@
     "qualitaet": "2 – Leistungsstandard und annotierte Schülerexemplare",
     "konfidenz": "mittel",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-14",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "NZQA-92016",
@@ -5153,7 +5421,9 @@
     "qualitaet": "2 – Leistungsstandard und annotierte Schülerexemplare",
     "konfidenz": "mittel",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-14",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "NZQA-92017",
@@ -5194,7 +5464,9 @@
     "qualitaet": "2 – Leistungsstandard und annotierte Schülerexemplare",
     "konfidenz": "mittel",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-14",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "NZQA-91327",
@@ -5235,7 +5507,9 @@
     "qualitaet": "2 – Leistungsstandard und annotierte Schülerexemplare",
     "konfidenz": "mittel",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-14",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "NZQA-91328",
@@ -5276,7 +5550,9 @@
     "qualitaet": "2 – Leistungsstandard und annotierte Schülerexemplare",
     "konfidenz": "mittel",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-14",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "NZQA-91331",
@@ -5317,7 +5593,9 @@
     "qualitaet": "2 – Leistungsstandard und annotierte Schülerexemplare",
     "konfidenz": "mittel",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-14",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "NZQA-91335",
@@ -5358,7 +5636,9 @@
     "qualitaet": "2 – Leistungsstandard und annotierte Schülerexemplare",
     "konfidenz": "mittel",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-14",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "NZQA-91789",
@@ -5399,7 +5679,9 @@
     "qualitaet": "2 – Leistungsstandard und annotierte Schülerexemplare",
     "konfidenz": "mittel",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-14",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "NZQA-91916",
@@ -5440,7 +5722,9 @@
     "qualitaet": "2 – Leistungsstandard und annotierte Schülerexemplare",
     "konfidenz": "mittel",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-14",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "NZQA-91917",
@@ -5481,7 +5765,9 @@
     "qualitaet": "2 – Leistungsstandard und annotierte Schülerexemplare",
     "konfidenz": "mittel",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-14",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "NZQA-91724",
@@ -5522,7 +5808,9 @@
     "qualitaet": "2 – Leistungsstandard und annotierte Schülerexemplare",
     "konfidenz": "mittel",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-14",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "NZQA-90821",
@@ -5563,7 +5851,9 @@
     "qualitaet": "2 – Leistungsstandard und annotierte Schülerexemplare",
     "konfidenz": "mittel",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-14",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "NZQA-90822",
@@ -5604,7 +5894,9 @@
     "qualitaet": "2 – Leistungsstandard und annotierte Schülerexemplare",
     "konfidenz": "mittel",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-14",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "NZQA-90823",
@@ -5645,7 +5937,9 @@
     "qualitaet": "2 – Leistungsstandard und annotierte Schülerexemplare",
     "konfidenz": "mittel",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-14",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "NZQA-91725",
@@ -5686,7 +5980,9 @@
     "qualitaet": "2 – Leistungsstandard und annotierte Schülerexemplare",
     "konfidenz": "mittel",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-14",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "NZQA-90825",
@@ -5727,7 +6023,9 @@
     "qualitaet": "2 – Leistungsstandard und annotierte Schülerexemplare",
     "konfidenz": "mittel",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-14",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "NZQA-90826",
@@ -5768,7 +6066,9 @@
     "qualitaet": "2 – Leistungsstandard und annotierte Schülerexemplare",
     "konfidenz": "mittel",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-14",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "NZQA-90827",
@@ -5809,7 +6109,9 @@
     "qualitaet": "2 – Leistungsstandard und annotierte Schülerexemplare",
     "konfidenz": "mittel",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-14",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "NZQA-92004",
@@ -5850,7 +6152,9 @@
     "qualitaet": "2 – Leistungsstandard und annotierte Schülerexemplare",
     "konfidenz": "mittel",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-14",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "NZQA-92005",
@@ -5891,7 +6195,9 @@
     "qualitaet": "2 – Leistungsstandard und annotierte Schülerexemplare",
     "konfidenz": "mittel",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-14",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "NZQA-91893",
@@ -5932,7 +6238,9 @@
     "qualitaet": "2 – Leistungsstandard und annotierte Schülerexemplare",
     "konfidenz": "mittel",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-14",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "NZQA-91896",
@@ -5973,7 +6281,9 @@
     "qualitaet": "2 – Leistungsstandard und annotierte Schülerexemplare",
     "konfidenz": "mittel",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-14",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "NZQA-91897",
@@ -6014,7 +6324,9 @@
     "qualitaet": "2 – Leistungsstandard und annotierte Schülerexemplare",
     "konfidenz": "mittel",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-14",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "NZQA-91903",
@@ -6055,7 +6367,9 @@
     "qualitaet": "2 – Leistungsstandard und annotierte Schülerexemplare",
     "konfidenz": "mittel",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-14",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "NZQA-91904",
@@ -6096,7 +6410,9 @@
     "qualitaet": "2 – Leistungsstandard und annotierte Schülerexemplare",
     "konfidenz": "mittel",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-14",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "NZQA-91907",
@@ -6137,7 +6453,9 @@
     "qualitaet": "2 – Leistungsstandard und annotierte Schülerexemplare",
     "konfidenz": "mittel",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-14",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "NZQA-91924",
@@ -6178,7 +6496,9 @@
     "qualitaet": "2 – Leistungsstandard und annotierte Schülerexemplare",
     "konfidenz": "mittel",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-14",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "NZQA-91926",
@@ -6219,7 +6539,9 @@
     "qualitaet": "2 – Leistungsstandard und annotierte Schülerexemplare",
     "konfidenz": "mittel",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-14",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "NZQA-91101",
@@ -6260,7 +6582,9 @@
     "qualitaet": "2 – Leistungsstandard und annotierte Schülerexemplare",
     "konfidenz": "mittel",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-14",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "NZQA-91102",
@@ -6301,7 +6625,9 @@
     "qualitaet": "2 – Leistungsstandard und annotierte Schülerexemplare",
     "konfidenz": "mittel",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-14",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "NZQA-91103",
@@ -6342,7 +6668,9 @@
     "qualitaet": "2 – Leistungsstandard und annotierte Schülerexemplare",
     "konfidenz": "mittel",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-14",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "NZQA-91104",
@@ -6383,7 +6711,9 @@
     "qualitaet": "2 – Leistungsstandard und annotierte Schülerexemplare",
     "konfidenz": "mittel",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-14",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "NZQA-91476",
@@ -6424,7 +6754,9 @@
     "qualitaet": "2 – Leistungsstandard und annotierte Schülerexemplare",
     "konfidenz": "mittel",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-14",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "NZQA-91478",
@@ -6465,7 +6797,9 @@
     "qualitaet": "2 – Leistungsstandard und annotierte Schülerexemplare",
     "konfidenz": "mittel",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-14",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "NZQA-91912",
@@ -6506,7 +6840,9 @@
     "qualitaet": "2 – Leistungsstandard und annotierte Schülerexemplare",
     "konfidenz": "mittel",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-14",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "NZQA-91913",
@@ -6547,7 +6883,9 @@
     "qualitaet": "2 – Leistungsstandard und annotierte Schülerexemplare",
     "konfidenz": "mittel",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-14",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "NZQA-91325",
@@ -6588,7 +6926,9 @@
     "qualitaet": "2 – Leistungsstandard und annotierte Schülerexemplare",
     "konfidenz": "mittel",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-14",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "NZQA-91460",
@@ -6629,7 +6969,9 @@
     "qualitaet": "2 – Leistungsstandard und annotierte Schülerexemplare",
     "konfidenz": "mittel",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-14",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "REK-15-14",
@@ -6670,7 +7012,9 @@
     "qualitaet": "2 – Praxisbericht mit Projektphasen",
     "konfidenz": "mittel",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-14",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "REK-15-37",
@@ -6711,7 +7055,9 @@
     "qualitaet": "3 – Aufgaben, Materialien, Erwartungshorizont und Bewertungsbogen",
     "konfidenz": "hoch",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-14",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "REK-17-4",
@@ -6751,7 +7097,9 @@
     "qualitaet": "3 – Praxisbericht mit Ablauf und Beurteilungsmatrix",
     "konfidenz": "hoch",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-14",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "REK-17-17",
@@ -6792,7 +7140,9 @@
     "qualitaet": "2 – Aufträge und Kompetenzraster im Praxisbericht",
     "konfidenz": "mittel",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-14",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "REK-17-23",
@@ -6833,7 +7183,9 @@
     "qualitaet": "3 – Reihenplanung und Originalaufgaben über die verlinkte Pinnwand",
     "konfidenz": "hoch",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-14",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "REK-18-32",
@@ -6874,7 +7226,9 @@
     "qualitaet": "2 – Aufgabenstellung und vereinbarte Kriterien",
     "konfidenz": "mittel",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-14",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "REK-18-36",
@@ -6915,7 +7269,9 @@
     "qualitaet": "2 – Praxisbericht mit Aufgabenanforderungen und Korrekturerfahrung",
     "konfidenz": "mittel",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-14",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "REK-EXT0-17",
@@ -6956,7 +7312,9 @@
     "qualitaet": "2 – Ablauf, Reflexion und Formatspinne",
     "konfidenz": "mittel",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-14",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "REK-EXT1-6",
@@ -6997,7 +7355,9 @@
     "qualitaet": "2 – Praxisbericht mit Bewertungsanteilen und Formatspinne",
     "konfidenz": "mittel",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-14",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "REK-PART2",
@@ -7039,7 +7399,9 @@
     "ki_setzung": [
       "offen"
     ],
-    "ki_setzung_status": "explizit"
+    "ki_setzung_status": "explizit",
+    "erfasst_am": "2026-11-14",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "REK-SPORT",
@@ -7080,7 +7442,9 @@
     "qualitaet": "2 – Amtliche Prüfungsaufgabe mit Bewertungskriterien",
     "konfidenz": "mittel",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-14",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "REK-MATHCASES",
@@ -7121,7 +7485,9 @@
     "qualitaet": "2 – Erprobter Ablauf und zwei Bewertungsraster",
     "konfidenz": "mittel",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-14",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "REK-BOOKTOK",
@@ -7161,7 +7527,9 @@
     "qualitaet": "2 – Praxismaterial mit Aufgaben, Arbeitsphasen und Punktebewertung",
     "konfidenz": "mittel",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-14",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "REK-EXT0-6-19",
@@ -7202,7 +7570,9 @@
     "qualitaet": "2 – LuPe²-Praxisbericht und Formatspinne",
     "konfidenz": "mittel",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-14",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "REK-EXT0-6-23",
@@ -7243,7 +7613,9 @@
     "qualitaet": "2 – Aufgabenmaterial, Checkliste und Bewertungsbogen",
     "konfidenz": "mittel",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-14",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "REK-EXT0-6-25",
@@ -7284,7 +7656,9 @@
     "qualitaet": "2 – Praxisbericht mit Zeitaufteilung und zwei Varianten",
     "konfidenz": "mittel",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-14",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "REK-EXT0-6-30",
@@ -7325,7 +7699,9 @@
     "qualitaet": "2 – LuPe²-Praxisbericht mit Prüfungsformat",
     "konfidenz": "mittel",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-14",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "REK-BENOTETE-PROJEKTARBEIT",
@@ -7366,7 +7742,9 @@
     "qualitaet": "2 – Good-Practice-Beispiel mit verlinktem Überblick und Praxismaterial",
     "konfidenz": "mittel",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-14",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "REK-SPORT-TANZ",
@@ -7407,7 +7785,9 @@
     "qualitaet": "2 – Amtliche Prüfungsanforderungen und Wertungstabellen",
     "konfidenz": "mittel",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-14",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "IB-VA-COMP",
@@ -7448,7 +7828,9 @@
     "qualitaet": "2 – Offizielle Beschreibung der Prüfungsaufgabe",
     "konfidenz": "mittel",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-14",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "IB-VA-PORT",
@@ -7489,7 +7871,9 @@
     "qualitaet": "2 – Offizielle Beschreibung der Prüfungsaufgabe",
     "konfidenz": "mittel",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-14",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "IB-VA-EXHIB",
@@ -7530,7 +7914,9 @@
     "qualitaet": "2 – Offizielle Beschreibung der Prüfungsaufgabe",
     "konfidenz": "mittel",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-14",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "IB-VA27-PORT",
@@ -7571,7 +7957,9 @@
     "qualitaet": "2 – Offizielle Beschreibung der Prüfungsaufgabe",
     "konfidenz": "mittel",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-14",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "IB-VA27-CON",
@@ -7612,7 +8000,9 @@
     "qualitaet": "2 – Offizielle Beschreibung der Prüfungsaufgabe",
     "konfidenz": "mittel",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-14",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "IB-VA27-PROJ",
@@ -7653,7 +8043,9 @@
     "qualitaet": "2 – Offizielle Beschreibung der Prüfungsaufgabe",
     "konfidenz": "mittel",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-14",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "IB-VA27-RES",
@@ -7694,7 +8086,9 @@
     "qualitaet": "2 – Offizielle Beschreibung der Prüfungsaufgabe",
     "konfidenz": "mittel",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-14",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "IB-M-EXPLORE",
@@ -7735,7 +8129,9 @@
     "qualitaet": "2 – Offizielle Beschreibung der Prüfungsaufgabe",
     "konfidenz": "mittel",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-14",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "IB-M-PRESENT",
@@ -7776,7 +8172,9 @@
     "qualitaet": "2 – Offizielle Beschreibung der Prüfungsaufgabe",
     "konfidenz": "mittel",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-14",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "IB-M-EXPERIMENT",
@@ -7817,7 +8215,9 @@
     "qualitaet": "2 – Offizielle Beschreibung der Prüfungsaufgabe",
     "konfidenz": "mittel",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-14",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "IB-M-HL",
@@ -7858,7 +8258,9 @@
     "qualitaet": "2 – Offizielle Beschreibung der Prüfungsaufgabe",
     "konfidenz": "mittel",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-14",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "IB-EE",
@@ -7899,7 +8301,9 @@
     "qualitaet": "2 – Offizielle Beschreibung der Prüfungsaufgabe",
     "konfidenz": "mittel",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-14",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "AIAS-L2-SPEAK",
@@ -7940,9 +8344,11 @@
     "qualitaet": "2 – Konkretes Aufgabenszenario",
     "konfidenz": "mittel",
     "ki_setzung": [
-      "K03"
+      "integriert"
     ],
-    "ki_setzung_status": "eingeschätzt"
+    "ki_setzung_status": "eingeschätzt",
+    "erfasst_am": "2026-11-14",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "AIAS-L2-ART",
@@ -7983,9 +8389,11 @@
     "qualitaet": "2 – Konkretes Aufgabenszenario",
     "konfidenz": "mittel",
     "ki_setzung": [
-      "K03"
+      "integriert"
     ],
-    "ki_setzung_status": "eingeschätzt"
+    "ki_setzung_status": "eingeschätzt",
+    "erfasst_am": "2026-11-14",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "AIAS-L3-ESSAY",
@@ -8026,9 +8434,11 @@
     "qualitaet": "2 – Konkretes Aufgabenszenario",
     "konfidenz": "mittel",
     "ki_setzung": [
-      "K02"
+      "integriert"
     ],
-    "ki_setzung_status": "explizit"
+    "ki_setzung_status": "explizit",
+    "erfasst_am": "2026-11-14",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "AIAS-L4-FOLIO",
@@ -8069,9 +8479,11 @@
     "qualitaet": "2 – Ausgearbeiteter Entwurf mit Arbeitsphasen und Einreichung",
     "konfidenz": "mittel",
     "ki_setzung": [
-      "K04"
+      "reflektiert"
     ],
-    "ki_setzung_status": "explizit"
+    "ki_setzung_status": "explizit",
+    "erfasst_am": "2026-11-14",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "FR-GRANDORAL",
@@ -8111,9 +8523,11 @@
     "qualitaet": "2 – Offizielle Beschreibung der Prüfung mit FAQ und Bewertungsraster",
     "konfidenz": "hoch",
     "ki_setzung": [
-      "K01"
+      "begrenzt"
     ],
-    "ki_setzung_status": "eingeschätzt"
+    "ki_setzung_status": "eingeschätzt",
+    "erfasst_am": "2026-11-15",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "FR-CHEFDOEUVRE",
@@ -8154,7 +8568,9 @@
     "qualitaet": "2 – Offizieller Leitfaden mit Beispielen",
     "konfidenz": "mittel",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-15",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "FR-DNB-ORAL",
@@ -8194,7 +8610,9 @@
     "qualitaet": "2 – Offizielle Erläuterung mit Kriterien",
     "konfidenz": "hoch",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-15",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "ES-TDR-CAT",
@@ -8234,9 +8652,11 @@
     "qualitaet": "3 – Ausführliche Handreichung mit Bewertungsanteilen und Ablauf",
     "konfidenz": "hoch",
     "ki_setzung": [
-      "K01"
+      "begrenzt"
     ],
-    "ki_setzung_status": "explizit"
+    "ki_setzung_status": "explizit",
+    "erfasst_am": "2026-11-15",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "ES-PIB-MADRID",
@@ -8276,9 +8696,11 @@
     "qualitaet": "3 – Vollständige Bases mit Bewertungsraster",
     "konfidenz": "hoch",
     "ki_setzung": [
-      "K01"
+      "begrenzt"
     ],
-    "ki_setzung_status": "explizit"
+    "ki_setzung_status": "explizit",
+    "erfasst_am": "2026-11-15",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "US-NYPSC-PBAT",
@@ -8319,7 +8741,9 @@
     "qualitaet": "2 – Systembeschreibung; Rubrics über die Website des Konsortiums",
     "konfidenz": "mittel",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-15",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "US-AP-SEMINAR",
@@ -8359,7 +8783,9 @@
     "qualitaet": "3 – Offizielle Aufgabenbeschreibung mit Gewichtung und Bewertungsrichtlinien",
     "konfidenz": "hoch",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-15",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "US-ENVISION-DEFENSE",
@@ -8400,7 +8826,9 @@
     "qualitaet": "2 – Ausführliches Fallprofil mit Bewertungsbereichen",
     "konfidenz": "mittel",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-15",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "FGF-2023-ZAHLENZAUBER",
@@ -8442,7 +8870,9 @@
     "ki_setzung": [
       "offen"
     ],
-    "ki_setzung_status": "explizit"
+    "ki_setzung_status": "explizit",
+    "erfasst_am": "2026-11-18",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "PK-NATHAN",
@@ -8483,7 +8913,9 @@
     "qualitaet": "2 – konkreter Praxisbericht; teilweise Materiallücken",
     "konfidenz": "mittel",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-18",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "ZUM-SKIFERIEN",
@@ -8498,7 +8930,7 @@
     "sprache": "de",
     "pruefungsart": "Klassenarbeit/Klausur",
     "ki_rolle": 1,
-    "ki_rolle_begruendung": "KI in der Quelle nicht thematisiert; daraus folgt kein Verbot.",
+    "ki_rolle_begruendung": "Keine Hilfsmittel zugelassen (Hilfsmittel-Stufe 1); KI ist damit ausgeschlossen. Eine eigene Begründung der Begrenzung nennt die Quelle nicht.",
     "aias_stufe": null,
     "digitale_medien": "nicht nötig",
     "tools": "",
@@ -8522,8 +8954,12 @@
     "link_status": "geprüft",
     "qualitaet": "1 – kurze Beschreibung; kaum Material",
     "konfidenz": "mittel",
-    "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung": [
+      "begrenzt"
+    ],
+    "ki_setzung_status": "eingeschätzt",
+    "erfasst_am": "2026-11-18",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "PK-DIY-KA",
@@ -8563,7 +8999,9 @@
     "qualitaet": "2 – konkreter Praxisbericht; teilweise Materiallücken",
     "konfidenz": "hoch",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-18",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "NLQ-TEPASSE",
@@ -8604,7 +9042,9 @@
     "qualitaet": "1 – kurze Beschreibung; kaum Material",
     "konfidenz": "niedrig",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-18",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "NLQ-DREWES-GE",
@@ -8645,7 +9085,9 @@
     "qualitaet": "1 – kurze Beschreibung; kaum Material",
     "konfidenz": "niedrig",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-18",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "PK-DREIER-LYRIK",
@@ -8685,7 +9127,9 @@
     "qualitaet": "3 – ausgearbeitet mit Aufgaben-/Bewertungsmaterial",
     "konfidenz": "hoch",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-18",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "PK-SIEGERT-TRIGO",
@@ -8725,7 +9169,9 @@
     "qualitaet": "2 – konkreter Praxisbericht; teilweise Materiallücken",
     "konfidenz": "hoch",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-18",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "PK-SCHMITZ-SARTRE",
@@ -8765,7 +9211,9 @@
     "qualitaet": "2 – konkreter Praxisbericht; teilweise Materiallücken",
     "konfidenz": "hoch",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-18",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "PK-KRAEWINKEL-VS",
@@ -8805,7 +9253,9 @@
     "qualitaet": "2 – konkreter Praxisbericht; teilweise Materiallücken",
     "konfidenz": "hoch",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-18",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "LUPE-OLCHI",
@@ -8846,7 +9296,9 @@
     "qualitaet": "2 – konkreter Praxisbericht; teilweise Materiallücken",
     "konfidenz": "hoch",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-18",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "LUPE-AUSTRALIA",
@@ -8886,7 +9338,9 @@
     "qualitaet": "3 – ausgearbeitet mit Aufgaben-/Bewertungsmaterial",
     "konfidenz": "hoch",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-18",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "PK-FRONIUS-ALGO",
@@ -8926,7 +9380,9 @@
     "qualitaet": "3 – ausgearbeitet mit Aufgaben-/Bewertungsmaterial",
     "konfidenz": "hoch",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-18",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "PK-KOLODZY-RU",
@@ -8967,7 +9423,9 @@
     "qualitaet": "3 – ausgearbeitet mit Aufgaben-/Bewertungsmaterial",
     "konfidenz": "hoch",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-18",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "PK-BRILL-USA",
@@ -9008,7 +9466,9 @@
     "qualitaet": "2 – konkreter Praxisbericht; teilweise Materiallücken",
     "konfidenz": "hoch",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-18",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "PK-NIER-DREHBUCH",
@@ -9048,7 +9508,9 @@
     "qualitaet": "2 – konkreter Praxisbericht; teilweise Materiallücken",
     "konfidenz": "hoch",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-18",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "PK-SANDERS-SCRUM",
@@ -9089,7 +9551,9 @@
     "qualitaet": "1 – kurze Beschreibung; kaum Material",
     "konfidenz": "mittel",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-18",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "TCMA-QUADR",
@@ -9104,7 +9568,7 @@
     "sprache": "de",
     "pruefungsart": "Mündlicher Leistungsnachweis",
     "ki_rolle": 1,
-    "ki_rolle_begruendung": "KI in der Quelle nicht thematisiert; daraus folgt kein Verbot.",
+    "ki_rolle_begruendung": "Keine Hilfsmittel zugelassen (Hilfsmittel-Stufe 1); KI ist damit ausgeschlossen. Eine eigene Begründung der Begrenzung nennt die Quelle nicht.",
     "aias_stufe": null,
     "digitale_medien": "optional",
     "tools": "",
@@ -9129,8 +9593,12 @@
     "link_status": "geprüft",
     "qualitaet": "3 – ausgearbeitet mit Aufgaben-/Bewertungsmaterial",
     "konfidenz": "hoch",
-    "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung": [
+      "begrenzt"
+    ],
+    "ki_setzung_status": "eingeschätzt",
+    "erfasst_am": "2026-11-20",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "TCMA-EXPO",
@@ -9171,7 +9639,9 @@
     "qualitaet": "3 – ausgearbeitet mit Aufgaben-/Bewertungsmaterial",
     "konfidenz": "hoch",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-20",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "TCMA-FALTBUCH",
@@ -9212,7 +9682,9 @@
     "qualitaet": "3 – ausgearbeitet mit Aufgaben-/Bewertungsmaterial",
     "konfidenz": "hoch",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-20",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "TCMA-RENOV",
@@ -9253,7 +9725,9 @@
     "qualitaet": "2 – konkreter Praxisbericht; teilweise Materiallücken",
     "konfidenz": "hoch",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-20",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "TC-MAERCHEN",
@@ -9294,7 +9768,9 @@
     "qualitaet": "3 – ausgearbeitet mit Aufgaben-/Bewertungsmaterial",
     "konfidenz": "hoch",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-20",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "TC-ESP-PRES",
@@ -9335,7 +9811,9 @@
     "qualitaet": "2 – konkreter Praxisbericht; teilweise Materiallücken",
     "konfidenz": "mittel",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-20",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "TC-ESP-BARRIO",
@@ -9376,7 +9854,9 @@
     "qualitaet": "3 – ausgearbeitet mit Aufgaben-/Bewertungsmaterial",
     "konfidenz": "hoch",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-20",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "TC-TAGESSCHAU",
@@ -9417,7 +9897,9 @@
     "qualitaet": "2 – konkreter Praxisbericht; teilweise Materiallücken",
     "konfidenz": "mittel",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-20",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "BP25-LTB",
@@ -9458,7 +9940,9 @@
     "qualitaet": "1 – kurze Beschreibung; kaum Material",
     "konfidenz": "mittel",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-20",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "BP25-TURNEN",
@@ -9499,7 +9983,9 @@
     "qualitaet": "1 – kurze Beschreibung; kaum Material",
     "konfidenz": "mittel",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-20",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "BP25-BEWERB",
@@ -9542,7 +10028,9 @@
     "ki_setzung": [
       "offen"
     ],
-    "ki_setzung_status": "explizit"
+    "ki_setzung_status": "explizit",
+    "erfasst_am": "2026-11-20",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "BP25-LONDON",
@@ -9583,7 +10071,9 @@
     "qualitaet": "1 – kurze Beschreibung; kaum Material",
     "konfidenz": "mittel",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-20",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "BP25-DIKTAT",
@@ -9624,7 +10114,9 @@
     "qualitaet": "1 – kurze Beschreibung; kaum Material",
     "konfidenz": "mittel",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-20",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "BP25-BUCH",
@@ -9665,9 +10157,11 @@
     "qualitaet": "1 – kurze Beschreibung; kaum Material",
     "konfidenz": "mittel",
     "ki_setzung": [
-      "K02"
+      "integriert"
     ],
-    "ki_setzung_status": "explizit"
+    "ki_setzung_status": "explizit",
+    "erfasst_am": "2026-11-20",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "BP25-RADIO",
@@ -9708,7 +10202,9 @@
     "qualitaet": "1 – kurze Beschreibung; kaum Material",
     "konfidenz": "mittel",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-20",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "BP25-PODCAST",
@@ -9749,7 +10245,9 @@
     "qualitaet": "1 – kurze Beschreibung; kaum Material",
     "konfidenz": "mittel",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-20",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "BP25-WINKEL",
@@ -9790,7 +10288,9 @@
     "qualitaet": "1 – kurze Beschreibung; kaum Material",
     "konfidenz": "mittel",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-20",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "BP25-HOWTO",
@@ -9831,7 +10331,9 @@
     "qualitaet": "1 – kurze Beschreibung; kaum Material",
     "konfidenz": "mittel",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-20",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "BP25-AIDA",
@@ -9872,7 +10374,9 @@
     "qualitaet": "1 – kurze Beschreibung; kaum Material",
     "konfidenz": "mittel",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-20",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "BP25-JUGEND",
@@ -9913,7 +10417,9 @@
     "qualitaet": "1 – kurze Beschreibung; kaum Material",
     "konfidenz": "mittel",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-20",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "BP25-ROUTINE",
@@ -9954,7 +10460,9 @@
     "qualitaet": "1 – kurze Beschreibung; kaum Material",
     "konfidenz": "mittel",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-20",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "BP25-EBOOKPROZ",
@@ -9995,7 +10503,9 @@
     "qualitaet": "1 – kurze Beschreibung; kaum Material",
     "konfidenz": "mittel",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-20",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "SP-ZEITZEUGEN",
@@ -10036,7 +10546,9 @@
     "qualitaet": "1 – kurze Beschreibung; kaum Material",
     "konfidenz": "mittel",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-20",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "BLUME-ISMAEL",
@@ -10077,7 +10589,9 @@
     "qualitaet": "2 – konkreter Praxisbericht; teilweise Materiallücken",
     "konfidenz": "hoch",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-20",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "ZUM-MYTHEN",
@@ -10118,7 +10632,9 @@
     "qualitaet": "3 – ausgearbeitet mit Aufgaben-/Bewertungsmaterial",
     "konfidenz": "hoch",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-20",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "ISB14-HOERSPIEL",
@@ -10159,7 +10675,9 @@
     "qualitaet": "3 – ausgearbeitet mit Aufgaben-/Bewertungsmaterial",
     "konfidenz": "hoch",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-20",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "ISB14-AUSSTELL",
@@ -10200,7 +10718,9 @@
     "qualitaet": "2 – konkreter Praxisbericht; teilweise Materiallücken",
     "konfidenz": "mittel",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-20",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "ISB14-INFOGRAFIK",
@@ -10241,7 +10761,9 @@
     "qualitaet": "2 – konkreter Praxisbericht; teilweise Materiallücken",
     "konfidenz": "mittel",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-20",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "ISB14-FOTO",
@@ -10282,7 +10804,9 @@
     "qualitaet": "2 – konkreter Praxisbericht; teilweise Materiallücken",
     "konfidenz": "mittel",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-20",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "ISB12-FR8",
@@ -10297,7 +10821,7 @@
     "sprache": "de",
     "pruefungsart": "Mündlicher Leistungsnachweis",
     "ki_rolle": 1,
-    "ki_rolle_begruendung": "KI in der Quelle nicht thematisiert; daraus folgt kein Verbot.",
+    "ki_rolle_begruendung": "Keine Hilfsmittel zugelassen (Hilfsmittel-Stufe 1); KI ist damit ausgeschlossen. Eine eigene Begründung der Begrenzung nennt die Quelle nicht.",
     "aias_stufe": null,
     "digitale_medien": "optional",
     "tools": "",
@@ -10322,8 +10846,12 @@
     "link_status": "geprüft",
     "qualitaet": "3 – ausgearbeitet mit Aufgaben-/Bewertungsmaterial",
     "konfidenz": "mittel",
-    "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung": [
+      "begrenzt"
+    ],
+    "ki_setzung_status": "eingeschätzt",
+    "erfasst_am": "2026-11-20",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "ISB15-INFLUENCER",
@@ -10364,7 +10892,9 @@
     "qualitaet": "3 – ausgearbeitet mit Aufgaben-/Bewertungsmaterial",
     "konfidenz": "mittel",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-20",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "ISB15-ANLAGE",
@@ -10405,7 +10935,9 @@
     "qualitaet": "3 – ausgearbeitet mit Aufgaben-/Bewertungsmaterial",
     "konfidenz": "mittel",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-20",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "ISB15-TOURISMUS",
@@ -10446,7 +10978,9 @@
     "qualitaet": "3 – ausgearbeitet mit Aufgaben-/Bewertungsmaterial",
     "konfidenz": "mittel",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-20",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "ISB15-DEBATTE",
@@ -10461,7 +10995,7 @@
     "sprache": "de",
     "pruefungsart": "Mündlicher Leistungsnachweis",
     "ki_rolle": 1,
-    "ki_rolle_begruendung": "KI in der Quelle nicht thematisiert; daraus folgt kein Verbot.",
+    "ki_rolle_begruendung": "Häusliche Einarbeitung ohne Einschränkung, KI laut Überblick (S. 1–2) zugelassen; am Prüfungstag nur eigene Notizen. Eine bestimmte Rolle ist nicht festgelegt.",
     "aias_stufe": null,
     "digitale_medien": "optional",
     "tools": "",
@@ -10486,8 +11020,12 @@
     "link_status": "geprüft",
     "qualitaet": "3 – ausgearbeitet mit Aufgaben-/Bewertungsmaterial",
     "konfidenz": "mittel",
-    "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung": [
+      "offen"
+    ],
+    "ki_setzung_status": "eingeschätzt",
+    "erfasst_am": "2026-11-20",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "CH-WAH-CONV",
@@ -10528,7 +11066,9 @@
     "qualitaet": "3 – ausgearbeitet mit Aufgaben-/Bewertungsmaterial",
     "konfidenz": "hoch",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-20",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "CH-WAH-KONSUM",
@@ -10569,7 +11109,9 @@
     "qualitaet": "3 – ausgearbeitet mit Aufgaben-/Bewertungsmaterial",
     "konfidenz": "hoch",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-20",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "CH-WAH-MENU",
@@ -10610,7 +11152,9 @@
     "qualitaet": "3 – ausgearbeitet mit Aufgaben-/Bewertungsmaterial",
     "konfidenz": "hoch",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-20",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "CH-BG-WERBUNG",
@@ -10651,7 +11195,9 @@
     "qualitaet": "3 – ausgearbeitet mit Aufgaben-/Bewertungsmaterial",
     "konfidenz": "hoch",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-20",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "CH-DE-RADIO",
@@ -10692,7 +11238,9 @@
     "qualitaet": "3 – ausgearbeitet mit Aufgaben-/Bewertungsmaterial",
     "konfidenz": "hoch",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-20",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "CH-DE-STRAND",
@@ -10733,7 +11281,9 @@
     "qualitaet": "3 – ausgearbeitet mit Aufgaben-/Bewertungsmaterial",
     "konfidenz": "hoch",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-20",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "CH-DE-DURCHSAGE",
@@ -10774,7 +11324,9 @@
     "qualitaet": "3 – ausgearbeitet mit Aufgaben-/Bewertungsmaterial",
     "konfidenz": "hoch",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-20",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "CH-DE-GEDICHT",
@@ -10815,7 +11367,9 @@
     "qualitaet": "3 – ausgearbeitet mit Aufgaben-/Bewertungsmaterial",
     "konfidenz": "hoch",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-20",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "CH-DE-KONFLIKT",
@@ -10856,7 +11410,9 @@
     "qualitaet": "3 – ausgearbeitet mit Aufgaben-/Bewertungsmaterial",
     "konfidenz": "hoch",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-20",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "CH-DE-COMIC",
@@ -10897,7 +11453,9 @@
     "qualitaet": "3 – ausgearbeitet mit Aufgaben-/Bewertungsmaterial",
     "konfidenz": "hoch",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-20",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "CH-DE-ROLLEN6",
@@ -10938,7 +11496,9 @@
     "qualitaet": "3 – ausgearbeitet mit Aufgaben-/Bewertungsmaterial",
     "konfidenz": "hoch",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-20",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "CH-DE-BUCHPLAKAT",
@@ -10979,7 +11539,9 @@
     "qualitaet": "3 – ausgearbeitet mit Aufgaben-/Bewertungsmaterial",
     "konfidenz": "hoch",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-20",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "CH-DE-BEWERBUNG",
@@ -11020,7 +11582,9 @@
     "qualitaet": "3 – ausgearbeitet mit Aufgaben-/Bewertungsmaterial",
     "konfidenz": "hoch",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-20",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "CH-ERG-KONFLIKT",
@@ -11061,7 +11625,9 @@
     "qualitaet": "3 – ausgearbeitet mit Aufgaben-/Bewertungsmaterial",
     "konfidenz": "hoch",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-20",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "CH-ERG-BERATUNG",
@@ -11102,7 +11668,9 @@
     "qualitaet": "3 – ausgearbeitet mit Aufgaben-/Bewertungsmaterial",
     "konfidenz": "hoch",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-20",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "CH-MU-TANZ",
@@ -11143,7 +11711,9 @@
     "qualitaet": "3 – ausgearbeitet mit Aufgaben-/Bewertungsmaterial",
     "konfidenz": "hoch",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-20",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "CH-TTG-PRAES",
@@ -11184,7 +11754,9 @@
     "qualitaet": "3 – ausgearbeitet mit Aufgaben-/Bewertungsmaterial",
     "konfidenz": "hoch",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-20",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "CH-RZG-LAND",
@@ -11225,7 +11797,9 @@
     "qualitaet": "3 – ausgearbeitet mit Aufgaben-/Bewertungsmaterial",
     "konfidenz": "hoch",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-20",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "CH-NMG-ROEMER",
@@ -11266,7 +11840,9 @@
     "qualitaet": "3 – ausgearbeitet mit Aufgaben-/Bewertungsmaterial",
     "konfidenz": "hoch",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-20",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "QCAA-E10-NEWS",
@@ -11307,7 +11883,9 @@
     "qualitaet": "3 – ausgearbeitet mit Aufgaben-/Bewertungsmaterial",
     "konfidenz": "mittel",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-20",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "QCAA-M10-REKORD",
@@ -11348,7 +11926,9 @@
     "qualitaet": "3 – ausgearbeitet mit Aufgaben-/Bewertungsmaterial",
     "konfidenz": "mittel",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-20",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "QCAA-G5-HAZARD",
@@ -11389,7 +11969,9 @@
     "qualitaet": "3 – ausgearbeitet mit Aufgaben-/Bewertungsmaterial",
     "konfidenz": "mittel",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-20",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "QCAA-M6-APPR",
@@ -11430,7 +12012,9 @@
     "qualitaet": "3 – ausgearbeitet mit Aufgaben-/Bewertungsmaterial",
     "konfidenz": "mittel",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-20",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "QCAA-E7-SPEECH",
@@ -11471,7 +12055,9 @@
     "qualitaet": "3 – ausgearbeitet mit Aufgaben-/Bewertungsmaterial",
     "konfidenz": "mittel",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-20",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "QCAA-H7-ANCIENT",
@@ -11512,7 +12098,9 @@
     "qualitaet": "3 – ausgearbeitet mit Aufgaben-/Bewertungsmaterial",
     "konfidenz": "mittel",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-20",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "QCAA-E8-BLOG",
@@ -11553,7 +12141,9 @@
     "qualitaet": "3 – ausgearbeitet mit Aufgaben-/Bewertungsmaterial",
     "konfidenz": "mittel",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-20",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "QCAA-G8-PORTF",
@@ -11594,7 +12184,9 @@
     "qualitaet": "3 – ausgearbeitet mit Aufgaben-/Bewertungsmaterial",
     "konfidenz": "mittel",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-20",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "QCAA-H8-ECLIPSE",
@@ -11635,7 +12227,9 @@
     "qualitaet": "3 – ausgearbeitet mit Aufgaben-/Bewertungsmaterial",
     "konfidenz": "mittel",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-20",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "QCAA-M8-PAVING",
@@ -11676,7 +12270,9 @@
     "qualitaet": "3 – ausgearbeitet mit Aufgaben-/Bewertungsmaterial",
     "konfidenz": "mittel",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-20",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "QCAA-E9-CELEB",
@@ -11717,7 +12313,9 @@
     "qualitaet": "3 – ausgearbeitet mit Aufgaben-/Bewertungsmaterial",
     "konfidenz": "mittel",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-20",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "QCAA-M9-SHOW",
@@ -11758,7 +12356,9 @@
     "qualitaet": "3 – ausgearbeitet mit Aufgaben-/Bewertungsmaterial",
     "konfidenz": "mittel",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-20",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "QCAA-S9-KETTLE",
@@ -11799,7 +12399,9 @@
     "qualitaet": "3 – ausgearbeitet mit Aufgaben-/Bewertungsmaterial",
     "konfidenz": "mittel",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-20",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "QCAA-S9-QUAKE",
@@ -11840,7 +12442,9 @@
     "qualitaet": "3 – ausgearbeitet mit Aufgaben-/Bewertungsmaterial",
     "konfidenz": "mittel",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-20",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "BC-ELA6-SPEECH",
@@ -11881,7 +12485,9 @@
     "qualitaet": "2 – konkreter Praxisbericht; teilweise Materiallücken",
     "konfidenz": "mittel",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-20",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "BC-ELA8-SELF",
@@ -11922,7 +12528,9 @@
     "qualitaet": "2 – konkreter Praxisbericht; teilweise Materiallücken",
     "konfidenz": "mittel",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-20",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "BC-M6-INTERVIEW",
@@ -11963,7 +12571,9 @@
     "qualitaet": "2 – konkreter Praxisbericht; teilweise Materiallücken",
     "konfidenz": "mittel",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-20",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "BC-M8-GARDEN",
@@ -12004,7 +12614,9 @@
     "qualitaet": "2 – konkreter Praxisbericht; teilweise Materiallücken",
     "konfidenz": "mittel",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-20",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "BC-S5-LEVER",
@@ -12045,7 +12657,9 @@
     "qualitaet": "2 – konkreter Praxisbericht; teilweise Materiallücken",
     "konfidenz": "mittel",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-20",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "C3-KOREA",
@@ -12086,7 +12700,9 @@
     "qualitaet": "2 – konkreter Praxisbericht; teilweise Materiallücken",
     "konfidenz": "hoch",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-20",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "C3-WATER",
@@ -12127,7 +12743,9 @@
     "qualitaet": "1 – kurze Beschreibung; kaum Material",
     "konfidenz": "niedrig",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-20",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "C3-AMREV",
@@ -12168,7 +12786,9 @@
     "qualitaet": "1 – kurze Beschreibung; kaum Material",
     "konfidenz": "niedrig",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-20",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "C3-HOLOCAUST",
@@ -12209,7 +12829,9 @@
     "qualitaet": "1 – kurze Beschreibung; kaum Material",
     "konfidenz": "niedrig",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-20",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "C3-PROGRESS",
@@ -12250,7 +12872,9 @@
     "qualitaet": "1 – kurze Beschreibung; kaum Material",
     "konfidenz": "niedrig",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-20",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "C3-CIVILRIGHTS",
@@ -12291,7 +12915,9 @@
     "qualitaet": "1 – kurze Beschreibung; kaum Material",
     "konfidenz": "niedrig",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-20",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "NGSS-HAZARDS",
@@ -12332,7 +12958,9 @@
     "qualitaet": "2 – konkreter Praxisbericht; teilweise Materiallücken",
     "konfidenz": "mittel",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-20",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "SN-CH-PRAKT",
@@ -12373,7 +13001,9 @@
     "qualitaet": "3 – ausgearbeitet mit Aufgaben-/Bewertungsmaterial",
     "konfidenz": "mittel",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-20",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "SN-CH-TANDEM",
@@ -12414,7 +13044,9 @@
     "qualitaet": "2 – konkreter Praxisbericht; teilweise Materiallücken",
     "konfidenz": "mittel",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-20",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "NSW-RUST",
@@ -12455,7 +13087,9 @@
     "qualitaet": "3 – ausgearbeitet mit Aufgaben-/Bewertungsmaterial",
     "konfidenz": "hoch",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-20",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "NSW-BINBAGS",
@@ -12496,7 +13130,9 @@
     "qualitaet": "3 – ausgearbeitet mit Aufgaben-/Bewertungsmaterial",
     "konfidenz": "niedrig",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-20",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "NSW-RATE",
@@ -12537,7 +13173,9 @@
     "qualitaet": "2 – konkreter Praxisbericht; teilweise Materiallücken",
     "konfidenz": "niedrig",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-20",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "OSE-TAJ",
@@ -12578,7 +13216,9 @@
     "qualitaet": "3 – ausgearbeitet mit Aufgaben-/Bewertungsmaterial",
     "konfidenz": "hoch",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-20",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "IE-EEI",
@@ -12619,7 +13259,9 @@
     "qualitaet": "3 – ausgearbeitet mit Aufgaben-/Bewertungsmaterial",
     "konfidenz": "hoch",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-20",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "LISUM-BRAUSE",
@@ -12660,7 +13302,9 @@
     "qualitaet": "3 – ausgearbeitet mit Aufgaben-/Bewertungsmaterial",
     "konfidenz": "mittel",
     "ki_setzung": [],
-    "ki_setzung_status": "nicht gesetzt"
+    "ki_setzung_status": "nicht gesetzt",
+    "erfasst_am": "2026-11-20",
+    "pruefstatus": "geprüft"
   },
   {
     "id": "FIENE-KI",
@@ -12701,8 +13345,10 @@
     "qualitaet": "2 – konkreter Praxisbericht; teilweise Materiallücken",
     "konfidenz": "hoch",
     "ki_setzung": [
-      "K04"
+      "reflektiert"
     ],
-    "ki_setzung_status": "explizit"
+    "ki_setzung_status": "explizit",
+    "erfasst_am": "2026-11-20",
+    "pruefstatus": "geprüft"
   }
 ]

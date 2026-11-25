@@ -188,20 +188,21 @@ footer{padding-bottom:90px!important}
 
 /* KI-Block */
 .ki-block{margin-top:12px}
-.ki-rollen{margin-top:12px;padding:12px 14px;border-radius:12px;background:var(--akzent-hell)}
-.ki-unter{font-size:.86rem;font-weight:700;color:var(--tinte);margin-bottom:8px}
-.ki-unter span{font-weight:500;color:var(--leise)}
-.rollen{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:8px}
-.rolle{display:flex;flex-direction:column;gap:3px;text-align:left;min-height:44px;padding:10px 12px;border-radius:10px;border:1px solid var(--linie-stark);background:#fff;cursor:pointer;color:var(--text);font-size:.86rem;line-height:1.4;transition-property:transform,background-color,border-color,box-shadow;transition-duration:.14s;transition-timing-function:var(--ease)}
-.rolle:active{transform:scale(.96)}
-.rolle b{font-size:.95rem;color:var(--tinte);display:flex;justify-content:space-between;gap:8px}
-.rolle b small{font-weight:600;color:var(--leise);font-variant-numeric:tabular-nums}
-.rolle i{color:var(--leise)}
-.rolle[aria-pressed=true]{border-color:var(--akzent);box-shadow:inset 0 0 0 1px var(--akzent);background:#fff}
-.rolle b span{margin-right:auto}
-.rolle[aria-pressed=true] b::before{content:"✓";color:var(--akzent-text)}
-.rolle.offen-rolle{background:#fbfcfd}
-.ki-quelle{font-size:.76rem;color:var(--leise);margin-top:8px}
+.ki-chip{display:inline-flex;align-items:center;gap:2px}
+.ki-i{width:32px;height:32px;flex:none;display:inline-grid;place-items:center;border:0;background:transparent;border-radius:50%;cursor:pointer;color:var(--akzent-text);padding:0}
+.ki-i svg{width:19px;height:19px}
+.ki-i:hover,.ki-i[aria-expanded=true]{background:var(--akzent-hell)}
+.ki-i:focus-visible{outline:2px solid var(--akzent-text);outline-offset:1px}
+@media (pointer:coarse){.ki-i{width:44px;height:44px;margin:0 -6px}}
+.ki-pop{position:absolute;z-index:60;width:min(340px,calc(100vw - 24px));padding:12px 14px;border-radius:12px;background:#fff;color:var(--text);font-size:.88rem;line-height:1.45;box-shadow:0 12px 32px -8px rgba(13,46,73,.35),0 0 0 1px var(--linie);animation:kiPopEin .16s var(--ease)}
+.ki-pop[hidden]{display:none}
+.ki-pop b{display:block;color:var(--tinte);margin-bottom:3px;font-size:.93rem}
+.ki-pop p{margin:4px 0 0}
+.ki-pop .bsp{color:var(--leise);font-style:italic}
+.ki-pop .nicht{margin-top:6px;padding:6px 9px;border-radius:8px;background:var(--hinweis-bg);color:var(--hinweis-text)}
+@keyframes kiPopEin{from{opacity:0;transform:translateY(-4px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){.ki-pop{animation:none}}
+.ki-quelle{font-size:.76rem;color:var(--leise);margin-top:10px}
 .woran{margin-top:12px;font-size:.76rem;font-style:italic;color:var(--leise);border-top:1px solid var(--linie);padding-top:8px}
 
 /* Spalten */
@@ -471,11 +472,8 @@ footer{max-width:1320px;margin:0 auto;padding:0 20px 40px;font-size:.84rem;color
     <summary><svg class="pfeil" aria-hidden="true"><use href="#i-pfeil"/></svg><span id="kiTitel">Rolle der KI</span><span class="p-info" id="kiInfo"></span></summary>
     <div class="panel-body">
     <div class="chips" id="fKi" role="group" aria-labelledby="kiTitel"></div>
-    <div class="ki-rollen" id="kiRollen" hidden>
-      <p class="ki-unter" id="lblRolle">Welche Rolle hat die KI? <span>(mehrere möglich, nichts gewählt = alle mit KI)</span></p>
-      <div class="rollen" id="fRolle" role="group" aria-labelledby="lblRolle"></div>
-      <p class="ki-quelle">Rollen nach Hauke Pölert: <a href="https://unterrichten.digital/aufgaben-remix-5x4-matrix-ki/" target="_blank" rel="noopener noreferrer">Aufgaben-Remix – 5×4-Matrix<span class="sr"> (öffnet in neuem Tab)</span></a> (unterrichten.digital, 2026)</p>
-    </div>
+    <p class="ki-quelle">Kategorien nach Joscha Falck: <a href="https://deutsches-schulportal.de/expertenstimmen/wie-wird-ki-zur-lernressource-statt-zur-abkuerzung/" target="_blank" rel="noopener noreferrer">„KI-Didaktik: Wie wird KI zur Lernressource statt zur Abkürzung?“<span class="sr"> (öffnet in neuem Tab)</span></a> (Deutsches Schulportal, 2026) – empfohlen zur Vertiefung. Grundlage: <a href="https://joschafalck.de/lernen-und-ki/" target="_blank" rel="noopener noreferrer">„Lernen und Künstliche Intelligenz – fünf Dimensionen“<span class="sr"> (öffnet in neuem Tab)</span></a> (joschafalck.de).</p>
+    <div class="ki-pop" id="kiPop" role="dialog" aria-modal="false" hidden></div>
     <p class="woran">Woran wird die Eigenleistung sichtbar? Pölert unterscheidet Echtzeit-, Prozess-, Kontext- und verkörperte Evidenz. In den gesammelten Beispielen ist das bislang kaum ausgewiesen – beim Auswählen lohnt der Blick darauf. <a href="https://unterrichten.digital/aufgaben-remix-5x4-matrix-ki/" target="_blank" rel="noopener noreferrer">Zum Beitrag<span class="sr"> (öffnet in neuem Tab)</span></a></p>
     </div>
   </details>
@@ -602,20 +600,26 @@ const CONFIG = {
         "kontinuierliches Feedback aus mehreren Quellen (Lehrkraft, Mitlernende, KI), selbstgesteuerte Reflexion und wiederholte Überarbeitung" ] }
   ],
 
-  // Rolle der KI (Datenfeld ki_setzung). Rollen nach Hauke Pölert, „Aufgaben-Remix – 5×4-Matrix“ (2026).
-  // Hauptauswahl: ausgeschlossen / erlaubt / ohne Angabe. „erlaubt“ öffnet die Rollenwahl.
-  kiHaupt: [
-    { wert:"aus",    name:"KI ausgeschlossen" },
-    { wert:"erlaubt", name:"KI erlaubt" },
-    { wert:"leer",   name:"ohne Angabe" }
+  // Rolle der KI (Datenfeld ki_setzung, Mehrfachnennung möglich).
+  // Kategorien nach Joscha Falck, „KI-Didaktik: Wie wird KI zur Lernressource statt zur Abkürzung?“ (Deutsches Schulportal, 2026).
+  kiKategorien: [
+    { wert:"begrenzt", name:"begründet begrenzt", karte:"KI begründet begrenzt",
+      info:["KI wird bewusst ausgeschlossen oder eingeschränkt, damit eine Kompetenz aufgebaut und sichtbar werden kann. Die Begründung wird den Lernenden mitgeteilt.",
+            "Beispiel: eine hilfsmittelfreie Phase in Präsenz, bevor KI dazukommt."] },
+    { wert:"integriert", name:"integriert", karte:"KI integriert",
+      info:["Die KI hilft beim Lernen – sie löst nicht die Aufgabe. Ihr Einsatz ist an Lernziele gebunden und auf bestimmte Phasen begrenzt.",
+            "Als Tutor gibt sie Hinweise und Rückmeldung zum eigenen Entwurf; die Lernenden überarbeiten selbst und dokumentieren die Änderungen.",
+            "Als Sparringspartner widerspricht sie, liefert Gegenargumente oder Prüfsteine, die die Lernenden am Material prüfen."],
+      nicht:"Nicht gemeint: KI als „Taschenrechner“, der die Antwort liefert." },
+    { wert:"reflektiert", name:"reflektiert / thematisiert", karte:"KI reflektiert / thematisiert",
+      info:["KI-Einsatz und KI-Ergebnisse werden geprüft, verglichen und hinterfragt – oder die KI ist selbst das Thema: Funktionsweise, Grenzen, Chancen und Risiken.",
+            "Beispiel: eine KI-Infografik auf Fehler und Lücken prüfen; übernommene und verworfene KI-Vorschläge begründen."] },
+    { wert:"offen", name:"erlaubt, Rolle offen", karte:"KI erlaubt, Rolle offen",
+      info:["Die Quelle erlaubt KI, legt aber nicht fest, wofür. Ob sie beim Lernen hilft oder nur die Antwort liefert, bleibt offen.",
+            "Wer das Beispiel übernimmt, sollte die Rolle selbst festlegen."] },
+    { wert:"leer", name:"ohne Angabe",
+      info:["Die Quelle sagt nichts zu KI. Das bedeutet kein Verbot. Das gilt für die meisten Beispiele der Sammlung."] }
   ],
-  kiRollen: [
-    { wert:"K02", name:"KI als Tutor", text:"Hinweise und Feedback in klar benannten Phasen, mit Leitplanken.", beispiel:"Rückmeldung zum eigenen Entwurf, dokumentierte Änderungen" },
-    { wert:"K03", name:"KI als Sparringspartner", text:"Gegenpositionen, Perspektivwechsel und Prüfsteine für das eigene Denken.", beispiel:"Drei Einwände erzeugen und am Material prüfen" },
-    { wert:"K04", name:"KI als Gegenstand", text:"Das KI-Produkt selbst wird geprüft, verglichen und eingeordnet.", beispiel:"KI-Infografik auf Fehler und Lücken prüfen" },
-    { wert:"offen", name:"Rolle nicht festgelegt", text:"KI ist erlaubt, die Quelle legt aber keine bestimmte Rolle fest.", beispiel:"", zusatz:true }
-  ],
-  kiNamen: { K01:"KI ausgeschlossen", K02:"KI als Tutor", K03:"KI als Sparringspartner", K04:"KI als Gegenstand", offen:"KI erlaubt, Rolle offen" },
 
   // Zusammenfassung der Fächer im Filter. Schlüssel: Fachangaben aus den Daten (klein, ä=ae …);
   // nicht aufgeführte Fächer erscheinen unter ihrem eigenen Namen.
@@ -653,7 +657,7 @@ const CONFIG = {
   laender: { DE:"Deutschland", AT:"Österreich", CH:"Schweiz", NZ:"Neuseeland", FR:"Frankreich", ES:"Spanien", US:"USA", international:"International (länderübergreifend)" },
   dach: ["DE","AT","CH"],
 
-  fusszeile: "Rollen der KI nach Hauke Pölert (unterrichten.digital, 2026). Die Achsenwerte der Beispiele stammen aus einer Recherche und sind zum Teil eingeschätzt, nicht in der Quelle belegt. Fehlende Angaben werden gekennzeichnet; solche Beispiele bleiben immer sichtbar."
+  fusszeile: "Rolle der KI nach Joscha Falck (Deutsches Schulportal, 2026). Die Achsenwerte der Beispiele stammen aus einer Recherche und sind zum Teil eingeschätzt, nicht in der Quelle belegt. Fehlende Angaben werden gekennzeichnet; solche Beispiele bleiben immer sichtbar."
 };
 
 /* =====================================================================
@@ -769,15 +773,21 @@ function fachTeile(fach){
   return txt(fach).split(/\s*[;,]\s*|\s+\/\s+/).map(s => s.trim()).filter(Boolean);
 }
 
-const KI_ERLAUBT = ["K02","K03","K04","offen"];
+const KI_WERTE = ["begrenzt","integriert","reflektiert","offen"];
+const KI_ALT = { K01:"begrenzt", K02:"integriert", K03:"integriert", K04:"reflektiert" };
 function kiSetzungLesen(e){
   let v = e.ki_setzung;
   if (typeof v === "string") v = v.split(/[\s,;+]+/);
-  if (Array.isArray(v)) return v.map(x => txt(x)).map(x => /^k0?\d$/i.test(x) ? "K0" + x.slice(-1) : x.toLowerCase() === "offen" ? "offen" : "").filter(Boolean);
+  if (Array.isArray(v)){
+    const r = [];
+    v.map(x => txt(x)).forEach(x => { const k = KI_ALT[x.toUpperCase()] || x.toLowerCase(); if (KI_WERTE.includes(k) && !r.includes(k)) r.push(k); });
+    return r;
+  }
   // ältere Dateien ohne ki_setzung: aus ki_rolle ableiten
   const r = zahl(e.ki_rolle);
-  return r === 0 ? ["K01"] : r === 4 ? ["K04"] : (r === 2 || r === 3) ? ["offen"] : [];
+  return r === 0 ? ["begrenzt"] : r === 4 ? ["reflektiert"] : (r === 2 || r === 3) ? ["offen"] : [];
 }
+function kiName(x){ const k = CONFIG.kiKategorien.find(k => k.wert === x); return k ? (k.karte || k.name) : x; }
 function bereiteVor(e, index){
   const achsen = CONFIG.achsen.map(a => stufe(e[a.feld]));
   const beleg = belegLesen(e.achsen_belegstatus);
@@ -805,6 +815,7 @@ function bereiteVor(e, index){
     kiBegruendung: txt(e.ki_rolle_begruendung),
     kiSetzung: kiSetzungLesen(e),
     kiStatus: txt(e.ki_setzung_status),
+    sichtungOffen: txt(e.pruefstatus).startsWith("automatisch"),
     aias: zahl(e.aias_stufe),
     medien: medienNorm(e.digitale_medien),
     medienRoh: fehlt(e.digitale_medien) ? "" : txt(e.digitale_medien),
@@ -860,7 +871,7 @@ const state = {
   reglerAn: true,
   toleranz: 1,
   sichtbar: CONFIG.proSeite,
-  f: { jgVon:null, jgBis:null, bereich:"", fach:"", art:"", land:"", suche:"", ki:new Set(), rolle:new Set(), medien:new Set(), ewh:false }
+  f: { jgVon:null, jgBis:null, bereich:"", fach:"", art:"", land:"", suche:"", ki:new Set(), medien:new Set(), ewh:false }
 };
 
 /* =====================================================================
@@ -868,13 +879,8 @@ const state = {
    ===================================================================== */
 function kiPasst(p){
   const f = state.f, s = p.kiSetzung;
-  if (f.ki.has("aus") && s.includes("K01")) return true;
   if (f.ki.has("leer") && s.length === 0) return true;
-  if (f.ki.has("erlaubt")){
-    const erlaubt = s.filter(x => KI_ERLAUBT.includes(x));
-    if (erlaubt.length && (!f.rolle.size || erlaubt.some(x => f.rolle.has(x)))) return true;
-  }
-  return false;
+  return s.some(x => f.ki.has(x));
 }
 function passtFilter(p){
   const f = state.f;
@@ -1091,22 +1097,15 @@ function baueFilter(){
 
   // Rolle der KI
   const zaehle = fn => DATEN.filter(fn).length;
-  const kiAnz = { aus: zaehle(p => p.kiSetzung.includes("K01")), erlaubt: zaehle(p => p.kiSetzung.some(x => KI_ERLAUBT.includes(x))), leer: zaehle(p => !p.kiSetzung.length) };
-  $("#fKi").replaceChildren(...CONFIG.kiHaupt.map(k => {
-    const b = h("button", { type:"button", class:"chip-btn", "aria-pressed":"false", "data-ki":k.wert }, k.name, h("small", null, kiAnz[k.wert]));
-    if (k.wert === "erlaubt") b.setAttribute("aria-controls", "kiRollen");
-    b.addEventListener("click", () => { umschalten(f.ki, k.wert, b); zeigeRollen(); geaendert(); });
-    return b;
+  $("#fKi").replaceChildren(...CONFIG.kiKategorien.map(k => {
+    const n = k.wert === "leer" ? zaehle(p => !p.kiSetzung.length) : zaehle(p => p.kiSetzung.includes(k.wert));
+    const b = h("button", { type:"button", class:"chip-btn", "aria-pressed":"false", "data-ki":k.wert }, k.name, h("small", null, n));
+    b.addEventListener("click", () => { umschalten(f.ki, k.wert, b); geaendert(); });
+    const i = h("button", { type:"button", class:"ki-i", "aria-label":"Was heißt „" + k.name + "“?", "aria-expanded":"false", "aria-controls":"kiPop" });
+    i.innerHTML = '<svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="8.25" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="10" cy="6.4" r="1.1" fill="currentColor"/><path d="M10 9v5.2" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>';
+    i.addEventListener("click", ev => { ev.stopPropagation(); kiInfoZeigen(k, i); });
+    return h("span", { class:"ki-chip" }, b, i);
   }));
-  $("#fRolle").replaceChildren(...CONFIG.kiRollen.map(r => {
-    const b = h("button", { type:"button", class:"rolle" + (r.zusatz ? " offen-rolle" : ""), "aria-pressed":"false" },
-      h("b", null, h("span", null, r.name), h("small", null, zaehle(p => p.kiSetzung.includes(r.wert)))),
-      h("span", null, r.text),
-      r.beispiel ? h("i", null, r.beispiel) : null);
-    b.addEventListener("click", () => { umschalten(f.rolle, r.wert, b); geaendert(); });
-    return b;
-  }));
-  zeigeRollen();
   // Digitale Medien
   $("#fMedien").replaceChildren(...MEDIEN.map(m => {
     const n = DATEN.filter(p => p.medien === m).length;
@@ -1115,11 +1114,33 @@ function baueFilter(){
     return b;
   }));
 }
-function zeigeRollen(){
-  const an = state.f.ki.has("erlaubt");
-  $("#kiRollen").hidden = !an;
-  if (!an && state.f.rolle.size){ state.f.rolle.clear(); document.querySelectorAll("#fRolle .rolle").forEach(b => b.setAttribute("aria-pressed", "false")); }
+let kiPopAnker = null;
+function kiInfoZu(){
+  const pop = $("#kiPop");
+  if (pop.hidden) return;
+  pop.hidden = true;
+  if (kiPopAnker) kiPopAnker.setAttribute("aria-expanded", "false");
+  kiPopAnker = null;
 }
+function kiInfoZeigen(k, knopf){
+  const pop = $("#kiPop");
+  if (kiPopAnker === knopf){ kiInfoZu(); knopf.focus(); return; }
+  kiInfoZu();
+  pop.replaceChildren(h("b", null, k.name),
+    ...k.info.map((t, n) => h("p", { class: n && /^Beispiel/.test(t) ? "bsp" : null }, t)),
+    k.nicht ? h("p", { class:"nicht" }, k.nicht) : "");
+  pop.setAttribute("aria-label", k.name);
+  pop.hidden = false;
+  const r = knopf.getBoundingClientRect(), w = pop.offsetWidth;
+  const links = Math.max(window.scrollX + 12, Math.min(r.left + window.scrollX + r.width / 2 - w / 2, window.scrollX + document.documentElement.clientWidth - w - 12));
+  pop.style.left = links + "px";
+  pop.style.top = (r.bottom + window.scrollY + 6) + "px";
+  knopf.setAttribute("aria-expanded", "true");
+  kiPopAnker = knopf;
+}
+document.addEventListener("click", e => { if (kiPopAnker && !$("#kiPop").contains(e.target)) kiInfoZu(); });
+document.addEventListener("keydown", e => { if (e.key === "Escape" && kiPopAnker){ const k = kiPopAnker; kiInfoZu(); k.focus(); } });
+window.addEventListener("resize", kiInfoZu);
 function umschalten(menge, wert, knopf){
   if (menge.has(wert)) menge.delete(wert); else menge.add(wert);
   knopf.setAttribute("aria-pressed", menge.has(wert) ? "true" : "false");
@@ -1204,7 +1225,7 @@ function dlZeile(dl, name, inhalt){
 }
 function kiText(p){
   if (!p.kiSetzung.length) return "in der Quelle nicht festgelegt";
-  return p.kiSetzung.map(x => CONFIG.kiNamen[x] || x).join(" + ");
+  return p.kiSetzung.map(kiName).join(" + ");
 }
 function detailInhalt(p){
   const dl = h("dl", { class:"dl" });
@@ -1257,12 +1278,13 @@ function detailsEbene1(t){
     .filter(Boolean).flatMap((x, i) => i ? [" · ", x] : [x]);
 
   const marken = [];
+  if (p.sichtungOffen) marken.push(h("span", { class:"marke fehlt" }, "neu, Sichtung offen"));
   if (!p.kiSetzung.length) marken.push(h("span", { class:"marke ki" }, "Rolle der KI: ohne Angabe"));
   else {
-    const zweiphasig = p.kiSetzung.includes("K01") && p.kiSetzung.length > 1;
+    const zweiphasig = p.kiSetzung.includes("begrenzt") && p.kiSetzung.length > 1;
     if (zweiphasig) marken.push(h("span", { class:"marke ki" }, "zweiphasig: erst ohne, dann mit KI"));
-    p.kiSetzung.filter(x => !(zweiphasig && x === "K01")).forEach(x =>
-      marken.push(h("span", { class:"marke " + (x === "K01" ? "ki" : "ki-stark") }, CONFIG.kiNamen[x] || x)));
+    p.kiSetzung.filter(x => !(zweiphasig && x === "begrenzt")).forEach(x =>
+      marken.push(h("span", { class:"marke " + (x === "begrenzt" || x === "offen" ? "ki" : "ki-stark") }, kiName(x))));
   }
   marken.push(p.medien
     ? h("span", { class:"marke" }, "Digitale Medien: " + p.medien)
@@ -1338,9 +1360,7 @@ function zeige(mitWechsel){
   $("#filterInfo").textContent = fa ? fa + " aktiv" : "";
   const kf = state.f;
   $("#kiInfo").textContent = !kf.ki.size ? ""
-    : CONFIG.kiHaupt.filter(k => kf.ki.has(k.wert)).map(k => k.wert === "erlaubt" && kf.rolle.size
-        ? "KI erlaubt: " + CONFIG.kiRollen.filter(r => kf.rolle.has(r.wert)).map(r => r.name.replace(/^KI als /, "")).join(", ")
-        : k.name).join(" · ");
+    : CONFIG.kiKategorien.filter(k => kf.ki.has(k.wert)).map(k => k.name).join(" · ");
 
   const ol = $("#liste");
   const sicht = liste.slice(0, state.sichtbar);
