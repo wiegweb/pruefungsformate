@@ -8,7 +8,9 @@
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23123b5c'/%3E%3Cpath d='M6 16h20' stroke='%23fff' stroke-width='3' stroke-linecap='round'/%3E%3Ccircle cx='20' cy='16' r='5' fill='%23fff'/%3E%3C/svg%3E">
 <title>Inspirationssammlung für zukunftsorientierte Prüfungsformate</title>
 <meta name="description" content="Schieberegler einstellen und passende, dokumentierte Prüfungsbeispiele mit Link zur Originalquelle finden.">
+<link rel="preload" href="fonts/source-serif-4-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
 <style>
+@font-face{font-family:"Source Serif 4";font-style:normal;font-weight:200 900;font-display:swap;src:url(fonts/source-serif-4-latin-wght-normal.woff2) format("woff2")}
 :root{
   --bg:#eef2f5;
   --flaeche:#ffffff;
@@ -35,6 +37,7 @@
   --r-klein:7px;
   --schatten:0 1px 2px rgba(19,41,61,.05),0 4px 16px -6px rgba(19,41,61,.10);
   --ease:cubic-bezier(.2,0,0,1);
+  --titel:"Source Serif 4",Georgia,"Times New Roman",serif;
   --schrift:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif;
 }
 *{box-sizing:border-box}
@@ -52,10 +55,23 @@ a{color:var(--akzent-dunkel)}
 /* Kopf */
 .kopf{background:var(--navy)}
 .kopf-innen{max-width:1320px;margin:0 auto;padding:24px 20px 22px;display:flex;gap:24px;align-items:center;justify-content:space-between}
-h1{font-size:clamp(1.4rem,1.1rem + 1.4vw,1.9rem);line-height:1.18;letter-spacing:-.015em;color:#fff;font-weight:650}
+h1{font-family:var(--titel);font-size:clamp(1.55rem,1.15rem + 1.6vw,2.25rem);line-height:1.12;letter-spacing:-.01em;color:#fff;font-weight:600;max-width:27ch}
 .intro{margin-top:6px;color:#b9cddc;font-size:.98rem}
-.motiv{flex:none;width:132px;display:none}
-@media (min-width:860px){.motiv{display:block}}
+.kopf-profil{flex:none;margin:-8px 0 -10px;display:none;text-align:center}
+@media (min-width:760px){.kopf-profil{display:block}}
+.kopf-profil svg{width:260px;height:214px;display:block;overflow:visible}
+.kopf-profil figcaption{font-size:.74rem;color:#9fbbd0;display:flex;gap:6px;align-items:center;justify-content:center;margin-top:-4px}
+.kopf-profil .lg{display:inline-block;width:14px;height:0;border-top:2px solid #5cc8ee}
+.kopf-profil .lg.ka{border-top:2px dashed #7d97ad;margin-left:8px}
+.kr-netz{fill:none;stroke:rgba(255,255,255,.12);stroke-width:1}
+.kr-speiche{stroke:rgba(255,255,255,.16);stroke-width:1}
+.kr-speiche.aus{stroke-dasharray:2 3;stroke:rgba(255,255,255,.1)}
+.kr-ka{fill:rgba(125,151,173,.18);stroke:#7d97ad;stroke-width:1.5;stroke-dasharray:4 3}
+.kr-ich{fill:rgba(92,200,238,.22);stroke:#5cc8ee;stroke-width:2;stroke-linejoin:round}
+.kr-pkt{fill:#fff;stroke:#5cc8ee;stroke-width:2}
+.kr-txt{font-size:10.5px;fill:#b9cddc;font-family:var(--schrift)}
+.kr-txt.aus{fill:#6f8aa0}
+.kopf-innen{align-items:center}
 
 
 /* Juristische Grundlagen: dezenter Knopf im Kopf + Dialog */
@@ -156,7 +172,15 @@ select{appearance:none;-webkit-appearance:none;padding-right:34px;background-ima
 .umschalter input:checked + .schalter{background:var(--akzent)}
 .umschalter input:checked + .schalter::after{transform:translateX(18px)}
 .umschalter input:focus-visible + .schalter{outline:3px solid var(--akzent);outline-offset:2px}
-#filterPanel{margin-top:12px}
+.reiter-panel{margin-top:12px}
+.reiter{display:flex;flex-wrap:wrap;gap:4px;padding:4px 10px 0;border-bottom:1px solid transparent}
+.reiter-panel.offen .reiter{border-bottom-color:var(--linie)}
+.reiter-btn{display:inline-flex;align-items:baseline;gap:8px;min-height:48px;padding:10px 10px 8px;border:0;border-bottom:2px solid transparent;background:transparent;cursor:pointer;font-weight:700;font-size:.98rem;color:var(--tinte)}
+.reiter-btn::after{content:"";width:7px;height:7px;margin-left:2px;border-right:2px solid var(--leise);border-bottom:2px solid var(--leise);transform:translateY(-3px) rotate(45deg);transition:transform .18s var(--ease)}
+.reiter-btn[aria-selected=true]{border-bottom-color:var(--akzent);color:var(--akzent-text)}
+.reiter-btn[aria-selected=true]::after{transform:translateY(1px) rotate(225deg);border-color:var(--akzent-text)}
+.reiter-btn:hover{color:var(--akzent-text)}
+.reiter-panel [role=tabpanel]{padding-top:12px}
 .regler-pause{margin-top:10px;font-size:.84rem;color:var(--text);background:var(--akzent-hell);border-radius:10px;padding:8px 6px 8px 12px;display:flex;flex-wrap:wrap;align-items:center;gap:4px 8px}
 .regler-pause[hidden],.schnell-hinweis[hidden]{display:none}
 .regler-panel.pausiert #regler,.regler-panel.pausiert .regler-fuss{opacity:.4;pointer-events:none}
@@ -187,7 +211,7 @@ footer{padding-bottom:90px!important}
 @media (max-width:420px){.regler-info dl{grid-template-columns:1fr}.regler-info dd{margin-bottom:4px}}
 
 /* KI-Block */
-.ki-block{margin-top:12px}
+.ki-block{margin-top:0}
 .ki-chip{display:inline-flex;align-items:center;gap:2px}
 .ki-i{width:32px;height:32px;flex:none;display:inline-grid;place-items:center;border:0;background:transparent;border-radius:50%;cursor:pointer;color:var(--akzent-text);padding:0}
 .ki-i svg{width:19px;height:19px}
@@ -212,7 +236,7 @@ footer{padding-bottom:90px!important}
 /* Regler – immer sichtbar, kompakt */
 .regler-panel{padding:18px 22px 12px;background:#f4fafd;box-shadow:0 0 0 1px #cde6f2,0 4px 18px -6px rgba(19,41,61,.14)}
 .regler-kopf{display:flex;align-items:baseline;justify-content:space-between;gap:8px 12px;flex-wrap:wrap}
-.regler-kopf h2{font-size:1.05rem;color:var(--tinte)}
+.regler-kopf h2{font-family:var(--titel);font-size:1.2rem;font-weight:600;color:var(--tinte)}
 .profil{font-size:.8rem;font-weight:600;color:var(--akzent-text)}
 .profil.eigen{color:var(--leise)}
 .regler-hinweis{font-size:.82rem;color:var(--leise);margin-top:2px}
@@ -243,15 +267,14 @@ input[type=range]::-moz-range-thumb{width:20px;height:20px;border-radius:50%;bac
 input[type=range]:focus-visible{outline:none}
 input[type=range]:focus-visible::-webkit-slider-thumb{outline:3px solid var(--akzent);outline-offset:3px}
 input[type=range]:focus-visible::-moz-range-thumb{outline:3px solid var(--akzent);outline-offset:3px}
-.schiene{position:relative;padding-top:6px}
-.blase{position:relative;display:block;width:max-content;max-width:min(100%,250px);margin:0 0 7px;padding:5px 10px;border-radius:8px;background:var(--akzent-dunkel);color:#fff;font-size:.8rem;line-height:1.3;font-weight:600;text-wrap:balance;will-change:transform}
-.blase::after{content:"";position:absolute;bottom:-5px;left:var(--pfeil,50%);width:10px;height:10px;margin-left:-5px;background:inherit;transform:rotate(45deg);border-radius:0 0 2px 0}
+.schiene{position:relative;padding-top:2px}
+.blase{margin:0;font-size:.84rem;line-height:1.35;font-weight:600;color:var(--akzent-text);min-height:1.35em}
 .schiene input[type=range]{margin:-10px 0 -6px}
 .striche{position:relative;height:8px;margin-bottom:2px}
 .striche i{position:absolute;top:0;width:1px;height:6px;background:var(--linie-stark)}
 .regler.aus input[type=range]{opacity:.35}
 .regler.aus .pole,.regler.aus label.name{opacity:.55}
-.regler.aus .blase{background:#e3e8ed;color:var(--leise);font-style:italic;font-weight:500}
+.regler.aus .blase{color:var(--leise);font-style:italic;font-weight:500}
 .regler-fuss{display:flex;flex-wrap:wrap;gap:4px;border-top:1px solid var(--linie);padding-top:6px;margin:0 -8px}
 
 /* Trefferleiste */
@@ -265,19 +288,32 @@ input[type=range]:focus-visible::-moz-range-thumb{outline:3px solid var(--akzent
 .modus select{width:auto;min-width:150px}
 
 /* Karten: zuerst nur Titel und Kurzbeschreibung */
-#liste{list-style:none;margin:14px 0 0;padding:0;display:grid;gap:12px}
-.karte{background:var(--flaeche);border-radius:var(--r-gross);box-shadow:var(--schatten);padding:16px 20px 6px}
-.k-kopf{display:flex;gap:14px;justify-content:space-between;align-items:baseline}
-.karte h3{font-size:1.08rem;line-height:1.3;color:var(--tinte);letter-spacing:-.005em}
-.treffer{flex:none;font-weight:700;font-size:.9rem;font-variant-numeric:tabular-nums;white-space:nowrap;padding:3px 10px;border-radius:999px;color:#fff;background:var(--leise)}
-.f90{background:var(--p90);color:#fff}.f80{background:var(--p80);color:#1d3510}.f70{background:var(--p70);color:#3d2f00}.f60{background:var(--p60);color:#3b1c00}.f50{background:var(--p50);color:#fff}
+#liste{list-style:none;margin:14px 0 0;padding:0;display:grid;gap:12px;align-items:start}
+@media (min-width:1100px){#liste{grid-template-columns:1fr 1fr}#liste>.trenner,#liste>.ausgeblendet,#liste>.leerzustand{grid-column:1/-1}}
+.karte{background:var(--flaeche);border-radius:var(--r-gross);box-shadow:var(--schatten);padding:16px 18px 6px 22px;position:relative;overflow:hidden}
+.karte::before{content:"";position:absolute;left:0;top:0;bottom:0;width:5px;background:var(--fb)}
+.k-titel{min-width:0}
+.k-fach{font-size:.8rem;font-weight:650;color:var(--fb);margin-bottom:2px}
+.k-seite{flex:none;display:flex;flex-direction:column;align-items:flex-end;gap:2px}
+.mini-radar{width:58px;height:58px;display:block}
+.mr-rand{fill:#f3f6f8;stroke:var(--linie-stark);stroke-width:.8}
+.mr-speiche{stroke:var(--linie-stark);stroke-width:.6}
+.mr-speiche.leer{stroke-dasharray:1.5 1.5;stroke:#e0a9a0}
+.mr-ich{fill:none;stroke:var(--tinte);stroke-width:1;stroke-dasharray:2 1.6;opacity:.75}
+.mr-form{fill:color-mix(in srgb,var(--fb) 30%,transparent);stroke:var(--fb);stroke-width:1.4;stroke-linejoin:round}
+.k-kopf{display:flex;gap:14px;justify-content:space-between;align-items:flex-start}
+.karte h3{font-family:var(--titel);font-size:1.16rem;line-height:1.28;font-weight:600;color:var(--tinte)}
+.treffer{flex:none;display:inline-flex;align-items:center;gap:5px;font-weight:700;font-size:.86rem;font-variant-numeric:tabular-nums;white-space:nowrap;color:var(--tinte)}
+.treffer::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--pf,var(--leise))}
+.f90{--pf:var(--p90)}.f80{--pf:var(--p80)}.f70{--pf:var(--p70)}.f60{--pf:var(--p60)}.f50{--pf:var(--p50)}
 .farblegende{display:flex;flex-wrap:wrap;gap:4px 12px;font-size:.76rem;color:var(--leise);margin-top:4px}
 .farblegende span{display:inline-flex;align-items:center;gap:5px;font-variant-numeric:tabular-nums}
 .farblegende i{width:10px;height:10px;border-radius:50%;display:inline-block}
 .trenner{margin-top:14px;padding:4px 4px 0;font-size:.86rem;color:var(--leise)}
 .trenner b{color:var(--tinte)}
 .ausgeblendet{margin-top:12px;font-size:.88rem;color:var(--leise);text-align:center}
-.treffer.offen{font-weight:600;font-size:.8rem;color:var(--leise);background:#eef1f4}
+.treffer.offen{font-weight:600;font-size:.76rem;color:var(--leise)}
+.treffer.offen::before{display:none}
 .k-text{margin-top:6px;max-width:75ch;color:var(--text)}
 .stufe1,.stufe2{margin-top:6px}
 .stufe1>summary,.stufe2>summary{list-style:none;cursor:pointer;display:inline-flex;align-items:center;gap:6px;min-height:44px;font-weight:600;font-size:.9rem;color:var(--akzent-dunkel);border-radius:8px}
@@ -358,16 +394,10 @@ footer{max-width:1320px;margin:0 auto;padding:0 20px 40px;font-size:.84rem;color
       <p class="intro">Regler verschieben, passende Prüfungsbeispiele finden.</p>
       <button type="button" class="recht-knopf" id="rechtAuf" aria-haspopup="dialog">⚖️ juristische Grundlagen (NRW)</button>
     </div>
-    <svg class="motiv" viewBox="0 0 210 120" aria-hidden="true">
-      <g fill="none" stroke-linecap="round" stroke-width="6">
-        <path d="M12 22h186" stroke="#2a5476"/><path d="M12 22h40" stroke="#1a9ccf"/>
-        <path d="M12 60h186" stroke="#2a5476"/><path d="M12 60h112" stroke="#1a9ccf"/>
-        <path d="M12 98h186" stroke="#2a5476"/><path d="M12 98h160" stroke="#1a9ccf"/>
-      </g>
-      <g fill="#fff" stroke="#1a9ccf" stroke-width="4">
-        <circle cx="52" cy="22" r="10"/><circle cx="124" cy="60" r="10"/><circle cx="172" cy="98" r="10"/>
-      </g>
-    </svg>
+    <figure class="kopf-profil" aria-hidden="true">
+      <svg id="kopfRadar" viewBox="0 0 260 214"></svg>
+      <figcaption><span class="lg ich"></span>deine Einstellung <span class="lg ka"></span>klassische Klassenarbeit</figcaption>
+    </figure>
   </div>
 </header>
 
@@ -449,8 +479,12 @@ footer{max-width:1320px;margin:0 auto;padding:0 20px 40px;font-size:.84rem;color
     <p class="schnell-hinweis" id="schnellHinweis">Nur nach Fach oder Stufe stöbern? Schieberegler ausschalten – dann erscheinen alle passenden Beispiele, ohne Passung in Prozent.</p>
   </section>
 
-  <details class="panel" id="filterPanel">
-    <summary><svg class="pfeil" aria-hidden="true"><use href="#i-pfeil"/></svg><span>Weitere Filter</span><span class="p-info" id="filterInfo"></span></summary>
+  <section class="panel reiter-panel" aria-label="Weitere Filter und Rolle der KI">
+    <div class="reiter" role="tablist">
+      <button type="button" role="tab" class="reiter-btn" id="tabFilter" aria-selected="false" aria-controls="filterPanel"><span>Weitere Filter</span><span class="p-info" id="filterInfo"></span></button>
+      <button type="button" role="tab" class="reiter-btn" id="tabKi" aria-selected="false" aria-controls="kiPanel"><span id="kiTitel">Rolle der KI</span><span class="p-info" id="kiInfo"></span></button>
+    </div>
+    <div role="tabpanel" id="filterPanel" aria-labelledby="tabFilter" hidden>
     <div class="panel-body">
       <div class="filter-raster">
         <div class="feld"><label for="fArt">Prüfungsart</label><select id="fArt"></select></div>
@@ -466,17 +500,16 @@ footer{max-width:1320px;margin:0 auto;padding:0 20px 40px;font-size:.84rem;color
         <button type="button" class="btn" id="filterReset">Filter zurücksetzen</button>
       </div>
     </div>
-  </details>
-
-  <details class="panel ki-block" id="kiPanel">
-    <summary><svg class="pfeil" aria-hidden="true"><use href="#i-pfeil"/></svg><span id="kiTitel">Rolle der KI</span><span class="p-info" id="kiInfo"></span></summary>
+    </div>
+    <div role="tabpanel" id="kiPanel" class="ki-block" aria-labelledby="tabKi" hidden>
     <div class="panel-body">
     <div class="chips" id="fKi" role="group" aria-labelledby="kiTitel"></div>
     <p class="ki-quelle">Kategorien nach Joscha Falck: <a href="https://deutsches-schulportal.de/expertenstimmen/wie-wird-ki-zur-lernressource-statt-zur-abkuerzung/" target="_blank" rel="noopener noreferrer">„KI-Didaktik: Wie wird KI zur Lernressource statt zur Abkürzung?“<span class="sr"> (öffnet in neuem Tab)</span></a> (Deutsches Schulportal, 2026) – empfohlen zur Vertiefung. Grundlage: <a href="https://joschafalck.de/lernen-und-ki/" target="_blank" rel="noopener noreferrer">„Lernen und Künstliche Intelligenz – fünf Dimensionen“<span class="sr"> (öffnet in neuem Tab)</span></a> (joschafalck.de).</p>
     <div class="ki-pop" id="kiPop" role="dialog" aria-modal="false" hidden></div>
     <p class="woran">Woran wird die Eigenleistung sichtbar? Pölert unterscheidet Echtzeit-, Prozess-, Kontext- und verkörperte Evidenz. In den gesammelten Beispielen ist das bislang kaum ausgewiesen – beim Auswählen lohnt der Blick darauf. <a href="https://unterrichten.digital/aufgaben-remix-5x4-matrix-ki/" target="_blank" rel="noopener noreferrer">Zum Beitrag<span class="sr"> (öffnet in neuem Tab)</span></a></p>
     </div>
-  </details>
+    </div>
+  </section>
 
   <div class="spalten">
     <section class="panel regler-panel" aria-labelledby="reglerTitel">
@@ -484,7 +517,7 @@ footer{max-width:1320px;margin:0 auto;padding:0 20px 40px;font-size:.84rem;color
         <h2 id="reglerTitel">Schieberegler</h2>
         <span class="profil" id="profilLabel"></span>
       </div>
-      <p class="regler-hinweis">⚠️ Die Stufenbeschreibungen sind beispielhaft zu verstehen.</p>
+      <p class="regler-hinweis">Die Stufenbeschreibungen sind als Beispiele zu verstehen.</p>
       <p class="regler-pause" id="reglerPause" hidden>Die Schieberegler sind ausgeschaltet. Angezeigt werden alle Beispiele zu Fach, Stufe und Filtern. <button type="button" class="btn leise" id="reglerWiederAn">Wieder einschalten</button></p>
       <div id="regler"></div>
       <div class="regler-fuss">
@@ -969,8 +1002,8 @@ function baueRegler(){
             h("span", { class:"toast", id: id + "-toast", "aria-hidden":"true" })),
           h("span", { class:"pole" }, "von ", h("b", null, a.polLinks), " bis ", h("b", null, a.polRechts))),
         h("label", { class:"egal" }, egal, h("span", { class:"schalter" }), "egal")),
-      h("div", { class:"schiene" }, stufeEl, range,
-        h("div", { class:"striche", "aria-hidden":"true" }, [0,1,2,3,4].map(k => h("i", { style:"left:calc(13px + (100% - 26px) * " + (k / 4) + ")" })))),
+      h("div", { class:"schiene" }, range,
+        h("div", { class:"striche", "aria-hidden":"true" }, [0,1,2,3,4].map(k => h("i", { style:"left:calc(13px + (100% - 26px) * " + (k / 4) + ")" })))), stufeEl,
       a.info ? h("details", { class:"regler-info" }, h("summary", null, icon("i-pfeil", "pfeil"), a.info.titel),
         h("dl", null, a.info.gruppen.flatMap(([t, b]) => [h("dt", null, t), h("dd", null, b)]))) : null);
     range.addEventListener("input", () => { merkeStart(i); state.werte[i] = Number(range.value); zeigeRegler(i); geaendert(); });
@@ -988,6 +1021,44 @@ function baueRegler(){
     box.append(block);
   });
 }
+/* Prüfungsprofil als Achteck: Kopf (live) und Karten (Fingerabdruck) */
+function radarPunkte(werte, cx, cy, r0, r){
+  return werte.map((v, i) => {
+    const w = -Math.PI / 2 + i * 2 * Math.PI / werte.length, d = r0 + ((v === null ? 1 : v) - 1) / 4 * (r - r0);
+    return [cx + Math.cos(w) * d, cy + Math.sin(w) * d];
+  });
+}
+const SVGNS = "http://www.w3.org/2000/svg";
+function sv(tag, attrs){ const e = document.createElementNS(SVGNS, tag); for (const k in attrs) e.setAttribute(k, attrs[k]); return e; }
+const pz = pts => pts.map(q => q[0].toFixed(1) + "," + q[1].toFixed(1)).join(" ");
+function zeichneKopfRadar(){
+  const svg = document.getElementById("kopfRadar");
+  if (!svg) return;
+  const cx = 130, cy = 104, r0 = 12, r = 72, n = CONFIG.achsen.length;
+  const an = i => state.reglerAn && state.aktiv[i];
+  const kinder = [];
+  [1,2,3,4,5].forEach(st => kinder.push(sv("polygon", { class:"kr-netz", points: pz(radarPunkte(Array(n).fill(st), cx, cy, r0, r)) })));
+  radarPunkte(Array(n).fill(5), cx, cy, r0, r).forEach((q, i) => kinder.push(sv("line", { class:"kr-speiche" + (an(i) ? "" : " aus"), x1:cx, y1:cy, x2:q[0], y2:q[1] })));
+  kinder.push(sv("polygon", { class:"kr-ka", points: pz(radarPunkte(CONFIG.achsen.map(a => a.start), cx, cy, r0, r)) }));
+  const ich = radarPunkte(state.werte.map((v, i) => an(i) ? v : 1), cx, cy, r0, r);
+  kinder.push(sv("polygon", { class:"kr-ich", points: pz(ich) }));
+  ich.forEach((q, i) => { if (an(i)) kinder.push(sv("circle", { class:"kr-pkt", cx:q[0], cy:q[1], r:3 })); });
+  radarPunkte(Array(n).fill(6.3), cx, cy, r0, r).forEach((q, i) => {
+    const t = sv("text", { class:"kr-txt" + (an(i) ? "" : " aus"), x:q[0], y:q[1] + 3.5, "text-anchor": Math.abs(q[0] - cx) < 4 ? "middle" : q[0] > cx ? "start" : "end" });
+    t.textContent = CONFIG.achsen[i].kurz; kinder.push(t);
+  });
+  svg.replaceChildren(...kinder);
+}
+function miniRadar(p){
+  const cx = 26, cy = 26, r0 = 4, r = 22, n = CONFIG.achsen.length, aktiv = state.reglerAn && state.aktiv.some(Boolean);
+  const svg = sv("svg", { class:"mini-radar", viewBox:"0 0 52 52", "aria-hidden":"true", focusable:"false" });
+  svg.append(sv("polygon", { class:"mr-rand", points: pz(radarPunkte(Array(n).fill(5), cx, cy, r0, r)) }));
+  radarPunkte(Array(n).fill(5), cx, cy, r0, r).forEach((q, i) =>
+    svg.append(sv("line", { class:"mr-speiche" + (p.achsen[i] === null ? " leer" : ""), x1:cx, y1:cy, x2:q[0], y2:q[1] })));
+  if (aktiv) svg.append(sv("polygon", { class:"mr-ich", points: pz(radarPunkte(state.werte.map((v, i) => state.aktiv[i] ? v : 1), cx, cy, r0, r)) }));
+  svg.append(sv("polygon", { class:"mr-form", points: pz(radarPunkte(p.achsen, cx, cy, r0, r)) }));
+  return svg;
+}
 function kommazahl(v){ return (Math.round(v * 10) / 10).toLocaleString("de-DE", { minimumFractionDigits:1, maximumFractionDigits:1 }); }
 function zeigeRegler(i){
   const a = CONFIG.achsen[i], el = reglerEls[i], v = state.werte[i], an = state.aktiv[i];
@@ -1001,21 +1072,14 @@ function zeigeRegler(i){
   el.stufeEl.textContent = an ? a.stufen[naechste - 1] : "egal – zählt nicht mit";
   setzeBlase(i);
   const start = state.aktiv.every(Boolean) && state.werte.every((w, k) => Math.abs(w - CONFIG.achsen[k].start) < 0.005);
+  zeichneKopfRadar();
   const lab = $("#profilLabel");
   lab.textContent = !state.reglerAn ? "ausgeschaltet" : start ? "Ausgangsprofil: " + CONFIG.ausgangsprofil : "eigene Einstellung";
   lab.classList.toggle("eigen", !start);
 }
 // Die Stufenbeschreibung sitzt als Blase über dem Griff und bleibt innerhalb der Reglerbreite.
 const GRIFF = 26;
-function setzeBlase(i){
-  const el = reglerEls[i], b = el.stufeEl, W = el.range.clientWidth;
-  if (!W) return;
-  const mitte = GRIFF / 2 + (state.werte[i] - 1) / 4 * (W - GRIFF);
-  const bw = b.offsetWidth;
-  const x = Math.max(0, Math.min(W - bw, mitte - bw / 2));
-  b.style.transform = "translateX(" + x + "px)";
-  b.style.setProperty("--pfeil", Math.max(8, Math.min(bw - 8, mitte - x)) + "px");
-}
+function setzeBlase(){ /* Stufentext steht fest unter der Schiene */ }
 // Rückmeldung am bewegten Regler: Trefferzahl und Veränderung seit Beginn der Bewegung
 const LIVE = { regler:null, start:0, aktuell:0, timer:null };
 function merkeStart(i){
@@ -1159,7 +1223,18 @@ function filterZuruecksetzen(alles){
   document.querySelectorAll("#fMedien .chip-btn").forEach(b => b.setAttribute("aria-pressed", "false"));
   fuelleFach();
 }
+function verdrahteReiter(){
+  const paare = [["#tabFilter","#filterPanel"],["#tabKi","#kiPanel"]];
+  paare.forEach(([t, pnl]) => $(t).addEventListener("click", () => {
+    const war = $(t).getAttribute("aria-selected") === "true";
+    paare.forEach(([t2, p2]) => { $(t2).setAttribute("aria-selected", "false"); $(p2).hidden = true; });
+    if (!war){ $(t).setAttribute("aria-selected", "true"); $(pnl).hidden = false; }
+    document.querySelector(".reiter-panel").classList.toggle("offen", !war);
+    if (typeof kiInfoZu === "function") kiInfoZu();
+  }));
+}
 function verdrahteFilter(){
+  verdrahteReiter();
   const f = state.f;
   $("#fJgVon").addEventListener("change", e => { f.jgVon = zahl(e.target.value); geaendert(); });
   $("#fJgBis").addEventListener("change", e => { f.jgBis = zahl(e.target.value); geaendert(); });
@@ -1320,6 +1395,12 @@ function detailsEbene1(t){
     warn,
     aufklapper("stufe2", "Alle Angaben", p.id, "d2", () => h("div", { class:"d-inhalt" }, detailInhalt(p))));
 }
+const BEREICH_FARBE = {
+  [norm("Sprachen")]:"#9b3d5a", [norm("Gesellschaftswissenschaften")]:"#8a6a1f", [norm("MINT")]:"#2f7d5b",
+  [norm("Informatik")]:"#3d5fa8", [norm("Kunst/Musik/Darstellendes Spiel")]:"#8a4fa0", [norm("Sport")]:"#a3510f",
+  [norm("Religion/Philosophie")]:"#5f6b7a", [norm("fächerübergreifend")]:"#0d6f9a"
+};
+function jgKurz(p){ return p.jgVon === null ? "" : p.jgVon === p.jgBis ? "Jg. " + p.jgVon : "Jg. " + p.jgVon + "–" + p.jgBis; }
 function karte(t){
   const p = t.p;
   let treffer = null;
@@ -1329,8 +1410,13 @@ function karte(t){
       : h("span", { class:"treffer " + farbklasse(prozent(t)), title:"Passung zur Reglerstellung (verglichen auf " + t.n + " von " + t.aktive + " Reglern)" },
           prozent(t) + " %", h("span", { class:"sr" }, " Passung"));
   }
-  return h("li", { class:"karte" },
-    h("div", { class:"k-kopf" }, h("h3", null, p.titel), treffer),
+  const farbe = BEREICH_FARBE[norm(p.bereich)] || "var(--linie-stark)";
+  const meta = [p.fach, jgKurz(p)].filter(Boolean).join(", ");
+  const profilText = "Profil: " + CONFIG.achsen.map((a, i) => a.kurz + " " + (p.achsen[i] === null ? "keine Angabe" : p.achsen[i])).join(", ");
+  return h("li", { class:"karte", style:"--fb:" + farbe },
+    h("div", { class:"k-kopf" },
+      h("div", { class:"k-titel" }, meta ? h("p", { class:"k-fach" }, meta) : null, h("h3", null, p.titel)),
+      h("div", { class:"k-seite", title: profilText }, miniRadar(p), treffer, h("span", { class:"sr" }, profilText))),
     p.text ? h("p", { class:"k-text" }, p.text) : null,
     aufklapper("stufe1", "Details", p.id, "d1", () => detailsEbene1(t)));
 }
